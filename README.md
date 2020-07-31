@@ -1,2 +1,2 @@
-# leetcode-cn
+# leetcode
 ✏️【UPDATING】LeetCode Solutions in JAVA.
