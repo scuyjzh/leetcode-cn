@@ -68,7 +68,7 @@ class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        TreeNode root = TreeNode.createBinaryTree("[5,4,8,11,null,13,4,7,2,null,null,null,null,5,1]");
+        TreeNode root = TreeNode.initBinaryTree("[5,4,8,11,null,13,4,7,2,null,null,null,null,5,1]");
         System.out.println(solution.pathSum1(root, 22));
         System.out.println(solution.pathSum2(root, 22));
     }

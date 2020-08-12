@@ -58,7 +58,7 @@ class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.sumNumbers1(TreeNode.createBinaryTree("[4,9,0,5,1]")));
-        System.out.println(solution.sumNumbers2(TreeNode.createBinaryTree("[4,9,0,5,1]")));
+        System.out.println(solution.sumNumbers1(TreeNode.initBinaryTree("[4,9,0,5,1]")));
+        System.out.println(solution.sumNumbers2(TreeNode.initBinaryTree("[4,9,0,5,1]")));
     }
 }

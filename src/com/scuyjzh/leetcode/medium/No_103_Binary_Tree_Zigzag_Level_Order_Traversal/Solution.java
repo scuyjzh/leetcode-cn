@@ -66,7 +66,7 @@ class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        TreeNode root = TreeNode.createBinaryTree("[3,9,20,null,null,15,7]");
+        TreeNode root = TreeNode.initBinaryTree("[3,9,20,null,null,15,7]");
         System.out.println(solution.zigzagLevelOrder1(root));
         System.out.println(solution.zigzagLevelOrder2(root));
     }

@@ -47,7 +47,7 @@ class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        TreeNode root = TreeNode.createBinaryTree("[1,2,5,3,4,null,6]");
+        TreeNode root = TreeNode.initBinaryTree("[1,2,5,3,4,null,6]");
         solution.flatten1(root);
         System.out.println();
     }

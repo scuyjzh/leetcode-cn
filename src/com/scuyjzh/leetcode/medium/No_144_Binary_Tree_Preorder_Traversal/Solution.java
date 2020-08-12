@@ -79,7 +79,7 @@ class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        TreeNode root = TreeNode.createBinaryTree("[1,2,3,4,5,null,6]");
+        TreeNode root = TreeNode.initBinaryTree("[1,2,3,4,5,null,6]");
         System.out.println(solution.preorderTraversal1(root));
         System.out.println(solution.preorderTraversal2(root));
         System.out.println(solution.preorderTraversal3(root));

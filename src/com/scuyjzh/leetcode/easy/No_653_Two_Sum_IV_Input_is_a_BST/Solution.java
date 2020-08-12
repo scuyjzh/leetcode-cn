@@ -67,7 +67,7 @@ class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        TreeNode root = TreeNode.createBinaryTree("[50,35,58,30,40,57,60]");
+        TreeNode root = TreeNode.initBinaryTree("[50,35,58,30,40,57,60]");
         System.out.println(solution.findTarget1(root, 100));
         System.out.println(solution.findTarget2(root, 100));
         System.out.println(solution.findTarget3(root, 100));

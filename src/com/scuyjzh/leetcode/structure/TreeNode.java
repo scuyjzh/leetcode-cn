@@ -9,7 +9,7 @@ public class TreeNode {
         val = x;
     }
 
-    public static TreeNode createBinaryTree(String str) {
+    public static TreeNode initBinaryTree(String str) {
         if ("[]".equals(str)) {
             return null;
         }

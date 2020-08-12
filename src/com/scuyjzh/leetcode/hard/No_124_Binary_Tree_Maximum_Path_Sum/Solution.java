@@ -30,6 +30,6 @@ class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.maxPathSum(TreeNode.createBinaryTree("[-10,9,20,null,null,15,7]")));
+        System.out.println(solution.maxPathSum(TreeNode.initBinaryTree("[-10,9,20,null,null,15,7]")));
     }
 }

@@ -22,7 +22,7 @@ class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        TreeNode root = TreeNode.createBinaryTree("[1,2,3,4,5,6,null]");
+        TreeNode root = TreeNode.initBinaryTree("[1,2,3,4,5,6,null]");
         System.out.println(solution.countNodes(root));
     }
 }
