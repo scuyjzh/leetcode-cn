@@ -29,7 +29,7 @@ class Solution {
         invert(root.left);
         // 递归交换当前节点的右子树
         invert(root.right);
-        //函数返回时就表示当前这个节点，以及它的左右子树都已经交换完了
+        // 函数返回时就表示当前这个节点，以及它的左右子树都已经交换完了
         return root;
     }
 
@@ -59,7 +59,7 @@ class Solution {
             }
 
         }
-        //返回处理完的根节点
+        // 返回处理完的根节点
         return root;
     }
 }
