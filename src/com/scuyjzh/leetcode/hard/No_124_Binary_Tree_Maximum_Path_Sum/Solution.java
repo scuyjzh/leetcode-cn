@@ -1,4 +1,4 @@
-package com.scuyjzh.leetcode.hard._124_Binary_Tree_Maximum_Path_Sum;
+package com.scuyjzh.leetcode.hard.No_124_Binary_Tree_Maximum_Path_Sum;
 
 import com.scuyjzh.leetcode.structure.TreeNode;
 

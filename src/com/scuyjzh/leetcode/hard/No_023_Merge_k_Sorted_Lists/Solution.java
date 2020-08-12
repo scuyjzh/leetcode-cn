@@ -1,4 +1,4 @@
-package com.scuyjzh.leetcode.hard._023_Merge_k_Sorted_Lists;
+package com.scuyjzh.leetcode.hard.No_023_Merge_k_Sorted_Lists;
 
 import com.scuyjzh.leetcode.structure.ListNode;
 

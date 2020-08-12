@@ -1,4 +1,4 @@
-package com.scuyjzh.leetcode.hard._135_Candy;
+package com.scuyjzh.leetcode.hard.No_135_Candy;
 
 class Solution {
     public int candy(int[] ratings) {
