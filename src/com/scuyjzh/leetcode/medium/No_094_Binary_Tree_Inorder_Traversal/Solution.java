@@ -6,14 +6,14 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 
 class Solution {
     /**
-     * Approach #1 (Iteration with Stack)
+     * Approach #1 (Iteration with Stack - DFS)
      */
     public List<Integer> inorderTraversal1(TreeNode root) {
-        List<Integer> list = new LinkedList<Integer>();
+        List<Integer> list = new LinkedList<>();
         if (root == null) {
             return list;
         }
-        Stack<TreeNode> stack = new Stack<TreeNode>();
+        Stack<TreeNode> stack = new Stack<>();
         TreeNode curr = root;
         while (curr != null || !stack.empty()) {
             while (curr != null) {
@@ -28,7 +28,7 @@ class Solution {
     }
 
     /**
-     * Approach #2 (Recursion)
+     * Approach #2 (Recursion - DFS)
      */
     public List<Integer> inorderTraversal2(TreeNode root) {
         List<Integer> list = new LinkedList<Integer>();

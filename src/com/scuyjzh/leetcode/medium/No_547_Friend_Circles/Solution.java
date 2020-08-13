@@ -63,13 +63,13 @@ class Solution {
         Queue<Integer> queue = new LinkedList<>();
         int num = 0;
         for (int i = 0; i < M.length; ++i) {
-            if (visited[i] == false) {
+            if (!visited[i]) {
                 queue.add(i);
                 while (!queue.isEmpty()) {
                     int t = queue.poll();
                     visited[t] = true;
                     for (int j = 0; j < M.length; j++) {
-                        if (M[t][j] == 1 && visited[j] == false) {
+                        if (M[t][j] == 1 && !visited[j]) {
                             queue.add(j);
                         }
                     }
@@ -90,7 +90,7 @@ class Solution {
         boolean[] visited = new boolean[M.length];
         int num = 0;
         for (int i = 0; i < M.length; i++) {
-            if (visited[i] == false) {
+            if (!visited[i]) {
                 helper(M, visited, i);
                 num++;
             }

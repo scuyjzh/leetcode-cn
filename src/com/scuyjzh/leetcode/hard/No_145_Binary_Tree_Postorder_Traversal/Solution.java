@@ -36,7 +36,7 @@ class Solution {
     }
 
     /**
-     * Approach #2 (Iteration with Stack)
+     * Approach #2 (Iteration with Double ended Queue)
      */
     public List<Integer> postorderTraversal2(TreeNode root) {
         LinkedList<Integer> list = new LinkedList<>();
@@ -59,20 +59,20 @@ class Solution {
     }
 
     /**
-     * Approach #3 (Recursion)
+     * Approach #3 (Recursion - DFS)
      */
     public List<Integer> postorderTraversal3(TreeNode root) {
         List<Integer> list = new LinkedList<Integer>();
-        helper(root, list);
+        traversal(root, list);
         return list;
     }
 
-    private void helper(TreeNode root, List<Integer> list) {
+    private void traversal(TreeNode root, List<Integer> list) {
         if (root == null) {
             return;
         }
-        helper(root.left, list);
-        helper(root.right, list);
+        traversal(root.left, list);
+        traversal(root.right, list);
         list.add(root.val);
     }
 

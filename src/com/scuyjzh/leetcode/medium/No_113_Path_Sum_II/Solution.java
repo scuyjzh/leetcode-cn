@@ -6,7 +6,7 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 
 class Solution {
     /**
-     * Approach #1 (Iteration with Stack - Postorder Traversal)
+     * Approach #1 (Iteration by postorder traversal)
      */
     public List<List<Integer>> pathSum1(TreeNode root, int sum) {
         List<List<Integer>> list = new ArrayList<>();
@@ -42,11 +42,11 @@ class Solution {
      * Approach #2 (Recursion - DFS)
      */
     public List<List<Integer>> pathSum2(TreeNode root, int sum) {
-        List<List<Integer>> list = new ArrayList<List<Integer>>();
+        List<List<Integer>> list = new ArrayList<>();
         if (root == null) {
             return list;
         }
-        List<Integer> path = new ArrayList<Integer>();
+        List<Integer> path = new ArrayList<>();
         helper(root, sum, path, list);
         return list;
     }

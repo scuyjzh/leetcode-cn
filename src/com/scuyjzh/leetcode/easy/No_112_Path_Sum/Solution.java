@@ -6,9 +6,41 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 
 class Solution {
     /**
-     * Approach #1 (Iteration by postorder traversal - BFS)
+     * Approach #1 (Iteration with Queue - BFS)
      */
     public boolean hasPathSum1(TreeNode root, int sum) {
+        if (root == null) {
+            return false;
+        }
+        Queue<TreeNode> queNode = new LinkedList<>();
+        Queue<Integer> queVal = new LinkedList<>();
+        queNode.offer(root);
+        queVal.offer(root.val);
+        while (!queNode.isEmpty()) {
+            TreeNode now = queNode.poll();
+            int temp = queVal.poll();
+            if (now.left == null && now.right == null) {
+                if (temp == sum) {
+                    return true;
+                }
+                continue;
+            }
+            if (now.left != null) {
+                queNode.offer(now.left);
+                queVal.offer(now.left.val + temp);
+            }
+            if (now.right != null) {
+                queNode.offer(now.right);
+                queVal.offer(now.right.val + temp);
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Approach #2 (Iteration by postorder traversal)
+     */
+    public boolean hasPathSum2(TreeNode root, int sum) {
         Deque<TreeNode> stack = new ArrayDeque<>();
         TreeNode curr = root, pre = null;
         int SUM = 0;
@@ -35,20 +67,20 @@ class Solution {
     }
 
     /**
-     * Approach #2 (Recursion - DFS)
+     * Approach #3 (Recursion - DFS)
      */
-    public boolean hasPathSum2(TreeNode root, int sum) {
-        return helper(root, sum);
+    public boolean hasPathSum3(TreeNode root, int sum) {
+        return dfs(root, sum);
     }
 
-    private boolean helper(TreeNode root, int sum) {
+    private boolean dfs(TreeNode root, int sum) {
         if (root == null) {
             return false;
         }
         if (root.left == null && root.right == null) {
             return sum == root.val;
         }
-        return helper(root.left, sum - root.val) || helper(root.right, sum - root.val);
+        return dfs(root.left, sum - root.val) || dfs(root.right, sum - root.val);
     }
 
     public static void main(String[] args) {

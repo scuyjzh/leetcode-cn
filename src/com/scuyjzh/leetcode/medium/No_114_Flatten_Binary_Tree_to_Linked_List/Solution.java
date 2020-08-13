@@ -6,10 +6,10 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 
 class Solution {
     /**
-     * Approach #1 (Iteration with Stack)
+     * Approach #1 (Iteration with Double ended Queue)
      */
     public void flatten1(TreeNode root) {
-        Deque<TreeNode> stack = new ArrayDeque<TreeNode>();
+        Deque<TreeNode> stack = new ArrayDeque<>();
         TreeNode curr = root;
         while (curr != null || !stack.isEmpty()) {
             if (curr.right != null) {
