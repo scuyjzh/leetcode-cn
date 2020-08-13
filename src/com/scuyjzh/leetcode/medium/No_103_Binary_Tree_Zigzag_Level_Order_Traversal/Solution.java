@@ -40,7 +40,7 @@ class Solution {
     }
 
     /**
-     * Approach #2 (Recursion with DFS)
+     * Approach #2 (Recursion - DFS)
      */
     public List<List<Integer>> zigzagLevelOrder2(TreeNode root) {
         List<List<Integer>> list = new LinkedList<>();

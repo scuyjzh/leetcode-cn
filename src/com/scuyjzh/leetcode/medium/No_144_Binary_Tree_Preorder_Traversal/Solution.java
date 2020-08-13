@@ -6,7 +6,7 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 
 class Solution {
     /**
-     * Approach #1 (Iteration with Stack)
+     * Approach #1 (Iteration with Stack - DFS)
      */
     public List<Integer> preorderTraversal1(TreeNode root) {
         List<Integer> list = new LinkedList<>();
@@ -29,21 +29,21 @@ class Solution {
     }
 
     /**
-     * Approach #2 (Recursion)
+     * Approach #2 (Recursion - DFS)
      */
     public List<Integer> preorderTraversal2(TreeNode root) {
-        List<Integer> list = new LinkedList<Integer>();
-        helper(root, list);
+        List<Integer> list = new LinkedList<>();
+        traversal(root, list);
         return list;
     }
 
-    private void helper(TreeNode root, List<Integer> list) {
+    private void traversal(TreeNode root, List<Integer> list) {
         if (root == null) {
             return;
         }
         list.add(root.val);
-        helper(root.left, list);
-        helper(root.right, list);
+        traversal(root.left, list);
+        traversal(root.right, list);
     }
 
     /**

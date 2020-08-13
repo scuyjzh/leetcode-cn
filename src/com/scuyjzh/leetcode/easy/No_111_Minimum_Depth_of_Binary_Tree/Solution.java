@@ -6,7 +6,7 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 
 class Solution {
     /**
-     * Approach #1 (Iteration by level-order traversal)
+     * Approach #1 (Iteration by level-order traversal - BFS)
      */
     public int minDepth1(TreeNode root) {
         if (root == null) {
@@ -35,7 +35,7 @@ class Solution {
     }
 
     /**
-     * Approach #2 (Recursion)
+     * Approach #2 (Recursion - DFS)
      */
     public int minDepth2(TreeNode root) {
         return helper(root);

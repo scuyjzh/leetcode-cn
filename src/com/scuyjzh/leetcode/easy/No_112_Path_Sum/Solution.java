@@ -6,7 +6,7 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 
 class Solution {
     /**
-     * Approach #1 (Iteration with Stack - Postorder Traversal)
+     * Approach #1 (Iteration by postorder traversal - BFS)
      */
     public boolean hasPathSum1(TreeNode root, int sum) {
         Deque<TreeNode> stack = new ArrayDeque<>();

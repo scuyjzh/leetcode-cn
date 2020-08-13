@@ -6,7 +6,7 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 
 class Solution {
     /**
-     * Approach #1 (Iteration with Queues - DFS)
+     * Approach #1 (Iteration with Queues - BFS)
      */
     public int sumNumbers1(TreeNode root) {
         if (root == null) {

@@ -32,17 +32,17 @@ class Solution {
     }
 
     /**
-     * Approach #2 (Recursion)
+     * Approach #2 (Recursion - DFS)
      */
     public int maxDepth2(TreeNode root) {
-        return helper(root);
+        return dfs(root);
     }
 
-    private int helper(TreeNode root) {
+    private int dfs(TreeNode root) {
         if (root == null) {
             return 0;
         }
-        return 1 + Math.max(helper(root.left), helper(root.right));
+        return 1 + Math.max(dfs(root.left), dfs(root.right));
     }
 
     public static void main(String[] args) {

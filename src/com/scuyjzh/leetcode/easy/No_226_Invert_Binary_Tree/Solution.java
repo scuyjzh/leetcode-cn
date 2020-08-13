@@ -10,7 +10,7 @@ import java.util.*;
  */
 class Solution {
     /**
-     * 递归法 - 深度优先遍历
+     * Approach #1 (Recursion - DFS)
      */
     public TreeNode invertTree1(TreeNode root) {
         return invert(root);
@@ -34,7 +34,7 @@ class Solution {
     }
 
     /**
-     * 迭代法 - 广度优先遍历
+     * Approach #2 (Iteration with Queue - BFS)
      */
     public TreeNode invertTree2(TreeNode root) {
         if (root == null) {
