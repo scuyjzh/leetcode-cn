@@ -45,7 +45,7 @@ class Solution {
         queue.add(root);
         while (!queue.isEmpty()) {
             // 每次都从队列中拿一个节点，并交换这个节点的左右子树
-            TreeNode tmp = queue.poll();
+            TreeNode tmp = queue.remove();
             TreeNode left = tmp.left;
             tmp.left = tmp.right;
             tmp.right = left;

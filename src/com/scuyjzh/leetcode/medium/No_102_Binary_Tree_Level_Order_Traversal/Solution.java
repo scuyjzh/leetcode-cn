@@ -15,19 +15,19 @@ class Solution {
         List<List<Integer>> res = new LinkedList<>();
         Queue<TreeNode> queue = new LinkedList<>();
         // 将根节点放入队列中，然后不断遍历队列
-        queue.offer(root);
+        queue.add(root);
         while (!queue.isEmpty()) {
             // 获取当前队列的长度，这个长度相当于当前这一层的节点个数
             int size = queue.size();
             List<Integer> tmp = new LinkedList<>();
             while (size-- > 0) {
-                TreeNode curr = queue.poll();
+                TreeNode curr = queue.remove();
                 tmp.add(curr.val);
                 if (curr.left != null) {
-                    queue.offer(curr.left);
+                    queue.add(curr.left);
                 }
                 if (curr.right != null) {
-                    queue.offer(curr.right);
+                    queue.add(curr.right);
                 }
             }
             res.add(tmp);

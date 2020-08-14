@@ -18,7 +18,7 @@ class Solution {
         while (!queue.isEmpty()) {
             int size = queue.size();
             while (size-- > 0) {
-                TreeNode curr = queue.poll();
+                TreeNode curr = queue.remove();
                 // 第一个访问到的叶子就是最小深度的节点
                 if (curr.left == null && curr.right == null) {
                     return depth;

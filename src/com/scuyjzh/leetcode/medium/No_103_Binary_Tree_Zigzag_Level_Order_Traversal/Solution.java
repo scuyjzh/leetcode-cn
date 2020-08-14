@@ -14,23 +14,23 @@ class Solution {
             return list;
         }
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
-        queue.offer(root);
+        queue.add(root);
         boolean zigzag = false;
         while (!queue.isEmpty()) {
             int levelNum = queue.size();
             LinkedList<Integer> subList = new LinkedList<>();
             for (int i = 0; i < levelNum; ++i) {
-                TreeNode curr = queue.poll();
+                TreeNode curr = queue.remove();
                 if (zigzag) {
                     subList.addFirst(curr.val);
                 } else {
                     subList.add(curr.val);
                 }
                 if (curr.left != null) {
-                    queue.offer(curr.left);
+                    queue.add(curr.left);
                 }
                 if (curr.right != null) {
-                    queue.offer(curr.right);
+                    queue.add(curr.right);
                 }
             }
             list.add(subList);

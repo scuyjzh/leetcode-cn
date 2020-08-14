@@ -66,7 +66,7 @@ class Solution {
             if (!visited[i]) {
                 queue.add(i);
                 while (!queue.isEmpty()) {
-                    int t = queue.poll();
+                    int t = queue.remove();
                     visited[t] = true;
                     for (int j = 0; j < M.length; j++) {
                         if (M[t][j] == 1 && !visited[j]) {
