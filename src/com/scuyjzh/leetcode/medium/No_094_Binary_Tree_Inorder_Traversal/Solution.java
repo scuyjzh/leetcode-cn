@@ -14,15 +14,15 @@ class Solution {
             return list;
         }
         Stack<TreeNode> stack = new Stack<>();
-        TreeNode curr = root;
-        while (curr != null || !stack.empty()) {
-            while (curr != null) {
-                stack.push(curr);
-                curr = curr.left;
+        TreeNode cur = root;
+        while (cur != null || !stack.empty()) {
+            while (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
             }
-            curr = stack.pop();
-            list.add(curr.val);
-            curr = curr.right;
+            cur = stack.pop();
+            list.add(cur.val);
+            cur = cur.right;
         }
         return list;
     }
@@ -35,23 +35,23 @@ class Solution {
         if (root == null) {
             return list;
         }
-        TreeNode curr = root, pre;
-        while (curr != null) {
-            if (curr.left == null) {
-                list.add(curr.val);
-                curr = curr.right;
+        TreeNode cur = root, pre;
+        while (cur != null) {
+            if (cur.left == null) {
+                list.add(cur.val);
+                cur = cur.right;
             } else {
-                pre = curr.left;
-                while (pre.right != null && pre.right != curr) {
+                pre = cur.left;
+                while (pre.right != null && pre.right != cur) {
                     pre = pre.right;
                 }
                 if (pre.right == null) {
-                    pre.right = curr;
-                    curr = curr.left;
+                    pre.right = cur;
+                    cur = cur.left;
                 } else {
                     pre.right = null;
-                    list.add(curr.val);
-                    curr = curr.right;
+                    list.add(cur.val);
+                    cur = cur.right;
                 }
             }
         }

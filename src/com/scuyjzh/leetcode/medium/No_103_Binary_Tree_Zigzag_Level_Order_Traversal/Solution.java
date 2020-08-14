@@ -20,17 +20,17 @@ class Solution {
             int levelNum = queue.size();
             LinkedList<Integer> subList = new LinkedList<>();
             for (int i = 0; i < levelNum; ++i) {
-                TreeNode curr = queue.remove();
+                TreeNode cur = queue.remove();
                 if (zigzag) {
-                    subList.addFirst(curr.val);
+                    subList.addFirst(cur.val);
                 } else {
-                    subList.add(curr.val);
+                    subList.add(cur.val);
                 }
-                if (curr.left != null) {
-                    queue.add(curr.left);
+                if (cur.left != null) {
+                    queue.add(cur.left);
                 }
-                if (curr.right != null) {
-                    queue.add(curr.right);
+                if (cur.right != null) {
+                    queue.add(cur.right);
                 }
             }
             list.add(subList);

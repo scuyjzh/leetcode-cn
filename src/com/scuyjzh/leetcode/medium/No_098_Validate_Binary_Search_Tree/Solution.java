@@ -13,19 +13,19 @@ class Solution {
             return true;
         }
         Stack<TreeNode> stack = new Stack<>();
-        TreeNode curr = root;
+        TreeNode cur = root;
         TreeNode pre = null;
-        while (curr != null || !stack.isEmpty()) {
-            while (curr != null) {
-                stack.push(curr);
-                curr = curr.left;
+        while (cur != null || !stack.isEmpty()) {
+            while (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
             }
-            curr = stack.pop();
-            if (pre != null && curr.val <= pre.val) {
+            cur = stack.pop();
+            if (pre != null && cur.val <= pre.val) {
                 return false;
             }
-            pre = curr;
-            curr = curr.right;
+            pre = cur;
+            cur = cur.right;
         }
         return true;
     }

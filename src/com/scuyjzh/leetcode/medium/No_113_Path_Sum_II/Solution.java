@@ -12,28 +12,28 @@ class Solution {
         List<List<Integer>> list = new ArrayList<>();
         List<Integer> path = new ArrayList<>();
         Deque<TreeNode> stack = new ArrayDeque<>();
-        TreeNode curr = root, pre = null;
+        TreeNode cur = root, pre = null;
         int SUM = 0;
-        while (curr != null || !stack.isEmpty()) {
-            while (curr != null) {
-                stack.addLast(curr);
-                path.add(curr.val);
-                SUM += curr.val;
-                curr = curr.left;
+        while (cur != null || !stack.isEmpty()) {
+            while (cur != null) {
+                stack.addLast(cur);
+                path.add(cur.val);
+                SUM += cur.val;
+                cur = cur.left;
             }
-            curr = stack.peekLast();
-            if (curr.right != null && curr.right != pre) {
-                curr = curr.right;
+            cur = stack.peekLast();
+            if (cur.right != null && cur.right != pre) {
+                cur = cur.right;
                 continue;
             }
-            if (curr.left == null && curr.right == null && SUM == sum) {
+            if (cur.left == null && cur.right == null && SUM == sum) {
                 list.add(new ArrayList<>(path));
             }
-            pre = curr;
+            pre = cur;
             stack.pollLast();
             path.remove(path.size() - 1);
-            SUM -= curr.val;
-            curr = null;
+            SUM -= cur.val;
+            cur = null;
         }
         return list;
     }

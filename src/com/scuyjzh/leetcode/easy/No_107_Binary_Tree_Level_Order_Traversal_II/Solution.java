@@ -21,13 +21,13 @@ class Solution {
             int size = queue.size();
             List<Integer> tmp = new LinkedList<>();
             while (size-- > 0) {
-                TreeNode curr = queue.remove();
-                tmp.add(curr.val);
-                if (curr.left != null) {
-                    queue.add(curr.left);
+                TreeNode cur = queue.remove();
+                tmp.add(cur.val);
+                if (cur.left != null) {
+                    queue.add(cur.left);
                 }
-                if (curr.right != null) {
-                    queue.add(curr.right);
+                if (cur.right != null) {
+                    queue.add(cur.right);
                 }
             }
             // 采用前插法

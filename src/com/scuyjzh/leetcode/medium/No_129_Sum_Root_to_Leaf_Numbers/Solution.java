@@ -19,18 +19,18 @@ class Solution {
         sumq.addLast(root.val);
         int sum = 0;
         while (!q.isEmpty()) {
-            TreeNode curr = q.removeFirst();
+            TreeNode cur = q.removeFirst();
             int tmpSum = sumq.removeFirst();
-            if (curr.left == null && curr.right == null) {
+            if (cur.left == null && cur.right == null) {
                 sum += tmpSum;
             } else {
-                if (curr.right != null) {
-                    q.addLast(curr.right);
-                    sumq.addLast(tmpSum * 10 + curr.right.val);
+                if (cur.right != null) {
+                    q.addLast(cur.right);
+                    sumq.addLast(tmpSum * 10 + cur.right.val);
                 }
-                if (curr.left != null) {
-                    q.addLast(curr.left);
-                    sumq.addLast(tmpSum * 10 + curr.left.val);
+                if (cur.left != null) {
+                    q.addLast(cur.left);
+                    sumq.addLast(tmpSum * 10 + cur.left.val);
                 }
             }
         }

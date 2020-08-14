@@ -42,25 +42,25 @@ class Solution {
      */
     public boolean hasPathSum2(TreeNode root, int sum) {
         Deque<TreeNode> stack = new ArrayDeque<>();
-        TreeNode curr = root, pre = null;
+        TreeNode cur = root, pre = null;
         int SUM = 0;
-        while (curr != null || !stack.isEmpty()) {
-            while (curr != null) {
-                stack.addLast(curr);
-                SUM += curr.val;
-                curr = curr.left;
+        while (cur != null || !stack.isEmpty()) {
+            while (cur != null) {
+                stack.addLast(cur);
+                SUM += cur.val;
+                cur = cur.left;
             }
-            curr = stack.peekLast();
-            if (curr.left == null && curr.right == null && SUM == sum) {
+            cur = stack.peekLast();
+            if (cur.left == null && cur.right == null && SUM == sum) {
                 return true;
             }
-            if (curr.right != null && curr.right != pre) {
-                curr = curr.right;
+            if (cur.right != null && cur.right != pre) {
+                cur = cur.right;
             } else {
-                pre = curr;
+                pre = cur;
                 stack.pollLast();
-                SUM -= curr.val;
-                curr = null;
+                SUM -= cur.val;
+                cur = null;
             }
         }
         return false;

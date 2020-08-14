@@ -7,19 +7,19 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 class Solution {
     public int kthSmallest(TreeNode root, int k) {
         Stack<TreeNode> stack = new Stack<>();
-        TreeNode curr = root;
-        while (curr != null || !stack.isEmpty()) {
-            while (curr != null) {
-                stack.push(curr);
-                curr = curr.left;
+        TreeNode cur = root;
+        while (cur != null || !stack.isEmpty()) {
+            while (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
             }
-            curr = stack.pop();
+            cur = stack.pop();
             k--;
             if (k == 0) {
                 break;
             }
-            curr = curr.right;
+            cur = cur.right;
         }
-        return curr.val;
+        return cur.val;
     }
 }

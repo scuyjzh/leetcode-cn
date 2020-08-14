@@ -17,18 +17,18 @@ class Solution {
         stack.addLast(root);
         TreeNode pre = root;
         while (!stack.isEmpty()) {
-            TreeNode curr = stack.peekLast();
-            boolean existed = (curr.left == null && curr.right == null) || (pre != null && (curr.left == pre || curr.right == pre));
+            TreeNode cur = stack.peekLast();
+            boolean existed = (cur.left == null && cur.right == null) || (pre != null && (cur.left == pre || cur.right == pre));
             if (existed) {
-                list.add(curr.val);
+                list.add(cur.val);
                 stack.pollLast();
-                pre = curr;
+                pre = cur;
             } else {
-                if (curr.right != null) {
-                    stack.addLast(curr.right);
+                if (cur.right != null) {
+                    stack.addLast(cur.right);
                 }
-                if (curr.left != null) {
-                    stack.addLast(curr.left);
+                if (cur.left != null) {
+                    stack.addLast(cur.left);
                 }
             }
         }
@@ -46,13 +46,13 @@ class Solution {
         Deque<TreeNode> stack = new ArrayDeque<>();
         stack.addLast(root);
         while (!stack.isEmpty()) {
-            TreeNode curr = stack.pollLast();
-            list.addFirst(curr.val);
-            if (curr.left != null) {
-                stack.addLast(curr.left);
+            TreeNode cur = stack.pollLast();
+            list.addFirst(cur.val);
+            if (cur.left != null) {
+                stack.addLast(cur.left);
             }
-            if (curr.right != null) {
-                stack.addLast(curr.right);
+            if (cur.right != null) {
+                stack.addLast(cur.right);
             }
         }
         return list;

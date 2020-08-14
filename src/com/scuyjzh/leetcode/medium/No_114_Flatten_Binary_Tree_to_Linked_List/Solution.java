@@ -10,19 +10,19 @@ class Solution {
      */
     public void flatten1(TreeNode root) {
         Deque<TreeNode> stack = new ArrayDeque<>();
-        TreeNode curr = root;
-        while (curr != null || !stack.isEmpty()) {
-            if (curr.right != null) {
-                stack.addLast(curr.right);
+        TreeNode cur = root;
+        while (cur != null || !stack.isEmpty()) {
+            if (cur.right != null) {
+                stack.addLast(cur.right);
             }
-            if (curr.left != null) {
-                curr.right = curr.left;
-                curr.left = null;
+            if (cur.left != null) {
+                cur.right = cur.left;
+                cur.left = null;
             } else if (!stack.isEmpty()) {
                 TreeNode tmp = stack.pollLast();
-                curr.right = tmp;
+                cur.right = tmp;
             }
-            curr = curr.right;
+            cur = cur.right;
         }
     }
 

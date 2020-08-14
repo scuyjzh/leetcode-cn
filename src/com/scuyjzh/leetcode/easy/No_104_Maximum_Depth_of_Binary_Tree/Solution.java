@@ -18,12 +18,12 @@ class Solution {
         while (!queue.isEmpty()) {
             int size = queue.size();
             while (size-- > 0) {
-                TreeNode curr = queue.remove();
-                if (curr.left != null) {
-                    queue.add(curr.left);
+                TreeNode cur = queue.remove();
+                if (cur.left != null) {
+                    queue.add(cur.left);
                 }
-                if (curr.right != null) {
-                    queue.add(curr.right);
+                if (cur.right != null) {
+                    queue.add(cur.right);
                 }
             }
             depth++;
