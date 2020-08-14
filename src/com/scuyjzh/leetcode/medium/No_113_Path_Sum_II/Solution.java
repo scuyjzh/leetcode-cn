@@ -6,7 +6,7 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 
 class Solution {
     /**
-     * Approach #1 (Iteration by postorder traversal)
+     * Approach #1 (Iteration by Postorder Traversal)
      */
     public List<List<Integer>> pathSum1(TreeNode root, int sum) {
         List<List<Integer>> list = new ArrayList<>();

@@ -38,7 +38,7 @@ class Solution {
     }
 
     /**
-     * Approach #2 (Iteration by postorder traversal)
+     * Approach #2 (Iteration by Postorder Traversal)
      */
     public boolean hasPathSum2(TreeNode root, int sum) {
         Deque<TreeNode> stack = new ArrayDeque<>();

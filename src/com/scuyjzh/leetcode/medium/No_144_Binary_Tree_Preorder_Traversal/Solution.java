@@ -29,27 +29,9 @@ class Solution {
     }
 
     /**
-     * Approach #2 (Recursion - DFS)
+     * Approach #2 (Iteration by Morris Traversal)
      */
     public List<Integer> preorderTraversal2(TreeNode root) {
-        List<Integer> list = new LinkedList<>();
-        traversal(root, list);
-        return list;
-    }
-
-    private void traversal(TreeNode root, List<Integer> list) {
-        if (root == null) {
-            return;
-        }
-        list.add(root.val);
-        traversal(root.left, list);
-        traversal(root.right, list);
-    }
-
-    /**
-     * Approach #3 (Morris Traversal)
-     */
-    public List<Integer> preorderTraversal3(TreeNode root) {
         List<Integer> list = new LinkedList<>();
         if (root == null) {
             return list;
@@ -75,6 +57,24 @@ class Solution {
             }
         }
         return list;
+    }
+
+    /**
+     * Approach #3 (Recursion - DFS)
+     */
+    public List<Integer> preorderTraversal3(TreeNode root) {
+        List<Integer> list = new LinkedList<>();
+        traversal(root, list);
+        return list;
+    }
+
+    private void traversal(TreeNode root, List<Integer> list) {
+        if (root == null) {
+            return;
+        }
+        list.add(root.val);
+        traversal(root.left, list);
+        traversal(root.right, list);
     }
 
     public static void main(String[] args) {

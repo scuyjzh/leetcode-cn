@@ -28,33 +28,14 @@ class Solution {
     }
 
     /**
-     * Approach #2 (Recursion - DFS)
+     * Approach #2 (Iteration by Morris Traversal)
      */
     public List<Integer> inorderTraversal2(TreeNode root) {
-        List<Integer> list = new LinkedList<Integer>();
-        helper(root, list);
-        return list;
-    }
-
-    private void helper(TreeNode root, List<Integer> list) {
-        if (root == null) {
-            return;
-        }
-        helper(root.left, list);
-        list.add(root.val);
-        helper(root.right, list);
-
-    }
-
-    /**
-     * Approach #3 (Morris Traversal)
-     */
-    public List<Integer> inorderTraversal3(TreeNode root) {
-        List<Integer> list = new LinkedList<Integer>();
+        List<Integer> list = new LinkedList<>();
         if (root == null) {
             return list;
         }
-        TreeNode curr = root, pre = null;
+        TreeNode curr = root, pre;
         while (curr != null) {
             if (curr.left == null) {
                 list.add(curr.val);
@@ -75,6 +56,25 @@ class Solution {
             }
         }
         return list;
+    }
+
+    /**
+     * Approach #3 (Recursion - DFS)
+     */
+    public List<Integer> inorderTraversal3(TreeNode root) {
+        List<Integer> list = new LinkedList<>();
+        traversal(root, list);
+        return list;
+    }
+
+    private void traversal(TreeNode root, List<Integer> list) {
+        if (root == null) {
+            return;
+        }
+        traversal(root.left, list);
+        list.add(root.val);
+        traversal(root.right, list);
+
     }
 
     public static void main(String[] args) {
