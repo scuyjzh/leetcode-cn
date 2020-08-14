@@ -37,18 +37,26 @@ class Solution {
         }
         TreeNode cur = root, pre;
         while (cur != null) {
+            // 左子树为空，输出当前节点，并将其右孩子作为当前节点
             if (cur.left == null) {
                 list.add(cur.val);
                 cur = cur.right;
             } else {
+                // 左子树不为空
                 pre = cur.left;
+                // 找到前驱节点，即左子树中的最右节点
                 while (pre.right != null && pre.right != cur) {
                     pre = pre.right;
                 }
+                // 如果前驱节点的右孩子为空，则将它的右孩子设置为当前节点
+                // 并将当前节点更新为当前节点的左孩子
                 if (pre.right == null) {
                     pre.right = cur;
                     cur = cur.left;
-                } else {
+                }
+                // 如果前驱节点的右孩子为当前节点，将它的右孩子重新设为空（恢复树的形状，斩断线索）
+                // 并输出当前节点，且将当前节点更新为当前节点的右孩子
+                if (pre.right == cur) {
                     pre.right = null;
                     list.add(cur.val);
                     cur = cur.right;
