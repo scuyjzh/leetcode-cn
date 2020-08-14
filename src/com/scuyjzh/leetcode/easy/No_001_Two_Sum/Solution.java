@@ -51,8 +51,8 @@ class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.twoSum1(new int[]{3, 2, 4}, 6));
-        System.out.println(solution.twoSum2(new int[]{3, 2, 4}, 6));
-        System.out.println(solution.twoSum3(new int[]{3, 2, 4}, 6));
+        System.out.println(Arrays.toString(solution.twoSum1(new int[]{3, 2, 4}, 6)));
+        System.out.println(Arrays.toString(solution.twoSum2(new int[]{3, 2, 4}, 6)));
+        System.out.println(Arrays.toString(solution.twoSum3(new int[]{3, 2, 4}, 6)));
     }
 }

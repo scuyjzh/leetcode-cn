@@ -3,7 +3,7 @@ package com.scuyjzh.leetcode.medium.No_018_4Sum;
 import java.util.*;
 
 class Solution {
-    public List<List<Integer>> fourSum1(int nums[], int target) {
+    public List<List<Integer>> fourSum1(int[] nums, int target) {
         List<List<Integer>> res = new LinkedList<>();
         if (nums == null || nums.length < 4) {
             return res;
