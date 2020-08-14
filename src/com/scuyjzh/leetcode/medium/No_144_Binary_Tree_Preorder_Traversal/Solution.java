@@ -50,11 +50,11 @@ class Solution {
      * Approach #3 (Morris Traversal)
      */
     public List<Integer> preorderTraversal3(TreeNode root) {
-        List<Integer> list = new LinkedList<Integer>();
+        List<Integer> list = new LinkedList<>();
         if (root == null) {
             return list;
         }
-        TreeNode curr = root, pre = null;
+        TreeNode curr = root, pre;
         while (curr != null) {
             if (curr.left == null) {
                 list.add(curr.val);
