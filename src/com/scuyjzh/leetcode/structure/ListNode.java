@@ -1,5 +1,8 @@
 package com.scuyjzh.leetcode.structure;
 
+/**
+ * @author scuyjzh
+ */
 public class ListNode {
     public int val;
     public ListNode next;
@@ -8,7 +11,7 @@ public class ListNode {
         val = x;
     }
 
-    public static ListNode createList(String str) {
+    public static ListNode initList(String str) {
         if ("[]".equals(str)) {
             return null;
         }

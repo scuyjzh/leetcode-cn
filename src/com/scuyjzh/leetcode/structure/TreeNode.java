@@ -1,5 +1,8 @@
 package com.scuyjzh.leetcode.structure;
 
+/**
+ * @author scuyjzh
+ */
 public class TreeNode {
     public int val;
     public TreeNode left;
