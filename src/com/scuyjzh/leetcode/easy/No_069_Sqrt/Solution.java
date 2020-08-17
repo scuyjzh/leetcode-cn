@@ -1,10 +1,10 @@
 package com.scuyjzh.leetcode.easy.No_069_Sqrt;
 
 class Solution {
+    /**
+     * Approach #1 (Binary search solution)
+     */
     public int mySqrt1(int x) {
-        /**
-         * Approach #1 (Binary search solution)
-         */
         if (x <= 1) {
             return x;
         }
@@ -25,7 +25,7 @@ class Solution {
     }
 
     /**
-     * Approach #1 (Newton's method)
+     * Approach #2 (Newton's method)
      */
     public int mySqrt2(int x) {
         long r = x;
@@ -37,6 +37,7 @@ class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
+        System.out.println(solution.mySqrt1(12));
         System.out.println(solution.mySqrt2(12));
     }
 }
