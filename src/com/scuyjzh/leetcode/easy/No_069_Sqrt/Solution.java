@@ -2,6 +2,9 @@ package com.scuyjzh.leetcode.easy.No_069_Sqrt;
 
 class Solution {
     public int mySqrt1(int x) {
+        /**
+         * Approach #1 (Binary search solution)
+         */
         if (x <= 1) {
             return x;
         }
@@ -21,6 +24,9 @@ class Solution {
         return right;
     }
 
+    /**
+     * Approach #1 (Newton's method)
+     */
     public int mySqrt2(int x) {
         long r = x;
         while (r * r > x) {
