@@ -1,5 +1,7 @@
 package com.scuyjzh.leetcode.easy.No_821_Shortest_Distance_to_a_Character;
 
+import java.util.Arrays;
+
 class Solution {
     public int[] shortestToChar(String S, char C) {
         int[] res = new int[S.length()];
@@ -21,9 +23,9 @@ class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        String S = "loveleetcodeo";
+        String S = "livecode";
         char C = 'e';
         int[] res = solution.shortestToChar(S, C);
-        System.out.println(res);
+        System.out.println(Arrays.toString(res));
     }
 }

@@ -6,7 +6,7 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 
 class Solution {
     /**
-     * Approach #1 (Iteration with Queues - BFS)
+     * Approach #1 (Iteration with Deque - BFS)
      */
     public int sumNumbers1(TreeNode root) {
         if (root == null) {
@@ -42,10 +42,10 @@ class Solution {
      * Approach #2 (Recursion - DFS)
      */
     public int sumNumbers2(TreeNode root) {
-        return helper(root, 0);
+        return dfs(root, 0);
     }
 
-    private int helper(TreeNode root, int sum) {
+    private int dfs(TreeNode root, int sum) {
         if (root == null) {
             return 0;
         }
@@ -53,7 +53,7 @@ class Solution {
         if (root.left == null && root.right == null) {
             return sum;
         }
-        return helper(root.left, sum) + helper(root.right, sum);
+        return dfs(root.left, sum) + dfs(root.right, sum);
     }
 
     public static void main(String[] args) {

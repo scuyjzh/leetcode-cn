@@ -36,7 +36,7 @@ class Solution {
     }
 
     /**
-     * Approach #2 (Iteration with Double ended Queue)
+     * Approach #2 (Iteration with Deque)
      */
     public List<Integer> postorderTraversal2(TreeNode root) {
         LinkedList<Integer> list = new LinkedList<>();

@@ -6,7 +6,7 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 
 class Solution {
     /**
-     * Approach #1 (Iteration with Double ended Queue)
+     * Approach #1 (Iteration with Deque)
      */
     public void flatten1(TreeNode root) {
         Deque<TreeNode> stack = new ArrayDeque<>();

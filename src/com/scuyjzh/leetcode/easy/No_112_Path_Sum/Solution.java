@@ -88,5 +88,6 @@ class Solution {
         TreeNode root = TreeNode.initBinaryTree("[5,4,8,11,null,13,4,7,2,null,null,null,null,null,1,null,null,3]");
         System.out.println(solution.hasPathSum1(root, 18));
         System.out.println(solution.hasPathSum2(root, 22));
+        System.out.println(solution.hasPathSum3(root, 22));
     }
 }

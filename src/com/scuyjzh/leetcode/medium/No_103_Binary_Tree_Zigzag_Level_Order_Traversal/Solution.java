@@ -6,14 +6,14 @@ import java.util.*;
 
 class Solution {
     /**
-     * Approach #1 (Iteration with BFS)
+     * Approach #1 (Iteration with Queue - BFS)
      */
     public List<List<Integer>> zigzagLevelOrder1(TreeNode root) {
         List<List<Integer>> list = new LinkedList<>();
         if (root == null) {
             return list;
         }
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         boolean zigzag = false;
         while (!queue.isEmpty()) {
