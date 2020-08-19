@@ -6,7 +6,7 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 
 class Solution {
     /**
-     * Approach #1 (Iteration with Stack)
+     * Approach #1 (Iteration with Deque)
      */
     public List<Integer> postorderTraversal1(TreeNode root) {
         List<Integer> list = new LinkedList<>();
