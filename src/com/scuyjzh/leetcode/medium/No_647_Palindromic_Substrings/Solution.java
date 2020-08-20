@@ -25,23 +25,8 @@ class Solution {
         return ans;
     }
 
-    /**
-     * 方法三：动态规划
-     * 时间复杂度：O(n^2)
-     * 空间复杂度：O(n^2)
-     */
-    public int countSubstrings3(String s) {
-        int n = s.length(), ans = 0;
-        boolean[][] dp = new boolean[n][n];
-        for (int j = 0; j < n; j++) {
-            for (int i = 0; i <= j; i++) {
-                if (s.charAt(j) == s.charAt(i)) {
-                    if (dp[i][j] = i == j || j - i == 1 || dp[i + 1][j - 1]) {
-                        ans++;
-                    }
-                }
-            }
-        }
-        return ans;
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(solution.countSubstrings1("madam"));
     }
 }
