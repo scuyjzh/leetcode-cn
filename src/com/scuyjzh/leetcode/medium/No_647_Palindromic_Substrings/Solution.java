@@ -81,6 +81,11 @@ class Solution {
         return ans;
     }
 
+    /**
+     * 方法四：Manacher 算法
+     * 时间复杂度：O(N)，Manacher 算法只有在遇到还未匹配的位置时才进行匹配，已经匹配过的位置不再匹配，因此对于字符串 S 的每一个位置，都只进行一次匹配，算法的复杂度为 O(N)
+     * 空间复杂度：O(N)，这里 p 数组的长度为 N
+     */
     public int countSubstrings4(String s) {
         int len = s.length();
         // 得到预处理字符串
