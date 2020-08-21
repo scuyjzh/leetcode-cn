@@ -17,7 +17,7 @@ class Solution {
         }
         int maxLen = 1;
         int begin = 0;
-        // s.charAt(i) 每次都会检查数组下标越界，因此先转换成字符数组，这一步非必须
+        // s.charAt(i) 每次都会检查数组下标越界，因此先转换成字符数组，这一步非必需
         char[] charArray = s.toCharArray();
 
         // 枚举所有长度严格大于 1 的子串 charArray[i..j]
