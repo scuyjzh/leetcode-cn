@@ -1,4 +1,4 @@
-package com.scuyjzh.lcci._01_01;
+package com.scuyjzh.lcci.No_01;
 
 /**
  * 判断字符是否唯一
@@ -6,7 +6,7 @@ package com.scuyjzh.lcci._01_01;
  * @author scuyjzh
  * @date 2020/6/30 14:09
  */
-class Solution {
+class Solution01 {
     public boolean isUnique(String astr) {
         // 由于ASCII码字符个数为128个，因此可以使用
         // 两个64位的long变量来存储是否出现某个字符
@@ -35,7 +35,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Solution01 solution = new Solution01();
         solution.isUnique("leetcode");
         solution.isUnique("abc");
     }

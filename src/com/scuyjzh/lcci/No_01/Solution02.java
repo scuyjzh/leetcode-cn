@@ -1,4 +1,4 @@
-package com.scuyjzh.lcci._01_02;
+package com.scuyjzh.lcci.No_01;
 
 /**
  * 判定是否互为字符重排
@@ -6,7 +6,7 @@ package com.scuyjzh.lcci._01_02;
  * @author scuyjzh
  * @date 2020/6/30 16:04
  */
-class Solution {
+class Solution02 {
     public boolean CheckPermutation(String s1, String s2) {
         int l1 = s1.length(), l2 = s2.length();
         if (l1 != l2) {
@@ -26,7 +26,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Solution02 solution = new Solution02();
         solution.CheckPermutation("abc", "cba");
     }
 }

@@ -1,4 +1,4 @@
-package com.scuyjzh.lcof._03;
+package com.scuyjzh.lcof.No_03;
 
 import java.util.*;
 
@@ -10,7 +10,7 @@ import java.util.*;
  */
 class Solution {
     public int findRepeatNumber(int[] nums) {
-        Set<Integer> set = new HashSet<Integer>();
+        Set<Integer> set = new HashSet<>();
         int repeat = -1;
         for (int num : nums) {
             if (!set.add(num)) {

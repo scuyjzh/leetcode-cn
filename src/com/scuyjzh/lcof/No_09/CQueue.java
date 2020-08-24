@@ -1,4 +1,4 @@
-package com.scuyjzh.lcof._09;
+package com.scuyjzh.lcof.No_09;
 
 import java.util.LinkedList;
 
