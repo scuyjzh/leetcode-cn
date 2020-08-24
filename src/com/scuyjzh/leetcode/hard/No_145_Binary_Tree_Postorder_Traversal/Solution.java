@@ -10,49 +10,55 @@ class Solution {
      */
     public List<Integer> postorderTraversal1(TreeNode root) {
         List<Integer> list = new LinkedList<>();
-        if (root == null) {
-            return list;
-        }
         Deque<TreeNode> stack = new ArrayDeque<>();
-        stack.addLast(root);
-        TreeNode pre = root;
-        while (!stack.isEmpty()) {
-            TreeNode cur = stack.peekLast();
-            boolean existed = (cur.left == null && cur.right == null) || (pre != null && (cur.left == pre || cur.right == pre));
-            if (existed) {
+
+        TreeNode cur = root;
+        TreeNode pre = null;
+        while (cur != null || !stack.isEmpty()) {
+            while (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
+            }
+            cur = stack.element();
+            if (cur.right == null || cur.right == pre) {
                 list.add(cur.val);
-                stack.pollLast();
+                stack.pop();
+                // 记录上一个访问的节点
+                // 用于判断“访问根节点之前，右子树是否已访问过”
                 pre = cur;
+                // 表示不需要转向，继续弹栈
+                cur = null;
             } else {
-                if (cur.right != null) {
-                    stack.addLast(cur.right);
-                }
-                if (cur.left != null) {
-                    stack.addLast(cur.left);
-                }
+                cur = cur.right;
             }
         }
         return list;
     }
 
     /**
-     * Approach #2 (Iteration with Deque)
+     * Approach #2 (Iteration with Stack)
      */
     public List<Integer> postorderTraversal2(TreeNode root) {
         LinkedList<Integer> list = new LinkedList<>();
         if (root == null) {
             return list;
         }
-        Deque<TreeNode> stack = new ArrayDeque<>();
-        stack.addLast(root);
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        // 前序遍历顺序为：根 -> 左 -> 右
+        // 后序遍历顺序为：左 -> 右 -> 根
         while (!stack.isEmpty()) {
-            TreeNode cur = stack.pollLast();
+            TreeNode cur = stack.pop();
+            // 将节点插入链表的头部
+            // 链表：右 -> 左 -> 根
             list.addFirst(cur.val);
+            // 将遍历的顺序由从左到右修改为从右到左
+            // 链表：左 -> 右 -> 根
             if (cur.left != null) {
-                stack.addLast(cur.left);
+                stack.push(cur.left);
             }
             if (cur.right != null) {
-                stack.addLast(cur.right);
+                stack.push(cur.right);
             }
         }
         return list;
