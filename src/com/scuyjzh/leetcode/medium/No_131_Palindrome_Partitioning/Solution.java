@@ -13,7 +13,7 @@ class Solution {
     public List<List<String>> partition1(String s) {
         // dp[i][j] 表示 s[i..j] 是否是回文串
         boolean[][] dp = new boolean[s.length()][s.length()];
-        dynamicProgramming(s, dp);
+        validPalindrome(s, dp);
 
         return partitionHelper(s, 0, dp);
     }
@@ -68,7 +68,7 @@ class Solution {
 
         // dp[i][j] 表示 s[i..j] 是否是回文串
         boolean[][] dp = new boolean[len][len];
-        dynamicProgramming(s, dp);
+        validPalindrome(s, dp);
 
         // 采用一个路径变量 path 搜索，path 全局使用一个，在递归执行方法结束以后需要回溯
         // path 的操作只在列表的末端，因此合适的数据结构是栈
@@ -126,7 +126,7 @@ class Solution {
         }
     }
 
-    private void dynamicProgramming(String s, boolean[][] dp) {
+    private void validPalindrome(String s, boolean[][] dp) {
         // s.charAt(i) 每次都会检查数组下标越界，因此先转换成字符数组，这一步非必需
         char[] charArray = s.toCharArray();
         // 状态转移方程：在 s[i] == s[j] 的时候，dp[i][j] 参考 dp[i + 1][j - 1]
