@@ -21,9 +21,9 @@ public class ListNode {
         String[] split = str.split(",");
         int len = split.length;
         ListNode[] listNodes = new ListNode[len + 1];
-        listNodes[0] = new ListNode(Integer.valueOf(split[0]));
+        listNodes[0] = new ListNode(Integer.parseInt(split[0]));
         for (int i = 1; i < len; i++) {
-            listNodes[i] = new ListNode(Integer.valueOf(split[i]));
+            listNodes[i] = new ListNode(Integer.parseInt(split[i]));
             listNodes[i - 1].next = listNodes[i];
         }
         return listNodes[0];
@@ -32,9 +32,8 @@ public class ListNode {
     public static String toString(ListNode head) {
         StringBuilder sb = new StringBuilder();
         sb.append("[");
-        ListNode cur = head;
-        while (cur.next != null) {
-            sb.append(cur.val + ",");
+        while (head.next != null) {
+            sb.append(head.val).append(",");
         }
         sb.replace(sb.length() - 1, sb.length(), "]");
         return sb.toString();
