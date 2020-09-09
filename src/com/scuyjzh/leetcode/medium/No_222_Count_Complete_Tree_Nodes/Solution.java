@@ -4,25 +4,33 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 
 class Solution {
     public int countNodes(TreeNode root) {
-        int hLeft = 0, hRight = 0;
-        TreeNode leftNode = root, rightNode = root;
-        while (leftNode != null) {
-            hLeft++;
-            leftNode = leftNode.left;
+        if (root == null) {
+            return 0;
         }
-        while (rightNode != null) {
-            hRight++;
-            rightNode = rightNode.right;
+        int left = countLevel(root.left);
+        int right = countLevel(root.right);
+        // 利用移位计算 2 ^ left 和 2 ^ right
+        // 1.left == right，说明左子树一定是满二叉树
+        // 2.left != right，说明右子树一定是满二叉树
+        if (left == right) {
+            return countNodes(root.right) + (1 << left);
+        } else {
+            return countNodes(root.left) + (1 << right);
         }
-        if (hLeft == hRight) {
-            return (1 << hLeft) - 1;
+    }
+
+    private int countLevel(TreeNode root) {
+        int level = 0;
+        while (root != null) {
+            level++;
+            root = root.left;
         }
-        return countNodes(root.left) + countNodes(root.right) + 1;
+        return level;
     }
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        TreeNode root = TreeNode.initBinaryTree("[1,2,3,4,5,6,null]");
+        TreeNode root = TreeNode.initBinaryTree("[1,2,3,4,5,6]");
         System.out.println(solution.countNodes(root));
     }
 }
