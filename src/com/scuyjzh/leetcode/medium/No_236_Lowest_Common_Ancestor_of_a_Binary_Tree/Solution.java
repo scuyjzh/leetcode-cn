@@ -3,16 +3,38 @@ package com.scuyjzh.leetcode.medium.No_236_Lowest_Common_Ancestor_of_a_Binary_Tr
 import com.scuyjzh.leetcode.structure.TreeNode;
 
 class Solution {
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p,
-                                         TreeNode q) {
-        if (root == null || root == p || root == q) {
-            return root;
+    private TreeNode ans;
+
+    public Solution() {
+        this.ans = null;
+    }
+
+    private boolean dfs(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null) {
+            return false;
         }
-        TreeNode left = lowestCommonAncestor(root.left, p, q);
-        TreeNode right = lowestCommonAncestor(root.right, p, q);
-        if (left != null && right != null) {
-            return root;
+        // 在左子树
+        boolean inLeft = dfs(root.left, p, q);
+        // 在右子树
+        boolean inRight = dfs(root.right, p, q);
+        // 是当前节点
+        boolean isCurrentNode = root.val == p.val || root.val == q.val;
+        if ((inLeft && inRight) || (isCurrentNode && (inLeft || inRight))) {
+            ans = root;
         }
-        return left != null ? left : right;
+        return inLeft || inRight || isCurrentNode;
+    }
+
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        this.dfs(root, p, q);
+        return this.ans;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        TreeNode root = TreeNode.initBinaryTree("[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]");
+        TreeNode p = new TreeNode(9);
+        TreeNode q = new TreeNode(11);
+        System.out.println(solution.lowestCommonAncestor(root, p, q).val);
     }
 }
