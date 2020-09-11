@@ -5,10 +5,6 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 class Solution {
     private TreeNode ans;
 
-    public Solution() {
-        this.ans = null;
-    }
-
     private boolean dfs(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null) {
             return false;
@@ -19,7 +15,8 @@ class Solution {
         boolean inRight = dfs(root.right, p, q);
         // 是当前节点
         boolean isCurrentNode = root.val == p.val || root.val == q.val;
-        if ((inLeft && inRight) || (isCurrentNode && (inLeft || inRight))) {
+        boolean existed = (inLeft && inRight) || (isCurrentNode && (inLeft || inRight));
+        if (existed) {
             ans = root;
         }
         return inLeft || inRight || isCurrentNode;
