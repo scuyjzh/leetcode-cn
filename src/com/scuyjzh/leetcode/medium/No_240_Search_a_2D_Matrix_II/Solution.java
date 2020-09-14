@@ -2,7 +2,7 @@ package com.scuyjzh.leetcode.medium.No_240_Search_a_2D_Matrix_II;
 
 /**
  * @author scuyjzh
- * @data 2020/6/28 23:19
+ * @date 2020/6/28 23:19
  */
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {

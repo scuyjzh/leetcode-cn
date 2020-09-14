@@ -2,7 +2,7 @@ package com.scuyjzh.leetcode.easy.No_167_Two_Sum_II;
 
 /**
  * @author scuyjzh
- * @data 2020/6/28 1:46
+ * @date 2020/6/28 1:46
  */
 class Solution {
     public int[] twoSum(int[] numbers, int target) {

@@ -2,7 +2,7 @@ package com.scuyjzh.leetcode.easy.No_028_strStr;
 
 /**
  * @author scuyjzh
- * @data 2020/6/22 4:24
+ * @date 2020/6/22 4:24
  */
 class Solution {
     /**

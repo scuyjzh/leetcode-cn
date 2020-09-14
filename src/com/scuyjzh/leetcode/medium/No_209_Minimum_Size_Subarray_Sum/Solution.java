@@ -2,7 +2,7 @@ package com.scuyjzh.leetcode.medium.No_209_Minimum_Size_Subarray_Sum;
 
 /**
  * @author scuyjzh
- * @data 2020/6/28 2:01
+ * @date 2020/6/28 2:01
  */
 class Solution {
     public int minSubArrayLen(int s, int[] nums) {

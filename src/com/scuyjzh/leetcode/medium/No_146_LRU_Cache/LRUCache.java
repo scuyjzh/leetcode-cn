@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * @author scuyjzh
- * @data 2020/6/16 21:11
+ * @date 2020/6/16 21:11
  */
 class LRUCache {
     class Node {

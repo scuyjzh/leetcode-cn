@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * @author scuyjzh
- * @data 2020/6/25 0:19
+ * @date 2020/6/25 0:19
  */
 class Solution {
     public boolean wordBreak(String s, List<String> wordDict) {
