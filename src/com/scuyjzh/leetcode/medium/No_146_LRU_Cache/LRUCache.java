@@ -3,6 +3,9 @@ package com.scuyjzh.leetcode.medium.No_146_LRU_Cache;
 import java.util.*;
 
 /**
+ * Design and implement a data structure for Least Recently Used (LRU) cache.
+ * It should support the following operations: get and put.
+ *
  * @author scuyjzh
  * @date 2020/6/16 21:11
  */
@@ -19,7 +22,7 @@ class LRUCache {
 
     class DoubleList {
         /**
-         * 头尾虚节点
+         * 虚拟头尾节点
          */
         private Node head, tail;
         /**
@@ -36,7 +39,7 @@ class LRUCache {
         }
 
         /**
-         * 在链表头部添加节点 x
+         * 在链表头部添加节点 x，时间 O(1)
          */
         public void addFirst(Node x) {
             x.next = head.next;
@@ -47,7 +50,7 @@ class LRUCache {
         }
 
         /**
-         * 删除链表中的 x 节点（x 一定存在）
+         * 删除链表中的 x 节点（x 一定存在），时间 O(1)
          */
         public void remove(Node x) {
             x.prev.next = x.next;
@@ -56,7 +59,7 @@ class LRUCache {
         }
 
         /**
-         * 删除链表中最后一个节点，并返回该节点
+         * 删除链表中最后一个节点，并返回该节点，时间 O(1)
          */
         public Node removeLast() {
             if (tail.prev == head) {
@@ -68,7 +71,7 @@ class LRUCache {
         }
 
         /**
-         * 返回链表长度
+         * 返回链表长度，时间 O(1)
          */
         public int size() {
             return size;
@@ -76,13 +79,15 @@ class LRUCache {
     }
 
     /**
-     * key -> Node(key, val)
+     * key 映射到 Node(key, val)
      */
     private HashMap<Integer, Node> map;
+
     /**
      * Node(k1, v1) <-> Node(k2, v2)...
      */
     private DoubleList cache;
+
     /**
      * 最大容量
      */
@@ -107,11 +112,12 @@ class LRUCache {
     public void put(int key, int val) {
         // 先把新节点 x 做出来
         Node x = new Node(key, val);
-
+        // key 已存在
         if (map.containsKey(key)) {
             // 删除旧的节点
             cache.remove(map.get(key));
         } else {
+            // cache 已满
             if (cap == cache.size()) {
                 // 删除链表最后一个节点
                 Node last = cache.removeLast();
@@ -119,9 +125,22 @@ class LRUCache {
                 map.remove(last.key);
             }
         }
-        // 新节点插到头部
+        // 新节点 x 插到头部
         cache.addFirst(x);
         // 更新 map 中对应的数据
         map.put(key, x);
+    }
+
+    public static void main(String[] args) {
+        LRUCache cache = new LRUCache(2);
+        cache.put(1, 1);
+        cache.put(2, 2);
+        System.out.println(cache.get(1));
+        cache.put(3, 3);
+        System.out.println(cache.get(2));
+        cache.put(4, 4);
+        System.out.println(cache.get(1));
+        System.out.println(cache.get(3));
+        System.out.println(cache.get(4));
     }
 }
