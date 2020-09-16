@@ -32,8 +32,9 @@ public class ListNode {
     public static String toString(ListNode head) {
         StringBuilder sb = new StringBuilder();
         sb.append("[");
-        while (head.next != null) {
+        while (head != null) {
             sb.append(head.val).append(",");
+            head = head.next;
         }
         sb.replace(sb.length() - 1, sb.length(), "]");
         return sb.toString();

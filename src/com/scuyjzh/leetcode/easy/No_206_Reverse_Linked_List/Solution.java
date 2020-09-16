@@ -37,7 +37,7 @@ class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.reverseList1(ListNode.initLinkedList("[1,2,3,4,5]")));
-        System.out.println(solution.reverseList2(ListNode.initLinkedList("[1,2,3,4,5]")));
+        System.out.println(ListNode.toString(solution.reverseList1(ListNode.initLinkedList("[1,2,3,4,5]"))));
+        System.out.println(ListNode.toString(solution.reverseList2(ListNode.initLinkedList("[1,2,3,4,5]"))));
     }
 }
