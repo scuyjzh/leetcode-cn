@@ -13,7 +13,7 @@ public class ListNode {
         val = x;
     }
 
-    public static ListNode initList(String str) {
+    public static ListNode initLinkedList(String str) {
         if ("[]".equals(str)) {
             return null;
         }
