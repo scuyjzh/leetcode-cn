@@ -1,5 +1,11 @@
 package com.scuyjzh.leetcode.medium.No_208_Implement_Trie;
 
+/**
+ * 实现一个 Trie (前缀树)，包含 insert, search, 和 startsWith 这三个操作。
+ *
+ * @author scuyjzh
+ * @date 2020/9/16 19:56
+ */
 class Trie {
     class TrieNode {
         boolean isWord;
@@ -62,5 +68,15 @@ class Trie {
             }
         }
         return true;
+    }
+
+    public static void main(String[] args) {
+        Trie trie = new Trie();
+        trie.insert("apple");
+        System.out.println(trie.search("apple"));
+        System.out.println(trie.search("app"));
+        System.out.println(trie.startsWith("app"));
+        trie.insert("app");
+        System.out.println(trie.search("app"));
     }
 }
