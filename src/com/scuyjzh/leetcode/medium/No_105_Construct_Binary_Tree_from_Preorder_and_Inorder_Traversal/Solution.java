@@ -15,13 +15,13 @@ class Solution {
         }
 
         // build a map of the indices of the values as they appear in the inorder array
-        Map<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>(16);
         for (int i = 0; i < inorder.length; i++) {
             map.put(inorder[i], i);
         }
 
         // initialize the stack of tree nodes
-        Stack<TreeNode> stack = new Stack<>();
+        Deque<TreeNode> stack = new ArrayDeque<>();
         int value = preorder[0];
         TreeNode root = new TreeNode(value);
         stack.push(root);
@@ -42,7 +42,7 @@ class Solution {
                 // pop the stack until we either run out of ancestors
                 // or the node at the top of the stack is to the right of the new node
                 TreeNode parent = null;
-                while (!stack.empty() && map.get(value) > map.get(stack.peek().val)) {
+                while (!stack.isEmpty() && map.get(value) > map.get(stack.peek().val)) {
                     parent = stack.pop();
                 }
                 parent.right = node;

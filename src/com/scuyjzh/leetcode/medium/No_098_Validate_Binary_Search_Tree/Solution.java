@@ -19,7 +19,7 @@ class Solution {
         if (root == null) {
             return true;
         }
-        Stack<TreeNode> stack = new Stack<>();
+        Deque<TreeNode> stack = new ArrayDeque<>();
         TreeNode cur = root;
         TreeNode pre = null;
         while (cur != null || !stack.isEmpty()) {
@@ -46,12 +46,14 @@ class Solution {
      * Approach #2 (Recursion)
      */
     public boolean isValidBST2(TreeNode root) {
-        // 二叉搜索树的两个特征：
-        // 1.节点的左子树只包含小于当前节点的数。
-        // 2.节点的右子树只包含大于当前节点的数。
-        // 即可理解为：
-        // 1.当前节点的值是其左子树的值的上界（最大值）
-        // 2.当前节点的值是其右子树的值的下界（最小值）
+        /*
+            二叉搜索树的两个特征：
+            1.节点的左子树只包含小于当前节点的数。
+            2.节点的右子树只包含大于当前节点的数。
+            也可理解为：
+            1.当前节点的值是其左子树的值的上界（最大值）
+            2.当前节点的值是其右子树的值的下界（最小值）
+        */
         return helper(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
 

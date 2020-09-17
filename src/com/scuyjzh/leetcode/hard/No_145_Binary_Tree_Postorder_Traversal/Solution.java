@@ -43,7 +43,7 @@ class Solution {
         if (root == null) {
             return list;
         }
-        Stack<TreeNode> stack = new Stack<>();
+        Deque<TreeNode> stack = new ArrayDeque<>();
         stack.push(root);
         // 前序遍历顺序为：根 -> 左 -> 右
         // 后序遍历顺序为：左 -> 右 -> 根
@@ -68,7 +68,7 @@ class Solution {
      * Approach #3 (Recursion - DFS)
      */
     public List<Integer> postorderTraversal3(TreeNode root) {
-        List<Integer> list = new LinkedList<Integer>();
+        List<Integer> list = new LinkedList<>();
         traversal(root, list);
         return list;
     }

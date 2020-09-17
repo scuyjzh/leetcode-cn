@@ -21,7 +21,7 @@ class Solution {
         }
 
         // initialize the stack of tree nodes
-        Stack<TreeNode> stack = new Stack<>();
+        Deque<TreeNode> stack = new ArrayDeque<>();
         int value = postorder[postorder.length - 1];
         TreeNode root = new TreeNode(value);
         stack.push(root);
@@ -42,7 +42,7 @@ class Solution {
                 // pop the stack until we either run out of ancestors
                 // or the node at the top of the stack is to the left of the new node
                 TreeNode parent = null;
-                while (!stack.empty() && map.get(value) < map.get(stack.peek().val)) {
+                while (!stack.isEmpty() && map.get(value) < map.get(stack.peek().val)) {
                     parent = stack.pop();
                 }
                 parent.left = node;

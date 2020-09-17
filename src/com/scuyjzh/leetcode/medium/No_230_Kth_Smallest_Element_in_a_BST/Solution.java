@@ -6,7 +6,7 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 
 class Solution {
     public int kthSmallest(TreeNode root, int k) {
-        Stack<TreeNode> stack = new Stack<>();
+        Deque<TreeNode> stack = new ArrayDeque<>();
         TreeNode cur = root;
         while (cur != null || !stack.isEmpty()) {
             while (cur != null) {
