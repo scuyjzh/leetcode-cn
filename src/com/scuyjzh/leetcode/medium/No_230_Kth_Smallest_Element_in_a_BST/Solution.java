@@ -1,8 +1,8 @@
 package com.scuyjzh.leetcode.medium.No_230_Kth_Smallest_Element_in_a_BST;
 
-import java.util.*;
-
 import com.scuyjzh.leetcode.structure.TreeNode;
+
+import java.util.*;
 
 class Solution {
     public int kthSmallest(TreeNode root, int k) {

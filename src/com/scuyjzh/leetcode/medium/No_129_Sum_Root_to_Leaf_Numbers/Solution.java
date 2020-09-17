@@ -1,8 +1,8 @@
 package com.scuyjzh.leetcode.medium.No_129_Sum_Root_to_Leaf_Numbers;
 
-import java.util.*;
-
 import com.scuyjzh.leetcode.structure.TreeNode;
+
+import java.util.*;
 
 class Solution {
     /**
@@ -13,8 +13,8 @@ class Solution {
             return 0;
         }
 
-        Deque<TreeNode> q = new LinkedList<>();
-        Deque<Integer> sumq = new LinkedList<>();
+        Deque<TreeNode> q = new ArrayDeque<>();
+        Deque<Integer> sumq = new ArrayDeque<>();
         q.addLast(root);
         sumq.addLast(root.val);
         int sum = 0;

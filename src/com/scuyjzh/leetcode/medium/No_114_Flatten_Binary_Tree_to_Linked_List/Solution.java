@@ -1,8 +1,8 @@
 package com.scuyjzh.leetcode.medium.No_114_Flatten_Binary_Tree_to_Linked_List;
 
-import java.util.*;
-
 import com.scuyjzh.leetcode.structure.TreeNode;
+
+import java.util.*;
 
 class Solution {
     /**

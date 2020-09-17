@@ -1,6 +1,6 @@
 package com.scuyjzh.leetcode.medium.No_016_3Sum_Closest;
 
-import java.util.Arrays;
+import java.util.*;
 
 class Solution {
     public int threeSumClosest(int[] nums, int target) {

@@ -2,8 +2,7 @@ package com.scuyjzh.leetcode.easy.No_100_Same_Tree;
 
 import com.scuyjzh.leetcode.structure.TreeNode;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * @author scuyjzh

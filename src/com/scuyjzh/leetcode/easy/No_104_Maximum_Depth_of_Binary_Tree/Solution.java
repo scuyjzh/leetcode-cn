@@ -1,8 +1,8 @@
 package com.scuyjzh.leetcode.easy.No_104_Maximum_Depth_of_Binary_Tree;
 
-import java.util.*;
-
 import com.scuyjzh.leetcode.structure.TreeNode;
+
+import java.util.*;
 
 class Solution {
     /**

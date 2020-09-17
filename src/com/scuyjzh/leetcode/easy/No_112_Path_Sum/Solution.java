@@ -1,8 +1,8 @@
 package com.scuyjzh.leetcode.easy.No_112_Path_Sum;
 
-import java.util.*;
-
 import com.scuyjzh.leetcode.structure.TreeNode;
+
+import java.util.*;
 
 class Solution {
     /**

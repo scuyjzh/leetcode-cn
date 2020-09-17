@@ -1,8 +1,8 @@
 package com.scuyjzh.leetcode.medium.No_105_Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal;
 
-import java.util.*;
-
 import com.scuyjzh.leetcode.structure.TreeNode;
+
+import java.util.*;
 
 class Solution {
     /**

@@ -1,8 +1,8 @@
 package com.scuyjzh.leetcode.medium.No_094_Binary_Tree_Inorder_Traversal;
 
-import java.util.*;
-
 import com.scuyjzh.leetcode.structure.TreeNode;
+
+import java.util.*;
 
 class Solution {
     /**

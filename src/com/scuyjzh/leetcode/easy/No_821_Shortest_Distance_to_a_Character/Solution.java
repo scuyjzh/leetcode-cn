@@ -1,6 +1,6 @@
 package com.scuyjzh.leetcode.easy.No_821_Shortest_Distance_to_a_Character;
 
-import java.util.Arrays;
+import java.util.*;
 
 class Solution {
     public int[] shortestToChar(String S, char C) {

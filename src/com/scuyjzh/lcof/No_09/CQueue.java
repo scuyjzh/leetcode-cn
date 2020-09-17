@@ -1,40 +1,46 @@
 package com.scuyjzh.lcof.No_09;
 
-import java.util.LinkedList;
+import java.util.*;
 
 /**
- * 用两个栈实现队列
- *
- * Your CQueue object will be instantiated and called as such:
- * CQueue obj = new CQueue();
- * obj.appendTail(value);
- * int param_2 = obj.deleteHead();
+ * 剑指 Offer 09. 用两个栈实现队列
+ * 用两个栈实现一个队列。
  *
  * @author scuyjzh
  * @date 2020/6/30 10:35
  */
 class CQueue {
-    LinkedList<Integer> A, B;
+    Deque<Integer> A, B;
 
     public CQueue() {
-        A = new LinkedList<>();
-        B = new LinkedList<>();
+        A = new ArrayDeque<>();
+        B = new ArrayDeque<>();
     }
 
     public void appendTail(int value) {
-        A.addLast(value);
+        A.push(value);
     }
 
     public int deleteHead() {
         if (!B.isEmpty()) {
-            return B.removeLast();
+            return B.pop();
         }
         if (A.isEmpty()) {
             return -1;
         }
         while (!A.isEmpty()) {
-            B.addLast(A.removeLast());
+            B.push(A.pop());
         }
-        return B.removeLast();
+        return B.pop();
+    }
+
+    public static void main(String[] args) {
+        CQueue q = new CQueue();
+        q.appendTail(1);
+        q.appendTail(2);
+        q.appendTail(3);
+        System.out.println(q.deleteHead());
+        System.out.println(q.deleteHead());
+        System.out.println(q.deleteHead());
     }
 }

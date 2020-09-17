@@ -1,8 +1,8 @@
 package com.scuyjzh.leetcode.hard.No_145_Binary_Tree_Postorder_Traversal;
 
-import java.util.*;
-
 import com.scuyjzh.leetcode.structure.TreeNode;
+
+import java.util.*;
 
 class Solution {
     /**
