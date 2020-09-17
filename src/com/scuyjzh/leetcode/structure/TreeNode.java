@@ -8,8 +8,14 @@ public class TreeNode {
     public TreeNode left;
     public TreeNode right;
 
-    public TreeNode(int x) {
-        val = x;
+    public TreeNode(int val) {
+        this.val = val;
+    }
+
+    public TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
     }
 
     public static TreeNode initBinaryTree(String str) {
@@ -22,7 +28,7 @@ public class TreeNode {
         TreeNode[] treeNodes = new TreeNode[len];
         for (int i = 0; i < len; ++i) {
             if (!"null".equals(split[i])) {
-                treeNodes[i] = new TreeNode(Integer.valueOf(split[i]));
+                treeNodes[i] = new TreeNode(Integer.parseInt(split[i]));
             }
         }
         for (int i = 0; i < len; ++i) {
