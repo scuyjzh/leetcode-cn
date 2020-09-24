@@ -4,6 +4,13 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 
 import java.util.*;
 
+/**
+ * 112. 路径总和
+ * 给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。
+ *
+ * @author scuyjzh
+ * @date 2020/9/21 15:10
+ */
 class Solution {
     /**
      * Approach #1 (Iteration with Queue - BFS)
@@ -17,21 +24,21 @@ class Solution {
         queNode.offer(root);
         queVal.offer(root.val);
         while (!queNode.isEmpty()) {
-            TreeNode now = queNode.poll();
-            int temp = queVal.poll();
-            if (now.left == null && now.right == null) {
-                if (temp == sum) {
+            TreeNode cur = queNode.poll();
+            int curSum = queVal.poll();
+            if (cur.left == null && cur.right == null) {
+                if (curSum == sum) {
                     return true;
                 }
                 continue;
             }
-            if (now.left != null) {
-                queNode.offer(now.left);
-                queVal.offer(now.left.val + temp);
+            if (cur.left != null) {
+                queNode.offer(cur.left);
+                queVal.offer(cur.left.val + curSum);
             }
-            if (now.right != null) {
-                queNode.offer(now.right);
-                queVal.offer(now.right.val + temp);
+            if (cur.right != null) {
+                queNode.offer(cur.right);
+                queVal.offer(cur.right.val + curSum);
             }
         }
         return false;
@@ -41,26 +48,32 @@ class Solution {
      * Approach #2 (Iteration by Postorder Traversal)
      */
     public boolean hasPathSum2(TreeNode root, int sum) {
+        if (root == null) {
+            return false;
+        }
         Deque<TreeNode> stack = new ArrayDeque<>();
-        TreeNode cur = root, pre = null;
-        int SUM = 0;
+        TreeNode cur = root;
+        TreeNode pre = null;
+        // 记录当前累计的和
+        int curSum = 0;
         while (cur != null || !stack.isEmpty()) {
             while (cur != null) {
-                stack.addLast(cur);
-                SUM += cur.val;
+                stack.push(cur);
+                curSum += cur.val;
                 cur = cur.left;
             }
-            cur = stack.peekLast();
-            if (cur.left == null && cur.right == null && SUM == sum) {
+            cur = stack.peek();
+            if (cur.left == null && cur.right == null && curSum == sum) {
                 return true;
             }
-            if (cur.right != null && cur.right != pre) {
-                cur = cur.right;
-            } else {
+            if (cur.right == null || cur.right == pre) {
+                stack.pop();
+                // 减去出栈的值
+                curSum -= cur.val;
                 pre = cur;
-                stack.pollLast();
-                SUM -= cur.val;
                 cur = null;
+            } else {
+                cur = cur.right;
             }
         }
         return false;
@@ -87,7 +100,7 @@ class Solution {
         Solution solution = new Solution();
         TreeNode root = TreeNode.initBinaryTree("[5,4,8,11,null,13,4,7,2,null,null,null,null,null,1,null,null,3]");
         System.out.println(solution.hasPathSum1(root, 18));
-        System.out.println(solution.hasPathSum2(root, 22));
-        System.out.println(solution.hasPathSum3(root, 22));
+        System.out.println(solution.hasPathSum2(root, 18));
+        System.out.println(solution.hasPathSum3(root, 18));
     }
 }
