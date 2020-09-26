@@ -4,6 +4,13 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 
 import java.util.*;
 
+/**
+ * 114. 二叉树展开为链表
+ * 给定一个二叉树，原地将它展开为一个单链表。
+ *
+ * @author scuyjzh
+ * @date 2020/9/25 11:09
+ */
 class Solution {
     /**
      * Approach #1 (Iteration with Stack)
@@ -13,13 +20,13 @@ class Solution {
         TreeNode cur = root;
         while (cur != null || !stack.isEmpty()) {
             if (cur.right != null) {
-                stack.addLast(cur.right);
+                stack.push(cur.right);
             }
             if (cur.left != null) {
                 cur.right = cur.left;
                 cur.left = null;
             } else if (!stack.isEmpty()) {
-                TreeNode tmp = stack.pollLast();
+                TreeNode tmp = stack.pop();
                 cur.right = tmp;
             }
             cur = cur.right;

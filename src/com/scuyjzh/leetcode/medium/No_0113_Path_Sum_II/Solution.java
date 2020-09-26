@@ -20,7 +20,7 @@ class Solution {
         if (root == null) {
             return list;
         }
-        List<Integer> path = new ArrayList<>();
+        List<Integer> path = new LinkedList<>();
         Deque<TreeNode> stack = new ArrayDeque<>();
         TreeNode cur = root;
         TreeNode pre = null;
