@@ -19,7 +19,7 @@ class Solution {
             int size = queue.size();
             while (size-- > 0) {
                 TreeNode cur = queue.remove();
-                // 第一个访问到的叶子就是最小深度的节点
+                // 第一个访问到的叶子就是最小深度的结点
                 if (cur.left == null && cur.right == null) {
                     return depth;
                 }
@@ -51,7 +51,7 @@ class Solution {
         // 右子树的最小深度
         int right = dfs(root.right);
         // 1.如果left和right都为0，返回1即可
-        // 2.如果left和right只有一个为0，说明只有一个孩子节点，只需要返回此孩子节点的最小深度+1即可
+        // 2.如果left和right只有一个为0，说明只有一个孩子结点，只需要返回此孩子结点的最小深度+1即可
         // 3.如果left和right都不为0，说明左右孩子都不为空，只需要返回最小深度的+1即可
         return (left == 0 || right == 0) ? left + right + 1 : Math.min(left, right) + 1;
     }

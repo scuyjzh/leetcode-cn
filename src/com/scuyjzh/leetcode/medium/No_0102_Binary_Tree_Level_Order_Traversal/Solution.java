@@ -14,10 +14,10 @@ class Solution {
         }
         List<List<Integer>> res = new LinkedList<>();
         Queue<TreeNode> queue = new LinkedList<>();
-        // 将根节点放入队列中，然后不断遍历队列
+        // 将根结点放入队列中，然后不断遍历队列
         queue.add(root);
         while (!queue.isEmpty()) {
-            // 获取当前队列的长度，这个长度相当于当前这一层的节点个数
+            // 获取当前队列的长度，这个长度相当于当前这一层的结点个数
             int size = queue.size();
             List<Integer> tmp = new LinkedList<>();
             while (size-- > 0) {
@@ -53,7 +53,7 @@ class Solution {
         if (res.size() < level) {
             res.add(new LinkedList<>());
         }
-        // 将当前节点的值加入到res中，level代表当前层，假设level是3，节点值是99
+        // 将当前结点的值加入到res中，level代表当前层，假设level是3，结点值是99
         // res是[ [1] [2,3] [4] ]，加入后res就变为 [ [1] [2,3] [4,99] ]
         res.get(level - 1).add(root.val);
         // 递归处理左子树和右子树，同时将层数level加1

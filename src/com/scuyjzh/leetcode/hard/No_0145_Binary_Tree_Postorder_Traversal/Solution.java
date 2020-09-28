@@ -23,8 +23,8 @@ class Solution {
             if (cur.right == null || cur.right == pre) {
                 list.add(cur.val);
                 stack.pop();
-                // 记录上一个访问的节点
-                // 用于判断“访问根节点之前，右子树是否已访问过”
+                // 记录上一个访问的结点
+                // 用于判断“访问根结点之前，右子树是否已访问过”
                 pre = cur;
                 // 表示不需要转向，继续弹栈
                 cur = null;
@@ -49,7 +49,7 @@ class Solution {
         // 后序遍历顺序为：左 -> 右 -> 根
         while (!stack.isEmpty()) {
             TreeNode cur = stack.pop();
-            // 将节点插入链表的头部
+            // 将结点插入链表的头部
             // 链表：右 -> 左 -> 根
             list.addFirst(cur.val);
             // 将遍历的顺序由从左到右修改为从右到左
