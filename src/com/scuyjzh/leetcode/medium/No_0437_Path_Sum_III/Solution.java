@@ -1,5 +1,7 @@
 package com.scuyjzh.leetcode.medium.No_0437_Path_Sum_III;
 
+import com.scuyjzh.leetcode.structure.TreeNode;
+
 /**
  * 437. 路径总和 III
  * 给定一个二叉树，它的每个结点都存放着一个整数值。找出路径和等于给定数值的路径总数。
@@ -10,4 +12,27 @@ package com.scuyjzh.leetcode.medium.No_0437_Path_Sum_III;
  * @date 2020/9/28 12:18
  */
 class Solution {
+    public int pathSum(TreeNode root, int sum) {
+        // array 数组存储某一次递归时所遍历结点的结果值，p 表示当前结点的位置，0 表示根结点
+        return helper(root, sum, new int[1000], 0);
+    }
+
+    public int helper(TreeNode root, int sum, int[] array, int p) {
+        if (root == null) {
+            return 0;
+        }
+        array[p] = root.val;
+        int curSum = 0;
+        int n = 0;
+        for (int i = p; i >= 0; i--) {
+            curSum += array[i];
+            if (curSum == sum) {
+                n++;
+                // 结点存放值可能为0或者负数，因此不能提前break
+            }
+        }
+        int left = helper(root.left, sum, array, p + 1);
+        int right = helper(root.right, sum, array, p + 1);
+        return n + left + right;
+    }
 }
