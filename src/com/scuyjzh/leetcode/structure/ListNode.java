@@ -4,7 +4,7 @@ package com.scuyjzh.leetcode.structure;
  * Definition for singly-linked list.
  *
  * @author scuyjzh
- * @date 2020/8/13 1:37
+ * @version 1.0
  */
 public class ListNode {
     public int val;
