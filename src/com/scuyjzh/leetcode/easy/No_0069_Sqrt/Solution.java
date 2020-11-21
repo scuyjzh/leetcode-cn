@@ -38,6 +38,6 @@ class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
         System.out.println(solution.mySqrt1(12));
-        System.out.println(solution.mySqrt2(12));
+        System.out.println(solution.mySqrt2(78));
     }
 }
