@@ -41,6 +41,9 @@ class Solution {
     }
 
     public static void main(String[] args) {
-
+        Solution solution = new Solution();
+        ListNode l1 = ListNode.initLinkedList("[2,4,3]");
+        ListNode l2 = ListNode.initLinkedList("[5,6,4]");
+        System.out.println(ListNode.toString(solution.addTwoNumbers(l1, l2)));
     }
 }
