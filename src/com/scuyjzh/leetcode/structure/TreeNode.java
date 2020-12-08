@@ -4,7 +4,6 @@ package com.scuyjzh.leetcode.structure;
  * Definition for a binary tree node.
  *
  * @author scuyjzh
- * @version 1.0
  */
 public class TreeNode {
     public int val;
@@ -22,7 +21,8 @@ public class TreeNode {
     }
 
     public static TreeNode initBinaryTree(String str) {
-        if ("[]".equals(str)) {
+        String emptyStr = "[]";
+        if (emptyStr.equals(str)) {
             return null;
         }
         str = str.substring(1, str.length() - 1);

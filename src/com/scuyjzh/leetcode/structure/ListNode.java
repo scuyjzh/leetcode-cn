@@ -4,7 +4,6 @@ package com.scuyjzh.leetcode.structure;
  * Definition for singly-linked list.
  *
  * @author scuyjzh
- * @version 1.0
  */
 public class ListNode {
     public int val;
@@ -15,7 +14,8 @@ public class ListNode {
     }
 
     public static ListNode initLinkedList(String str) {
-        if ("[]".equals(str)) {
+        String emptyStr = "[]";
+        if (emptyStr.equals(str)) {
             return null;
         }
         str = str.substring(1, str.length() - 1);
