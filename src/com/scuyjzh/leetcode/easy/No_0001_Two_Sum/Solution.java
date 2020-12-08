@@ -2,57 +2,43 @@ package com.scuyjzh.leetcode.easy.No_0001_Two_Sum;
 
 import java.util.*;
 
+/**
+ * 1. 两数之和
+ * 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
+ */
 class Solution {
     /**
-     * Approach #1 (Brute Force)
+     * 方法一：暴力枚举
      */
     public int[] twoSum1(int[] nums, int target) {
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[j] == target - nums[i]) {
+        int n = nums.length;
+        for (int i = 0; i < n; ++i) {
+            for (int j = i + 1; j < n; ++j) {
+                if (nums[j] + nums[i] == target) {
                     return new int[]{i, j};
                 }
             }
         }
-        throw new IllegalArgumentException("No two sum solution");
+        return new int[0];
     }
 
     /**
-     * Approach #2 (Two-pass Hash Table)
+     * 方法二：哈希表
      */
     public int[] twoSum2(int[] nums, int target) {
-        Map<Integer, Integer> map = new HashMap<>(16);
-        for (int i = 0; i < nums.length; i++) {
-            map.put(nums[i], i);
-        }
-        for (int i = 0; i < nums.length; i++) {
-            int complement = target - nums[i];
-            if (map.containsKey(complement) && map.get(complement) != i) {
-                return new int[]{i, map.get(complement)};
+        Map<Integer, Integer> hashtable = new HashMap<>(16);
+        for (int i = 0; i < nums.length; ++i) {
+            if (hashtable.containsKey(target - nums[i])) {
+                return new int[]{hashtable.get(target - nums[i]), i};
             }
+            hashtable.put(nums[i], i);
         }
-        throw new IllegalArgumentException("No two sum solution");
-    }
-
-    /**
-     * Approach #3 (One-pass Hash Table)
-     */
-    public int[] twoSum3(int[] nums, int target) {
-        Map<Integer, Integer> map = new HashMap<>(16);
-        for (int i = 0; i < nums.length; i++) {
-            int complement = target - nums[i];
-            if (map.containsKey(complement)) {
-                return new int[]{map.get(complement), i};
-            }
-            map.put(nums[i], i);
-        }
-        throw new IllegalArgumentException("No two sum solution");
+        return new int[0];
     }
 
     public static void main(String[] args) {
         Solution solution = new Solution();
         System.out.println(Arrays.toString(solution.twoSum1(new int[]{3, 2, 4}, 6)));
         System.out.println(Arrays.toString(solution.twoSum2(new int[]{3, 2, 4}, 6)));
-        System.out.println(Arrays.toString(solution.twoSum3(new int[]{3, 2, 4}, 6)));
     }
 }
