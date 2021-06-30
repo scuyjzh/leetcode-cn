@@ -16,12 +16,12 @@ import com.scuyjzh.leetcode.structure.ListNode;
 class Solution {
     /**
      * 方法一：模拟
-     * 时间复杂度：O(max(m,n))，其中m、n为两个链表的长度。我们要遍历两个链表的全部位置，而处理每个位置只需要O(1)的时间。
-     * 空间复杂度：O(max(m,n))。答案链表的长度最多为较长链表的长度+1。
+     * 时间复杂度：O(max(m,n))，其中 m、n 为两个链表的长度。我们要遍历两个链表的全部位置，而处理每个位置只需要 O(1) 的时间。
+     * 空间复杂度：O(max(m,n))。答案链表的长度最多为较长链表的长度 + 1。
      */
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode head = null, tail = null;
-        // 设定进位值为carry
+        // 设定进位值为 carry
         int carry = 0;
         while (l1 != null || l2 != null) {
             // 同时遍历两个链表
