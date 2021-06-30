@@ -3,9 +3,11 @@ package com.scuyjzh.leetcode.medium.No_0005_Longest_Palindromic_Substring;
 /**
  * 5. 最长回文子串
  * 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
- *
- * @author scuyjzh
- * @date 2020/8/20 9:45
+ * <p>
+ * 示例 1：
+ * 输入：s = "babad"
+ * 输出："bab"
+ * 解释："aba" 同样是符合题意的答案。
  */
 class Solution {
     /**
@@ -24,8 +26,8 @@ class Solution {
         char[] charArray = s.toCharArray();
 
         // 枚举所有长度严格大于 1 的子串 charArray[i..j]
-        for (int i = 0; i < len - 1; i++) {
-            for (int j = i + 1; j < len; j++) {
+        for (int i = 0; i < len - 1; ++i) {
+            for (int j = i + 1; j < len; ++j) {
                 if (j - i + 1 > maxLen && validPalindromic(charArray, i, j)) {
                     maxLen = j - i + 1;
                     begin = i;
@@ -61,13 +63,13 @@ class Solution {
         // dp[i][j] 表示 s[i..j] 是否是回文串
         boolean[][] dp = new boolean[len][len];
         char[] charArray = s.toCharArray();
-        // 初始化的部分可以省去。因为只有一个字符的时候一定是回文，dp[i][i] 根本不会被其它状态值所参考
+        // 初始化：所有长度为 1 的子串都是回文串
         for (int i = 0; i < len; i++) {
             dp[i][i] = true;
         }
         // 由于 dp[i][j] 参考它左下方的值：（1）先升序填列；（2）再升序填行
-        for (int j = 1; j < len; j++) {
-            for (int i = 0; i < j; i++) {
+        for (int j = 1; j < len; ++j) {
+            for (int i = 0; i < j; ++i) {
                 // dp[i][j] = charArray[i] == charArray[j] && (j - i < 3 || dp[i + 1][j - 1]);
                 if (charArray[i] != charArray[j]) {
                     dp[i][j] = false;
