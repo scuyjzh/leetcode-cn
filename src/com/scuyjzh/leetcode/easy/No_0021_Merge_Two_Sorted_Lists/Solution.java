@@ -2,6 +2,14 @@ package com.scuyjzh.leetcode.easy.No_0021_Merge_Two_Sorted_Lists;
 
 import com.scuyjzh.leetcode.structure.ListNode;
 
+/**
+ * 21. 合并两个有序链表
+ * 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+ * <p>
+ * 示例 1：
+ * 输入：l1 = [1,2,4], l2 = [1,3,4]
+ * 输出：[1,1,2,3,4,4]
+ */
 class Solution {
     /**
      * Approach #1 (Iteration)
@@ -49,5 +57,13 @@ class Solution {
             l2.next = merge(l1, l2.next);
             return l2;
         }
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        ListNode l1 = ListNode.initLinkedList("[1,2,4]");
+        ListNode l2 = ListNode.initLinkedList("[1,3,4]");
+        System.out.println(ListNode.toString(solution.mergeTwoLists1(l1, l2)));
+        System.out.println(ListNode.toString(solution.mergeTwoLists2(l1, l2)));
     }
 }
