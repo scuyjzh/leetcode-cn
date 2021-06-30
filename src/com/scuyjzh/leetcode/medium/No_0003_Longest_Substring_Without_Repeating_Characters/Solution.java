@@ -24,7 +24,7 @@ class Solution {
         int rk = -1, ans = 0;
         for (int i = 0; i < n; ++i) {
             if (i != 0) {
-                // 左指针i向右移动一格，移除一个字符
+                // 左指针向右移动一格，移除一个字符
                 occ.remove(s.charAt(i - 1));
             }
             while (rk + 1 < n && !occ.contains(s.charAt(rk + 1))) {
