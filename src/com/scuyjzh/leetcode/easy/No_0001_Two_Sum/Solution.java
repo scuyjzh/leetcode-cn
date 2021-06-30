@@ -36,12 +36,15 @@ class Solution {
      * 空间复杂度：O(N)，其中 N 是数组中的元素数量。主要为哈希表的开销。
      */
     public int[] twoSum2(int[] nums, int target) {
-        Map<Integer, Integer> hashtable = new HashMap<>(16);
-        for (int i = 0; i < nums.length; ++i) {
-            if (hashtable.containsKey(target - nums[i])) {
-                return new int[]{hashtable.get(target - nums[i]), i};
+        int len = nums.length;
+        Map<Integer, Integer> hashMap = new HashMap<>(len - 1);
+        hashMap.put(nums[0], 0);
+        for (int i = 1; i < len; ++i) {
+            int another = target - nums[i];
+            if (hashMap.containsKey(another)) {
+                return new int[]{hashMap.get(another), i};
             }
-            hashtable.put(nums[i], i);
+            hashMap.put(nums[i], i);
         }
         throw new IllegalArgumentException("No two sum solution");
     }
@@ -49,6 +52,6 @@ class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
         System.out.println(Arrays.toString(solution.twoSum1(new int[]{3, 2, 4}, 5)));
-        System.out.println(Arrays.toString(solution.twoSum2(new int[]{3, 2, 4}, 8)));
+        System.out.println(Arrays.toString(solution.twoSum2(new int[]{3, 2, 4}, 7)));
     }
 }
