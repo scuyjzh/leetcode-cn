@@ -46,7 +46,7 @@ class Solution {
               由于两个数组均为正序数组，则只需要要求：nums1[i-1] <= nums2[j] && nums2[j-1] <= nums1[i]；
               由于该条件等价于在[0, m]中找到最大的i使得nums1[i-1] <= nums2[j]，因此可以使用二分查找。
               （证明：假设我们已经找到了满足条件的最大i，使得nums1[i-1] <= nums2[j]，
-                    那么此时必有nums[i] >= nums2[j]，进而有nums[i] >= nums2[j-1]）
+                     那么此时必有nums[i] >= nums2[j]，进而有nums[i] >= nums2[j-1]）
              */
             //要找最大i，使得nums1[i-1] <= nums2[j]，用对立面缩小区间
             if (nums1[i - 1] > nums2[j]) {
