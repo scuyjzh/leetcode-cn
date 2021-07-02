@@ -70,7 +70,7 @@ class Solution {
         // nums2分割线左边没有元素
         int nums2LeftMax = j == 0 ? Integer.MIN_VALUE : nums2[j - 1];
         // nums2分割线右边没有元素
-        int nums2RightMin = j == m ? Integer.MAX_VALUE : nums2[j];
+        int nums2RightMin = j == n ? Integer.MAX_VALUE : nums2[j];
         // 如果两个数组的长度之和为奇数，直接返回两个数组在分割线左边的最大值即可
         if (((m + n) % 2) == 1) {
             return Math.max(nums1LeftMax, nums2LeftMax);
