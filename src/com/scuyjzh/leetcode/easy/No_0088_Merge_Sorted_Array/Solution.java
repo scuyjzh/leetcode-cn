@@ -1,6 +1,6 @@
 package com.scuyjzh.leetcode.easy.No_0088_Merge_Sorted_Array;
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * 88. 合并两个有序数组
