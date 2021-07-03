@@ -102,23 +102,21 @@ class Solution {
      */
     public int myAtoi3(String str) {
         int len = str.length();
-        // str.charAt(i) 方法回去检查下标的合法性，一般先转换成字符数组
-        char[] charArray = str.toCharArray();
 
         // 1、去除前导空格
         int index = 0;
-        while (index < len && charArray[index] == ' ') {
+        while (index < len && str.charAt(index) == ' ') {
             index++;
         }
 
-        // 2、如果已经遍历完成（针对极端用例 "      "）
+        // 2、如果已经遍历结束
         if (index == len) {
             return 0;
         }
 
         // 3、如果出现符号字符，仅第 1 个有效，并记录正负
         int sign = 1;
-        char firstChar = charArray[index];
+        char firstChar = str.charAt(index);
         if (firstChar == '+') {
             index++;
         } else if (firstChar == '-') {
@@ -129,7 +127,7 @@ class Solution {
         // 4、将后续出现的数字字符进行转换（题目规定不能使用 long 类型）
         int res = 0;
         while (index < len) {
-            char currChar = charArray[index];
+            char currChar = str.charAt(index);
             // 4.1 先判断不合法的情况
             if (currChar < '0' || currChar > '9') {
                 break;
