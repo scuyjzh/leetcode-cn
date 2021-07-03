@@ -1,6 +1,7 @@
 package com.scuyjzh.leetcode.medium.No_0008_String_to_Integer;
 
 import java.util.*;
+import java.util.regex.*;
 
 /**
  * 8. 字符串转换整数 (atoi)
@@ -19,7 +20,7 @@ class Solution {
           in_number   end     end     in_number   end
           end         end     end     end         end
          */
-        private Map<String, String[]> table = new HashMap<>() {{
+        private Map<String, String[]> table = new HashMap<String, String[]>() {{
             put("start", new String[]{"start", "signed", "in_number", "end"});
             put("signed", new String[]{"end", "end", "in_number", "end"});
             put("in_number", new String[]{"end", "end", "in_number", "end"});
@@ -55,7 +56,7 @@ class Solution {
      * 时间复杂度：O(n)，其中 n 为字符串的长度。我们只需要依次处理所有的字符，处理每个字符需要的时间为 O(1)。
      * 空间复杂度：O(1)。自动机的状态只需要常数空间存储。
      */
-    public int myAtoi(String str) {
+    public int myAtoi1(String str) {
         Automaton automaton = new Automaton();
         int length = str.length();
         for (int i = 0; i < length; ++i) {
@@ -64,12 +65,41 @@ class Solution {
         return (int) (automaton.sign * automaton.ans);
     }
 
+    /**
+     * 方法二：正则表达式
+     */
+    public int myAtoi2(String str) {
+        //清空字符串开头和末尾空格（这是trim方法功能，事实上我们只需清空开头空格）
+        str = str.trim();
+        //java正则表达式
+        Pattern p = Pattern.compile("^[\\+\\-]?\\d+");
+        Matcher m = p.matcher(str);
+        int value = 0;
+        //判断是否能匹配
+        if (m.find()) {
+            //字符串转整数，溢出
+            try {
+                value = Integer.parseInt(str.substring(m.start(), m.end()));
+            } catch (Exception e) {
+                //由于有的字符串"42"没有正号，所以我们判断'-'
+                value = str.charAt(0) == '-' ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+            }
+        }
+        return value;
+    }
+
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.myAtoi("42"));
-        System.out.println(solution.myAtoi("   -42"));
-        System.out.println(solution.myAtoi("4193 with words"));
-        System.out.println(solution.myAtoi("words and 987"));
-        System.out.println(solution.myAtoi("-91283472332"));
+        System.out.println(solution.myAtoi1("42"));
+        System.out.println(solution.myAtoi1("   -42"));
+        System.out.println(solution.myAtoi1("4193 with words"));
+        System.out.println(solution.myAtoi1("words and 987"));
+        System.out.println(solution.myAtoi1("-91283472332"));
+
+        System.out.println(solution.myAtoi2("42"));
+        System.out.println(solution.myAtoi2("   -42"));
+        System.out.println(solution.myAtoi2("4193 with words"));
+        System.out.println(solution.myAtoi2("words and 987"));
+        System.out.println(solution.myAtoi2("-91283472332"));
     }
 }
