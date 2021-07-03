@@ -69,19 +69,28 @@ class Solution {
      * 方法二：正则表达式
      */
     public int myAtoi2(String str) {
-        //清空字符串开头和末尾空格（这是trim方法功能，事实上我们只需清空开头空格）
+        // 清空字符串开头和末尾的空格（这是trim方法功能，事实上只需清空开头的空格）
+        // 注意：trim()不能去除全角空格，只能去除半角空格
         str = str.trim();
-        //java正则表达式
-        Pattern p = Pattern.compile("^[\\+\\-]?\\d+");
+
+        /*
+          Java正则表达式：^[+\\-]?\\d+
+          ^   表示匹配字符串开头，此处匹配的就是 '+'、'-' 号
+          []  表示匹配其中包含的任一字符，比如[0-9]就是匹配数字字符 0 - 9 中的一个
+          ?   表示前面一个字符出现零次或者一次，这里用 ? 是因为 '+' 号可以省略
+          \\d 表示数字 0 - 9 范围
+          +   表示前面一个字符出现一次或者多次，\\d+ 合一起就能匹配一连串数字了
+         */
+        Pattern p = Pattern.compile("^[+-]?\\d+");
         Matcher m = p.matcher(str);
         int value = 0;
-        //判断是否能匹配
+        // 判断是否能匹配到
         if (m.find()) {
-            //字符串转整数，溢出
+            // 字符串转整数，溢出异常捕获
             try {
                 value = Integer.parseInt(str.substring(m.start(), m.end()));
             } catch (Exception e) {
-                //由于有的字符串"42"没有正号，所以我们判断'-'
+                // 判断正负
                 value = str.charAt(0) == '-' ? Integer.MIN_VALUE : Integer.MAX_VALUE;
             }
         }
