@@ -2,8 +2,6 @@ package com.scuyjzh.leetcode.structure;
 
 /**
  * Definition for a binary tree node.
- *
- * @author scuyjzh
  */
 public class TreeNode {
     public int val;

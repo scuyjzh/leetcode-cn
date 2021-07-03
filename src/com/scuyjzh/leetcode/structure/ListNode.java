@@ -2,8 +2,6 @@ package com.scuyjzh.leetcode.structure;
 
 /**
  * Definition for singly-linked list.
- *
- * @author scuyjzh
  */
 public class ListNode {
     public int val;

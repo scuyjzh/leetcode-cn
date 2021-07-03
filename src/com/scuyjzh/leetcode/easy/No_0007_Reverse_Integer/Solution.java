@@ -48,4 +48,10 @@ class Solution {
         }
         return ans;
     }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(solution.reverse(214748364));
+        System.out.println(solution.reverse(2147483647));
+    }
 }
