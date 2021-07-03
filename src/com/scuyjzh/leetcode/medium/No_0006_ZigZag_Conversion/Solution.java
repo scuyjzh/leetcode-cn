@@ -14,7 +14,7 @@ import java.util.*;
 class Solution {
     /**
      * 方法一：按行排序
-     * 时间复杂度：O(N)，遍历一遍字符串 s；
+     * 时间复杂度：O(N)，遍历一遍字符串 s。
      * 空间复杂度：O(N)，各行字符串共占用 O(N) 额外空间。
      */
     public String convert(String s, int numRows) {
