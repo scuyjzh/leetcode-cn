@@ -12,12 +12,12 @@ class Solution {
         public long ans = 0;
         private String state = "start";
         /*
-          用下面的表格来表示这个自动机：
-                      ' '   	+/- 	number  	other
-          start       start 	signed	in_number	end
-          signed	  end	    end	    in_number	end
-          in_number   end	    end	    in_number	end
-          end	      end	    end	    end	        end
+          用下面的表格来表示自动机：
+                      ' '     +/-     number      other
+          start       start   signed  in_number   end
+          signed      end     end     in_number   end
+          in_number   end     end     in_number   end
+          end         end     end     end         end
          */
         private Map<String, String[]> table = new HashMap<>() {{
             put("start", new String[]{"start", "signed", "in_number", "end"});
