@@ -10,4 +10,36 @@ package com.scuyjzh.leetcode.medium.No_0393_UTF8_Validation;
  * 输入是整数数组。只有每个整数的 最低 8 个有效位 用来存储数据。这意味着每个整数只表示 1 字节的数据。
  */
 class Solution {
+    public boolean validUtf8(int[] data) {
+        int current = 0;
+        for (int datum : data) {
+            if (current > 0) {
+                if ((datum & 0b11000000) != 0b10000000) {
+                    return false;
+                }
+                current--;
+                continue;
+            }
+            if ((datum & 0b10000000) == 0) {
+                current = 0;
+            } else if ((datum & 0b11100000) == 0b11000000) {
+                current = 1;
+            } else if ((datum & 0b11110000) == 0b11100000) {
+                current = 2;
+            } else if ((datum & 0b11111000) == 0b11110000) {
+                current = 3;
+            } else {
+                return false;
+            }
+        }
+        return current == 0;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        // 11000101 10000010 00000001
+        System.out.println(solution.validUtf8(new int[]{197, 130, 1}));
+        // 11101011 10001100 00000100
+        System.out.println(solution.validUtf8(new int[]{235, 140, 4}));
+    }
 }
