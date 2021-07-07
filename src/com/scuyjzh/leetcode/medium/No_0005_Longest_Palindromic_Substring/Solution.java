@@ -2,12 +2,8 @@ package com.scuyjzh.leetcode.medium.No_0005_Longest_Palindromic_Substring;
 
 /**
  * 5. 最长回文子串
- * 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
  * <p>
- * 示例：
- * 输入：s = "babad"
- * 输出："bab"
- * 解释："aba" 同样是符合题意的答案。
+ * 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
  */
 class Solution {
     /**
