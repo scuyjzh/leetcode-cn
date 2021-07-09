@@ -1,2 +1,3 @@
-# leetcode
-✏️【UPDATING】LeetCode Solutions in JAVA.
+# leetcode-cn
+✏️📖 Solutions for LeetCode(CN) Problems
+
