@@ -2,6 +2,11 @@ package com.scuyjzh.leetcode.medium.No_0016_3Sum_Closest;
 
 import java.util.*;
 
+/**
+ * 16. 最接近的三数之和
+ * <p>
+ * 给定一个包括n 个整数的数组nums和 一个目标值target。找出nums中的三个整数，使得它们的和与target最接近。返回这三个数的和。假定每组输入只存在唯一答案。
+ */
 class Solution {
     public int threeSumClosest(int[] nums, int target) {
         // 排序

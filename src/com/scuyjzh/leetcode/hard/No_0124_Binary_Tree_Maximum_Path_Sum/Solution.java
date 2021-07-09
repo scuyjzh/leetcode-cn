@@ -18,13 +18,13 @@ class Solution {
         if (root == null) {
             return 0;
         }
-        /* 由左孩子开始的最大路径和 */
+        // 由左孩子开始的最大路径和
         int left = helper(root.left);
-        /* 由右孩子开始的最大路径和 */
+        // 由右孩子开始的最大路径和
         int right = helper(root.right);
-        /* 计算以root为最高点的最大路径和，并和原先的最大值比较 */
+        // 计算以root为最高点的最大路径和，并和原先的最大值比较
         maxValue = Math.max(maxValue, Math.max(left, 0) + Math.max(right, 0) + root.val);
-        /* 返回以root为起点的单向路径的最大路径和 */
+        // 返回以root为起点的单向路径的最大路径和
         return Math.max(root.val, Math.max(root.val + left, root.val + right));
     }
 
