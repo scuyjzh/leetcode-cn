@@ -38,13 +38,12 @@ class Solution {
                     left++;
                     right--;
                     // 去除重复解
-                    while (left < right && nums[left] == nums[left + 1]) {
+                    while (left < right && nums[left] == nums[left - 1]) {
                         left++;
                     }
-                    while (left < right && nums[right] == nums[right - 1]) {
+                    while (left < right && nums[right] == nums[right + 1]) {
                         right--;
                     }
-                    right--;
                 } else if (sum < 0) {
                     left++;
                 } else {

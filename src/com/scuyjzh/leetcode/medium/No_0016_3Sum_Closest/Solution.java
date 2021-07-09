@@ -29,14 +29,14 @@ class Solution {
                     // 如果和小于 target，移动左指针
                     left++;
                     // 跳过重复元素
-                    while (left < right && nums[left] == nums[left + 1]) {
+                    while (left < right && nums[left] == nums[left - 1]) {
                         left++;
                     }
                 } else if (sum > target) {
                     // 如果和小于 target，移动右指针
                     right--;
                     // 跳过重复元素
-                    while (left < right && nums[right] == nums[right - 1]) {
+                    while (left < right && nums[right] == nums[right + 1]) {
                         right--;
                     }
                 } else {
