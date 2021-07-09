@@ -1,7 +1,7 @@
 # leetcode-cn
-✏️📖 Solutions for LeetCode(CN) Problems
+✏️📖 Solutions for LeetCode(CN) Problems (inspired by [haoel's leetcode](https://github.com/haoel/leetcode))
 
-(Notes: "🔒" means you need a premium subscription)
+(**Notes**: "🔒" means you need a premium subscription)
 
 ## Algorithms
 
