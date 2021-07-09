@@ -9,6 +9,11 @@ import java.util.*;
  * 注意：答案中不可以包含重复的三元组。
  */
 class Solution {
+    /**
+     * 方法一：排序 + 双指针
+     * 时间复杂度：O(N^2)，其中 N 是数组 nums 的长度。
+     * 空间复杂度：O(1)。
+     */
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> res = new LinkedList<>();
         if (nums == null || nums.length < 3) {
@@ -22,7 +27,7 @@ class Solution {
                 break;
             }
             if (i > 0 && nums[i] == nums[i - 1]) {
-                // 去重
+                // 跳过重复元素，避免出现重复解
                 continue;
             }
             int left = i + 1, right = nums.length - 1;
@@ -30,20 +35,20 @@ class Solution {
                 int sum = nums[i] + nums[left] + nums[right];
                 if (0 == sum) {
                     res.add(Arrays.asList(nums[i], nums[left], nums[right]));
+                    left++;
+                    right--;
+                    // 去除重复解
                     while (left < right && nums[left] == nums[left + 1]) {
-                        // 去重
-                        ++left;
+                        left++;
                     }
-                    ++left;
                     while (left < right && nums[right] == nums[right - 1]) {
-                        // 去重
-                        --right;
+                        right--;
                     }
-                    --right;
+                    right--;
                 } else if (sum < 0) {
-                    ++left;
+                    left++;
                 } else {
-                    --right;
+                    right--;
                 }
             }
         }
