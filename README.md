@@ -1,4 +1,4 @@
-# leetcode-cn
+# [leetcode-cn](https://leetcode-cn.com/)
 ✏️📖 Solutions for LeetCode(CN) Problems (inspired by [haoel's leetcode](https://github.com/haoel/leetcode))
 
 (**Notes**: "🔒" means you need a premium subscription)
@@ -10,6 +10,7 @@
 
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签                   |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ---------------------- |
+| 19   | [删除链表的倒数第 N 个结点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0019_Remove_Nth_Node_From_End_of_List/Solution.java) | 中等 | 链表 双指针            |
 | 18   | [四数之和](https://leetcode-cn.com/problems/4sum/)           | [Java](./src/com/scuyjzh/leetcode/medium/No_0018_4Sum/Solution.java) | 中等 | 数组 双指针 排序       |
 | 17   | [电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0017_Letter_Combinations_of_a_Phone_Number/Solution.java) | 中等 | 哈希表 字符串 回溯     |
 | 16   | [最接近的三数之和](https://leetcode-cn.com/problems/3sum-closest/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0016_3Sum_Closest/Solution.java) | 中等 | 数组 双指针 排序       |

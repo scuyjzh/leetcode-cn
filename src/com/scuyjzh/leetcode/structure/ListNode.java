@@ -7,13 +7,17 @@ public class ListNode {
     public int val;
     public ListNode next;
 
-    public ListNode(int x) {
-        val = x;
+    public ListNode(int val) {
+        this.val = val;
+    }
+
+    public ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
     }
 
     public static ListNode initLinkedList(String str) {
-        String emptyStr = "[]";
-        if (emptyStr.equals(str)) {
+        if ("[]".equals(str)) {
             return null;
         }
         str = str.substring(1, str.length() - 1);
@@ -29,6 +33,9 @@ public class ListNode {
     }
 
     public static String toString(ListNode head) {
+        if (head == null) {
+            return "[]";
+        }
         StringBuilder sb = new StringBuilder();
         sb.append("[");
         while (head != null) {
