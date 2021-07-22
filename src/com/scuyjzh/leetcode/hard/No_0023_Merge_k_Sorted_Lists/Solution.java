@@ -2,38 +2,83 @@ package com.scuyjzh.leetcode.hard.No_0023_Merge_k_Sorted_Lists;
 
 import com.scuyjzh.leetcode.structure.ListNode;
 
+import java.util.*;
+
+/**
+ * 23. 合并K个升序链表
+ * <p>
+ * 给你一个链表数组，每个链表都已经按升序排列。
+ * 请你将所有链表合并到一个升序链表中，返回合并后的链表。
+ */
 class Solution {
-    public ListNode mergeKLists(ListNode[] lists) {
+    /**
+     * 方法一：分治合并
+     */
+    public ListNode mergeKLists1(ListNode[] lists) {
         return partion(lists, 0, lists.length - 1);
     }
 
-    public ListNode partion(ListNode[] lists, int start, int end) {
+    private ListNode partion(ListNode[] lists, int start, int end) {
         if (start == end) {
             return lists[start];
         }
-        if (start < end) {
-            int mid = ((end - start) >> 1) + start;
-            ListNode l1 = partion(lists, start, mid);
-            ListNode l2 = partion(lists, mid + 1, end);
-            return merge(l1, l2);
-        } else {
+        if (start > end) {
             return null;
         }
+        int mid = ((end - start) >> 1) + start;
+        return merge(partion(lists, start, mid), partion(lists, mid + 1, end));
     }
 
-    public ListNode merge(ListNode l1, ListNode l2) {
-        if (l1 == null) {
-            return l2;
+    private ListNode merge(ListNode l1, ListNode l2) {
+        ListNode dummy = new ListNode(-1);
+        ListNode cur = dummy;
+        while (l1 != null && l2 != null) {
+            if (l1.val < l2.val) {
+                cur.next = l1;
+                l1 = l1.next;
+            } else {
+                cur.next = l2;
+                l2 = l2.next;
+            }
+            cur = cur.next;
         }
-        if (l2 == null) {
-            return l1;
+        cur.next = l1 == null ? l2 : l1;
+        return dummy.next;
+    }
+
+    /**
+     * 方法二：使用优先队列合并
+     * 时间复杂度：考虑优先队列中的元素不超过 k 个，那么插入和删除的时间代价为 O(log k)，这里最多有 kn 个点，对于每个点都被插入删除各一次，故总的时间代价即渐进时间复杂度为 O(kn × log k)。
+     * 空间复杂度：这里用了优先队列，优先队列中的元素不超过 k 个，故渐进空间复杂度为 O(k)。
+     */
+    public ListNode mergeKLists2(ListNode[] lists) {
+        if (lists.length == 0) {
+            return null;
         }
-        if (l1.val < l2.val) {
-            l1.next = merge(l1.next, l2);
-            return l1;
-        } else {
-            l2.next = merge(l1, l2.next);
-            return l2;
+
+        PriorityQueue<ListNode> queue = new PriorityQueue<>(Comparator.comparingInt(o -> o.val));
+        for (ListNode list : lists) {
+            if (list != null) {
+                queue.add(list);
+            }
         }
+
+        ListNode dummy = new ListNode(-1);
+        ListNode cur = dummy;
+        while (!queue.isEmpty()) {
+            ListNode nextNode = queue.poll();
+            cur.next = nextNode;
+            cur = cur.next;
+            if (nextNode.next != null) {
+                queue.add(nextNode.next);
+            }
+        }
+        return dummy.next;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(ListNode.toString(solution.mergeKLists1(new ListNode[]{ListNode.initLinkedList("[1,4,5]"), ListNode.initLinkedList("[1,3,4]"), ListNode.initLinkedList("[2,6]")})));
+        System.out.println(ListNode.toString(solution.mergeKLists2(new ListNode[]{ListNode.initLinkedList("[1,4,5]"), ListNode.initLinkedList("[1,3,4]"), ListNode.initLinkedList("[2,6]")})));
     }
 }
