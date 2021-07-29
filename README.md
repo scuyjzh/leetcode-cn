@@ -1,5 +1,5 @@
-# [leetcode-cn](https://leetcode-cn.com/)
-✏️📖 Solutions for LeetCode(CN) Problems (inspired by [haoel's leetcode](https://github.com/haoel/leetcode))
+# leetcode-cn
+✏️📖 Solutions for [LeetCode(CN)](https://leetcode-cn.com/) Problems (inspired by [haoel's leetcode](https://github.com/haoel/leetcode))
 
 (**Notes**: "🔒" means you need a premium subscription)
 
@@ -7,6 +7,7 @@
 
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签                              |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | --------------------------------- |
+| 33   | [搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0033_Search_in_Rotated_Sorted_Array/Solution.java) | 中等 | 数组 二分查找                     |
 | 32   | [最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0032_Longest_Valid_Parentheses/Solution.java) | 困难 | 栈 字符串 动态规划                |
 | 31   | [下一个排列](https://leetcode-cn.com/problems/next-permutation/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0031_Next_Permutation/Solution.java) | 中等 | 数组 双指针                       |
 | 30   | [串联所有单词的子串](https://leetcode-cn.com/problems/substring-with-concatenation-of-all-words/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0030_Substring_with_Concatenation_of_All_Words/Solution.java) | 困难 | 哈希表 字符串 滑动窗口            |
