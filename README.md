@@ -7,6 +7,7 @@
 
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签                              |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | --------------------------------- |
+| 37   | [解数独](https://leetcode-cn.com/problems/sudoku-solver/)    | [Java](./src/com/scuyjzh/leetcode/hard/No_0037_Sudoku_Solver/Solution.java) | 困难 | 数组 回溯 矩阵                    |
 | 36   | [有效的数独](https://leetcode-cn.com/problems/valid-sudoku/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0036_Valid_Sudoku/Solution.java) | 中等 | 数组 哈希表 矩阵                  |
 | 35   | [搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0035_Search_Insert_Position/Solution.java) | 简单 | 数组 二分查找                     |
 | 34   | [在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0034_Find_First_and_Last_Position_of_Element_in_Sorted_Array/Solution.java) | 中等 | 数组 二分查找                     |
