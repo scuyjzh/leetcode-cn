@@ -28,7 +28,7 @@ class Solution {
 
     /**
      * 方法二：哈希表
-     * 时间复杂度：O(N)，其中 N 是数组中的元素数量。对于每一个元素 x，我们可以 O(1) 地寻找 target - x。
+     * 时间复杂度：O(N)，其中 N 是数组中的元素数量。对于每一个元素 x，可以 O(1) 地寻找 target - x。
      * 空间复杂度：O(N)，其中 N 是数组中的元素数量。主要为哈希表的开销。
      */
     public int[] twoSum2(int[] nums, int target) {
