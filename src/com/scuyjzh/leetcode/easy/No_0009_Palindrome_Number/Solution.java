@@ -9,8 +9,8 @@ package com.scuyjzh.leetcode.easy.No_0009_Palindrome_Number;
 class Solution {
     /**
      * 方法一：反转一半数字
-     * 时间复杂度：O(log n)，对于每次迭代，我们会将输入除以 10，因此时间复杂度为 O(log n)。
-     * 空间复杂度：O(1)。我们只需要常数空间存放若干变量。
+     * 时间复杂度：O(log n)，对于每次迭代，会将输入除以 10，因此时间复杂度为 O(log n)。
+     * 空间复杂度：O(1)。只需要常数空间存放若干变量。
      */
     public boolean isPalindrome(int x) {
         // 特殊情况：
@@ -28,9 +28,9 @@ class Solution {
             x /= 10;
         }
 
-        // 当数字长度为奇数时，我们可以通过 revertedNumber/10 去除处于中位的数字。
-        // 例如，当输入为 12321 时，在 while 循环的末尾我们可以得到 x = 12，revertedNumber = 123，
-        // 由于处于中位的数字不影响回文（它总是与自己相等），所以我们可以简单地将其去除。
+        // 当数字长度为奇数时，可以通过 revertedNumber/10 去除处于中位的数字。
+        // 例如，当输入为 12321 时，在 while 循环的末尾可以得到 x = 12，revertedNumber = 123，
+        // 由于处于中位的数字不影响回文（它总是与自己相等），所以可以简单地将其去除。
         return x == revertedNumber || x == revertedNumber / 10;
     }
 
