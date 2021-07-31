@@ -2,16 +2,12 @@ package com.scuyjzh.leetcode.hard.No_0004_Median_of_Two_Sorted_Arrays;
 
 /**
  * 4. 寻找两个正序数组的中位数
- * 给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。请你找出并返回这两个正序数组的中位数。
  * <p>
- * 示例：
- * 输入：nums1 = [1,2], nums2 = [3,4]
- * 输出：2.50000
- * 解释：合并数组 = [1,2,3,4] ，中位数 (2 + 3) / 2 = 2.5
+ * 给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。请你找出并返回这两个正序数组的中位数。
  */
 class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        // 我们要在一个短的数组上搜索 i，需始保证 nums1 为较短的数组，否则可能会导致 nums2[j - 1] 的访问越界
+        // 要在一个短的数组上搜索 i，需始保证 nums1 为较短的数组，否则可能会导致 nums2[j - 1] 的访问越界
         if (nums1.length > nums2.length) {
             int[] temp = nums1;
             nums1 = nums2;
@@ -47,15 +43,13 @@ class Solution {
              * 分割线左侧元素小于等于分割线右侧元素。
              * 由于两个数组均为正序数组，则只需要要求：nums1[i-1] <= nums2[j] && nums2[j-1] <= nums1[i]；
              * 由于该条件等价于在[0, m]中找到最大的i使得nums1[i-1] <= nums2[j]，因此可以使用二分查找。
-             * （证明：假设我们已经找到了满足条件的最大i，使得nums1[i-1] <= nums2[j]，那么此时必有nums[i] >= nums2[j]，进而有nums[i] >= nums2[j-1]）
+             * （证明：假设已经找到了满足条件的最大i，使得nums1[i-1] <= nums2[j]，那么此时必有nums[i] >= nums2[j]，进而有nums[i] >= nums2[j-1]）
              */
-            // 要找最大i，使得nums1[i-1] <= nums2[j]，用对立面缩小区间
             if (nums1[i - 1] > nums2[j]) {
                 // 下一轮搜索的区间 [left, i - 1]
                 right = i - 1;
             } else {
                 // 下一轮搜索的区间 [i, right]
-                // 注意：[left(i), right]
                 left = i;
             }
         }
@@ -77,8 +71,7 @@ class Solution {
             return Math.max(nums1LeftMax, nums2LeftMax);
         } else {
             // 如果两个数组的长度之和为偶数，返回的是两个数组在左边的最大值和两个数组在右边的最小值的和的二分之一
-            // 此处不能被向下取整，所以要强制转换为double类型
-            return (double) ((Math.max(nums1LeftMax, nums2LeftMax) + Math.min(nums1RightMin, nums2RightMin))) / 2;
+            return 1.0 * ((Math.max(nums1LeftMax, nums2LeftMax) + Math.min(nums1RightMin, nums2RightMin))) / 2;
         }
     }
 
