@@ -14,7 +14,7 @@ import java.util.*;
 class Solution {
     /**
      * 方法：一次迭代
-     * 时间复杂度：O(1)，因为我们只对 81 个单元格进行了一次迭代。
+     * 时间复杂度：O(1)，因为只对 81 个单元格进行了一次迭代。
      * 空间复杂度：O(1)。
      */
     public boolean isValidSudoku(char[][] board) {
