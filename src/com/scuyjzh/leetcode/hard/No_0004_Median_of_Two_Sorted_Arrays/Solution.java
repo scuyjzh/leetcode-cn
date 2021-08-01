@@ -6,6 +6,11 @@ package com.scuyjzh.leetcode.hard.No_0004_Median_of_Two_Sorted_Arrays;
  * 给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。请你找出并返回这两个正序数组的中位数。
  */
 class Solution {
+    /**
+     * 方法：二分查找
+     * 时间复杂度：O(log(m+n))，其中 m 和 n 分别是数组 nums1 和 nums2 的长度。
+     * 空间复杂度：O(1)。
+     */
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         // 要在一个短的数组上搜索 i，需始保证 nums1 为较短的数组，否则可能会导致 nums2[j - 1] 的访问越界
         if (nums1.length > nums2.length) {
