@@ -9,9 +9,9 @@ import java.util.*;
  */
 class Solution {
     /**
-     * 方法一：排序 + 双指针
-     * 时间复杂度：O(N^2)，其中 N 是数组 nums 的长度。我们首先需要 O(NlogN) 的时间对数组进行排序，随后在枚举的过程中，使用一重循环 O(N) 枚举 a，双指针 O(N) 枚举 b 和 c，故一共是 O(N^2)。
-     * 空间复杂度：O(logN)。排序需要使用 O(logN) 的空间。然而我们修改了输入的数组 nums，在实际情况下不一定允许，因此也可以看成使用了一个额外的数组存储了 nums 的副本并进行排序，此时空间复杂度为 O(N)O(N)。
+     * 方法：排序 + 双指针
+     * 时间复杂度：O(N^2)，其中 N 是数组 nums 的长度。首先需要 O(NlogN) 的时间对数组进行排序，随后在枚举的过程中，使用一重循环 O(N) 枚举 a，双指针 O(N) 枚举 b 和 c，故一共是 O(N^2)。
+     * 空间复杂度：O(logN)。排序需要使用 O(logN) 的空间。
      */
     public int threeSumClosest(int[] nums, int target) {
         // 排序
