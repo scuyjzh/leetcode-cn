@@ -8,7 +8,57 @@ package com.scuyjzh.leetcode.medium.No_0029_Divide_Two_Integers;
  * 整数除法的结果应当截去（truncate）其小数部分，例如：truncate(8.345) = 8 以及 truncate(-2.7335) = -2
  */
 class Solution {
-    public int divide(int dividend, int divisor) {
+    /**
+     * 方法一：二分 + 倍增乘法
+     */
+    public int divide1(int dividend, int divisor) {
+        long x = dividend, y = divisor;
+        boolean isNeg = (x > 0 && y < 0) || (x < 0 && y > 0);
+        x = x < 0 ? -x : x;
+        y = y < 0 ? -y : y;
+
+        // 思路：通过实现一个「倍增乘法」，然后利用对于 x 除以 y，结果 x / y 必然落在范围 [0, x] 的规律进行二分
+        long l = 0, r = x;
+        while (l < r) {
+            /*
+             * 「二分」模板中计算 mid 的方式有两套，根据 check(mid) 函数为 true 时，需要调整的是 l 指针还是 r 指针来判断：
+             * • 当 check(mid) == true 调整的是 l 时：计算 mid 的方式应该为 mid = l + r + 1 >> 1：
+             * • 当 check(mid) == true 调整的是 r 时：计算 mid 的方式应该为 mid = l + r >> 1：
+             */
+            long mid = l + r + 1 >> 1;
+            if (mul(mid, y) <= x) {
+                l = mid;
+            } else {
+                r = mid - 1;
+            }
+        }
+        long ans = isNeg ? -l : l;
+        if (ans > Integer.MAX_VALUE || ans < Integer.MIN_VALUE) {
+            return Integer.MAX_VALUE;
+        }
+        return (int) ans;
+    }
+
+    /**
+     * 倍增乘法
+     *
+     * @param a 乘数
+     * @param k 被乘数
+     * @return 积
+     */
+    private long mul(long a, long k) {
+        long ans = 0;
+        while (k > 0) {
+            if ((k & 1) == 1) {
+                ans += a;
+            }
+            k >>= 1;
+            a += a;
+        }
+        return ans;
+    }
+
+    public int divide2(int dividend, int divisor) {
         if (dividend == 0) {
             return 0;
         }
@@ -36,7 +86,7 @@ class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.divide(10, 3));
-        System.out.println(solution.divide(7, -3));
+        System.out.println(solution.divide1(10, 4));
+        System.out.println(solution.divide2(7, -3));
     }
 }
