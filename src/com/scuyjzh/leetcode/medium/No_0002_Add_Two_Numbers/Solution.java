@@ -11,7 +11,7 @@ import com.scuyjzh.leetcode.structure.ListNode;
  */
 class Solution {
     /**
-     * 方法一：模拟
+     * 方法：模拟
      * 时间复杂度：O(max(m,n))，其中 m、n 为两个链表的长度。要遍历两个链表的全部位置，而处理每个位置只需要 O(1) 的时间。
      * 空间复杂度：O(max(m,n))。答案链表的长度最多为较长链表的长度 + 1。
      */
