@@ -52,7 +52,7 @@ class Solution {
     }
 
     /**
-     * 方法二：回溯法
+     * 方法二：回溯
      */
     public List<String> generateParenthesis2(int n) {
         List<String> res = new ArrayList<>();
