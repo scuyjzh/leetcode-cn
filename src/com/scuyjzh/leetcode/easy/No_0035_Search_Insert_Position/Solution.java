@@ -8,9 +8,9 @@ package com.scuyjzh.leetcode.easy.No_0035_Search_Insert_Position;
  */
 class Solution {
     /**
-     * 方法一：二分查找
+     * 方法：二分查找
      * 时间复杂度：O(log n)，其中 n 为数组的长度。二分查找所需的时间复杂度为 O(log n)。
-     * 空间复杂度：O(1)。我们只需要常数空间存放若干变量。
+     * 空间复杂度：O(1)。只需要常数空间存放若干变量。
      */
     public int searchInsert(int[] nums, int target) {
         /*
