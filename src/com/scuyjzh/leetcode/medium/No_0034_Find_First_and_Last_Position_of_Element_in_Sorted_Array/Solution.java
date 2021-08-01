@@ -11,7 +11,7 @@ import java.util.*;
  */
 class Solution {
     /**
-     * 方法一：二分查找
+     * 方法：二分查找
      * 时间复杂度：O(log n)，其中 n 为数组的长度。二分查找的时间复杂度为 O(log n)，一共会执行两次，因此总时间复杂度为 O(log n)。
      * 空间复杂度：O(1)。只需要常数空间存放若干变量。
      */
@@ -19,7 +19,7 @@ class Solution {
         /*
          * 思路：
          * 由于数组已经排序，因此整个数组是单调递增的，可以利用二分法来加速查找的过程。
-         * 考虑 target 开始和结束位置，其实我们要找的就是数组中「第一个等于 target 的位置」（记为 leftIdx）和「第一个大于 target 的位置减一」（记为 rightIdx）。
+         * 考虑 target 开始和结束位置，其实要找的就是数组中「第一个等于 target 的位置」（记为 leftIdx）和「第一个大于 target 的位置减一」（记为 rightIdx）。
          * 二分查找中，寻找 leftIdx 即为在数组中寻找第一个大于等于 target 的下标，寻找 rightIdx 即为在数组中寻找第一个大于 target 的下标，然后将下标减一。
          * 最后，因为 target 可能不存在数组中，因此需要重新校验得到的两个下标 leftIdx 和 rightIdx。
          */
