@@ -7,6 +7,7 @@
 
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签                              |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | --------------------------------- |
+| 38   | [外观数列](https://leetcode-cn.com/problems/count-and-say/)  | [Java](./src/com/scuyjzh/leetcode/medium/No_0038_Count_and_Say/Solution.java) | 中等 | 字符串                            |
 | 37   | [解数独](https://leetcode-cn.com/problems/sudoku-solver/)    | [Java](./src/com/scuyjzh/leetcode/hard/No_0037_Sudoku_Solver/Solution.java) | 困难 | 数组 回溯 矩阵                    |
 | 36   | [有效的数独](https://leetcode-cn.com/problems/valid-sudoku/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0036_Valid_Sudoku/Solution.java) | 中等 | 数组 哈希表 矩阵                  |
 | 35   | [搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0035_Search_Insert_Position/Solution.java) | 简单 | 数组 二分查找                     |
