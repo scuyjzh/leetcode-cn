@@ -8,6 +8,7 @@
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签                              |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | --------------------------------- |
 | 55   | [跳跃游戏](https://leetcode-cn.com/problems/jump-game/)      | [Java](./src/com/scuyjzh/leetcode/medium/No_0055_Jump_Game/Solution.java) | 中等 | 贪心 数组 动态规划                |
+| 46   | [全排列](https://leetcode-cn.com/problems/permutations/)     | [Java](./src/com/scuyjzh/leetcode/medium/No_0046_Permutations/Solution.java) | 中等 | 数组 回溯                         |
 | 45   | [跳跃游戏 II](https://leetcode-cn.com/problems/jump-game-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0045_Jump_Game_II/Solution.java) | 中等 | 贪心 数组 动态规划                |
 | 40   | [组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0040_Combination_Sum_II/Solution.java) | 中等 | 数组 回溯                         |
 | 39   | [组合总和](https://leetcode-cn.com/problems/combination-sum/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0039_Combination_Sum/Solution.java) | 中等 | 数组 回溯                         |
