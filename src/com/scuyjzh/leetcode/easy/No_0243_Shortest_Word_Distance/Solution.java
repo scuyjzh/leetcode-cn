@@ -9,20 +9,17 @@ package com.scuyjzh.leetcode.easy.No_0243_Shortest_Word_Distance;
  */
 class Solution {
     public int shortestDistance1(String[] words, String word1, String word2) {
-        int m = -1, n = -1;
+        int p1 = -1, p2 = -1;
         int res = Integer.MAX_VALUE;
-        for (int i = 0; i < words.length; i++) {
-            String s = words[i];
-            if (word1.equals(s)) {
-                m = i;
-                if (n != -1) {
-                    res = Math.min(res, m - n);
-                }
-            } else if (word2.equals(s)) {
-                n = i;
-                if (m != -1) {
-                    res = Math.min(res, n - m);
-                }
+        for (int i = 0; i < words.length; ++i) {
+            if (word1.equals(words[i])) {
+                p1 = i;
+            }
+            if (word2.equals(words[i])) {
+                p2 = i;
+            }
+            if (p1 != -1 && p2 != -1) {
+                res = Math.min(res, Math.abs(p1 - p2));
             }
         }
         return res;
