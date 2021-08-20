@@ -9,6 +9,7 @@
 - [Tags](#Tags)
   * [Array](#Array)
   * [String](#String)
+  * [Math](#Math)
 - [Problems](#Problems)
 
 ## Tags
@@ -45,6 +46,12 @@
 | 3    | [无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0003_Longest_Substring_Without_Repeating_Characters/Solution.java) | 中等 |
 | 5    | [最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0005_Longest_Palindromic_Substring/Solution.java) | 中等 |
 | 6    | [Z 字形变换](https://leetcode-cn.com/problems/zigzag-conversion/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0006_ZigZag_Conversion/Solution.java) | 中等 |
+
+### Math
+
+| #    | 题目                                                  | 题解                                                         | 难度 |
+| ---- | ----------------------------------------------------- | ------------------------------------------------------------ | ---- |
+| 50   | [Pow(x, n)](https://leetcode-cn.com/problems/powx-n/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0050_Pow/Solution.java) | 中等 |
 
 ## Problems
 
