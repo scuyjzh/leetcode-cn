@@ -9,11 +9,11 @@ package com.scuyjzh.leetcode.medium.No_0055_Jump_Game;
  */
 class Solution {
     /**
-     * 方法一：贪心
+     * 方法：贪心
      * 时间复杂度：O(n)，其中 n 为数组的大小。只需要访问 nums 数组一遍，共 n 个位置。
      * 空间复杂度：O(1)，不需要额外的空间开销。
      */
-    public boolean canJump1(int[] nums) {
+    public boolean canJump(int[] nums) {
         /*
          * 思路：
          * 对于每一个可以到达的位置 x，它使得 x+1, x+2, ..., x+nums[x] 这些连续的位置都可以到达。
@@ -41,37 +41,8 @@ class Solution {
         return false;
     }
 
-    /**
-     * 方法二：动态规划
-     */
-    public boolean canJump2(int[] nums) {
-        /*
-         * 思路：
-         * 1.参数
-         *   dp[k]表示从前面0到k-1个元素是否可以到达第k个元素，如果可以dp[k]为true，否则为false
-         * 2.递推方程
-         *   dp[k]由前面0到k-1位置的dp[i]决定，如果dp[i]==true且i+nums[i]>=k，则可以到达第k个位置
-         * 3.初始条件
-         *   dp[0]=true
-         */
-        boolean[] dp = new boolean[nums.length];
-        // 初值条件
-        dp[0] = true;
-        // 递推方程
-        for (int k = 1; k < nums.length; ++k) {
-            for (int i = 0; i < k; ++i) {
-                if (dp[i] && i + nums[i] >= k) {
-                    dp[k] = true;
-                    break;
-                }
-            }
-        }
-        return dp[nums.length - 1];
-    }
-
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.canJump1(new int[]{2, 3, 1, 1, 4}));
-        System.out.println(solution.canJump2(new int[]{3, 2, 1, 0, 4}));
+        System.out.println(solution.canJump(new int[]{2, 3, 1, 1, 4}));
     }
 }
