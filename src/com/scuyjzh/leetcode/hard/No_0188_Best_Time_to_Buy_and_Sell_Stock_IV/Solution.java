@@ -25,13 +25,13 @@ class Solution {
          *
          * 二、状态转移
          * • 对于 buy[i][j]，考虑当前手上持有的股票是否是在第 i 天买入的。
-         *   如果是第 i 天买入的，那么在第 i−1 天时，手上不持有股票，对应状态 sell[i−1][j]，并且需要扣除 [i]prices[i] 的买入花费；
+         *   如果是第 i 天买入的，那么在第 i−1 天时，手上不持有股票，对应状态 sell[i−1][j]，并且需要扣除 prices[i] 的买入花费；
          *   如果不是第 i 天买入的，那么在第 i−1 天时，手上持有股票，对应状态 buy[i−1][j]。
          *   那么可以得到状态转移方程：
          *       buy[i][j] = max{buy[i−1][j], sell[i−1][j] − price[i]}
          *
          * • 对于 sell[i][j]，考虑当前手上持有的股票是否是在第 i 天卖出的。
-         *   如果是第 i 天卖出的，那么在第 i−1 天时，手上持有股票，对应状态 buy[i−1][j−1]，并且需要增加 [i]prices[i] 的卖出收益；
+         *   如果是第 i 天卖出的，那么在第 i−1 天时，手上持有股票，对应状态 buy[i−1][j−1]，并且需要增加 prices[i] 的卖出收益；
          *   如果不是第 i 天卖出的，那么在第 i−1 天时，手上不持有股票，对应状态 sell[i−1][j]。
          *   那么可以得到状态转移方程：
          *       sell[i][j] = max{sell[i−1][j], buy[i−1][j−1] + price[i]}
@@ -70,6 +70,7 @@ class Solution {
         buy[0][0] = -prices[0];
         sell[0][0] = 0;
         for (int i = 1; i <= k; ++i) {
+            // 除以 2：防止 Integer.MIN_VALUE - prices[i] 越界
             buy[0][i] = sell[0][i] = Integer.MIN_VALUE / 2;
         }
 
