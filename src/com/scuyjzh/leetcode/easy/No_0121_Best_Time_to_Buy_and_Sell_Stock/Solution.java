@@ -9,73 +9,60 @@ package com.scuyjzh.leetcode.easy.No_0121_Best_Time_to_Buy_and_Sell_Stock;
  */
 class Solution {
     /**
-     * 方法一：一次遍历
-     * 时间复杂度：O(n)，只需要遍历一次。
-     * 空间复杂度：O(1)。只使用了常数个变量。
-     */
-    public int maxProfit1(int[] prices) {
-        // 用一个变量记录一个历史最低价格 min
-        int min = Integer.MAX_VALUE;
-        int res = 0;
-        for (int price : prices) {
-            if (price < min) {
-                // 更新历史最低价格
-                min = price;
-            } else if (price - min > res) {
-                // 更新最大利润
-                res = price - min;
-            }
-        }
-        return res;
-    }
-
-    /**
-     * 方法二：动态规划
+     * 方法一：动态规划
      * 时间复杂度：O(n)，其中 n 为数组的长度。一共有 2n 个状态，每次状态转移的时间复杂度为 O(1)，因此时间复杂度为 O(2n)=O(n)。
      * 空间复杂度：O(n)。需要开辟 O(n) 空间存储动态规划中的所有状态。如果使用空间优化，空间复杂度可以优化至 O(1)。
      */
-    public int maxProfit2(int[] prices) {
+    public int maxProfit1(int[] prices) {
+        /*
+         * 思路与算法：
+         * 一、状态定义
+         * • 定义状态 dp[i][0] 表示第 i 天交易完后手里没有股票的最大利润（i 从 0 开始）
+         * • 定义状态 dp[i][1] 表示第 i 天交易完后手里持有一支股票的最大利润
+         *
+         * 二、状态转移
+         * • 对于 dp[i][0]，如果这一天交易完后手里没有股票，那么可能的转移状态为前一天已经没有股票，即 dp[i−1][0]；
+         *   或者前一天结束的时候手里持有一支股票，即 dp[i−1][1]，这时候要将其卖出，并获得 prices[i] 的收益。
+         *   因此为了收益最大化，列出如下的转移方程：
+         *       dp[i][0] = max{dp[i−1][0], dp[i−1][1] + prices[i]}
+         *
+         * • 对于 dp[i][1]，可能的转移状态为前一天已经持有一支股票，即 dp[i−1][1]；
+         *   或者前一天结束时还没有股票，即 dp[i−1][0]，这时候要将其买入，并减少 prices[i] 的收益（因为只允许交易一次，所以此时利润就是当天股价的相反数）。
+         *   因此可以列出如下的转移方程：
+         *       dp[i][1] = max{dp[i−1][1], −prices[i]}
+         *
+         * 三、状态初始化
+         * 对于初始状态，根据状态定义可以知道第 0 天交易结束的时候 dp[0][0]=0，dp[0][1]=−prices[0]。
+         *
+         * 由于全部交易结束后，持有股票的收益一定低于不持有股票的收益，
+         * 因此这时候 dp[n−1][0] 的收益必然是大于 dp[n−1][1] 的，最后的答案即为 dp[n−1][0]。
+         */
         int n = prices.length;
 
         // 定义状态：
         // dp[i][0] 表示第 i 天交易完后手里没有股票的最大利润
-        // dp[i][1] 表示第 i 天交易完后手里持有一支股票的最大利润（i 从 0 开始）
+        // dp[i][1] 表示第 i 天交易完后手里持有一支股票的最大利润
         int[][] dp = new int[n][2];
 
-        // 对于初始状态，根据状态定义可以知道第 0 天交易结束的时候 dp[0][0]=0，dp[0][1]=−prices[0]
+        // 对于初始状态，根据状态定义可以知道第 0 天交易结束的时候 dp[0][0]=0, dp[0][1]=−prices[0]
         dp[0][0] = 0;
         dp[0][1] = -prices[0];
 
-        // 从第 2 天开始遍历
+        // 从第 2 天开始进行状态转移
         for (int i = 1; i < n; i++) {
-            /*
-             * 考虑 dp[i][0] 的转移方程，
-             * 如果这一天交易完后手里没有股票，那么可能的转移状态为前一天已经没有股票，即 dp[i−1][0]，
-             * 或者前一天结束的时候手里持有一支股票，即 dp[i−1][1]，这时候要将其卖出，并获得 prices[i] 的收益。
-             * 因此为了收益最大化，列出如下的转移方程：
-             * dp[i][0]=max{dp[i−1][0], dp[i−1][1]+prices[i]}
-             */
             dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i]);
-            /*
-             * 再来考虑 dp[i][1]，按照同样的方式考虑转移状态，
-             * 那么可能的转移状态为前一天已经持有一支股票，即 dp[i−1][1]，
-             * 或者前一天结束时还没有股票，即 dp[i−1][0]，这时候要将其买入，并减少 prices[i] 的收益（因为只允许交易一次，所以此时利润就是当天股价的相反数）。
-             * 可以列出如下的转移方程：
-             * dp[i][1]=max{dp[i−1][1], −prices[i]}
-             */
             dp[i][1] = Math.max(dp[i - 1][1], -prices[i]);
         }
-        // 由于全部交易结束后，持有股票的收益一定低于不持有股票的收益，
-        // 因此这时候 dp[n−1][0] 的收益必然是大于 dp[n−1][1] 的，最后的答案即为 dp[n−1][0]
+
         return dp[n - 1][0];
     }
 
     /**
-     * 方法三：动态规划（空间优化）
+     * 方法二：动态规划（空间优化）
      * 时间复杂度：O(n)，其中 n 为数组的长度。一共有 2n 个状态，每次状态转移的时间复杂度为 O(1)，因此时间复杂度为 O(2n)=O(n)。
      * 空间复杂度：O(1)。需要开辟 O(n) 空间存储动态规划中的所有状态。如果使用空间优化，空间复杂度可以优化至 O(1)。
      */
-    public int maxProfit3(int[] prices) {
+    public int maxProfit2(int[] prices) {
         int n = prices.length;
         /*
          * 空间优化：
@@ -89,6 +76,24 @@ class Solution {
             dp1 = Math.max(dp1, -prices[i]);
         }
         return dp0;
+    }
+
+    /**
+     * 方法三：贪心
+     * 时间复杂度：O(n)，只需要遍历一次。
+     * 空间复杂度：O(1)。只使用了常数个变量。
+     */
+    public int maxProfit3(int[] prices) {
+        // 用一个变量记录一个历史最低价格 min
+        int min = Integer.MAX_VALUE;
+        int res = 0;
+        for (int price : prices) {
+            // 更新历史最低价格
+            min = Math.min(min, price);
+            // 更新最大利润
+            res = Math.max(res, price - min);
+        }
+        return res;
     }
 
     public static void main(String[] args) {
