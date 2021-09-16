@@ -89,6 +89,7 @@
 | 152  | [乘积最大子数组](https://leetcode-cn.com/problems/maximum-product-subarray/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0152_Maximum_Product_Subarray/Solution.java) | 中等 | 数组 动态规划                              |
 | 228  | [汇总区间](https://leetcode-cn.com/problems/summary-ranges/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0228_Summary_Ranges/Solution.java) | 简单 | 数组                                       |
 | 163  | [缺失的区间](https://leetcode-cn.com/problems/missing-ranges/) 🔒 | [Java](./src/com/scuyjzh/leetcode/easy/No_0163_Missing_Ranges/Solution.java) | 简单 | 数组                                       |
+| 88   | [合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0088_Merge_Sorted_Array/Solution.java) | 简单 | 数组 双指针 排序                           |
 
 ### String
 
@@ -155,6 +156,7 @@
 | 119  | [杨辉三角 II](https://leetcode-cn.com/problems/pascals-triangle-ii/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0119_Pascals_Triangle_II/Solution.java) | 简单 | 数组 动态规划                                        |
 | 118  | [杨辉三角](https://leetcode-cn.com/problems/pascals-triangle/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0118_Pascals_Triangle/Solution.java) | 简单 | 数组 动态规划                                        |
 | 90   | [子集 II](https://leetcode-cn.com/problems/subsets-ii/)      | [Java](./src/com/scuyjzh/leetcode/medium/No_0090_Subsets_II/Solution.java) | 中等 | 位运算 数组 回溯                                     |
+| 88   | [合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0088_Merge_Sorted_Array/Solution.java) | 简单 | 数组 双指针 排序                                     |
 | 80   | [删除有序数组中的重复项 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0080_Remove_Duplicates_from_Sorted_Array_II/Solution.java) | 中等 | 数组 双指针                                          |
 | 78   | [子集](https://leetcode-cn.com/problems/subsets/)            | [Java](./src/com/scuyjzh/leetcode/medium/No_0078_Subsets/Solution.java) | 中等 | 位运算 数组 回溯                                     |
 | 77   | [组合](https://leetcode-cn.com/problems/combinations/)       | [Java](./src/com/scuyjzh/leetcode/medium/No_0077_Combinations/Solution.java) | 中等 | 数组 回溯                                            |
