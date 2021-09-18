@@ -96,6 +96,7 @@
 | 280  | [摆动排序](https://leetcode-cn.com/problems/wiggle-sort/) 🔒  | [Java](./src/com/scuyjzh/leetcode/medium/No_0280_Wiggle_Sort/Solution.java) | 中等 | 贪心 数组 排序                             |
 | 324  | [摆动排序 II](https://leetcode-cn.com/problems/wiggle-sort-ii/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0324_Wiggle_Sort_II/Solution.java) | 中等 | 数组 分治 快速排序 排序                    |
 | 278  | [第一个错误的版本](https://leetcode-cn.com/problems/first-bad-version/) | [Java](https://leetcode-cn.com/problems/first-bad-version/solution/) | 简单 | 二分查找 交互                              |
+| 35   | [搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0035_Search_Insert_Position/Solution.java) | 简单 | 数组 二分查找                              |
 
 ### String
 
