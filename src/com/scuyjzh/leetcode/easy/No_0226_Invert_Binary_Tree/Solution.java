@@ -5,35 +5,44 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 import java.util.*;
 
 /**
- * @author scuyjzh
- * @date 2020/8/13 1:01
+ * 226. 翻转二叉树
+ * <p>
+ * 翻转一棵二叉树。
  */
 class Solution {
     /**
-     * 方法一：深度优先搜索（递归法）
-     * 时间复杂度：O(n)，其中 n 是树中结点的个数，树中的每个结点都只被访问一次。在反转之前，不论怎样我们至少都得访问每个结点至少一次，因此这个问题无法做地比 O(n) 更好了
-     * 空间复杂度：O(n)，本方法使用了递归，在最坏情况下栈内需要存放 O(h) 个方法调用，其中 h 是树的高度。由于 h∈O(n)，可得出空间复杂度为 O(n)
+     * 方法一：递归
+     * 时间复杂度：O(N)，其中 N 为二叉树节点的数目。会遍历二叉树中的每一个节点，对每个节点而言，在常数时间内交换其两棵子树。
+     * 空间复杂度：O(N)。使用的空间由递归栈的深度决定，它等于当前节点在二叉树中的高度。在平均情况下，二叉树的高度与节点个数为对数关系，即 O(logN)。而在最坏情况下，树形成链状，空间复杂度为 O(N)。
      */
     public TreeNode invertTree1(TreeNode root) {
+        /*
+         * 思路与算法：
+         * 这是一道很经典的二叉树问题。显然，从根节点开始，递归地对树进行遍历，并从叶子节点先开始翻转。
+         * 如果当前遍历到的节点 root 的左右两棵子树都已经翻转，那么只需要交换两棵子树的位置，即可完成
+         * 以 root 为根节点的整棵子树的翻转。
+         */
         return invert(root);
     }
 
     private TreeNode invert(TreeNode root) {
-        // 递归函数的终止条件，结点为空时返回
+        // 递归函数的终止条件，当节点为 null 时直接返回
         if (root == null) {
             return null;
         }
+        // 如果当前结点不为 null，那么先将其左右子树进行翻转，然后交换左右子树
         TreeNode right = invert(root.right);
         TreeNode left = invert(root.left);
         root.left = right;
         root.right = left;
+        // 返回值为完成了翻转后的当前结点
         return root;
     }
 
     /**
-     * 方法二：广度优先搜索（迭代法）
-     * 时间复杂度：O(n)，其中 n 是树中结点的个数，树中的每个结点都只被访问/入队一次
-     * 空间复杂度：O(n)，即使在最坏的情况下，也就是队列里包含了树中所有的结点。对于一颗完整二叉树来说，叶子结点那一层拥有 n / 2 = O(n) 个结点
+     * 方法二：迭代
+     * 时间复杂度：O(N)，其中 N 为二叉树节点的数目。树中的每个节点都需要入队列/出队列一次。
+     * 空间复杂度：O(N)。最坏的情况下队列会包含所有的叶子节点，完全二叉树的叶子节点数是 n/2 个。
      */
     public TreeNode invertTree2(TreeNode root) {
         if (root == null) {
@@ -62,9 +71,8 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        TreeNode root = TreeNode.initBinaryTree("[1,2,3,4]");
-        System.out.println(solution.invertTree1(root));
-        System.out.println(solution.invertTree2(root));
+        TreeNode root = TreeNode.initBinaryTree("[1,2,3,4,5,6,7]");
+        new Solution().invertTree1(root);
+        new Solution().invertTree2(root);
     }
 }

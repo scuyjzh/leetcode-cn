@@ -10,6 +10,7 @@
   * [Array](#Array)
   * [String](#String)
   * [Math](#Math)
+  * [Tree](#Tree)
 - [Problems](#Problems)
 
 ## Tags
@@ -124,6 +125,14 @@
 | ---- | ----------------------------------------------------- | ------------------------------------------------------------ | ---- | --------- |
 | 50   | [Pow(x, n)](https://leetcode-cn.com/problems/powx-n/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0050_Pow/Solution.java) | 中等 | 递归 数学 |
 
+### Tree
+
+#### Preorder
+
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签                                |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ----------------------------------- |
+| 226  | [翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0226_Invert_Binary_Tree/Solution.java) | 简单 | 树 深度优先搜索 广度优先搜索 二叉树 |
+
 ## Problems
 
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签                                                 |
@@ -165,6 +174,7 @@
 | 238  | [除自身以外数组的乘积](https://leetcode-cn.com/problems/product-of-array-except-self/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0238_Product_of_Array_Except_Self/Solution.java) | 中等 | 数组 前缀和                                          |
 | 229  | [求众数 II](https://leetcode-cn.com/problems/majority-element-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0229_Majority_Element_II/Solution.java) | 中等 | 数组 哈希表 计数 排序                                |
 | 228  | [汇总区间](https://leetcode-cn.com/problems/summary-ranges/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0228_Summary_Ranges/Solution.java) | 简单 | 数组                                                 |
+| 226  | [翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0226_Invert_Binary_Tree/Solution.java) | 简单 | 树 深度优先搜索 广度优先搜索 二叉树                  |
 | 220  | [存在重复元素 III](https://leetcode-cn.com/problems/contains-duplicate-iii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0220_Contains_Duplicate_III/Solution.java) | 中等 | 数组 桶排序 有序集合 排序 滑动窗口                   |
 | 219  | [存在重复元素 II](https://leetcode-cn.com/problems/contains-duplicate-ii/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0219_Contains_Duplicate_II/Solution.java) | 简单 | 数组 哈希表 滑动窗口                                 |
 | 217  | [存在重复元素](https://leetcode-cn.com/problems/contains-duplicate/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0217_Contains_Duplicate/Solution.java) | 简单 | 数组 哈希表 排序                                     |
