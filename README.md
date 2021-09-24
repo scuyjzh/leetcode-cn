@@ -133,6 +133,12 @@
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ----------------------------------- |
 | 226  | [翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0226_Invert_Binary_Tree/Solution.java) | 简单 | 树 深度优先搜索 广度优先搜索 二叉树 |
 
+#### BFS
+
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签                              |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | --------------------------------- |
+| 235  | [二叉搜索树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree/Solution.java) | 简单 | 树 深度优先搜索 二叉搜索树 二叉树 |
+
 ## Problems
 
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签                                                 |
@@ -172,6 +178,7 @@
 | 243  | [最短单词距离](https://leetcode-cn.com/problems/shortest-word-distance/) 🔒 | [Java](./src/com/scuyjzh/leetcode/easy/No_0243_Shortest_Word_Distance/Solution.java) | 简单 | 数组 字符串                                          |
 | 239  | [滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0239_Sliding_Window_Maximum/Solution.java) | 困难 | 队列 数组 滑动窗口 单调队列 堆（优先队列）           |
 | 238  | [除自身以外数组的乘积](https://leetcode-cn.com/problems/product-of-array-except-self/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0238_Product_of_Array_Except_Self/Solution.java) | 中等 | 数组 前缀和                                          |
+| 235  | [二叉搜索树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree/Solution.java) | 简单 | 树 深度优先搜索 二叉搜索树 二叉树                    |
 | 229  | [求众数 II](https://leetcode-cn.com/problems/majority-element-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0229_Majority_Element_II/Solution.java) | 中等 | 数组 哈希表 计数 排序                                |
 | 228  | [汇总区间](https://leetcode-cn.com/problems/summary-ranges/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0228_Summary_Ranges/Solution.java) | 简单 | 数组                                                 |
 | 226  | [翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0226_Invert_Binary_Tree/Solution.java) | 简单 | 树 深度优先搜索 广度优先搜索 二叉树                  |
