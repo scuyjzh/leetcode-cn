@@ -116,6 +116,8 @@
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签                     | 说明 |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------------ | ---- |
 | 28   | [实现 strStr()](https://leetcode-cn.com/problems/implement-strstr/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0028_strStr/Solution.java) | 简单 | 双指针 字符串 字符串匹配 |      |
+| 14   | [最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0014_Longest_Common_Prefix/Solution.java) | 简单 | 字符串                   |      |
+| 58   | [最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0058_Length_of_Last_Word/Solution.java) | 简单 | 字符串                   |      |
 
 ### Math
 
@@ -221,6 +223,7 @@
 | 78   | [子集](https://leetcode-cn.com/problems/subsets/)            | [Java](./src/com/scuyjzh/leetcode/medium/No_0078_Subsets/Solution.java) | 中等 | 位运算 数组 回溯                                     |
 | 77   | [组合](https://leetcode-cn.com/problems/combinations/)       | [Java](./src/com/scuyjzh/leetcode/medium/No_0077_Combinations/Solution.java) | 中等 | 数组 回溯                                            |
 | 75   | [颜色分类](https://leetcode-cn.com/problems/sort-colors/)    | [Java](./src/com/scuyjzh/leetcode/medium/No_0075_Sort_Colors/Solution.java) | 中等 | 数组 双指针 排序                                     |
+| 58   | [最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0058_Length_of_Last_Word/Solution.java) | 简单 | 字符串                                               |
 | 57   | [插入区间](https://leetcode-cn.com/problems/insert-interval/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0057_Insert_Interval/Solution.java) | 中等 | 数组                                                 |
 | 56   | [合并区间](https://leetcode-cn.com/problems/merge-intervals/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0056_Merge_Intervals/Solution.java) | 中等 | 数组 排序                                            |
 | 55   | [跳跃游戏](https://leetcode-cn.com/problems/jump-game/)      | [Java](./src/com/scuyjzh/leetcode/medium/No_0055_Jump_Game/Solution.java) | 中等 | 贪心 数组 动态规划                                   |
