@@ -1,67 +1,29 @@
 package com.scuyjzh.leetcode.easy.No_0344_Reverse_String;
 
+/**
+ * 344. 反转字符串
+ * <p>
+ * 编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 s 的形式给出。
+ * 不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空间解决这一问题。
+ */
 class Solution {
     /**
-     * Approach #1 (Iterative Swapping Using Two Pointers)
+     * 方法：双指针
+     * 时间复杂度：O(N)，其中 N 为字符数组的长度。一共执行了 N/2 次的交换。
+     * 空间复杂度：O(1)。只使用了常数空间来存放若干变量。
      */
-    public String reverseString1(String s) {
-        char[] chs = s.toCharArray();
-        int i = 0;
-        int j = s.length() - 1;
-        while (i < j) {
-            chs[i] = (char) (chs[i] ^ chs[j]);
-            chs[j] = (char) (chs[i] ^ chs[j]);
-            chs[i] = (char) (chs[i] ^ chs[j]);
-            i++;
-            j--;
+    public void reverseString(char[] s) {
+        int n = s.length;
+        for (int left = 0, right = n - 1; left < right; ++left, --right) {
+            char tmp = s[left];
+            s[left] = s[right];
+            s[right] = tmp;
         }
-        return new String(chs);
-    }
-
-    /**
-     * Approach #2 (Iterative Swapping Using Two Pointers)
-     */
-    public String reverseString2(String s) {
-        byte[] bytes = s.getBytes();
-        int i = 0;
-        int j = s.length() - 1;
-        while (i < j) {
-            bytes[i] = (byte) (bytes[i] ^ bytes[j]);
-            bytes[j] = (byte) (bytes[i] ^ bytes[j]);
-            bytes[i] = (byte) (bytes[i] ^ bytes[j]);
-            i++;
-            j--;
-        }
-        return new String(bytes);
-    }
-
-    /**
-     * Approach #3 (Using Java Library)
-     */
-    public String reverseString4(String s) {
-        return new StringBuilder(s).reverse().toString();
-    }
-
-    /**
-     * Approach #4 (Recursion - Divide and Conquer)
-     */
-    public String reverseString3(String s) {
-        return helper(s);
-    }
-
-    private String helper(String s) {
-        int length = s.length();
-        if (length <= 1) {
-            return s;
-        }
-        String leftStr = s.substring(0, length / 2);
-        String rightStr = s.substring(length / 2, length);
-        return helper(rightStr) + helper(leftStr);
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.reverseString1("hello"));
-        System.out.println(solution.reverseString2("hello"));
+        char[] s = "hello".toCharArray();
+        new Solution().reverseString(s);
+        System.out.println(s);
     }
 }
