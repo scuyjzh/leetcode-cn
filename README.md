@@ -125,6 +125,7 @@
 | 186  | [翻转字符串里的单词 II](https://leetcode-cn.com/problems/reverse-words-in-a-string-ii/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0186_Reverse_Words_in_a_String_II/Solution.java) | 中等 | 双指针 字符串            |      |
 | 345  | [反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0345_Reverse_Vowels_of_a_String/Solution.java) | 简单 | 双指针 字符串            |      |
 | 205  | [同构字符串](https://leetcode-cn.com/problems/isomorphic-strings/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0205_Isomorphic_Strings/Solution.java) | 简单 | 哈希表 字符串            |      |
+| 293  | [翻转游戏](https://leetcode-cn.com/problems/flip-game/) 🔒    | [Java](./src/com/scuyjzh/leetcode/easy/No_0293_Flip_Game/Solution.java) | 简单 | 字符串                   |      |
 
 ### Math
 
@@ -182,6 +183,7 @@
 | 300  | [最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0300_Longest_Increasing_Subsequence/Solution.java) | 中等 | 数组 二分查找 动态规划                               |
 | 299  | [猜数字游戏](https://leetcode-cn.com/problems/bulls-and-cows/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0299_Bulls_and_Cows/Solution.java) | 中等 | 哈希表 字符串 计数                                   |
 | 295  | [数据流的中位数](https://leetcode-cn.com/problems/find-median-from-data-stream/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0295_Find_Median_from_Data_Stream/MedianFinder.java) | 困难 | 设计 双指针 数据流 排序 堆（优先队列）               |
+| 293  | [翻转游戏](https://leetcode-cn.com/problems/flip-game/) 🔒    | [Java](./src/com/scuyjzh/leetcode/easy/No_0293_Flip_Game/Solution.java) | 简单 | 字符串                                               |
 | 289  | [生命游戏](https://leetcode-cn.com/problems/game-of-life/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0289_Game_of_Life/Solution.java) | 中等 | 数组 矩阵 模拟                                       |
 | 287  | [寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0287_Find_the_Duplicate_Number/Solution.java) | 中等 | 位运算 数组 双指针 二分查找                          |
 | 283  | [移动零](https://leetcode-cn.com/problems/move-zeroes/)      | [Java](./src/com/scuyjzh/leetcode/easy/No_0283_Move_Zeroes/Solution.java) | 简单 | 数组 双指针                                          |
