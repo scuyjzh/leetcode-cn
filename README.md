@@ -123,6 +123,7 @@
 | 344  | [反转字符串](https://leetcode-cn.com/problems/reverse-string/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0344_Reverse_String/Solution.java) | 简单 | 递归 双指针 字符串       |      |
 | 151  | [翻转字符串里的单词](https://leetcode-cn.com/problems/reverse-words-in-a-string/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0151_Reverse_Words_in_a_String/Solution.java) | 中等 | 双指针 字符串            |      |
 | 186  | [翻转字符串里的单词 II](https://leetcode-cn.com/problems/reverse-words-in-a-string-ii/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0186_Reverse_Words_in_a_String_II/Solution.java) | 中等 | 双指针 字符串            |      |
+| 345  | [反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0345_Reverse_Vowels_of_a_String/Solution.java) | 简单 | 双指针 字符串            |      |
 
 ### Math
 
@@ -166,6 +167,7 @@
 | 352  | [将数据流变为多个不相交区间](https://leetcode-cn.com/problems/data-stream-as-disjoint-intervals/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0352_Data_Stream_as_Disjoint_Intervals/SummaryRanges.java) | 困难 | 设计 二分查找 有序集合                               |
 | 350  | [两个数组的交集 II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0350_Intersection_of_Two_Arrays_II/Solution.java) | 简单 | 数组 哈希表 双指针 二分查找 排序                     |
 | 349  | [两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0349_Intersection_of_Two_Arrays/Solution.java) | 简单 | 数组 哈希表 双指针 二分查找 排序                     |
+| 345  | [反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0345_Reverse_Vowels_of_a_String/Solution.java) | 简单 | 双指针 字符串                                        |
 | 344  | [反转字符串](https://leetcode-cn.com/problems/reverse-string/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0344_Reverse_String/Solution.java) | 简单 | 递归 双指针 字符串                                   |
 | 334  | [递增的三元子序列](https://leetcode-cn.com/problems/increasing-triplet-subsequence/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0334_Increasing_Triplet_Subsequence/Solution.java) | 中等 | 贪心 数组                                            |
 | 330  | [按要求补齐数组](https://leetcode-cn.com/problems/patching-array/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0330_Patching_Array/Solution.java) | 困难 | 贪心 数组                                            |
