@@ -5,28 +5,32 @@ import java.util.*;
 /**
  * 6. Z 字形变换
  * <p>
- * 将一个给定字符串 s 根据给定的行数 numRows ，以从上往下、从左到右进行 Z 字形排列。
+ * 将一个给定字符串 s 根据给定的行数 numRows ，以从上往下、从左到右
+ * 进行 Z 字形排列。
  * 比如输入字符串为 "PAYPALISHIRING" 行数为 3 时，排列如下：
- * P   A   H   N
- * A P L S I I G
- * Y   I   R
- * 之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如："PAHNAPLSIIGYIR"。
+ *   P   A   H   N
+ *   A P L S I I G
+ *   Y   I   R
+ * 之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比
+ * 如："PAHNAPLSIIGYIR"。
  * 请你实现这个将字符串进行指定行数变换的函数：
- * string convert(string s, int numRows);
+ *   string convert(string s, int numRows);
  */
 class Solution {
     /**
      * 方法：按行排序
-     * 时间复杂度：O(N)，遍历一遍字符串 s。
-     * 空间复杂度：O(N)，各行字符串共占用 O(N) 额外空间。
+     * 时间复杂度：O(n)，其中 n==len(s)
+     * 空间复杂度：O(n)
      */
     public String convert(String s, int numRows) {
         /*
          * 思路：
-         * 通过从左向右迭代字符串，确定字符位于 Z 字形图案中的哪一行。
+         * 通过从左向右迭代字符串，可以轻松地确定字符位于 Z 字形图案中的哪一行。
+         *
          * 算法：
-         * 使用 min(numRows, len(s)) 个列表来表示 Z 字形图案中的非空行。
-         * 从左到右迭代 s，将每个字符添加到合适的行。使用当前行和当前方向这两个变量对合适的行进行跟踪。
+         * 可以使用 min(numRows, len(s)) 个列表来表示 Z 字形图案中的非空行。
+         * 从左到右迭代 s，将每个字符添加到合适的行。使用当前行和当前方向这两个变量对合适的行进行跟
+         * 踪。
          * 只有当向上移动到最上面的行或向下移动到最下面的行时，当前方向才会发生改变。
          */
         if (numRows < 2) {
@@ -61,7 +65,8 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.convert("LEETCODE", 3));
+        System.out.println(new Solution().convert("PAYPALISHIRING", 3));
+        System.out.println(new Solution().convert("PAYPALISHIRING", 4));
+        System.out.println(new Solution().convert("A", 1));
     }
 }
