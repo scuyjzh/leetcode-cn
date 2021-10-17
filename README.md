@@ -132,6 +132,7 @@
 | 49   | [字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0049_Group_Anagrams/Solution.java) | 中等 | 哈希表 字符串 排序                 |      |
 | 249  | [移位字符串分组](https://leetcode-cn.com/problems/group-shifted-strings/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0249_Group_Shifted_Strings/Solution.java) | 中等 | 数组 哈希表 字符串                 |      |
 | 87   | [扰乱字符串](https://leetcode-cn.com/problems/scramble-string/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0087_Scramble_String/Solution.java) | 困难 | 字符串 动态规划                    |      |
+| 179  | [最大数](https://leetcode-cn.com/problems/largest-number/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0179_Largest_Number/Solution.java) | 中等 | 贪心 字符串 排序                   |      |
 
 ### Math
 
@@ -222,6 +223,7 @@
 | 189  | [旋转数组](https://leetcode-cn.com/problems/rotate-array/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0189_Rotate_Array/Solution.java) | 中等 | 数组 数学 双指针                                     |
 | 188  | [买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0188_Best_Time_to_Buy_and_Sell_Stock_IV/Solution.java) | 困难 | 数组 动态规划                                        |
 | 186  | [翻转字符串里的单词 II](https://leetcode-cn.com/problems/reverse-words-in-a-string-ii/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0186_Reverse_Words_in_a_String_II/Solution.java) | 中等 | 双指针 字符串                                        |
+| 179  | [最大数](https://leetcode-cn.com/problems/largest-number/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0179_Largest_Number/Solution.java) | 中等 | 贪心 字符串 排序                                     |
 | 169  | [多数元素](https://leetcode-cn.com/problems/majority-element/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0169_Majority_Element/Solution.java) | 简单 | 数组 哈希表 分治 计数 排序                           |
 | 164  | [最大间距](https://leetcode-cn.com/problems/maximum-gap/)    | [Java](./src/com/scuyjzh/leetcode/hard/No_0164_Maximum_Gap/Solution.java) | 困难 | 数组 桶排序 基数排序 排序                            |
 | 163  | [缺失的区间](https://leetcode-cn.com/problems/missing-ranges/) 🔒 | [Java](./src/com/scuyjzh/leetcode/easy/No_0163_Missing_Ranges/Solution.java) | 简单 | 数组                                                 |
