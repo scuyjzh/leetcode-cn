@@ -169,6 +169,7 @@
 
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签                                                 |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ---------------------------------------------------- |
+| 767  | [重构字符串](https://leetcode-cn.com/problems/reorganize-string/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0767_Reorganize_String/Solution.java) | 中等 | 贪心 哈希表 字符串 计数 排序 堆（优先队列）          |
 | 714  | [买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0714_Best_Time_to_Buy_and_Sell_Stock_with_Transaction_Fee/Solution.java) | 中等 | 贪心 数组 动态规划                                   |
 | 402  | [移掉 K 位数字](https://leetcode-cn.com/problems/remove-k-digits/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0402_Remove_K_Digits/Solution.java) | 中等 | 栈 贪心 字符串 单调栈                                |
 | 387  | [字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0387_First_Unique_Character_in_a_String/Solution.java) | 简单 | 队列 哈希表 字符串 计数                              |
