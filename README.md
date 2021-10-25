@@ -141,6 +141,7 @@
 | 271  | [字符串的编码与解码](https://leetcode-cn.com/problems/encode-and-decode-strings/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0271_Encode_and_Decode_Strings/Codec.java) | 中等 | 设计 数组 字符串                            |        |
 | 168  | [Excel表列名称](https://leetcode-cn.com/problems/excel-sheet-column-title/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0168_Excel_Sheet_Column_Title/Solution.java) | 简单 | 数学 字符串                                 |        |
 | 171  | [Excel 表列序号](https://leetcode-cn.com/problems/excel-sheet-column-number/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0171_Excel_Sheet_Column_Number/Solution.java) | 简单 | 数学 字符串                                 |        |
+| 13   | [罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0013_Roman_to_Integer/Solution.java) | 简单 | 哈希表 数学 字符串                          |        |
 
 ### Math
 
