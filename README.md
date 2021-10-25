@@ -143,6 +143,7 @@
 | 171  | [Excel 表列序号](https://leetcode-cn.com/problems/excel-sheet-column-number/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0171_Excel_Sheet_Column_Number/Solution.java) | 简单 | 数学 字符串                                 |        |
 | 13   | [罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0013_Roman_to_Integer/Solution.java) | 简单 | 哈希表 数学 字符串                          |        |
 | 12   | [整数转罗马数字](https://leetcode-cn.com/problems/integer-to-roman/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0012_Integer_to_Roman/Solution.java) | 中等 | 哈希表 数学 字符串                          |        |
+| 273  | [整数转换英文表示](https://leetcode-cn.com/problems/integer-to-english-words/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0273_Integer_to_English_Words/Solution.java) | 困难 | 递归 数学 字符串                            |        |
 
 ### Math
 
@@ -214,6 +215,7 @@
 | 277  | [搜寻名人](https://leetcode-cn.com/problems/find-the-celebrity/) 🔒 | [Java](https://leetcode.jp/leetcode-277-find-the-celebrity-%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90/) | 中等 | 贪心 图 双指针 交互                                  |
 | 275  | [H 指数 II](https://leetcode-cn.com/problems/h-index-ii/)    | [Java](./src/com/scuyjzh/leetcode/medium/No_0275_H_Index_II/Solution.java) | 中等 | 数组 二分查找                                        |
 | 274  | [H 指数](https://leetcode-cn.com/problems/h-index/)          | [Java](./src/com/scuyjzh/leetcode/medium/No_0274_H_Index/Solution.java) | 中等 | 数组 计数排序 排序                                   |
+| 273  | [整数转换英文表示](https://leetcode-cn.com/problems/integer-to-english-words/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0273_Integer_to_English_Words/Solution.java) | 困难 | 递归 数学 字符串                                     |
 | 271  | [字符串的编码与解码](https://leetcode-cn.com/problems/encode-and-decode-strings/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0271_Encode_and_Decode_Strings/Codec.java) | 中等 | 设计 数组 字符串                                     |
 | 252  | [会议室](https://leetcode-cn.com/problems/meeting-rooms/) 🔒  | [Java](./src/com/scuyjzh/leetcode/easy/No_0252_Meeting_Rooms/Solution.java) | 简单 | 数组 排序                                            |
 | 253  | [会议室 II](https://leetcode-cn.com/problems/meeting-rooms-ii/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0253_Meeting_Rooms_II/Solution.java) | 中等 | 贪心 数组 双指针 排序 堆（优先队列）                 |
