@@ -155,6 +155,7 @@
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签             |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ---------------- |
 | 157  | [用 Read4 读取 N 个字符](https://leetcode-cn.com/problems/read-n-characters-given-read4/) 🔒 | [Java](https://leetcode-cn.com/problems/read-n-characters-given-read4/solution/) | 简单 | 字符串 交互 模拟 |
+| 158  | [用 Read4 读取 N 个字符 II](https://leetcode-cn.com/problems/read-n-characters-given-read4-ii-call-multiple-times/) 🔒 | [Java](https://leetcode-cn.com/problems/read-n-characters-given-read4-ii-call-multiple-times/solution/) | 困难 | 字符串 交互 模拟 |
 
 ### Math
 
@@ -261,6 +262,7 @@
 | 163  | [缺失的区间](https://leetcode-cn.com/problems/missing-ranges/) 🔒 | [Java](./src/com/scuyjzh/leetcode/easy/No_0163_Missing_Ranges/Solution.java) | 简单 | 数组                                                 |
 | 162  | [寻找峰值](https://leetcode-cn.com/problems/find-peak-element/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0162_Find_Peak_Element/Solution.java) | 中等 | 数组 二分查找                                        |
 | 161  | [相隔为 1 的编辑距离](https://leetcode-cn.com/problems/one-edit-distance/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0161_One_Edit_Distance/Solution.java) | 中等 | 双指针 字符串                                        |
+| 158  | [用 Read4 读取 N 个字符 II](https://leetcode-cn.com/problems/read-n-characters-given-read4-ii-call-multiple-times/) 🔒 | [Java](https://leetcode-cn.com/problems/read-n-characters-given-read4-ii-call-multiple-times/solution/) | 困难 | 字符串 交互 模拟                                     |
 | 157  | [用 Read4 读取 N 个字符](https://leetcode-cn.com/problems/read-n-characters-given-read4/) 🔒 | [Java](https://leetcode-cn.com/problems/read-n-characters-given-read4/solution/) | 简单 | 字符串 交互 模拟                                     |
 | 154  | [寻找旋转排序数组中的最小值 II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0154_Find_Minimum_in_Rotated_Sorted_Array_II/Solution.java) | 困难 | 数组 二分查找                                        |
 | 153  | [寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0153_Find_Minimum_in_Rotated_Sorted_Array/Solution.java) | 中等 | 数组 二分查找                                        |
