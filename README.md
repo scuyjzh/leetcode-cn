@@ -113,6 +113,8 @@
 
 ### String
 
+#### 基础
+
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签                                        |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------------------------------- |
 | 28   | [实现 strStr()](https://leetcode-cn.com/problems/implement-strstr/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0028_strStr/Solution.java) | 简单 | 双指针 字符串 字符串匹配                    |
@@ -147,6 +149,12 @@
 | 246  | [中心对称数](https://leetcode-cn.com/problems/strobogrammatic-number/) 🔒 | [Java](./src/com/scuyjzh/leetcode/easy/No_0246_Strobogrammatic_Number/Solution.java) | 简单 | 哈希表 双指针 字符串                        |
 | 247  | [中心对称数 II ](https://leetcode-cn.com/problems/strobogrammatic-number-ii/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0247_Strobogrammatic_Number_II/Solution.java) | 中等 | 递归 数组 字符串                            |
 | 248  | [中心对称数 III](https://leetcode-cn.com/problems/strobogrammatic-number-iii/) 🔒 | [Java](./src/com/scuyjzh/leetcode/hard/No_0248_Strobogrammatic_Number_III/Solution.java) | 困难 | 递归 数组 字符串                            |
+
+#### 提高
+
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签             |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ---------------- |
+| 157  | [用 Read4 读取 N 个字符](https://leetcode-cn.com/problems/read-n-characters-given-read4/) 🔒 | [Java](https://leetcode-cn.com/problems/read-n-characters-given-read4/solution/) | 简单 | 字符串 交互 模拟 |
 
 ### Math
 
@@ -253,6 +261,7 @@
 | 163  | [缺失的区间](https://leetcode-cn.com/problems/missing-ranges/) 🔒 | [Java](./src/com/scuyjzh/leetcode/easy/No_0163_Missing_Ranges/Solution.java) | 简单 | 数组                                                 |
 | 162  | [寻找峰值](https://leetcode-cn.com/problems/find-peak-element/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0162_Find_Peak_Element/Solution.java) | 中等 | 数组 二分查找                                        |
 | 161  | [相隔为 1 的编辑距离](https://leetcode-cn.com/problems/one-edit-distance/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0161_One_Edit_Distance/Solution.java) | 中等 | 双指针 字符串                                        |
+| 157  | [用 Read4 读取 N 个字符](https://leetcode-cn.com/problems/read-n-characters-given-read4/) 🔒 | [Java](https://leetcode-cn.com/problems/read-n-characters-given-read4/solution/) | 简单 | 字符串 交互 模拟                                     |
 | 154  | [寻找旋转排序数组中的最小值 II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0154_Find_Minimum_in_Rotated_Sorted_Array_II/Solution.java) | 困难 | 数组 二分查找                                        |
 | 153  | [寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0153_Find_Minimum_in_Rotated_Sorted_Array/Solution.java) | 中等 | 数组 二分查找                                        |
 | 152  | [乘积最大子数组](https://leetcode-cn.com/problems/maximum-product-subarray/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0152_Maximum_Product_Subarray/Solution.java) | 中等 | 数组 动态规划                                        |
