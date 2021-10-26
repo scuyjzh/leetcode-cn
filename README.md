@@ -159,6 +159,12 @@
 | 68   | [文本左右对齐](https://leetcode-cn.com/problems/text-justification/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0068_Text_Justification/Solution.java) | 困难 | 字符串 模拟      |
 | 65   | [有效数字](https://leetcode-cn.com/problems/valid-number/)   | [Java](./src/com/scuyjzh/leetcode/hard/No_0065_Valid_Number/Solution.java) | 困难 | 字符串           |
 
+#### Substring
+
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签                   |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ---------------------- |
+| 76   | [最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0076_Minimum_Window_Substring/Solution.java) | 困难 | 哈希表 字符串 滑动窗口 |
+
 ### Math
 
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签 |
@@ -289,6 +295,7 @@
 | 80   | [删除有序数组中的重复项 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0080_Remove_Duplicates_from_Sorted_Array_II/Solution.java) | 中等 | 数组 双指针                                          |
 | 78   | [子集](https://leetcode-cn.com/problems/subsets/)            | [Java](./src/com/scuyjzh/leetcode/medium/No_0078_Subsets/Solution.java) | 中等 | 位运算 数组 回溯                                     |
 | 77   | [组合](https://leetcode-cn.com/problems/combinations/)       | [Java](./src/com/scuyjzh/leetcode/medium/No_0077_Combinations/Solution.java) | 中等 | 数组 回溯                                            |
+| 76   | [最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0076_Minimum_Window_Substring/Solution.java) | 困难 | 哈希表 字符串 滑动窗口                               |
 | 75   | [颜色分类](https://leetcode-cn.com/problems/sort-colors/)    | [Java](./src/com/scuyjzh/leetcode/medium/No_0075_Sort_Colors/Solution.java) | 中等 | 数组 双指针 排序                                     |
 | 68   | [文本左右对齐](https://leetcode-cn.com/problems/text-justification/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0068_Text_Justification/Solution.java) | 困难 | 字符串 模拟                                          |
 | 65   | [有效数字](https://leetcode-cn.com/problems/valid-number/)   | [Java](./src/com/scuyjzh/leetcode/hard/No_0065_Valid_Number/Solution.java) | 困难 | 字符串                                               |
