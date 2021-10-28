@@ -177,6 +177,7 @@
 | 125  | [验证回文串](https://leetcode-cn.com/problems/valid-palindrome/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0125_Valid_Palindrome/Solution.java) | 简单 | 双指针 字符串        |
 | 266  | [回文排列](https://leetcode-cn.com/problems/palindrome-permutation/) 🔒 | [Java](./src/com/scuyjzh/leetcode/easy/No_0266_Palindrome_Permutation/Solution.java) | 简单 | 位运算 哈希表 字符串 |
 | 5    | [最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0005_Longest_Palindromic_Substring/Solution.java) | 中等 | 字符串 动态规划      |
+| 9    | [回文数](https://leetcode-cn.com/problems/palindrome-number/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0009_Palindrome_Number/Solution.java) | 简单 | 数学                 |
 
 ### Math
 

@@ -2,20 +2,24 @@ package com.scuyjzh.leetcode.easy.No_0009_Palindrome_Number;
 
 /**
  * 9. 回文数
- * <p>
- * 给你一个整数 x ，如果 x 是一个回文整数，返回 true ；否则，返回 false 。
- * 回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。例如，121 是回文，而 123 不是。
+ *
+ * 给你一个整数 x ，如果 x 是一个回文整数，返回 true ；否则，返回
+ * false 。
+ * 回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。例
+ * 如，121 是回文，而 123 不是。
  */
 class Solution {
     /**
      * 方法：反转一半数字
-     * 时间复杂度：O(log n)，对于每次迭代，会将输入除以 10，因此时间复杂度为 O(log n)。
-     * 空间复杂度：O(1)。只需要常数空间存放若干变量。
+     *
+     * • 时间复杂度：O(log n)，对于每次迭代，会将输入除以 10，因此时间复杂度为 O(log n)。
+     * • 空间复杂度：O(1)。只需要常数空间存放若干变量。
      */
     public boolean isPalindrome(int x) {
         // 特殊情况：
-        // 1. 当 x < 0 时，x 不是回文数。
-        // 2. 如果数字的最后一位是 0，为了使该数字为回文，则其第一位数字也应该是 0
+        // 当 x < 0 时，x 不是回文数。
+        // 同样地，如果数字的最后一位是 0，为了使该数字为回文，则其第一位数字也应该是 0
+        // 只有 0 满足这一属性
         if (x < 0 || (x % 10 == 0 && x != 0)) {
             return false;
         }
@@ -33,8 +37,9 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.isPalindrome(121));
-        System.out.println(solution.isPalindrome(-121));
+        System.out.println(new Solution().isPalindrome(121));
+        System.out.println(new Solution().isPalindrome(-121));
+        System.out.println(new Solution().isPalindrome(10));
+        System.out.println(new Solution().isPalindrome(-101));
     }
 }
