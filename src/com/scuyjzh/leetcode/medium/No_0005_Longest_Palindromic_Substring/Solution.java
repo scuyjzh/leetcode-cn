@@ -2,14 +2,16 @@ package com.scuyjzh.leetcode.medium.No_0005_Longest_Palindromic_Substring;
 
 /**
  * 5. 最长回文子串
- * <p>
- * 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
+ *
+ * 给你一个字符串 s，找到 s 中最长的回文子串。
  */
 class Solution {
     /**
      * 方法一：动态规划
-     * 时间复杂度：O(N^2)
-     * 空间复杂度：O(N^2)，二维 dp 问题，一个状态得用二维有序数对表示，因此空间复杂度是 O(N^2)
+     *
+     * • 时间复杂度：O(N^2)，其中 N 是字符串的长度。动态规划的状态总数为 O(N^2)，对于每个状态，需
+     *   要转移的时间为 O(1)。
+     * • 空间复杂度：O(N^2)，即存储动态规划状态需要的空间。
      */
     public String longestPalindrome1(String s) {
         int len = s.length();
@@ -20,11 +22,11 @@ class Solution {
         int begin = 0;
         // dp[i][j] 表示 s[i..j] 是否是回文串
         boolean[][] dp = new boolean[len][len];
-        char[] charArray = s.toCharArray();
         // 初始化：所有长度为 1 的子串都是回文串
-        for (int i = 0; i < len; i++) {
+        for (int i = 0; i < len; ++i) {
             dp[i][i] = true;
         }
+        char[] charArray = s.toCharArray();
         // 由于 dp[i][j] 参考它左下方的值：（1）先升序填列；（2）再升序填行
         for (int j = 1; j < len; ++j) {
             for (int i = 0; i < j; ++i) {
@@ -51,9 +53,11 @@ class Solution {
     }
 
     /**
-     * 方法二：中心扩散
-     * 时间复杂度：O(N^2)，枚举“中心位置”时间复杂度为 O(N)，从“中心位置”扩散得到“回文子串”的时间复杂度为 O(N)，因此时间复杂度可以降到 O(N^2)
-     * 空间复杂度：O(1)，只使用到常数个临时变量，与字符串长度无关
+     * 方法二：中心扩展法
+     *
+     * • 时间复杂度：O(N^2)，其中 N 是字符串的长度。长度为 1 和 2 的回文中心分别有 N 和 N−1 个，每个回
+     *   文中心最多会向外扩展 O(N) 次。
+     * • 空间复杂度：O(1)。
      */
     public String longestPalindrome2(String s) {
         int len = s.length();
@@ -65,7 +69,7 @@ class Solution {
 
         char[] charArray = s.toCharArray();
         // 中心位置枚举到 len - 2 即可
-        for (int i = 0; i < len - 1; i++) {
+        for (int i = 0; i < len - 1; ++i) {
             // 奇数回文串
             int oddLen = expandAroundCenter(charArray, i, i);
             // 偶数回文串
@@ -100,10 +104,9 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.longestPalindrome1("madam"));
-        System.out.println(solution.longestPalindrome2("madam"));
-        System.out.println(solution.longestPalindrome1("revive"));
-        System.out.println(solution.longestPalindrome2("revive"));
+        System.out.println(new Solution().longestPalindrome1("babad"));
+        System.out.println(new Solution().longestPalindrome2("cbbd"));
+        System.out.println(new Solution().longestPalindrome1("a"));
+        System.out.println(new Solution().longestPalindrome2("ac"));
     }
 }
