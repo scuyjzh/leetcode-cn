@@ -150,6 +150,7 @@
 | 5    | [最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0005_Longest_Palindromic_Substring/Solution.java) | 中等 | 字符串 动态规划                             |
 | 9    | [回文数](https://leetcode-cn.com/problems/palindrome-number/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0009_Palindrome_Number/Solution.java) | 简单 | 数学                                        |
 | 214  | [最短回文串](https://leetcode-cn.com/problems/shortest-palindrome/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0214_Shortest_Palindrome/Solution.java) | 困难 | 字符串 字符串匹配 哈希函数 滚动哈希         |
+| 336  | [回文对](https://leetcode-cn.com/problems/palindrome-pairs/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0336_Palindrome_Pairs/Solution.java) | 困难 | 字典树 数组 哈希表 字符串                   |
 
 ### Math
 
