@@ -3,8 +3,10 @@ package com.scuyjzh.leetcode.medium.No_0131_Palindrome_Partitioning;
 import java.util.*;
 
 /**
- * @author scuyjzh
- * @date 2020/8/22 1:44
+ * 131. 分割回文串
+ *
+ * 给你一个字符串 s，请你将 s 分割成一些子串，使每个子串都是 回文串
+ * 。返回 s 所有可能的分割方案。
  */
 class Solution {
     /**
@@ -24,7 +26,7 @@ class Solution {
     public List<List<String>> partition2(String s) {
         // dp[i][j] 表示 s[i..j] 是否是回文串
         boolean[][] dp = new boolean[s.length()][s.length()];
-        for (int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < s.length(); ++i) {
             expandAroundCenter(s, i, i, dp);
             expandAroundCenter(s, i, i + 1, dp);
         }
@@ -41,17 +43,16 @@ class Solution {
             return ans;
         }
         List<List<String>> ans = new ArrayList<>();
-        for (int i = start; i < len; i++) {
+        for (int i = start; i < len; ++i) {
             // 当前切割后是回文串才考虑
             if (dp[start][i]) {
-                String left = s.substring(start, i + 1);
+                String prefix = s.substring(start, i + 1);
                 // 遍历后边字符串的所有结果，将当前的字符串加到头部
                 for (List<String> list : partitionHelper(s, i + 1, dp)) {
-                    list.add(0, left);
+                    list.add(0, prefix);
                     ans.add(list);
                 }
             }
-
         }
         return ans;
     }
@@ -91,7 +92,7 @@ class Solution {
 
         // dp[i][j] 表示 s[i..j] 是否是回文串
         boolean[][] dp = new boolean[len][len];
-        for (int i = 0; i < len; i++) {
+        for (int i = 0; i < len; ++i) {
             expandAroundCenter(s, i, i, dp);
             expandAroundCenter(s, i, i + 1, dp);
         }
@@ -114,7 +115,7 @@ class Solution {
             return;
         }
 
-        for (int i = start; i < len; i++) {
+        for (int i = start; i < len; ++i) {
             // 如果前缀字符串不是回文，则不产生分支和结点，这一步是剪枝操作
             if (!dp[start][i]) {
                 continue;
@@ -128,26 +129,25 @@ class Solution {
 
     private void validPalindrome(String s, boolean[][] dp) {
         // s.charAt(i) 每次都会检查数组下标越界，因此先转换成字符数组，这一步非必需
-        char[] charArray = s.toCharArray();
+        char[] chs = s.toCharArray();
         // 状态转移方程：在 s[i] == s[j] 的时候，dp[i][j] 参考 dp[i + 1][j - 1]
-        for (int j = 0; j < charArray.length; j++) {
+        for (int j = 0; j < chs.length; ++j) {
             // 注意：left <= right 取等号表示 1 个字符的时候也需要判断
-            for (int i = 0; i <= j; i++) {
+            for (int i = 0; i <= j; ++i) {
                 // 边界条件：j - 1 - (i + 1) + 1 < 2
-                dp[i][j] = charArray[i] == charArray[j] && (j - i < 3 || dp[i + 1][j - 1]);
+                dp[i][j] = chs[i] == chs[j] && (j - i < 3 || dp[i + 1][j - 1]);
             }
         }
     }
 
     private void expandAroundCenter(String s, int left, int right, boolean[][] dp) {
         // s.charAt(i) 每次都会检查数组下标越界，因此先转换成字符数组，这一步非必需
-        char[] charArray = s.toCharArray();
+        char[] chs = s.toCharArray();
         // 当 left = right 的时候，回文中心是一个字符，回文串的长度是奇数
         // 当 right = left + 1 的时候，回文中心是一个空隙，回文串的长度是偶数
-        int len = charArray.length;
         int i = left;
         int j = right;
-        while (i >= 0 && j < len && charArray[i] == charArray[j]) {
+        while (i >= 0 && j < chs.length && chs[i] == chs[j]) {
             dp[i][j] = true;
             i--;
             j++;
@@ -155,14 +155,9 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.partition1("madam"));
-        System.out.println(solution.partition2("madam"));
-        System.out.println(solution.partition3("madam"));
-        System.out.println(solution.partition4("madam"));
-        System.out.println(solution.partition1("revive"));
-        System.out.println(solution.partition2("revive"));
-        System.out.println(solution.partition3("revive"));
-        System.out.println(solution.partition4("revive"));
+        System.out.println(new Solution().partition1("aab"));
+        System.out.println(new Solution().partition2("aab"));
+        System.out.println(new Solution().partition3("a"));
+        System.out.println(new Solution().partition4("a"));
     }
 }
