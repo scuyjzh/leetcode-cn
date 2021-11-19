@@ -17,10 +17,20 @@ class Solution {
      * • 空间复杂度：O(1)。
      */
     public boolean canPermutePalindrome1(String s) {
+        /*
+         * 如果一个字符串可以组成一个回文串，那么：(1) 如果它的长度为偶数，那么每个字符都必须出现偶数次；
+         * (2) 如果它的长度为奇数，那么除了一个字符出现奇数次以外，其它的字符都必须出现偶数次。因此可以总结
+         * 得到，如果一个字符串可以组成一个回文串，那么出现奇数次的字符的数量不能超过 1。
+         *
+         * 由于字符串中出现的字符的 ASCII 码在 0 到 127 之间，因此可以枚举所有的字符，对于每一个字符 c，
+         * 找出它在字符串中出现的次数 ct，如果 ct 为奇数，那么将计数器 count 的值增加 1。如果在某一个
+         * 时刻 count 的值大于 1，那么说明至少有两个字符出现了奇数次，因此字符串就不能组成一个回文串。如果
+         * 在枚举完成后，count 的值仍然小于等于 1，那么字符串就可以组成一个回文串。
+         */
         int count = 0;
         for (char i = 0; i < 128 && count <= 1; ++i) {
             int ct = 0;
-            for (int j = 0; j < s.length(); j++) {
+            for (int j = 0; j < s.length(); ++j) {
                 if (s.charAt(j) == i) {
                     ct++;
                 }
@@ -39,6 +49,13 @@ class Solution {
      *   目最多只有 128 个。
      */
     public boolean canPermutePalindrome2(String s) {
+        /*
+         * 可以使用映射表（map）帮助统计字符串中每个字符出现的次数。映射表中的键（key）存放字
+         * 符，值（value）存放字符出现的次数。
+         *
+         * 对字符串进行遍历，并得到字符串对应的映射表。随后遍历映射表，如果发现超过一个字符出现了奇数
+         * 次，那么字符串就不可以组成一个回文串。
+         */
         HashMap<Character, Integer> map = new HashMap<>();
         for (int i = 0; i < s.length(); ++i) {
             map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
@@ -58,6 +75,9 @@ class Solution {
      * • 空间复杂度：O(128)。数组的长度为 128。
      */
     public boolean canPermutePalindrome3(String s) {
+        /*
+         * 因为不同的字符数目最多只有 128 个，因此可以用长度为 128 的数组代替映射表。
+         */
         int[] map = new int[128];
         for (int i = 0; i < s.length(); ++i) {
             map[s.charAt(i)]++;
@@ -76,6 +96,14 @@ class Solution {
      * • 空间复杂度：O(128)。数组的长度为 128。
      */
     public boolean canPermutePalindrome4(String s) {
+        /*
+         * 方法三中有两次循环，第一次循环统计每个字符出现的次数，第二次循环统计出现奇数次的字符数目 count
+         * 。可以把两个循环合二为一，只保留第一个循环，并在此循环中实时计算 count。
+         *
+         * 在对字符串进行遍历时，每一步更新了当前字符 c 出现的次数后，如果字符 c 出现了偶数次，就把
+         * count 减一（这说明字符 c 在这一步前出现了奇数次），否则就把 count 加一。在遍历完整个字符串后，
+         * count 就表示字符串中出现奇数次的字符的数目。
+         */
         int[] map = new int[128];
         int count = 0;
         for (int i = 0; i < s.length(); ++i) {
@@ -97,6 +125,12 @@ class Solution {
      *   目最多只有 128 个。
      */
     public boolean canPermutePalindrome5(String s) {
+        /*
+         * 方法四也可以使用集合而不是数组来实现。
+         *
+         * 集合里存放出现了奇数次的字符。在对字符串进行遍历时，如果字符 c 在集合中，就把它删除，否则就把它
+         * 添加进集合中。在遍历完整个字符串后，集合的大小就表示字符串中出现奇数次的字符的数目。
+         */
         Set<Character> set = new HashSet<>();
         for (int i = 0; i < s.length(); ++i) {
             if (!set.add(s.charAt(i))) {
