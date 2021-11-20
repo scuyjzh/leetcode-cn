@@ -155,6 +155,7 @@
 | 132  | [分割回文串 II](https://leetcode-cn.com/problems/palindrome-partitioning-ii/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0132_Palindrome_Partitioning_II/Solution.java) | 困难 | 字符串 动态规划                             |
 | 267  | [回文排列 II](https://leetcode-cn.com/problems/palindrome-permutation-ii/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0267_Palindrome_Permutation_II/Solution.java) | 中等 | 哈希表 字符串 回溯                          |
 | 20   | [有效的括号](https://leetcode-cn.com/problems/valid-parentheses/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0020_Valid_Parentheses/Solution.java) | 简单 | 栈 字符串                                   |
+| 22   | [括号生成](https://leetcode-cn.com/problems/generate-parentheses/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0022_Generate_Parentheses/Solution.java) | 中等 | 字符串 动态规划 回溯                        |
 
 ### Math
 

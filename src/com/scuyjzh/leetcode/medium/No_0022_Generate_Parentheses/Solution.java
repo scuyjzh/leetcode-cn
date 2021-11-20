@@ -4,8 +4,11 @@ import java.util.*;
 
 /**
  * 22. 括号生成
- * <p>
- * 数字 n 代表生成括号的对数，请你设计一个函数，用于能够生成所有可能的并且 有效的 括号组合。
+ *
+ * 数字 n 代表生成括号的对数，请你设计一个函数，用于能够生成所有可能
+ * 的并且 有效的 括号组合。
+ *
+ * 有效括号组合需满足：左括号必须以正确的顺序闭合。
  */
 class Solution {
     /**
@@ -18,41 +21,40 @@ class Solution {
             return res;
         }
 
+        String path = "";
         // 执行深度优先遍历，搜索可能的结果
-        dfs("", n, n, res);
+        dfs(path, n, n, res);
         return res;
     }
 
     /**
-     * @param curStr 当前递归得到的结果
-     * @param left   左括号还有几个可以使用
-     * @param right  右括号还有几个可以使用
-     * @param res    结果集
+     * @param path        当前递归得到的结果（从根结点到任意结点的路径）
+     * @param leftRemain  左括号剩余数量
+     * @param rightRemain 右括号剩余数量
+     * @param res         结果集
      */
-    private void dfs(String curStr, int left, int right, List<String> res) {
-        // 因为每一次尝试，都使用新的字符串变量，所以无需回溯
+    private void dfs(String path, int leftRemain, int rightRemain, List<String> res) {
         // 在递归终止的时候，直接把它添加到结果集即可
-        if (left == 0 && right == 0) {
-            res.add(curStr);
+        if (leftRemain == 0 && rightRemain == 0) {
+            res.add(path);
             return;
         }
 
-        // 剪枝（左括号可以使用的个数严格大于右括号可以使用的个数，才剪枝，注意这个细节）
-        if (left > right) {
-            return;
+        // 可以生出左枝叶（即生成左括号）的条件：左括号剩余数量（严格）大于 0
+        if (leftRemain > 0) {
+            // 因为每一次递归，都传入新的字符串变量（即拼接后的变量），并没有改变 path 状态变量，所以无需回溯
+            dfs(path + "(", leftRemain - 1, rightRemain, res);
         }
 
-        if (left > 0) {
-            dfs(curStr + "(", left - 1, right, res);
-        }
-
-        if (right > 0) {
-            dfs(curStr + ")", left, right - 1, res);
+        // 可以生出右枝叶（即生成右括号）的条件：左括号剩余数量（严格）小于 右括号剩余数量
+        if (leftRemain < rightRemain) {
+            // 因为每一次递归，都传入新的字符串变量（即拼接后的变量），并没有改变 path 状态变量，所以无需回溯
+            dfs(path + ")", leftRemain, rightRemain - 1, res);
         }
     }
 
     /**
-     * 方法二：回溯
+     * 方法二：深度优先遍历 + 回溯
      */
     public List<String> generateParenthesis2(int n) {
         List<String> res = new ArrayList<>();
@@ -62,38 +64,42 @@ class Solution {
         }
 
         StringBuilder path = new StringBuilder();
-        backtrack(path, n, n, res);
+        // 执行深度优先遍历，搜索可能的结果
+        dfs(path, n, n, res);
         return res;
     }
 
-
     /**
-     * @param path  从根结点到任意结点的路径
-     * @param left  左括号还有几个可以使用
-     * @param right 右括号还有几个可以使用
-     * @param res   结果集
+     * @param path        当前递归得到的结果（从根结点到任意结点的路径）
+     * @param leftRemain  左括号还有几个可以使用
+     * @param rightRemain 右括号还有几个可以使用
+     * @param res         结果集
      */
-    private void backtrack(StringBuilder path, int left, int right, List<String> res) {
-        if (left == 0 && right == 0) {
-            // path.toString() 生成了一个新的字符串，相当于做了一次拷贝
+    private void dfs(StringBuilder path, int leftRemain, int rightRemain, List<String> res) {
+        // 递归终止条件
+        if (leftRemain == 0 && rightRemain == 0) {
+            // path.toString() 生成了一个新的字符串，相当于做了一次拷贝，因为全程使用一份状态变量
             res.add(path.toString());
             return;
         }
 
-        // 剪枝（左括号可以使用的个数严格大于右括号可以使用的个数，才剪枝，注意这个细节）
-        if (left > right) {
-            return;
-        }
-
-        if (left > 0) {
+        // 可以生出左枝叶（即生成左括号）的条件：左括号剩余数量（严格）大于 0
+        if (leftRemain > 0) {
+            // 生成左括号
             path.append("(");
-            backtrack(path, left - 1, right, res);
+            // 继续递归生成新括号
+            dfs(path, leftRemain - 1, rightRemain, res);
+            // 由于递归之前改动了 path 状态变量（全程只使用这一份状态变量），因此退出递归后需要做回撤，即「撤销选择」、「恢复现场」
             path.deleteCharAt(path.length() - 1);
         }
 
-        if (right > 0) {
+        // 可以生出右枝叶（即生成右括号）的条件：左括号剩余数量（严格）小于 右括号剩余数量
+        if (leftRemain < rightRemain) {
+            // 生成右括号
             path.append(")");
-            backtrack(path, left, right - 1, res);
+            // 继续递归生成新括号
+            dfs(path, leftRemain, rightRemain - 1, res);
+            // 由于递归之前改动了 path 状态变量（全程只使用这一份状态变量），因此退出递归后需要做回撤，即「撤销选择」、「恢复现场」
             path.deleteCharAt(path.length() - 1);
         }
     }
@@ -104,14 +110,7 @@ class Solution {
     public List<String> generateParenthesis3(int n) {
         /*
          * 思路：
-         * 当清楚所有 i<n 时括号的可能生成排列后，对于 i=n 的情况，考虑整个括号排列中最左边的括号。
-         * 它一定是一个左括号，那么它一定可以和它对应的右括号组成一组完整的括号 "( )"，此时认为这一组是相比 n-1 增加进来的括号。
-         * 那么，剩下 n-1 组括号有可能在哪呢？
-         * 剩下的括号要么在这一组新增的括号内部，要么在这一组新增括号的外部（右侧）。
-         * 既然知道了 i<n 的情况，就可以对所有情况进行遍历：
-         * "(" + 【i=p时所有括号的排列组合】 + ")" + 【i=q时所有括号的排列组合】
-         * 其中 p + q = n-1，且 p、q 均为非负整数。
-         * 事实上，当上述 p 从 0 取到 n-1，q 从 n-1 取到 0 后，所有情况就遍历完了。
+         * https://leetcode-cn.com/problems/generate-parentheses/solution/zui-jian-dan-yi-dong-de-dong-tai-gui-hua-bu-lun-da/
          */
         if (n == 0) {
             return new ArrayList<>();
@@ -121,15 +120,15 @@ class Solution {
         res.add(new LinkedList<>(Collections.singletonList("")));
         // 1 组括号只有一种情况
         res.add(new LinkedList<>(Collections.singletonList("()")));
-        // 开始计算 i 组括号时的括号组合
-        for (int i = 2; i <= n; ++i) {
+        // 开始计算 i 组括号时的括号组合（i 从 2 开始）
+        for (int k = 2; k <= n; ++k) {
             List<String> combinations = new LinkedList<>();
-            // 开始遍历 p、q ，其中p+q=i-1, j 作为索引
-            for (int j = 0; j < i; ++j) {
+            // 开始遍历 p、q ，其中 p+q = k-1, i 作为索引
+            for (int i = 0; i < k; ++i) {
                 // p = j 时的括号组合情况
-                List<String> str1 = res.get(j);
-                // q = (i-1) - j 时的括号组合情况
-                List<String> str2 = res.get(i - 1 - j);
+                List<String> str1 = res.get(i);
+                // q = (k-1) - i 时的括号组合情况
+                List<String> str2 = res.get(k - 1 - i);
                 for (String s1 : str1) {
                     for (String s2 : str2) {
                         String str = "(" + s1 + ")" + s2;
@@ -138,16 +137,15 @@ class Solution {
                     }
                 }
             }
-            // combinations这个list就是i组括号的所有情况，添加到res中，继续求解i=i+1的情况
+            // combinations这个列表就是 i 组括号的所有情况，添加到 res 中，继续求解 k=k+1 的情况
             res.add(combinations);
         }
         return res.get(n);
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.generateParenthesis1(3));
-        System.out.println(solution.generateParenthesis2(3));
-        System.out.println(solution.generateParenthesis3(3));
+        System.out.println(new Solution().generateParenthesis1(3));
+        System.out.println(new Solution().generateParenthesis2(2));
+        System.out.println(new Solution().generateParenthesis3(1));
     }
 }
