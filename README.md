@@ -172,9 +172,10 @@
 
 ### Backtracking
 
-| #    | 题目                                                     | 题解                                                         | 难度 | 标签      |
-| ---- | -------------------------------------------------------- | ------------------------------------------------------------ | ---- | --------- |
-| 46   | [全排列](https://leetcode-cn.com/problems/permutations/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0046_Permutations/Solution.java) | 中等 | 数组 回溯 |
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签      |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | --------- |
+| 46   | [全排列](https://leetcode-cn.com/problems/permutations/)     | [Java](./src/com/scuyjzh/leetcode/medium/No_0046_Permutations/Solution.java) | 中等 | 数组 回溯 |
+| 47   | [全排列 II](https://leetcode-cn.com/problems/permutations-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0047_Permutations_II/Solution.java) | 中等 | 数组 回溯 |
 
 ### Trie
 
