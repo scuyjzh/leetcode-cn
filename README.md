@@ -170,6 +170,12 @@
 | 116  | [填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0116_Populating_Next_Right_Pointers_in_Each_Node/Solution.java) | 中等 | 树 深度优先搜索 广度优先搜索 二叉树 |
 | 117  | [填充每个节点的下一个右侧节点指针 II](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0117_Populating_Next_Right_Pointers_in_Each_Node_II/Solution.java) | 中等 | 树 深度优先搜索 广度优先搜索 二叉树 |
 
+### Backtracking
+
+| #    | 题目                                                     | 题解                                                         | 难度 | 标签      |
+| ---- | -------------------------------------------------------- | ------------------------------------------------------------ | ---- | --------- |
+| 46   | [全排列](https://leetcode-cn.com/problems/permutations/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0046_Permutations/Solution.java) | 中等 | 数组 回溯 |
+
 ### Trie
 
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签                      |
