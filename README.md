@@ -159,6 +159,7 @@
 | 32   | [最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0032_Longest_Valid_Parentheses/Solution.java) | 困难 | 栈 字符串 动态规划                          |
 | 241  | [为运算表达式设计优先级](https://leetcode-cn.com/problems/different-ways-to-add-parentheses/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0241_Different_Ways_to_Add_Parentheses/Solution.java) | 中等 | 递归 记忆化搜索 数学 字符串 动态规划        |
 | 301  | [删除无效的括号](https://leetcode-cn.com/problems/remove-invalid-parentheses/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0301_Remove_Invalid_Parentheses/Solution.java) | 困难 | 广度优先搜索 字符串 回溯                    |
+| 392  | [判断子序列](https://leetcode-cn.com/problems/is-subsequence/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0392_Is_Subsequence/Solution.java) | 简单 | 双指针 字符串 动态规划                      |
 
 ### Math
 
