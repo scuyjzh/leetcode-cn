@@ -161,6 +161,7 @@
 | 301  | [删除无效的括号](https://leetcode-cn.com/problems/remove-invalid-parentheses/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0301_Remove_Invalid_Parentheses/Solution.java) | 困难 | 广度优先搜索 字符串 回溯                    |
 | 392  | [判断子序列](https://leetcode-cn.com/problems/is-subsequence/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0392_Is_Subsequence/Solution.java) | 简单 | 双指针 字符串 动态规划                      |
 | 115  | [不同的子序列](https://leetcode-cn.com/problems/distinct-subsequences/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0115_Distinct_Subsequences/Solution.java) | 困难 | 字符串 动态规划                             |
+| 187  | [重复的DNA序列](https://leetcode-cn.com/problems/repeated-dna-sequences/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0187_Repeated_DNA_Sequences/Solution.java) | 中等 | 位运算 哈希表 字符串 滑动窗口 滚动哈希      |
 
 ### Math
 
