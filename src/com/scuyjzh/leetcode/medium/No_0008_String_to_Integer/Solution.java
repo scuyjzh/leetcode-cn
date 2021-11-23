@@ -5,15 +5,24 @@ import java.util.regex.*;
 
 /**
  * 8. 字符串转换整数 (atoi)
- * <p>
- * 请你来实现一个 myAtoi(string s) 函数，使其能将字符串转换成一个 32 位有符号整数（类似 C/C++ 中的 atoi 函数）。
+ *
+ * 请你来实现一个 myAtoi(string s) 函数，使其能将字符串转换成一个 32
+ * 位有符号整数（类似 C/C++ 中的 atoi 函数）。
  * 函数 myAtoi(string s) 的算法如下：
- * • 读入字符串并丢弃无用的前导空格。
- * • 检查下一个字符（假设还未到字符末尾）为正还是负号，读取该字符（如果有）。 确定最终结果是负数还是正数。 如果两者都不存在，则假定结果为正。
- * • 读入下一个字符，直到到达下一个非数字字符或到达输入的结尾。字符串的其余部分将被忽略。
- * • 将前面步骤读入的这些数字转换为整数（即，"123" -> 123， "0032" -> 32）。如果没有读入数字，则整数为 0 。必要时更改符号（从步骤 2 开始）。
- * • 如果整数数超过 32 位有符号整数范围 [−231, 231− 1] ，需要截断这个整数，使其保持在这个范围内。具体来说，小于 −231 的整数应该被固定为 −231 ，大于 231− 1 的整数应该被固定为 231− 1 。
- * • 返回整数作为最终结果。
+ *   • 读入字符串并丢弃无用的前导空格
+ *   • 检查下一个字符（假设还未到字符末尾）为正还是负号，读取该字
+ *     符（如果有）。 确定最终结果是负数还是正数。 如果两者都不存
+ *     在，则假定结果为正。
+ *   • 读入下一个字符，直到到达下一个非数字字符或到达输入的结尾。
+ *     字符串的其余部分将被忽略。
+ *   • 将前面步骤读入的这些数字转换为整数（即，"123" -> 123， "0032"
+ *     -> 32）。如果没有读入数字，则整数为 0 。必要时更改符号（从
+ *     步骤 2 开始）。
+ *   • 如果整数数超过 32 位有符号整数范围 [−2^31, 2^31− 1] ，需
+ *     要截断这个整数，使其保持在这个范围内。具体来说，小于 −2^31
+ *     的整数应该被固定为 −2^31 ，大于 2^31− 1 的整数应该被固定为
+ *     2^31− 1 。
+ *   • 返回整数作为最终结果。
  */
 class Solution {
     class Automaton {
@@ -36,7 +45,7 @@ class Solution {
         }};
 
         public void get(char c) {
-            state = table.get(state)[get_col(c)];
+            state = table.get(state)[getCol(c)];
             if ("in_number".equals(state)) {
                 ans = ans * 10 + c - '0';
                 ans = sign == 1 ? Math.min(ans, (long) Integer.MAX_VALUE) : Math.min(ans, -(long) Integer.MIN_VALUE);
@@ -45,7 +54,7 @@ class Solution {
             }
         }
 
-        private int get_col(char c) {
+        private int getCol(char c) {
             if (c == ' ') {
                 return 0;
             }
@@ -61,14 +70,12 @@ class Solution {
 
     /**
      * 方法一：自动机
-     * 时间复杂度：O(n)，其中 n 为字符串的长度。只需要依次处理所有的字符，处理每个字符需要的时间为 O(1)。
-     * 空间复杂度：O(1)。自动机的状态只需要常数空间存储。
      */
-    public int myAtoi1(String str) {
+    public int myAtoi1(String s) {
         Automaton automaton = new Automaton();
-        int length = str.length();
+        int length = s.length();
         for (int i = 0; i < length; ++i) {
-            automaton.get(str.charAt(i));
+            automaton.get(s.charAt(i));
         }
         return (int) (automaton.sign * automaton.ans);
     }
@@ -76,30 +83,31 @@ class Solution {
     /**
      * 方法二：正则表达式
      */
-    public int myAtoi2(String str) {
+    public int myAtoi2(String s) {
         // 清空字符串开头和末尾的空格（这是trim方法功能，事实上只需清空开头的空格）
         // 注意：trim()不能去除全角空格，只能去除半角空格
-        str = str.trim();
+        s = s.trim();
 
         /*
-          正则表达式：^[+\\-]?\\d+（Java中需用双斜杠表示转义）
-          ^   表示匹配字符串开头，此处匹配的就是 '+'、'-' 号
-          []  匹配方括号内的任意字符，比如 [0-9] 就是匹配数字字符 0 - 9 中的一个
-          ?   匹配之前的字符出现 >=0 次，这里用 ? 是因为 '+' 号可以省略
-          \\d 匹配数字（0 - 9）
-          +   匹配之前的字符出现 >=1 次，\\d+ 则匹配一串数字
+         * 正则表达式：^[+\\-]?\\d+（Java中需用双斜杠表示转义）
+         *
+         *   ^      表示匹配字符串开头，此处匹配的就是 '+'、'-' 号
+         *   []     匹配方括号内的任意字符，比如 [0-9] 就是匹配数字字符 0-9 中的一个
+         *   ?      匹配之前的字符出现 >=0 次，这里用 ? 是因为 '+' 号可以省略
+         *   \\d    匹配数字 0-9
+         *   +      匹配之前的字符出现 >=1 次，\\d+ 则匹配一串数字
          */
         Pattern p = Pattern.compile("^[+-]?\\d+");
-        Matcher m = p.matcher(str);
+        Matcher m = p.matcher(s);
         int value = 0;
         // 判断是否能匹配到
         if (m.find()) {
             // 字符串转整数，溢出异常捕获
             try {
-                value = Integer.parseInt(str.substring(m.start(), m.end()));
+                value = Integer.parseInt(s.substring(m.start(), m.end()));
             } catch (Exception e) {
                 // 判断正负
-                value = str.charAt(0) == '-' ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+                value = s.charAt(0) == '-' ? Integer.MIN_VALUE : Integer.MAX_VALUE;
             }
         }
         return value;
