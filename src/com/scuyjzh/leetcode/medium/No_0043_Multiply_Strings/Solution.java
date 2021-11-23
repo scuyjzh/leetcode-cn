@@ -2,15 +2,11 @@ package com.scuyjzh.leetcode.medium.No_0043_Multiply_Strings;
 
 /**
  * 43. 字符串相乘
- * <p>
- * 给定两个以字符串形式表示的非负整数 num1 和 num2，返回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。
+ *
+ * 给定两个以字符串形式表示的非负整数 num1 和 num2，返
+ * 回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。
  */
 class Solution {
-    /**
-     * 方法：做乘法
-     * 时间复杂度：O(mn)，其中 m 和 n 分别是 num1 和 num2 的长度。需要计算 num1 的每一位和 num2 的每一位的乘积。
-     * 空间复杂度：O(m+n)，其中 m 和 n 分别是 num1 和 num2 的长度。需要创建一个长度为 m+n 的数组存储乘积。
-     */
     public String multiply(String num1, String num2) {
         if ("0".equals(num1) || "0".equals(num2)) {
             return "0";
@@ -39,7 +35,7 @@ class Solution {
         }
         // 将计算结果转化成字符串
         StringBuilder sb = new StringBuilder();
-        for (; i < res.length; i++) {
+        for (; i < res.length; ++i) {
             sb.append(res[i]);
         }
 
@@ -48,6 +44,7 @@ class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
+        System.out.println(solution.multiply("2", "3"));
         System.out.println(solution.multiply("123", "456"));
     }
 }
