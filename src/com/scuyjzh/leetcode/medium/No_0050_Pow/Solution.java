@@ -2,22 +2,24 @@ package com.scuyjzh.leetcode.medium.No_0050_Pow;
 
 /**
  * 50. Pow(x, n)
- * <p>
+ *
  * 实现 pow(x, n) ，即计算 x 的 n 次幂函数（即，x^n）。
  */
 class Solution {
     /**
      * 方法一：快速幂 + 递归
-     * 时间复杂度：O(log n)，即为递归的层数。
-     * 空间复杂度：O(log n)，即为递归的层数。这是由于递归的函数调用会使用栈空间。
+     *
+     * • 时间复杂度：O(log n)，即为递归的层数。
+     * • 空间复杂度：O(log n)，即为递归的层数。这是由于递归的函数调用会使用栈空间。
      */
     public double myPow1(double x, int n) {
         /*
          * 思路：
-         * 「快速幂算法」的本质是分治算法：
-         * • 当计算 x^n 时，可以先递归地计算出 y = x^⌊n/2⌋，其中 ⌊a⌋ 表示对 a 进行下取整；
-         * • 根据递归计算的结果，如果 n 为偶数，那么 x^n = y^2；如果 n 为奇数，那么 x^n = y^2 × x；
-         * • 递归的边界为 n = 0，任意数的 0 次方均为 1。
+         * 「快速幂算法」的本质是分治思想：
+         *   • 当要计算 x^n 时，可以先递归地计算出 y = x^⌊n/2⌋，其中 ⌊a⌋ 表示对 a 进行下取整；
+         *   • 根据递归计算的结果，如果 n 为偶数，那么 x^n = y^2；如果 n 为奇数，那么 x^n = y^2 × x；
+         *   • 递归的边界为 n = 0，任意数的 0 次方均为 1。
+         * 由于每次递归都会使得指数减少一半，因此递归的层数为 O(log n)，算法可以在很快的时间内得到结果。
          */
         long N = n;
         // 符号判断
@@ -46,8 +48,9 @@ class Solution {
 
     /**
      * 方法二：快速幂 + 迭代
-     * 时间复杂度：O(log n)，即为对 n 进行二进制拆分的时间复杂度。
-     * 空间复杂度：O(1)。
+     *
+     * • 时间复杂度：O(log n)，即为对 n 进行二进制拆分的时间复杂度。
+     * • 空间复杂度：O(1)。
      */
     public double myPow2(double x, int n) {
         long N = n;
@@ -79,7 +82,8 @@ class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.myPow1(2.0, 5));
-        System.out.println(solution.myPow2(2.0, 5));
+        System.out.println(solution.myPow1(2.00000, 10));
+        System.out.println(solution.myPow2(2.10000, 5));
+        System.out.println(solution.myPow2(2.00000, -2));
     }
 }
