@@ -1,8 +1,15 @@
 package com.scuyjzh.leetcode.easy.No_0069_Sqrt;
 
+/**
+ * 69. Sqrt(x)
+ *
+ * 给你一个非负整数 x ，计算并返回x的 算术平方根 。
+ * 由于返回类型是整数，结果只保留 整数部分 ，小数部分将被 舍去 。
+ * 注意：不允许使用任何内置指数函数和算符，例如 pow(x, 0.5) 或者 x ** 0.5 。
+ */
 class Solution {
     /**
-     * Approach #1 (Binary search solution)
+     * 方法一：二分查找
      */
     public int mySqrt1(int x) {
         if (x <= 1) {
@@ -25,9 +32,13 @@ class Solution {
     }
 
     /**
-     * Approach #2 (Newton's method)
+     * 方法二：牛顿迭代法
      */
     public int mySqrt2(int x) {
+        /*
+         * 思路：
+         * https://www.matongxue.com/madocs/205/
+         */
         long r = x;
         while (r * r > x) {
             r = (r + x / r) / 2;
