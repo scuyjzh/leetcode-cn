@@ -4,15 +4,19 @@ import java.util.*;
 
 /**
  * 1. 两数之和
- * <p>
- * 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。
- * 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
+ *
+ * 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出
+ * 和为目标值 target  的那 两个 整数，并返回它们的数组下标。
+ * 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里
+ * 不能重复出现。
+ * 你可以按任意顺序返回答案。
  */
 class Solution {
     /**
      * 方法一：暴力枚举
-     * 时间复杂度：O(N^2)，其中 N 是数组中的元素数量。最坏情况下数组中任意两个数都要被匹配一次。
-     * 空间复杂度：O(1)。
+     *
+     * • 时间复杂度：O(N^2)，其中 N 是数组中的元素数量。最坏情况下数组中任意两个数都要被匹配一次。
+     * • 空间复杂度：O(1)。
      */
     public int[] twoSum1(int[] nums, int target) {
         int len = nums.length;
@@ -23,17 +27,19 @@ class Solution {
                 }
             }
         }
-        throw new IllegalArgumentException("No two sum solution");
+        return new int[0];
     }
 
     /**
      * 方法二：哈希表
-     * 时间复杂度：O(N)，其中 N 是数组中的元素数量。对于每一个元素 x，可以 O(1) 地寻找 target - x。
-     * 空间复杂度：O(N)，其中 N 是数组中的元素数量。主要为哈希表的开销。
+     *
+     * • 时间复杂度：O(N)，其中 N 是数组中的元素数量。对于每一个元素 x，可以 O(1) 地寻找
+     *   target - x。
+     * • 空间复杂度：O(N)，其中 N 是数组中的元素数量。主要为哈希表的开销。
      */
     public int[] twoSum2(int[] nums, int target) {
         int len = nums.length;
-        Map<Integer, Integer> hashMap = new HashMap<>(len - 1);
+        Map<Integer, Integer> hashMap = new HashMap<>();
         hashMap.put(nums[0], 0);
         for (int i = 1; i < len; ++i) {
             int another = target - nums[i];
@@ -42,12 +48,11 @@ class Solution {
             }
             hashMap.put(nums[i], i);
         }
-        throw new IllegalArgumentException("No two sum solution");
+        return new int[0];
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(Arrays.toString(solution.twoSum1(new int[]{3, 2, 4}, 5)));
-        System.out.println(Arrays.toString(solution.twoSum2(new int[]{3, 2, 4}, 7)));
+        System.out.println(Arrays.toString(new Solution().twoSum1(new int[]{3, 2, 4}, 5)));
+        System.out.println(Arrays.toString(new Solution().twoSum2(new int[]{3, 2, 4}, 7)));
     }
 }

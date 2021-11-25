@@ -180,6 +180,7 @@
 | 367  | [有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0367_Valid_Perfect_Square/Solution.java) | 简单 | 数学 二分查找                  |
 | 365  | [水壶问题](https://leetcode-cn.com/problems/water-and-jug-problem/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0365_Water_and_Jug_Problem/Solution.java) | 中等 | 深度优先搜索 广度优先搜索 数学 |
 | 204  | [计数质数](https://leetcode-cn.com/problems/count-primes/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0204_Count_Primes/Solution.java) | 中等 | 数组 数学 枚举 数论            |
+| 1    | [两数之和](https://leetcode-cn.com/problems/two-sum/)        | [Java](./src/com/scuyjzh/leetcode/easy/No_0001_Two_Sum/Solution.java) | 简单 | 数组 哈希表                    |
 
 ### Tree
 
