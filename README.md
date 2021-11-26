@@ -187,6 +187,7 @@
 | 259  | [较小的三数之和](https://leetcode-cn.com/problems/3sum-smaller/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0259_3Sum_Smaller/Solution.java) | 中等 | 数组 双指针 二分查找 排序      |
 | 18   | [四数之和](https://leetcode-cn.com/problems/4sum/)           | [Java](./src/com/scuyjzh/leetcode/medium/No_0018_4Sum/Solution.java) | 中等 | 数组 双指针 排序               |
 | 231  | [2 的幂](https://leetcode-cn.com/problems/power-of-two/)     | [Java](./src/com/scuyjzh/leetcode/easy/No_0231_Power_of_Two/Solution.java) | 简单 | 位运算 递归 数学               |
+| 326  | [3的幂](https://leetcode-cn.com/problems/power-of-three/)    | [Java](./src/com/scuyjzh/leetcode/easy/No_0326_Power_of_Three/Solution.java) | 简单 | 递归 数学                      |
 
 ### Tree
 
