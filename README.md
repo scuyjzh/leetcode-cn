@@ -189,6 +189,7 @@
 | 231  | [2 的幂](https://leetcode-cn.com/problems/power-of-two/)     | [Java](./src/com/scuyjzh/leetcode/easy/No_0231_Power_of_Two/Solution.java) | 简单 | 位运算 递归 数学               |
 | 326  | [3的幂](https://leetcode-cn.com/problems/power-of-three/)    | [Java](./src/com/scuyjzh/leetcode/easy/No_0326_Power_of_Three/Solution.java) | 简单 | 递归 数学                      |
 | 342  | [4的幂](https://leetcode-cn.com/problems/power-of-four/)     | [Java](./src/com/scuyjzh/leetcode/easy/No_0342_Power_of_Four/Solution.java) | 简单 | 位运算 递归 数学               |
+| 372  | [超级次方](https://leetcode-cn.com/problems/super-pow/)      | [Java](./src/com/scuyjzh/leetcode/medium/No_0372_Super_Pow/Solution.java) | 中等 | 数学 分治                      |
 
 ### Tree
 
