@@ -200,6 +200,7 @@
 | 306  | [累加数](https://leetcode-cn.com/problems/additive-number/)  | [Java](./src/com/scuyjzh/leetcode/medium/No_0306_Additive_Number/Solution.java) | 中等 | 字符串 回溯                         |
 | 172  | [阶乘后的零](https://leetcode-cn.com/problems/factorial-trailing-zeroes/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0172_Factorial_Trailing_Zeroes/Solution.java) | 中等 | 数学                                |
 | 396  | [旋转函数](https://leetcode-cn.com/problems/rotate-function/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0396_Rotate_Function/Solution.java) | 中等 | 数学 动态规划                       |
+| 390  | [消除游戏](https://leetcode-cn.com/problems/elimination-game/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0390_Elimination_Game/Solution.java) | 中等 | 数学                                |
 
 ### Tree
 
