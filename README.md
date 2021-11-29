@@ -192,6 +192,7 @@
 | 372  | [超级次方](https://leetcode-cn.com/problems/super-pow/)      | [Java](./src/com/scuyjzh/leetcode/medium/No_0372_Super_Pow/Solution.java) | 中等 | 数学 分治                      |
 | 233  | [数字 1 的个数](https://leetcode-cn.com/problems/number-of-digit-one/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0233_Number_of_Digit_One/Solution.java) | 困难 | 递归 数学 动态规划             |
 | 319  | [灯泡开关](https://leetcode-cn.com/problems/bulb-switcher/)  | [Java](./src/com/scuyjzh/leetcode/medium/No_0319_Bulb_Switcher/Solution.java) | 中等 | 脑筋急转弯 数学                |
+| 292  | [Nim 游戏](https://leetcode-cn.com/problems/nim-game/)       | [Java](./src/com/scuyjzh/leetcode/easy/No_0292_Nim_Game/Solution.java) | 简单 | 脑筋急转弯 数学 博弈           |
 
 ### Tree
 
