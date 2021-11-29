@@ -195,6 +195,7 @@
 | 292  | [Nim 游戏](https://leetcode-cn.com/problems/nim-game/)       | [Java](./src/com/scuyjzh/leetcode/easy/No_0292_Nim_Game/Solution.java) | 简单 | 脑筋急转弯 数学 博弈           |
 | 202  | [快乐数](https://leetcode-cn.com/problems/happy-number/)     | [Java](./src/com/scuyjzh/leetcode/easy/No_0202_Happy_Number/Solution.java) | 简单 | 哈希表 双指针 数学             |
 | 400  | [第 N 位数字](https://leetcode-cn.com/problems/nth-digit/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0400_Nth_Digit/Solution.java) | 中等 | 数学 二分查找                  |
+| 263  | [丑数](https://leetcode-cn.com/problems/ugly-number/)        | [Java](./src/com/scuyjzh/leetcode/easy/No_0263_Ugly_Number/Solution.java) | 简单 | 数学                           |
 
 ### Tree
 
