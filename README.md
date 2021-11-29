@@ -198,6 +198,7 @@
 | 263  | [丑数](https://leetcode-cn.com/problems/ugly-number/)        | [Java](./src/com/scuyjzh/leetcode/easy/No_0263_Ugly_Number/Solution.java) | 简单 | 数学                                |
 | 264  | [丑数 II](https://leetcode-cn.com/problems/ugly-number-ii/)  | [Java](./src/com/scuyjzh/leetcode/medium/No_0264_Ugly_Number_II/Solution.java) | 中等 | 哈希表 数学 动态规划 堆（优先队列） |
 | 306  | [累加数](https://leetcode-cn.com/problems/additive-number/)  | [Java](./src/com/scuyjzh/leetcode/medium/No_0306_Additive_Number/Solution.java) | 中等 | 字符串 回溯                         |
+| 172  | [阶乘后的零](https://leetcode-cn.com/problems/factorial-trailing-zeroes/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0172_Factorial_Trailing_Zeroes/Solution.java) | 中等 | 数学                                |
 
 ### Tree
 
