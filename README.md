@@ -165,37 +165,38 @@
 
 ### Math
 
-| #    | 题目                                                         | 题解                                                         | 难度 | 标签                           |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------------------ |
-| 7    | [整数反转](https://leetcode-cn.com/problems/reverse-integer/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0007_Reverse_Integer/Solution.java) | 简单 | 数学                           |
-| 165  | [比较版本号](https://leetcode-cn.com/problems/compare-version-numbers/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0165_Compare_Version_Numbers/Solution.java) | 中等 | 双指针 字符串                  |
-| 66   | [加一](https://leetcode-cn.com/problems/plus-one/)           | [Java](./src/com/scuyjzh/leetcode/easy/No_0066_Plus_One/Solution.java) | 简单 | 数组 数学                      |
-| 8    | [字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0008_String_to_Integer/Solution.java) | 中等 | 字符串                         |
-| 258  | [各位相加](https://leetcode-cn.com/problems/add-digits/)     | [Java](./src/com/scuyjzh/leetcode/easy/No_0258_Add_Digits/Solution.java) | 简单 | 数学 数论 模拟                 |
-| 67   | [二进制求和](https://leetcode-cn.com/problems/add-binary/)   | [Java](./src/com/scuyjzh/leetcode/easy/No_0067_Add_Binary/Solution.java) | 简单 | 位运算 数学 字符串 模拟        |
-| 43   | [字符串相乘](https://leetcode-cn.com/problems/multiply-strings/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0043_Multiply_Strings/Solution.java) | 中等 | 数学 字符串 模拟               |
-| 29   | [两数相除](https://leetcode-cn.com/problems/divide-two-integers/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0029_Divide_Two_Integers/Solution.java) | 中等 | 位运算 数学                    |
-| 69   | [Sqrt(x)](https://leetcode-cn.com/problems/sqrtx/)           | [Java](./src/com/scuyjzh/leetcode/easy/No_0069_Sqrt/Solution.java) | 简单 | 数学 二分查找                  |
-| 50   | [Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)        | [Java](./src/com/scuyjzh/leetcode/medium/No_0050_Pow/Solution.java) | 中等 | 递归 数学                      |
-| 367  | [有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0367_Valid_Perfect_Square/Solution.java) | 简单 | 数学 二分查找                  |
-| 365  | [水壶问题](https://leetcode-cn.com/problems/water-and-jug-problem/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0365_Water_and_Jug_Problem/Solution.java) | 中等 | 深度优先搜索 广度优先搜索 数学 |
-| 204  | [计数质数](https://leetcode-cn.com/problems/count-primes/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0204_Count_Primes/Solution.java) | 中等 | 数组 数学 枚举 数论            |
-| 1    | [两数之和](https://leetcode-cn.com/problems/two-sum/)        | [Java](./src/com/scuyjzh/leetcode/easy/No_0001_Two_Sum/Solution.java) | 简单 | 数组 哈希表                    |
-| 167  | [两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0167_Two_Sum_II/Solution.java) | 简单 | 数组 双指针 二分查找           |
-| 15   | [三数之和](https://leetcode-cn.com/problems/3sum/)           | [Java](./src/com/scuyjzh/leetcode/medium/No_0015_3Sum/Solution.java) | 中等 | 数组 双指针 排序               |
-| 16   | [最接近的三数之和](https://leetcode-cn.com/problems/3sum-closest/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0016_3Sum_Closest/Solution.java) | 中等 | 数组 双指针 排序               |
-| 259  | [较小的三数之和](https://leetcode-cn.com/problems/3sum-smaller/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0259_3Sum_Smaller/Solution.java) | 中等 | 数组 双指针 二分查找 排序      |
-| 18   | [四数之和](https://leetcode-cn.com/problems/4sum/)           | [Java](./src/com/scuyjzh/leetcode/medium/No_0018_4Sum/Solution.java) | 中等 | 数组 双指针 排序               |
-| 231  | [2 的幂](https://leetcode-cn.com/problems/power-of-two/)     | [Java](./src/com/scuyjzh/leetcode/easy/No_0231_Power_of_Two/Solution.java) | 简单 | 位运算 递归 数学               |
-| 326  | [3的幂](https://leetcode-cn.com/problems/power-of-three/)    | [Java](./src/com/scuyjzh/leetcode/easy/No_0326_Power_of_Three/Solution.java) | 简单 | 递归 数学                      |
-| 342  | [4的幂](https://leetcode-cn.com/problems/power-of-four/)     | [Java](./src/com/scuyjzh/leetcode/easy/No_0342_Power_of_Four/Solution.java) | 简单 | 位运算 递归 数学               |
-| 372  | [超级次方](https://leetcode-cn.com/problems/super-pow/)      | [Java](./src/com/scuyjzh/leetcode/medium/No_0372_Super_Pow/Solution.java) | 中等 | 数学 分治                      |
-| 233  | [数字 1 的个数](https://leetcode-cn.com/problems/number-of-digit-one/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0233_Number_of_Digit_One/Solution.java) | 困难 | 递归 数学 动态规划             |
-| 319  | [灯泡开关](https://leetcode-cn.com/problems/bulb-switcher/)  | [Java](./src/com/scuyjzh/leetcode/medium/No_0319_Bulb_Switcher/Solution.java) | 中等 | 脑筋急转弯 数学                |
-| 292  | [Nim 游戏](https://leetcode-cn.com/problems/nim-game/)       | [Java](./src/com/scuyjzh/leetcode/easy/No_0292_Nim_Game/Solution.java) | 简单 | 脑筋急转弯 数学 博弈           |
-| 202  | [快乐数](https://leetcode-cn.com/problems/happy-number/)     | [Java](./src/com/scuyjzh/leetcode/easy/No_0202_Happy_Number/Solution.java) | 简单 | 哈希表 双指针 数学             |
-| 400  | [第 N 位数字](https://leetcode-cn.com/problems/nth-digit/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0400_Nth_Digit/Solution.java) | 中等 | 数学 二分查找                  |
-| 263  | [丑数](https://leetcode-cn.com/problems/ugly-number/)        | [Java](./src/com/scuyjzh/leetcode/easy/No_0263_Ugly_Number/Solution.java) | 简单 | 数学                           |
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签                                |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ----------------------------------- |
+| 7    | [整数反转](https://leetcode-cn.com/problems/reverse-integer/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0007_Reverse_Integer/Solution.java) | 简单 | 数学                                |
+| 165  | [比较版本号](https://leetcode-cn.com/problems/compare-version-numbers/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0165_Compare_Version_Numbers/Solution.java) | 中等 | 双指针 字符串                       |
+| 66   | [加一](https://leetcode-cn.com/problems/plus-one/)           | [Java](./src/com/scuyjzh/leetcode/easy/No_0066_Plus_One/Solution.java) | 简单 | 数组 数学                           |
+| 8    | [字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0008_String_to_Integer/Solution.java) | 中等 | 字符串                              |
+| 258  | [各位相加](https://leetcode-cn.com/problems/add-digits/)     | [Java](./src/com/scuyjzh/leetcode/easy/No_0258_Add_Digits/Solution.java) | 简单 | 数学 数论 模拟                      |
+| 67   | [二进制求和](https://leetcode-cn.com/problems/add-binary/)   | [Java](./src/com/scuyjzh/leetcode/easy/No_0067_Add_Binary/Solution.java) | 简单 | 位运算 数学 字符串 模拟             |
+| 43   | [字符串相乘](https://leetcode-cn.com/problems/multiply-strings/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0043_Multiply_Strings/Solution.java) | 中等 | 数学 字符串 模拟                    |
+| 29   | [两数相除](https://leetcode-cn.com/problems/divide-two-integers/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0029_Divide_Two_Integers/Solution.java) | 中等 | 位运算 数学                         |
+| 69   | [Sqrt(x)](https://leetcode-cn.com/problems/sqrtx/)           | [Java](./src/com/scuyjzh/leetcode/easy/No_0069_Sqrt/Solution.java) | 简单 | 数学 二分查找                       |
+| 50   | [Pow(x, n)](https://leetcode-cn.com/problems/powx-n/)        | [Java](./src/com/scuyjzh/leetcode/medium/No_0050_Pow/Solution.java) | 中等 | 递归 数学                           |
+| 367  | [有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0367_Valid_Perfect_Square/Solution.java) | 简单 | 数学 二分查找                       |
+| 365  | [水壶问题](https://leetcode-cn.com/problems/water-and-jug-problem/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0365_Water_and_Jug_Problem/Solution.java) | 中等 | 深度优先搜索 广度优先搜索 数学      |
+| 204  | [计数质数](https://leetcode-cn.com/problems/count-primes/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0204_Count_Primes/Solution.java) | 中等 | 数组 数学 枚举 数论                 |
+| 1    | [两数之和](https://leetcode-cn.com/problems/two-sum/)        | [Java](./src/com/scuyjzh/leetcode/easy/No_0001_Two_Sum/Solution.java) | 简单 | 数组 哈希表                         |
+| 167  | [两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0167_Two_Sum_II/Solution.java) | 简单 | 数组 双指针 二分查找                |
+| 15   | [三数之和](https://leetcode-cn.com/problems/3sum/)           | [Java](./src/com/scuyjzh/leetcode/medium/No_0015_3Sum/Solution.java) | 中等 | 数组 双指针 排序                    |
+| 16   | [最接近的三数之和](https://leetcode-cn.com/problems/3sum-closest/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0016_3Sum_Closest/Solution.java) | 中等 | 数组 双指针 排序                    |
+| 259  | [较小的三数之和](https://leetcode-cn.com/problems/3sum-smaller/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0259_3Sum_Smaller/Solution.java) | 中等 | 数组 双指针 二分查找 排序           |
+| 18   | [四数之和](https://leetcode-cn.com/problems/4sum/)           | [Java](./src/com/scuyjzh/leetcode/medium/No_0018_4Sum/Solution.java) | 中等 | 数组 双指针 排序                    |
+| 231  | [2 的幂](https://leetcode-cn.com/problems/power-of-two/)     | [Java](./src/com/scuyjzh/leetcode/easy/No_0231_Power_of_Two/Solution.java) | 简单 | 位运算 递归 数学                    |
+| 326  | [3的幂](https://leetcode-cn.com/problems/power-of-three/)    | [Java](./src/com/scuyjzh/leetcode/easy/No_0326_Power_of_Three/Solution.java) | 简单 | 递归 数学                           |
+| 342  | [4的幂](https://leetcode-cn.com/problems/power-of-four/)     | [Java](./src/com/scuyjzh/leetcode/easy/No_0342_Power_of_Four/Solution.java) | 简单 | 位运算 递归 数学                    |
+| 372  | [超级次方](https://leetcode-cn.com/problems/super-pow/)      | [Java](./src/com/scuyjzh/leetcode/medium/No_0372_Super_Pow/Solution.java) | 中等 | 数学 分治                           |
+| 233  | [数字 1 的个数](https://leetcode-cn.com/problems/number-of-digit-one/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0233_Number_of_Digit_One/Solution.java) | 困难 | 递归 数学 动态规划                  |
+| 319  | [灯泡开关](https://leetcode-cn.com/problems/bulb-switcher/)  | [Java](./src/com/scuyjzh/leetcode/medium/No_0319_Bulb_Switcher/Solution.java) | 中等 | 脑筋急转弯 数学                     |
+| 292  | [Nim 游戏](https://leetcode-cn.com/problems/nim-game/)       | [Java](./src/com/scuyjzh/leetcode/easy/No_0292_Nim_Game/Solution.java) | 简单 | 脑筋急转弯 数学 博弈                |
+| 202  | [快乐数](https://leetcode-cn.com/problems/happy-number/)     | [Java](./src/com/scuyjzh/leetcode/easy/No_0202_Happy_Number/Solution.java) | 简单 | 哈希表 双指针 数学                  |
+| 400  | [第 N 位数字](https://leetcode-cn.com/problems/nth-digit/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0400_Nth_Digit/Solution.java) | 中等 | 数学 二分查找                       |
+| 263  | [丑数](https://leetcode-cn.com/problems/ugly-number/)        | [Java](./src/com/scuyjzh/leetcode/easy/No_0263_Ugly_Number/Solution.java) | 简单 | 数学                                |
+| 264  | [丑数 II](https://leetcode-cn.com/problems/ugly-number-ii/)  | [Java](./src/com/scuyjzh/leetcode/medium/No_0264_Ugly_Number_II/Solution.java) | 中等 | 哈希表 数学 动态规划 堆（优先队列） |
 
 ### Tree
 
