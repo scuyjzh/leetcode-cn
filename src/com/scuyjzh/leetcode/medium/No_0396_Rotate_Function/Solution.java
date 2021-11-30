@@ -9,7 +9,7 @@ package com.scuyjzh.leetcode.medium.No_0396_Rotate_Function;
  * F(k) = 0 * Bk[0] + 1 * Bk[1] + ... + (n-1) * Bk[n-1]。
  * 计算F(0), F(1), ..., F(n-1)中的最大值。
  * 注意:
- * 可以认为 n 的值小于 105。
+ * 可以认为 n 的值小于 10^5。
  */
 class Solution {
     public int maxRotateFunction(int[] nums) {
