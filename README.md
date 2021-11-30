@@ -203,6 +203,7 @@
 | 390  | [消除游戏](https://leetcode-cn.com/problems/elimination-game/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0390_Elimination_Game/Solution.java) | 中等 | 数学                                |
 | 386  | [字典序排数](https://leetcode-cn.com/problems/lexicographical-numbers/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0386_Lexicographical_Numbers/Solution.java) | 中等 | 深度优先搜索 字典树                 |
 | 357  | [计算各个位数不同的数字个数](https://leetcode-cn.com/problems/count-numbers-with-unique-digits/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0357_Count_Numbers_with_Unique_Digits/Solution.java) | 中等 | 数学 动态规划 回溯                  |
+| 360  | [有序转化数组](https://leetcode-cn.com/problems/sort-transformed-array/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0360_Sort_Transformed_Array/Solution.java) | 中等 | 数组 数学 双指针 排序               |
 
 ### Tree
 
