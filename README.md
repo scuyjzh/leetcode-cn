@@ -205,6 +205,7 @@
 | 357  | [计算各个位数不同的数字个数](https://leetcode-cn.com/problems/count-numbers-with-unique-digits/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0357_Count_Numbers_with_Unique_Digits/Solution.java) | 中等 | 数学 动态规划 回溯                  |
 | 360  | [有序转化数组](https://leetcode-cn.com/problems/sort-transformed-array/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0360_Sort_Transformed_Array/Solution.java) | 中等 | 数组 数学 双指针 排序               |
 | 397  | [整数替换](https://leetcode-cn.com/problems/integer-replacement/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0397_Integer_Replacement/Solution.java) | 中等 | 贪心 位运算 记忆化搜索 动态规划     |
+| 368  | [最大整除子集](https://leetcode-cn.com/problems/largest-divisible-subset/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0368_Largest_Divisible_Subset/Solution.java) | 中等 | 数组 数学 动态规划 排序             |
 
 ### Tree
 
