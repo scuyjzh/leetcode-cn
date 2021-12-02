@@ -5,16 +5,25 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 import java.util.*;
 
 /**
- * @author scuyjzh
- * @date 2020/8/25 10:06
+ * 100. 相同的树
+ *
+ * 给你两棵二叉树的根节点 p 和 q ，编写一个函数来检验这两棵树是否相
+ * 同。
+ * 如果两个树在结构上相同，并且节点具有相同的值，则认为它们是相同的。
  */
 class Solution {
     /**
      * 方法一：深度优先搜索
-     * 时间复杂度：O(min(m,n))，其中 m 和 n 分别是两个二叉树的结点数。对两个二叉树同时进行深度优先搜索，只有当两个二叉树中的对应结点都不为空时才会访问到该结点，因此被访问到的结点数不会超过较小的二叉树的结点数
-     * 空间复杂度：O(min(m,n))，其中 m 和 n 分别是两个二叉树的结点数。空间复杂度取决于递归调用的层数，递归调用的层数不会超过较小的二叉树的最大高度，最坏情况下，二叉树的高度等于结点数
      */
     public boolean isSameTree1(TreeNode p, TreeNode q) {
+        /*
+         * 如果两个二叉树都为空，则两个二叉树相同。如果两个二叉树中有且只有一个为空，则两个二叉树一定不相
+         * 同。
+         *
+         * 如果两个二叉树都不为空，那么首先判断它们的根节点的值是否相同，若不相同则两个二叉树一定不同，若
+         * 相同，再分别判断两个二叉树的左子树是否相同以及右子树是否相同。这是一个递归的过程，因此可以使用
+         * 深度优先搜索，递归地判断两个二叉树是否相同。
+         */
         return dfs(p, q);
     }
 
@@ -32,54 +41,41 @@ class Solution {
     }
 
     /**
-     * 方法二：广度优先搜索（层序遍历）
-     * 时间复杂度：O(min(m,n))，其中 m 和 n 分别是两个二叉树的结点数。对两个二叉树同时进行广度优先搜索，只有当两个二叉树中的对应结点都不为空时才会访问到该结点，因此被访问到的结点数不会超过较小的二叉树的结点数
-     * 空间复杂度：O(min(m,n))，其中 m 和 n 分别是两个二叉树的结点数。空间复杂度取决于队列中的元素个数，队列中的元素个数不会超过较小的二叉树的结点数
+     * 方法二：广度优先搜索
      */
     public boolean isSameTree2(TreeNode p, TreeNode q) {
         if (p == null && q == null) {
             return true;
-        } else if (p == null || q == null) {
+        }
+        if (p == null || q == null) {
             return false;
         }
-        Queue<TreeNode> queue1 = new LinkedList<>();
-        Queue<TreeNode> queue2 = new LinkedList<>();
-        queue1.add(p);
-        queue2.add(q);
-        while (!queue1.isEmpty() && !queue2.isEmpty()) {
-            TreeNode node1 = queue1.remove();
-            TreeNode node2 = queue2.remove();
-            if (node1.val != node2.val) {
-                return false;
-            }
-            TreeNode left1 = node1.left, right1 = node1.right, left2 = node2.left, right2 = node2.right;
-            if (left1 == null ^ left2 == null) {
-                return false;
-            }
-            if (right1 == null ^ right2 == null) {
-                return false;
-            }
-            if (left1 != null) {
-                queue1.add(left1);
-            }
-            if (right1 != null) {
-                queue1.add(right1);
-            }
-            if (left2 != null) {
-                queue2.add(left2);
-            }
-            if (right2 != null) {
-                queue2.add(right2);
-            }
-        }
-        return queue1.isEmpty() && queue2.isEmpty();
-    }
 
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(p);
+        queue.offer(q);
+        while (!queue.isEmpty()) {
+            p = queue.poll();
+            q = queue.poll();
+            if (p == null && q == null) {
+                continue;
+            }
+            if ((p == null || q == null) || p.val != q.val) {
+                return false;
+            }
+            queue.offer(p.left);
+            queue.offer(q.left);
+
+            queue.offer(p.right);
+            queue.offer(q.right);
+        }
+        return true;
+    }
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        TreeNode p = TreeNode.initBinaryTree("[1,2,2,3,4,4,3,8,7,6,5,5,6,7,8]");
-        TreeNode q = TreeNode.initBinaryTree("[1,2,2,3,4,4,3,8,7,6,5,5,6,7,8]");
+        TreeNode p = TreeNode.initBinaryTree("[1,2,3,4,5,null,6]");
+        TreeNode q = TreeNode.initBinaryTree("[1,2,3,4,5,null,6]");
         System.out.println(solution.isSameTree1(p, q));
         System.out.println(solution.isSameTree2(p, q));
     }
