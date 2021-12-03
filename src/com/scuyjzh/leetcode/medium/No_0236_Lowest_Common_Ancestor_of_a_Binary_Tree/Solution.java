@@ -4,14 +4,15 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 
 /**
  * 236. 二叉树的最近公共祖先
- * <p>
+ *
  * 给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。
+ * 百度百科中最近公共祖先的定义为：“对于有根树 T 的两个节点 p、q，最近
+ * 公共祖先表示为一个节点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大
+ * （一个节点也可以是它自己的祖先）。”
  */
 class Solution {
     /**
      * 方法：递归
-     * 时间复杂度：O(N)，其中 N 是二叉树的节点数。二叉树的所有节点有且只会被访问一次，因此时间复杂度为 O(N)。
-     * 空间复杂度：O(N)，其中 N 是二叉树的节点数。递归调用的栈深度取决于二叉树的高度，二叉树最坏情况下为一条链，此时高度为 N，因此空间复杂度为 O(N)。
      */
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         return dfs(root, p, q);
@@ -24,24 +25,18 @@ class Solution {
         if (root.val == p.val || root.val == q.val) {
             return root;
         }
-        TreeNode left = dfs(root.left, p, q);
-        TreeNode right = dfs(root.right, p, q);
-        if (left != null && right != null) {
+        TreeNode left_have = dfs(root.left, p, q);
+        TreeNode right_have = dfs(root.right, p, q);
+        if (left_have != null && right_have != null) {
             return root;
-        } else if (left != null) {
-            return left;
-        } else if (right != null) {
-            return right;
         } else {
-            return null;
+            return left_have != null ? left_have : right_have;
         }
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        TreeNode root = TreeNode.initBinaryTree("[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]");
-        TreeNode p = new TreeNode(9);
-        TreeNode q = new TreeNode(11);
-        System.out.println(solution.lowestCommonAncestor(root, p, q).val);
+        TreeNode root = TreeNode.initBinaryTree("[3,5,1,6,2,0,8,null,null,7,4]");
+        System.out.println(new Solution().lowestCommonAncestor(root, new TreeNode(5), new TreeNode(1)).val);
+        System.out.println(new Solution().lowestCommonAncestor(root, new TreeNode(5), new TreeNode(4)).val);
     }
 }
