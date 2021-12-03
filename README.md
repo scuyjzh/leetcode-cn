@@ -11,8 +11,8 @@
   * [String](#string)
   * [Math](#math)
   * [Tree](#tree)
-  * [Trie](#trie)
   * [Dynamic Programming](#dynamic-programming)
+  * [Trie](#trie)
 
 ## Tags
 
@@ -230,6 +230,7 @@
 | 124 | [二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0124_Binary_Tree_Maximum_Path_Sum/Solution.java) | 困难 | 树 深度优先搜索 动态规划 二叉树 |
 | 250 | [统计同值子树](https://leetcode-cn.com/problems/count-univalue-subtrees/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0250_Count_Univalue_Subtrees/Solution.java) | 中等 | 树 深度优先搜索 二叉树 |
 | 366 | [寻找二叉树的叶子节点](https://leetcode-cn.com/problems/find-leaves-of-binary-tree/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0366_Find_Leaves_of_Binary_Tree/Solution.java) | 中等 | 树 深度优先搜索 二叉树 |
+| 337 | [打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0337_House_Robber_III/Solution.java) | 中等 | 树 深度优先搜索 动态规划 二叉树 |
 | 235  | [二叉搜索树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0235_Lowest_Common_Ancestor_of_a_Binary_Search_Tree/Solution.java) | 简单 | 树 深度优先搜索 二叉搜索树 二叉树 |
 | 236  | [二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0236_Lowest_Common_Ancestor_of_a_Binary_Tree/Solution.java) | 中等 | 树 深度优先搜索 二叉树            |
 | 116  | [填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0116_Populating_Next_Right_Pointers_in_Each_Node/Solution.java) | 中等 | 树 深度优先搜索 广度优先搜索 二叉树 |
