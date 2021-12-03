@@ -7,11 +7,12 @@
 ## Table of Contents
 
 - [Tags](#Tags)
-  * [Array](#Array)
-  * [String](#String)
-  * [Math](#Math)
-  * [Tree](#Tree)
-  * [Trie](#Trie)
+  * [Array](#array)
+  * [String](#string)
+  * [Math](#math)
+  * [Tree](#tree)
+  * [Trie](#trie)
+  * [Dynamic Programming](#dynamic-programming)
 
 ## Tags
 
@@ -240,6 +241,12 @@
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | --------- |
 | 46   | [全排列](https://leetcode-cn.com/problems/permutations/)     | [Java](./src/com/scuyjzh/leetcode/medium/No_0046_Permutations/Solution.java) | 中等 | 数组 回溯 |
 | 47   | [全排列 II](https://leetcode-cn.com/problems/permutations-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0047_Permutations_II/Solution.java) | 中等 | 数组 回溯 |
+
+### Dynamic Programming
+
+| #    | 题目                                                       | 题解                                                         | 难度 | 标签          |
+| ---- | ---------------------------------------------------------- | ------------------------------------------------------------ | ---- | ------------- |
+| 198  | [打家劫舍](https://leetcode-cn.com/problems/house-robber/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0198_House_Robber/Solution.java) | 中等 | 数组 动态规划 |
 
 ### Trie
 
