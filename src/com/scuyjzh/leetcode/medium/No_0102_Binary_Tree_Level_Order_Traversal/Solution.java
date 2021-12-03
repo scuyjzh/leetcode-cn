@@ -12,12 +12,9 @@ import java.util.*;
  */
 class Solution {
     /**
-     * 方法：广度优先搜索
-     *
-     * • 时间复杂度：记树上所有节点的个数为 n。每个点进队出队各一次，故渐进时间复杂度为 O(n)。
-     * • 空间复杂度：队列中元素的个数不超过 n 个，故渐进空间复杂度为 O(n)。
+     * 方法一：广度优先搜索
      */
-    public List<List<Integer>> levelOrder(TreeNode root) {
+    public List<List<Integer>> levelOrder1(TreeNode root) {
         /*
          * 可以用一种巧妙的方法修改广度优先搜索：
          *   • 首先根元素入队
@@ -54,9 +51,40 @@ class Solution {
         return list;
     }
 
+    /**
+     * 方法二：深度优先搜索（递归）
+     */
+    public List<List<Integer>> levelOrder2(TreeNode root) {
+        if (root == null) {
+            return new LinkedList<>();
+        }
+        // 用来存放最终结果
+        List<List<Integer>> res = new LinkedList<>();
+        dfs(1, root, res);
+        return res;
+    }
+
+    private void dfs(int level, TreeNode root, List<List<Integer>> res) {
+        // 假设 res 是 [ [1] [2,3] ]，level 是 3，就再插入一个空 list 放到 res 中
+        if (res.size() < level) {
+            res.add(new LinkedList<>());
+        }
+        // 将当前节点的值加入到 res 中，level 代表当前层，假设 level 是 3，节点值是 99
+        // res 是 [ [1] [2,3] [4] ]，加入后 res 就变为 [ [1] [2,3] [4,99] ]
+        res.get(level - 1).add(root.val);
+        // 递归处理左子树和右子树，同时将层数 level 加 1
+        if (root.left != null) {
+            dfs(level + 1, root.left, res);
+        }
+        if (root.right != null) {
+            dfs(level + 1, root.right, res);
+        }
+    }
+
     public static void main(String[] args) {
         Solution solution = new Solution();
-        TreeNode root = TreeNode.initBinaryTree("[1,2,3,4,5,null,6]");
-        System.out.println(solution.levelOrder(root));
+        TreeNode root = TreeNode.initBinaryTree("[3,9,20,null,null,15,7]");
+        System.out.println(solution.levelOrder1(root));
+        System.out.println(solution.levelOrder2(root));
     }
 }
