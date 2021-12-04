@@ -241,6 +241,7 @@
 | 109 | [有序链表转换二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0109_Convert_Sorted_List_to_Binary_Search_Tree/Solution.java) | 中等 | 树 二叉搜索树 链表 分治 二叉树 |
 | 173 | [二叉搜索树迭代器](https://leetcode-cn.com/problems/binary-search-tree-iterator/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0173_Binary_Search_Tree_Iterator/BSTIterator.java) | 中等 | 栈 树 设计 二叉搜索树 二叉树 迭代器 |
 | 230 | [二叉搜索树中第K小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0230_Kth_Smallest_Element_in_a_BST/Solution.java) | 中等 | 树 深度优先搜索 二叉搜索树 二叉树 |
+| 297 | [二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0297_Serialize_and_Deserialize_Binary_Tree/Codec.java) | 困难 | 树 深度优先搜索 二叉搜索树 设计 字符串 二叉树 |
 | 116  | [填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0116_Populating_Next_Right_Pointers_in_Each_Node/Solution.java) | 中等 | 树 深度优先搜索 广度优先搜索 二叉树 |
 | 117  | [填充每个节点的下一个右侧节点指针 II](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0117_Populating_Next_Right_Pointers_in_Each_Node_II/Solution.java) | 中等 | 树 深度优先搜索 广度优先搜索 二叉树 |
 
