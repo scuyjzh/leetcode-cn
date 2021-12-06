@@ -4,84 +4,50 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 
 import java.util.*;
 
+/**
+ * 106. 从中序与后序遍历序列构造二叉树
+ *
+ * 根据一棵树的中序遍历与后序遍历构造二叉树。
+ * 注意:
+ * 你可以假设树中没有重复的元素。
+ */
 class Solution {
-    /**
-     * Approach #1 (Iteration)
-     */
-    public TreeNode buildTree1(int[] inorder, int[] postorder) {
-        // deal with edge case(s)
-        if (inorder.length == 0 || postorder.length == 0) {
-            return null;
-        }
-
-        // build a map of the indices of the values as they appear in the inorder array
-        Map<Integer, Integer> map = new HashMap<>(16);
-        for (int i = 0; i < inorder.length; i++) {
-            map.put(inorder[i], i);
-        }
-
-        // initialize the stack of tree nodes
-        Deque<TreeNode> stack = new ArrayDeque<>();
-        int value = postorder[postorder.length - 1];
-        TreeNode root = new TreeNode(value);
-        stack.push(root);
-
-        // for all remaining values...
-        for (int i = postorder.length - 2; i >= 0; --i) {
-            // create a node
-            value = postorder[i];
-            TreeNode node = new TreeNode(value);
-            if (map.get(value) > map.get(stack.peek().val)) {
-                // the new node is on the right of the last node,
-                // so it must be its right child (that's the way postorder works)
-                stack.peek().right = node;
-            } else {
-                // the new node is on the left of the last node,
-                // so it must be the left child of either the last node
-                // or one of the last node's ancestors.
-                // pop the stack until we either run out of ancestors
-                // or the node at the top of the stack is to the left of the new node
-                TreeNode parent = null;
-                while (!stack.isEmpty() && map.get(value) < map.get(stack.peek().val)) {
-                    parent = stack.pop();
-                }
-                parent.left = node;
-            }
-            // record the last node
-            stack.push(node);
-        }
-
-        return root;
-    }
-
-    /**
-     * Approach #2 (Recursion)
-     */
-    public TreeNode buildTree2(int[] inorder, int[] postorder) {
+    public TreeNode buildTree(int[] inorder, int[] postorder) {
+        /*
+         * 首先解决这道题需要明确给定一棵二叉树，是如何对其进行中序遍历与后序遍历的：
+         *   • 中序遍历的顺序是每次遍历左孩子，再遍历根节点，最后遍历右孩子。
+         *   • 后序遍历的顺序是每次遍历左孩子，再遍历右孩子，最后遍历根节点。
+         *
+         * 因此根据上文所述，可以发现后序遍历的数组最后一个元素代表的即为根节点。知道这个性质后，
+         * 可以利用已知的根节点信息在中序遍历的数组中找到根节点所在的下标，然后根据其将中序遍历的数组分成
+         * 左右两部分，左边部分即左子树，右边部分为右子树，针对每个部分可以用同样的方法继续递归下去构造。
+         *
+         * 为了高效查找根节点元素在中序遍历数组中的下标，选择创建哈希表来存储中序序列，即建立一个
+         * （元素，下标）键值对的哈希表。
+         */
+        int inLen = inorder.length;
         Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < inorder.length; i++) {
+        for (int i = 0; i < inLen; ++i) {
             map.put(inorder[i], i);
         }
-        return helper(postorder.length - 1, 0, inorder.length - 1, postorder, inorder, map);
+        return helper(postorder.length - 1, 0, inLen - 1, postorder, map);
     }
 
-    private TreeNode helper(int postRoot, int inStart, int inEnd, int[] postorder, int[] inorder, Map<Integer, Integer> map) {
+    private TreeNode helper(int postRoot, int inStart, int inEnd, int[] postorder, Map<Integer, Integer> map) {
         if (postRoot < 0 || inStart > inEnd) {
             return null;
         }
         TreeNode root = new TreeNode(postorder[postRoot]);
-        // Index of current root in inorder
+        // 在中序遍历中定位根节点
         int inRoot = map.get(root.val);
-        root.left = helper(postRoot - (inEnd - inRoot) - 1, inStart, inRoot - 1, postorder, inorder, map);
-        root.right = helper(postRoot - 1, inRoot + 1, inEnd, postorder, inorder, map);
+        root.left = helper(postRoot - (inEnd - inRoot) - 1, inStart, inRoot - 1, postorder, map);
+        root.right = helper(postRoot - 1, inRoot + 1, inEnd, postorder, map);
         return root;
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        int[] inorder = new int[]{4, 7, 2, 1, 5, 3, 8, 6};
-        int[] postorder = new int[]{7, 4, 2, 5, 8, 6, 3, 1};
-        System.out.println(solution.buildTree1(inorder, postorder));
-        System.out.println(solution.buildTree2(inorder, postorder));
+        int[] inorder = new int[]{9, 3, 15, 20, 7};
+        int[] postorder = new int[]{9, 15, 7, 20, 3};
+        System.out.println(new Solution().buildTree(inorder, postorder));
     }
 }
