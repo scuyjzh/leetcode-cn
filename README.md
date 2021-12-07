@@ -258,6 +258,7 @@
 | 314 | [二叉树的垂直遍历](https://leetcode-cn.com/problems/binary-tree-vertical-order-traversal/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0314_Binary_Tree_Vertical_Order_Traversal/Solution.java) | 中等 | 树 深度优先搜索 广度优先搜索 哈希表 二叉树 |
 | 96 | [不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0096_Unique_Binary_Search_Trees/Solution.java) | 中等 | 树 二叉搜索树 数学 动态规划 二叉树 |
 | 95 | [不同的二叉搜索树 II](https://leetcode-cn.com/problems/unique-binary-search-trees-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0095_Unique_Binary_Search_Trees_II/Solution.java) | 中等 | 树 二叉搜索树 动态规划 回溯 二叉树 |
+| 331 | [验证二叉树的前序序列化](https://leetcode-cn.com/problems/verify-preorder-serialization-of-a-binary-tree/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0331_Verify_Preorder_Serialization_of_a_Binary_Tree/Solution.java) | 中等 | 栈 树 字符串 二叉树 |
 
 ### Backtracking
 
