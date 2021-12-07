@@ -72,18 +72,18 @@ class Solution {
                 curSum += cur.val;
                 cur = cur.left;
             }
-            // 在出栈前，将栈顶视作实际的根结点，并检查其右子树是否不存在或已被访问
+            // 在出栈前，将栈顶视作实际的根节点，并检查其右子树是否不存在或已被访问
             cur = stack.peek();
             if (cur.left == null && cur.right == null && curSum == sum) {
                 // 找到路径
                 return true;
             }
             if (cur.right == null || cur.right == pre) {
-                // 如果不存在右子树或右子树已被访问，那么可以访问根结点，将其弹出栈
+                // 如果不存在右子树或右子树已被访问，那么可以访问根节点，将其弹出栈
                 stack.pop();
                 // 减去出栈的值
                 curSum -= cur.val;
-                // 记录上一个访问的结点，用于判断“访问根结点之前，右子树是否已访问过”
+                // 记录上一个访问的节点，用于判断“访问根节点之前，右子树是否已访问过”
                 pre = cur;
                 // 表示不需要转向，继续弹栈
                 cur = null;
