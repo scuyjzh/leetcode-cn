@@ -255,6 +255,7 @@
 | 106 | [从中序与后序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0106_Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal/Solution.java) | 中等 | 树 数组 哈希表 分治 二叉树 |
 | 116  | [填充每个节点的下一个右侧节点指针](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0116_Populating_Next_Right_Pointers_in_Each_Node/Solution.java) | 中等 | 树 深度优先搜索 广度优先搜索 二叉树 |
 | 117  | [填充每个节点的下一个右侧节点指针 II](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0117_Populating_Next_Right_Pointers_in_Each_Node_II/Solution.java) | 中等 | 树 深度优先搜索 广度优先搜索 二叉树 |
+| 314 | [二叉树的垂直遍历](https://leetcode-cn.com/problems/binary-tree-vertical-order-traversal/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0314_Binary_Tree_Vertical_Order_Traversal/Solution.java) | 中等 | 树 深度优先搜索 广度优先搜索 哈希表 二叉树 |
 
 ### Backtracking
 
