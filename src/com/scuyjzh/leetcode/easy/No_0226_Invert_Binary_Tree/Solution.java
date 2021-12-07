@@ -28,12 +28,12 @@ class Solution {
         if (root == null) {
             return null;
         }
-        // 如果当前结点不为 null，那么先将其左右子树进行翻转，然后交换左右子树
+        // 如果当前节点不为 null，那么先将其左右子树进行翻转，然后交换左右子树
         TreeNode right = dfs(root.right);
         TreeNode left = dfs(root.left);
         root.left = right;
         root.right = left;
-        // 返回值为完成了翻转后的当前结点
+        // 返回值为完成了翻转后的当前节点
         return root;
     }
 
@@ -44,31 +44,30 @@ class Solution {
         if (root == null) {
             return null;
         }
-        // 将二叉树中的结点逐层放入队列中，再迭代处理队列中的元素
+        // 将二叉树中的节点逐层放入队列中，再迭代处理队列中的元素
         Deque<TreeNode> queue = new ArrayDeque<>();
         queue.offer(root);
         while (!queue.isEmpty()) {
-            // 每次都从队列中拿一个结点，并交换这个结点的左右子树
+            // 每次都从队列中拿一个节点，并交换这个节点的左右子树
             TreeNode cur = queue.poll();
             TreeNode tmp = cur.left;
             cur.left = cur.right;
             cur.right = tmp;
-            // 如果当前结点的左子树不为空，则放入队列等待后续处理
+            // 如果当前节点的左子树不为空，则放入队列等待后续处理
             if (cur.left != null) {
                 queue.offer(cur.left);
             }
-            // 如果当前结点的右子树不为空，则放入队列等待后续处理
+            // 如果当前节点的右子树不为空，则放入队列等待后续处理
             if (cur.right != null) {
                 queue.offer(cur.right);
             }
         }
-        // 返回处理完的根结点
+        // 返回处理完的根节点
         return root;
     }
 
     public static void main(String[] args) {
-        TreeNode root = TreeNode.initBinaryTree("[1,2,3,4,5,null,6]");
-        new Solution().invertTree1(root);
-        new Solution().invertTree2(root);
+        new Solution().invertTree1(TreeNode.initBinaryTree("[1,2,3,4,5,null,6]"));
+        new Solution().invertTree2(TreeNode.initBinaryTree("[1,2,3,4,5,null,6]"));
     }
 }
