@@ -57,26 +57,26 @@ class Solution {
         while (cur != null || !stack.isEmpty()) {
             while (cur != null) {
                 stack.push(cur);
-                // 每走一步，就将结点加入到路径中
+                // 每走一步，就将节点加入到路径中
                 path.add(cur.val);
                 // 累加当前已走路径的和
                 curSum += cur.val;
                 cur = cur.left;
             }
-            // 在出栈前，将栈顶视作实际的根结点，并检查其右子树是否不存在或已被访问
+            // 在出栈前，将栈顶视作实际的根节点，并检查其右子树是否不存在或已被访问
             cur = stack.peek();
             if (cur.left == null && cur.right == null && curSum == sum) {
                 // path 全局只有一份，必须做拷贝
                 list.add(new ArrayList<>(path));
             }
             if (cur.right == null || cur.right == pre) {
-                // 如果不存在右子树或右子树已被访问，那么可以访问根结点，将其弹出栈
+                // 如果不存在右子树或右子树已被访问，那么可以访问根节点，将其弹出栈
                 stack.pop();
                 // 减去出栈的值
                 curSum -= cur.val;
-                // 移除路径中的出栈结点
+                // 移除路径中的出栈节点
                 path.remove(path.size() - 1);
-                // 记录上一个访问的结点，用于判断“访问根结点之前，右子树是否已访问过”
+                // 记录上一个访问的节点，用于判断“访问根节点之前，右子树是否已访问过”
                 pre = cur;
                 // 表示不需要转向，继续弹栈
                 cur = null;
