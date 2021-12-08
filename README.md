@@ -271,6 +271,7 @@
 | 39   | [组合总和](https://leetcode-cn.com/problems/combination-sum/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0039_Combination_Sum/Solution.java) | 中等 | 数组 回溯        |
 | 40   | [组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0040_Combination_Sum_II/Solution.java) | 中等 | 数组 回溯        |
 | 216  | [组合总和 III](https://leetcode-cn.com/problems/combination-sum-iii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0216_Combination_Sum_III/Solution.java) | 中等 | 数组 回溯        |
+| 377  | [组合总和 Ⅳ](https://leetcode-cn.com/problems/combination-sum-iv/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0377_Combination_Sum_IV/Solution.java) | 中等 | 数组 动态规划    |
 | 46   | [全排列](https://leetcode-cn.com/problems/permutations/)     | [Java](./src/com/scuyjzh/leetcode/medium/No_0046_Permutations/Solution.java) | 中等 | 数组 回溯        |
 | 47   | [全排列 II](https://leetcode-cn.com/problems/permutations-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0047_Permutations_II/Solution.java) | 中等 | 数组 回溯        |
 
