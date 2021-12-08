@@ -5,36 +5,36 @@ import java.util.*;
 /**
  * 47. 全排列 II
  *
- * 给定一个可包含重复数字的序列 nums ，按任意顺序 返回所有不重复的全
- * 排列。
+ * 给定一个可包含重复数字的序列 nums ，按任意顺序 返回所有不重复的全排列。
  */
 class Solution {
     /**
-     * 方法：回溯 + 剪枝
+     * 方法：回溯搜索 + 剪枝
      */
     public List<List<Integer>> permuteUnique(int[] nums) {
-        // 使用一个动态数组保存所有可能的全排列
         List<List<Integer>> res = new ArrayList<>();
         if (nums == null || nums.length == 0) {
             return res;
         }
+
         boolean[] visited = new boolean[nums.length];
         LinkedList<Integer> path = new LinkedList<>();
 
         // 排序（升序或者降序都可以），排序是剪枝的前提
         Arrays.sort(nums);
 
-        dfs(res, nums, path, visited);
+        dfs(nums, visited, path, res);
         return res;
     }
 
-    private void dfs(List<List<Integer>> res, int[] nums, LinkedList<Integer> path, boolean[] visited) {
+    private void dfs(int[] nums, boolean[] visited, LinkedList<Integer> path, List<List<Integer>> res) {
         // 递归终止条件
         if (path.size() == nums.length) {
             // 拷贝
             res.add(new ArrayList<>(path));
             return;
         }
+
         for (int i = 0; i < nums.length; ++i) {
             // 判断当前数是否被选择过
             if (visited[i]) {
@@ -53,12 +53,18 @@ class Solution {
             path.add(nums[i]);
             visited[i] = true;
 
+            // 调试语句 ①
+            System.out.println("  递归之前 => " + path);
+
             // 继续递归填下一个数
-            dfs(res, nums, path, visited);
+            dfs(nums, visited, path, res);
 
             // 回溯部分的代码，和 dfs 之前的代码是对称的
             path.removeLast();
             visited[i] = false;
+
+            // 调试语句 ②
+            System.out.println("递归之后 => " + path);
         }
     }
 
