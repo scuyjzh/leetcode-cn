@@ -4,13 +4,13 @@ import java.util.*;
 
 /**
  * 77. 组合
- * <p>
+ *
  * 给定两个整数 n 和 k，返回范围 [1, n] 中所有可能的 k 个数的组合。
  * 你可以按 任何顺序 返回答案。
  */
 class Solution {
     /**
-     * 方法一：回溯 + 剪枝
+     * 方法一：根据搜索起点画出二叉树（回溯 + 剪枝）
      */
     public List<List<Integer>> combine1(int n, int k) {
         List<List<Integer>> res = new ArrayList<>();
@@ -62,6 +62,7 @@ class Solution {
 
         // 为了防止底层动态数组扩容，初始化的时候传入最大长度
         Deque<Integer> path = new ArrayDeque<>(k);
+        // 可以按照每一个数选与不选画出二叉树，二叉树最多 n 层
         dfs(1, n, k, path, res);
         return res;
     }
@@ -76,12 +77,14 @@ class Solution {
         if (begin > n - k + 1) {
             return;
         }
+
         // 不选当前考虑的数 begin，直接递归到下一层
         dfs(begin + 1, n, k, path, res);
 
         // 选择当前考虑的数 begin，递归到下一层的时候 k - 1，这里 k 表示还需要选多少个数
         path.addLast(begin);
         dfs(begin + 1, n, k - 1, path, res);
+
         // 深度优先遍历有回头的过程，因此需要撤销选择
         path.removeLast();
     }
