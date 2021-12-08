@@ -275,6 +275,7 @@
 | 254  | [因子的组合](https://leetcode-cn.com/problems/factor-combinations/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0254_Factor_Combinations/Solution.java) | 中等 | 数组 回溯        |
 | 46   | [全排列](https://leetcode-cn.com/problems/permutations/)     | [Java](./src/com/scuyjzh/leetcode/medium/No_0046_Permutations/Solution.java) | 中等 | 数组 回溯        |
 | 47   | [全排列 II](https://leetcode-cn.com/problems/permutations-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0047_Permutations_II/Solution.java) | 中等 | 数组 回溯        |
+| 31   | [下一个排列](https://leetcode-cn.com/problems/next-permutation/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0031_Next_Permutation/Solution.java) | 中等 | 数组 双指针      |
 
 ### Dynamic Programming
 
