@@ -278,6 +278,7 @@
 | 31   | [下一个排列](https://leetcode-cn.com/problems/next-permutation/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0031_Next_Permutation/Solution.java) | 中等 | 数组 双指针        |
 | 60   | [排列序列](https://leetcode-cn.com/problems/permutation-sequence/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0060_Permutation_Sequence/Solution.java) | 困难 | 递归 数学          |
 | 291  | [单词规律 II](https://leetcode-cn.com/problems/word-pattern-ii/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0291_Word_Pattern_II/Solution.java) | 中等 | 哈希表 字符串 回溯 |
+| 17   | [电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0017_Letter_Combinations_of_a_Phone_Number/Solution.java) | 中等 | 哈希表 字符串 回溯 |
 
 ### Dynamic Programming
 
