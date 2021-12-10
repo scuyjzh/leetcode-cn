@@ -263,25 +263,26 @@
 
 ### Backtracking
 
-| #    | 题目                                                         | 题解                                                         | 难度 | 标签               |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------ |
-| 78   | [子集](https://leetcode-cn.com/problems/subsets/)            | [Java](./src/com/scuyjzh/leetcode/medium/No_0078_Subsets/Solution.java) | 中等 | 位运算 数组 回溯   |
-| 90   | [子集 II](https://leetcode-cn.com/problems/subsets-ii/)      | [Java](./src/com/scuyjzh/leetcode/medium/No_0090_Subsets_II/Solution.java) | 中等 | 位运算 数组 回溯   |
-| 77   | [组合](https://leetcode-cn.com/problems/combinations/)       | [Java](./src/com/scuyjzh/leetcode/medium/No_0077_Combinations/Solution.java) | 中等 | 数组 回溯          |
-| 39   | [组合总和](https://leetcode-cn.com/problems/combination-sum/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0039_Combination_Sum/Solution.java) | 中等 | 数组 回溯          |
-| 40   | [组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0040_Combination_Sum_II/Solution.java) | 中等 | 数组 回溯          |
-| 216  | [组合总和 III](https://leetcode-cn.com/problems/combination-sum-iii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0216_Combination_Sum_III/Solution.java) | 中等 | 数组 回溯          |
-| 377  | [组合总和 Ⅳ](https://leetcode-cn.com/problems/combination-sum-iv/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0377_Combination_Sum_IV/Solution.java) | 中等 | 数组 动态规划      |
-| 254  | [因子的组合](https://leetcode-cn.com/problems/factor-combinations/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0254_Factor_Combinations/Solution.java) | 中等 | 数组 回溯          |
-| 46   | [全排列](https://leetcode-cn.com/problems/permutations/)     | [Java](./src/com/scuyjzh/leetcode/medium/No_0046_Permutations/Solution.java) | 中等 | 数组 回溯          |
-| 47   | [全排列 II](https://leetcode-cn.com/problems/permutations-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0047_Permutations_II/Solution.java) | 中等 | 数组 回溯          |
-| 31   | [下一个排列](https://leetcode-cn.com/problems/next-permutation/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0031_Next_Permutation/Solution.java) | 中等 | 数组 双指针        |
-| 60   | [排列序列](https://leetcode-cn.com/problems/permutation-sequence/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0060_Permutation_Sequence/Solution.java) | 困难 | 递归 数学          |
-| 291  | [单词规律 II](https://leetcode-cn.com/problems/word-pattern-ii/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0291_Word_Pattern_II/Solution.java) | 中等 | 哈希表 字符串 回溯 |
-| 17   | [电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0017_Letter_Combinations_of_a_Phone_Number/Solution.java) | 中等 | 哈希表 字符串 回溯 |
-| 320  | [列举单词的全部缩写](https://leetcode-cn.com/problems/generalized-abbreviation/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0320_Generalized_Abbreviation/Solution.java) | 中等 | 位运算 字符串 回溯 |
-| 93   | [复原 IP 地址](https://leetcode-cn.com/problems/restore-ip-addresses/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0093_Restore_IP_Addresses/Solution.java) | 中等 | 字符串 回溯        |
-| 282  | [给表达式添加运算符](https://leetcode-cn.com/problems/expression-add-operators/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0282_Expression_Add_Operators/Solution.java) | 困难 | 数学 字符串 回溯   |
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签                                          |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | --------------------------------------------- |
+| 78   | [子集](https://leetcode-cn.com/problems/subsets/)            | [Java](./src/com/scuyjzh/leetcode/medium/No_0078_Subsets/Solution.java) | 中等 | 位运算 数组 回溯                              |
+| 90   | [子集 II](https://leetcode-cn.com/problems/subsets-ii/)      | [Java](./src/com/scuyjzh/leetcode/medium/No_0090_Subsets_II/Solution.java) | 中等 | 位运算 数组 回溯                              |
+| 77   | [组合](https://leetcode-cn.com/problems/combinations/)       | [Java](./src/com/scuyjzh/leetcode/medium/No_0077_Combinations/Solution.java) | 中等 | 数组 回溯                                     |
+| 39   | [组合总和](https://leetcode-cn.com/problems/combination-sum/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0039_Combination_Sum/Solution.java) | 中等 | 数组 回溯                                     |
+| 40   | [组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0040_Combination_Sum_II/Solution.java) | 中等 | 数组 回溯                                     |
+| 216  | [组合总和 III](https://leetcode-cn.com/problems/combination-sum-iii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0216_Combination_Sum_III/Solution.java) | 中等 | 数组 回溯                                     |
+| 377  | [组合总和 Ⅳ](https://leetcode-cn.com/problems/combination-sum-iv/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0377_Combination_Sum_IV/Solution.java) | 中等 | 数组 动态规划                                 |
+| 254  | [因子的组合](https://leetcode-cn.com/problems/factor-combinations/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0254_Factor_Combinations/Solution.java) | 中等 | 数组 回溯                                     |
+| 46   | [全排列](https://leetcode-cn.com/problems/permutations/)     | [Java](./src/com/scuyjzh/leetcode/medium/No_0046_Permutations/Solution.java) | 中等 | 数组 回溯                                     |
+| 47   | [全排列 II](https://leetcode-cn.com/problems/permutations-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0047_Permutations_II/Solution.java) | 中等 | 数组 回溯                                     |
+| 31   | [下一个排列](https://leetcode-cn.com/problems/next-permutation/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0031_Next_Permutation/Solution.java) | 中等 | 数组 双指针                                   |
+| 60   | [排列序列](https://leetcode-cn.com/problems/permutation-sequence/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0060_Permutation_Sequence/Solution.java) | 困难 | 递归 数学                                     |
+| 291  | [单词规律 II](https://leetcode-cn.com/problems/word-pattern-ii/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0291_Word_Pattern_II/Solution.java) | 中等 | 哈希表 字符串 回溯                            |
+| 17   | [电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0017_Letter_Combinations_of_a_Phone_Number/Solution.java) | 中等 | 哈希表 字符串 回溯                            |
+| 320  | [列举单词的全部缩写](https://leetcode-cn.com/problems/generalized-abbreviation/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0320_Generalized_Abbreviation/Solution.java) | 中等 | 位运算 字符串 回溯                            |
+| 93   | [复原 IP 地址](https://leetcode-cn.com/problems/restore-ip-addresses/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0093_Restore_IP_Addresses/Solution.java) | 中等 | 字符串 回溯                                   |
+| 282  | [给表达式添加运算符](https://leetcode-cn.com/problems/expression-add-operators/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0282_Expression_Add_Operators/Solution.java) | 困难 | 数学 字符串 回溯                              |
+| 140  | [单词拆分 II](https://leetcode-cn.com/problems/word-break-ii/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0140_Word_Break_II/Solution.java) | 困难 | 字典树 记忆化搜索 哈希表 字符串 动态规划 回溯 |
 
 ### Dynamic Programming
 
