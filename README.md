@@ -285,10 +285,11 @@
 
 ### Dynamic Programming
 
-| #    | 题目                                                         | 题解                                                         | 难度 | 标签          |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------- |
-| 198  | [打家劫舍](https://leetcode-cn.com/problems/house-robber/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0198_House_Robber/Solution.java) | 中等 | 数组 动态规划 |
-| 213  | [打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0213_House_Robber_II/Solution.java) | 中等 | 数组 动态规划 |
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签                                     |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ---------------------------------------- |
+| 139  | [单词拆分](https://leetcode-cn.com/problems/word-break/)     | [Java](./src/com/scuyjzh/leetcode/medium/No_0139_Word_Break/Solution.java) | 中等 | 字典树 记忆化搜索 哈希表 字符串 动态规划 |
+| 198  | [打家劫舍](https://leetcode-cn.com/problems/house-robber/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0198_House_Robber/Solution.java) | 中等 | 数组 动态规划                            |
+| 213  | [打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0213_House_Robber_II/Solution.java) | 中等 | 数组 动态规划                            |
 
 ### Trie
 
