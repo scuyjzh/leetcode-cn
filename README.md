@@ -283,6 +283,7 @@
 | 93   | [复原 IP 地址](https://leetcode-cn.com/problems/restore-ip-addresses/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0093_Restore_IP_Addresses/Solution.java) | 中等 | 字符串 回溯                                   |
 | 282  | [给表达式添加运算符](https://leetcode-cn.com/problems/expression-add-operators/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0282_Expression_Add_Operators/Solution.java) | 困难 | 数学 字符串 回溯                              |
 | 140  | [单词拆分 II](https://leetcode-cn.com/problems/word-break-ii/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0140_Word_Break_II/Solution.java) | 困难 | 字典树 记忆化搜索 哈希表 字符串 动态规划 回溯 |
+| 351  | [安卓系统手势解锁](https://leetcode-cn.com/problems/android-unlock-patterns/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0351_Android_Unlock_Patterns/Solution.java) | 中等 | 动态规划 回溯                                 |
 
 ### Dynamic Programming
 
