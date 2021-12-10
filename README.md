@@ -293,6 +293,7 @@
 | 62   | [不同路径](https://leetcode-cn.com/problems/unique-paths/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0062_Unique_Paths/Solution.java) | 中等 | 数学 动态规划 组合数学                   |
 | 63   | [不同路径 II](https://leetcode-cn.com/problems/unique-paths-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0063_Unique_Paths_II/Solution.java) | 中等 | 数学 动态规划 矩阵                       |
 | 120  | [三角形最小路径和](https://leetcode-cn.com/problems/triangle/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0120_Triangle/Solution.java) | 中等 | 数学 动态规划                            |
+| 279  | [完全平方数](https://leetcode-cn.com/problems/perfect-squares/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0279_Perfect_Squares/Solution.java) | 中等 | 广度优先搜索 数学 动态规划               |
 | 139  | [单词拆分](https://leetcode-cn.com/problems/word-break/)     | [Java](./src/com/scuyjzh/leetcode/medium/No_0139_Word_Break/Solution.java) | 中等 | 字典树 记忆化搜索 哈希表 字符串 动态规划 |
 | 198  | [打家劫舍](https://leetcode-cn.com/problems/house-robber/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0198_House_Robber/Solution.java) | 中等 | 数组 动态规划                            |
 | 213  | [打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0213_House_Robber_II/Solution.java) | 中等 | 数组 动态规划                            |
