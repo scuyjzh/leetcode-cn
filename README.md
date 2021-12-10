@@ -281,6 +281,7 @@
 | 17   | [电话号码的字母组合](https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0017_Letter_Combinations_of_a_Phone_Number/Solution.java) | 中等 | 哈希表 字符串 回溯 |
 | 320  | [列举单词的全部缩写](https://leetcode-cn.com/problems/generalized-abbreviation/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0320_Generalized_Abbreviation/Solution.java) | 中等 | 位运算 字符串 回溯 |
 | 93   | [复原 IP 地址](https://leetcode-cn.com/problems/restore-ip-addresses/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0093_Restore_IP_Addresses/Solution.java) | 中等 | 字符串 回溯        |
+| 282  | [给表达式添加运算符](https://leetcode-cn.com/problems/expression-add-operators/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0282_Expression_Add_Operators/Solution.java) | 困难 | 数学 字符串 回溯   |
 
 ### Dynamic Programming
 
