@@ -296,6 +296,7 @@
 | 279  | [完全平方数](https://leetcode-cn.com/problems/perfect-squares/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0279_Perfect_Squares/Solution.java) | 中等 | 广度优先搜索 数学 动态规划               |
 | 139  | [单词拆分](https://leetcode-cn.com/problems/word-break/)     | [Java](./src/com/scuyjzh/leetcode/medium/No_0139_Word_Break/Solution.java) | 中等 | 字典树 记忆化搜索 哈希表 字符串 动态规划 |
 | 375  | [猜数字大小 II](https://leetcode-cn.com/problems/guess-number-higher-or-lower-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0375_Guess_Number_Higher_or_Lower_II/Solution.java) | 中等 | 数学 动态规划 博弈                       |
+| 322  | [零钱兑换](https://leetcode-cn.com/problems/coin-change/)    | [Java](./src/com/scuyjzh/leetcode/medium/No_0322_Coin_Change/Solution.java) | 中等 | 广度优先搜索 数组 动态规划               |
 | 198  | [打家劫舍](https://leetcode-cn.com/problems/house-robber/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0198_House_Robber/Solution.java) | 中等 | 数组 动态规划                            |
 | 213  | [打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0213_House_Robber_II/Solution.java) | 中等 | 数组 动态规划                            |
 
