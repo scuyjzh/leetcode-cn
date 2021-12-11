@@ -300,6 +300,7 @@
 | 256  | [粉刷房子](https://leetcode-cn.com/problems/paint-house/)    | [Java](./src/com/scuyjzh/leetcode/medium/No_0256_Paint_House/Solution.java) | 中等 | 数组 动态规划                            |
 | 265  | [粉刷房子 II](https://leetcode-cn.com/problems/paint-house-ii/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0265_Paint_House_II/Solution.java) | 困难 | 数组 动态规划                            |
 | 64   | [最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0064_Minimum_Path_Sum/Solution.java) | 中等 | 数组 动态规划 矩阵                       |
+| 72   | [编辑距离](https://leetcode-cn.com/problems/edit-distance/)  | [Java](./src/com/scuyjzh/leetcode/hard/No_0072_Edit_Distance/Solution.java) | 困难 | 字符串 动态规划                          |
 | 198  | [打家劫舍](https://leetcode-cn.com/problems/house-robber/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0198_House_Robber/Solution.java) | 中等 | 数组 动态规划                            |
 | 213  | [打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0213_House_Robber_II/Solution.java) | 中等 | 数组 动态规划                            |
 
