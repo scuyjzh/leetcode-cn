@@ -13,6 +13,7 @@
   * [Tree](#tree)
   * [Backtracking](#backtracking)
   * [Dynamic Programming](#dynamic-programming)
+  * [Stack & PriorityQueue](#stack--priorityqueue)
   * [Trie](#trie)
 
 ## Tags
@@ -306,6 +307,12 @@
 | 221  | [最大正方形](https://leetcode-cn.com/problems/maximal-square/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0221_Maximal_Square/Solution.java) | 中等 | 数组 动态规划 矩阵                       |
 | 198  | [打家劫舍](https://leetcode-cn.com/problems/house-robber/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0198_House_Robber/Solution.java) | 中等 | 数组 动态规划                            |
 | 213  | [打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0213_House_Robber_II/Solution.java) | 中等 | 数组 动态规划                            |
+
+### Stack & PriorityQueue
+
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签           |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | -------------- |
+| 84   | [柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0084_Largest_Rectangle_in_Histogram/Solution.java) | 困难 | 栈 数组 单调栈 |
 
 ### Trie
 
