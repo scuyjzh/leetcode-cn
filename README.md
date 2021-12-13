@@ -306,6 +306,7 @@
 | 174  | [地下城游戏](https://leetcode-cn.com/problems/dungeon-game/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0174_Dungeon_Game/Solution.java) | 困难 | 数组 动态规划 矩阵                       |
 | 221  | [最大正方形](https://leetcode-cn.com/problems/maximal-square/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0221_Maximal_Square/Solution.java) | 中等 | 数组 动态规划 矩阵                       |
 | 85   | [最大矩形](https://leetcode-cn.com/problems/maximal-rectangle/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0085_Maximal_Rectangle/Solution.java) | 困难 | 栈 数组 动态规划 矩阵 单调栈             |
+| 363  | [矩形区域不超过 K 的最大数值和](https://leetcode-cn.com/problems/max-sum-of-rectangle-no-larger-than-k/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0363_Max_Sum_of_Rectangle_No_Larger_Than_K/Solution.java) | 困难 | 数组 二分查找 动态规划 矩阵 有序集合     |
 | 198  | [打家劫舍](https://leetcode-cn.com/problems/house-robber/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0198_House_Robber/Solution.java) | 中等 | 数组 动态规划                            |
 | 213  | [打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0213_House_Robber_II/Solution.java) | 中等 | 数组 动态规划                            |
 
