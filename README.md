@@ -309,6 +309,7 @@
 | 363  | [矩形区域不超过 K 的最大数值和](https://leetcode-cn.com/problems/max-sum-of-rectangle-no-larger-than-k/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0363_Max_Sum_of_Rectangle_No_Larger_Than_K/Solution.java) | 困难 | 数组 二分查找 动态规划 矩阵 有序集合     |
 | 198  | [打家劫舍](https://leetcode-cn.com/problems/house-robber/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0198_House_Robber/Solution.java) | 中等 | 数组 动态规划                            |
 | 213  | [打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0213_House_Robber_II/Solution.java) | 中等 | 数组 动态规划                            |
+| 276  | [栅栏涂色](https://leetcode-cn.com/problems/paint-fence/) 🔒  | [Java](./src/com/scuyjzh/leetcode/medium/No_0276_Paint_Fence/Solution.java) | 中等 | 动态规划                                 |
 
 ### Stack & PriorityQueue
 
