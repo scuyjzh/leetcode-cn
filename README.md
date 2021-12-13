@@ -311,6 +311,7 @@
 | 213  | [打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0213_House_Robber_II/Solution.java) | 中等 | 数组 动态规划                            |
 | 276  | [栅栏涂色](https://leetcode-cn.com/problems/paint-fence/) 🔒  | [Java](./src/com/scuyjzh/leetcode/medium/No_0276_Paint_Fence/Solution.java) | 中等 | 动态规划                                 |
 | 91   | [解码方法](https://leetcode-cn.com/problems/decode-ways/)    | [Java](./src/com/scuyjzh/leetcode/medium/No_0091_Decode_Ways/Solution.java) | 中等 | 字符串 动态规划                          |
+| 10   | [正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0010_Regular_Expression_Matching/Solution.java) | 困难 | 递归 字符串 动态规划                     |
 
 ### Stack & PriorityQueue
 
