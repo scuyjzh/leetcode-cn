@@ -317,9 +317,10 @@
 
 ### LinkedList
 
-| #    | 题目                                                         | 题解                                                         | 难度 | 标签      |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | --------- |
-| 206  | [反转链表](https://leetcode-cn.com/problems/reverse-linked-list/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0206_Reverse_Linked_List/Solution.java) | 简单 | 递归 链表 |
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签               |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------ |
+| 206  | [反转链表](https://leetcode-cn.com/problems/reverse-linked-list/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0206_Reverse_Linked_List/Solution.java) | 简单 | 递归 链表          |
+| 141  | [环形链表](https://leetcode-cn.com/problems/linked-list-cycle/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0141_Linked_List_Cycle/Solution.java) | 简单 | 哈希表 链表 双指针 |
 
 ### Stack & PriorityQueue
 
