@@ -329,6 +329,7 @@
 | 83   | [删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0083_Remove_Duplicates_from_Sorted_List/Solution.java) | 简单 | 链表               |
 | 203  | [移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0203_Remove_Linked_List_Elements/Solution.java) | 简单 | 递归 链表          |
 | 82   | [删除排序链表中的重复元素 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0082_Remove_Duplicates_from_Sorted_List_II/Solution.java) | 中等 | 链表 双指针        |
+| 369  | [给单链表加一](https://leetcode-cn.com/problems/plus-one-linked-list/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0369_Plus_One_Linked_List/Solution.java) | 中等 | 链表 数学          |
 
 ### Stack & PriorityQueue
 
