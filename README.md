@@ -332,6 +332,7 @@
 | 369  | [给单链表加一](https://leetcode-cn.com/problems/plus-one-linked-list/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0369_Plus_One_Linked_List/Solution.java) | 中等 | 链表 数学          |
 | 2    | [两数相加](https://leetcode-cn.com/problems/add-two-numbers/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0002_Add_Two_Numbers/Solution.java) | 中等 | 递归 链表 数学     |
 | 160  | [相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0160_Intersection_of_Two_Linked_Lists/Solution.java) | 简单 | 哈希表 链表 双指针 |
+| 21   | [合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0021_Merge_Two_Sorted_Lists/Solution.java) | 简单 | 递归 链表          |
 
 ### Stack & PriorityQueue
 
