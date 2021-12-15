@@ -334,6 +334,7 @@
 | 160  | [相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0160_Intersection_of_Two_Linked_Lists/Solution.java) | 简单 | 哈希表 链表 双指针  |
 | 21   | [合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0021_Merge_Two_Sorted_Lists/Solution.java) | 简单 | 递归 链表           |
 | 234  | [回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0234_Palindrome_Linked_List/Solution.java) | 简单 | 栈 递归 链表 双指针 |
+| 143  | [重排链表](https://leetcode-cn.com/problems/reorder-list/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0143_Reorder_List/Solution.java) | 中等 | 栈 递归 链表 双指针 |
 
 ### Stack & PriorityQueue
 
