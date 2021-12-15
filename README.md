@@ -325,6 +325,7 @@
 | 328  | [奇偶链表](https://leetcode-cn.com/problems/odd-even-linked-list/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0328_Odd_Even_Linked_List/Solution.java) | 中等 | 链表               |
 | 92   | [反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0092_Reverse_Linked_List_II/Solution.java) | 中等 | 链表               |
 | 237  | [删除链表中的节点](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0237_Delete_Node_in_a_Linked_List/Solution.java) | 简单 | 链表               |
+| 19   | [删除链表的倒数第 N 个结点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0019_Remove_Nth_Node_From_End_of_List/Solution.java) | 中等 | 链表 双指针        |
 
 ### Stack & PriorityQueue
 
