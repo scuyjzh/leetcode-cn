@@ -108,7 +108,7 @@ class Solution {
 
     private void dfs(String s, int start, boolean[][] dp, Deque<String> path, List<List<String>> res) {
         int len = s.length();
-        // 在叶子结点是空字符串的时候结算
+        // 在叶子节点是空字符串的时候结算
         if (start == len) {
             // 注意结算的时候，需要生成一个拷贝
             res.add(new ArrayList<>(path));
@@ -116,7 +116,7 @@ class Solution {
         }
 
         for (int i = start; i < len; ++i) {
-            // 如果前缀字符串不是回文，则不产生分支和结点，这一步是剪枝操作
+            // 如果前缀字符串不是回文，则不产生分支和节点，这一步是剪枝操作
             if (!dp[start][i]) {
                 continue;
             }
