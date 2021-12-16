@@ -3,26 +3,41 @@ package com.scuyjzh.leetcode.medium.No_0146_LRU_Cache;
 import java.util.*;
 
 /**
- * Design and implement a data structure for Least Recently Used (LRU) cache.
- * It should support the following operations: get and put.
+ * 146. LRU 缓存机制
  *
- * @author scuyjzh
- * @date 2020/6/16 21:11
+ * 运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制
+ * 。
+ * 实现 LRUCache 类：
+ *     • LRUCache(int capacity) 以正整数作为容量 capacity 初始化
+ *       LRU 缓存
+ *     • int get(int key) 如果关键字 key 存在于缓存中，则返回关键字
+ *       的值，否则返回 -1 。
+ *     • void put(int key, int value) 如果关键字已经存在，则变更其数
+ *       据值；如果关键字不存在，则插入该组「关键字-值」。当缓存容量
+ *       达到上限时，它应该在写入新数据之前删除最久未使用的数据值，
+ *       从而为新的数据值留出空间。
+ * 进阶：你是否可以在 O(1) 时间复杂度内完成这两种操作？
  */
 class LRUCache {
+    /**
+     * 双向链表节点
+     */
     class Node {
         public int key, val;
         public Node next, prev;
 
-        public Node(int k, int v) {
-            this.key = k;
-            this.val = v;
+        public Node(int key, int val) {
+            this.key = key;
+            this.val = val;
         }
     }
 
+    /**
+     * 双向链表
+     */
     class DoubleList {
         /**
-         * 虚拟头尾结点
+         * 虚拟头尾节点
          */
         private Node head, tail;
         /**
@@ -39,7 +54,7 @@ class LRUCache {
         }
 
         /**
-         * 在链表头部添加结点 x，时间 O(1)
+         * 在链表头部添加节点 x，时间 O(1)
          */
         public void addFirst(Node x) {
             x.next = head.next;
@@ -50,7 +65,7 @@ class LRUCache {
         }
 
         /**
-         * 删除链表中的 x 结点（x 一定存在），时间 O(1)
+         * 删除链表中的 x 节点（x 一定存在），时间 O(1)
          */
         public void remove(Node x) {
             x.prev.next = x.next;
@@ -59,7 +74,7 @@ class LRUCache {
         }
 
         /**
-         * 删除链表中最后一个结点，并返回该结点，时间 O(1)
+         * 删除链表中最后一个节点，并返回该节点，时间 O(1)
          */
         public Node removeLast() {
             if (tail.prev == head) {
@@ -108,22 +123,22 @@ class LRUCache {
     }
 
     public void put(int key, int val) {
-        // 先把新结点 x 做出来
+        // 先把新节点 x 做出来
         Node x = new Node(key, val);
         // key 已存在
         if (map.containsKey(key)) {
-            // 删除旧的结点
+            // 删除旧的节点
             cache.remove(map.get(key));
         } else {
             // cache 已满
             if (cap == cache.size()) {
-                // 删除链表最后一个结点
+                // 删除链表最后一个节点
                 Node last = cache.removeLast();
-                // 同时删除 map 中映射到该结点的 key
+                // 同时删除 map 中映射到该节点的 key
                 map.remove(last.key);
             }
         }
-        // 新结点 x 插到头部
+        // 新节点 x 插到头部
         cache.addFirst(x);
         // 更新 map 中对应的数据
         map.put(key, x);

@@ -16,6 +16,7 @@
   * [LinkedList](#linkedlist)
   * [Stack & PriorityQueue](#stack--priorityqueue)
   * [Trie](#trie)
+  * [Design](#design)
 
 ## Tags
 
@@ -354,3 +355,9 @@
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签                      |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------------- |
 | 208  | [实现 Trie (前缀树)](https://leetcode-cn.com/problems/implement-trie-prefix-tree/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0208_Implement_Trie/Trie.java) | 中等 | 设计 字典树 哈希表 字符串 |
+
+### Design
+
+| #    | 题目                                                        | 题解                                                         | 难度 | 标签                      |
+| ---- | ----------------------------------------------------------- | ------------------------------------------------------------ | ---- | ------------------------- |
+| 146  | [LRU 缓存机制](https://leetcode-cn.com/problems/lru-cache/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0146_LRU_Cache/LRUCache.java) | 中等 | 设计 哈希表 链表 双向链表 |
