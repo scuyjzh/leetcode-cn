@@ -5,19 +5,36 @@ import com.scuyjzh.leetcode.structure.TreeNode;
 import java.util.*;
 
 /**
- * 1038. 从二叉搜索树到更大和树
- * 给出二叉搜索树的根结点，该二叉树的结点值各不相同，修改二叉树，使每个结点 node 的新值等于原树中大于或等于 node.val 的值之和。
+ * 1038. 把二叉搜索树转换为累加树
  *
- * @author scuyjzh
- * @date 2020/9/21 15:04
+ * 给定一个二叉搜索树，请将它的每个节点的值替换成树中大于或者等
+ * 于该节点值的所有节点值之和。
+ * 提醒一下，二叉搜索树满足下列约束条件：
+ *   • 节点的左子树仅包含键 小于 节点键的节点。
+ *   • 节点的右子树仅包含键 大于 节点键的节点。
+ *   • 左右子树也必须是二叉搜索树。
+ * 注意：该题目与 538: https://leetcode-cn.com/problems/convert-bst-to-greater-tree/  相同
  */
 class Solution {
-    int sum = 0;
+    private int sum = 0;
 
     /**
-     * Approach #1 (Recursion by Inverse Inorder Traversal)
+     * 方法一：反序中序遍历（递归）
      */
     public TreeNode bstToGst1(TreeNode root) {
+        /*
+         * 二叉搜索树是一棵空树，或者是具有下列性质的二叉树：
+         *   1.若它的左子树不空，则左子树上所有节点的值均小于它的根节点的值；
+         *   2.若它的右子树不空，则右子树上所有节点的值均大于它的根节点的值；
+         *   3.它的左、右子树也分别为二叉搜索树。
+         *
+         * 由这样的性质可以发现，二叉搜索树的中序遍历是一个单调递增的有序序列。如果反序地中序遍历
+         * 该二叉搜索树，即可得到一个单调递减的有序序列。
+         *
+         * 本题中要求将每个节点的值修改为原来的节点值加上所有大于它的节点值之和。这样只需要反序中
+         * 序遍历该二叉搜索树，记录过程中的节点值之和，并不断更新当前遍历到的节点的节点值，即可得到题目要
+         * 求的累加树。
+         */
         helper(root);
         return root;
     }
@@ -33,7 +50,7 @@ class Solution {
     }
 
     /**
-     * Approach #2 (Iteration by Inverse Inorder Traversal)
+     * 方法二：反序中序遍历（迭代）
      */
     public TreeNode bstToGst2(TreeNode root) {
         if (root == null) {
@@ -56,9 +73,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        TreeNode root = TreeNode.initBinaryTree("[5,2,13]");
-        System.out.println(solution.bstToGst1(root));
-        System.out.println(solution.bstToGst2(root));
+        System.out.println(new Solution().bstToGst1(TreeNode.initBinaryTree("[4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]")));
+        System.out.println(new Solution().bstToGst2(TreeNode.initBinaryTree("[0,null,1]")));
     }
 }
