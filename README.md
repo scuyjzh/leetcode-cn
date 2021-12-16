@@ -339,6 +339,7 @@
 | 148  | [排序链表](https://leetcode-cn.com/problems/sort-list/)      | [Java](./src/com/scuyjzh/leetcode/medium/No_0148_Sort_List/Solution.java) | 中等 | 链表 双指针 分治 排序 归并排序 |
 | 25   | [K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0025_Reverse_Nodes_in_kGroup/Solution.java) | 困难 | 递归 链表                      |
 | 61   | [旋转链表](https://leetcode-cn.com/problems/rotate-list/)    | [Java](./src/com/scuyjzh/leetcode/medium/No_0061_Rotate_List/Solution.java) | 中等 | 链表 双指针                    |
+| 86   | [分隔链表](https://leetcode-cn.com/problems/partition-list/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0086_Partition_List/Solution.java) | 中等 | 链表 双指针                    |
 | 147  | [对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0147_Insertion_Sort_List/Solution.java) | 中等 | 链表 排序                      |
 
 ### Stack & PriorityQueue
