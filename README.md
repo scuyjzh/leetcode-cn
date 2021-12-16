@@ -336,6 +336,7 @@
 | 234  | [回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0234_Palindrome_Linked_List/Solution.java) | 简单 | 栈 递归 链表 双指针 |
 | 143  | [重排链表](https://leetcode-cn.com/problems/reorder-list/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0143_Reorder_List/Solution.java) | 中等 | 栈 递归 链表 双指针 |
 | 142  | [环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0142_Linked_List_Cycle_II/Solution.java) | 中等 | 哈希表 链表 双指针  |
+| 147  | [对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0147_Insertion_Sort_List/Solution.java) | 中等 | 链表 排序           |
 
 ### Stack & PriorityQueue
 
