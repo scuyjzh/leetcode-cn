@@ -59,7 +59,7 @@ class Solution {
      * s[0:len) 如果可以拆分成 wordSet 中的单词，把递归求解的结果加入 res 中
      *
      * @param len     长度为 len 的 s 的前缀子串
-     * @param path    从叶子结点到根结点的路径
+     * @param path    从叶子节点到根节点的路径
      */
     private void dfs(int len, LinkedList<String> path) {
         if (len == 0) {
