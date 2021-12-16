@@ -28,7 +28,7 @@ class Solution {
     }
 
     /**
-     * @param path        当前递归得到的结果（从根结点到任意结点的路径）
+     * @param path        当前递归得到的结果（从根节点到任意节点的路径）
      * @param leftRemain  左括号剩余数量
      * @param rightRemain 右括号剩余数量
      * @param res         结果集
@@ -70,7 +70,7 @@ class Solution {
     }
 
     /**
-     * @param path        当前递归得到的结果（从根结点到任意结点的路径）
+     * @param path        当前递归得到的结果（从根节点到任意节点的路径）
      * @param leftRemain  左括号还有几个可以使用
      * @param rightRemain 右括号还有几个可以使用
      * @param res         结果集
