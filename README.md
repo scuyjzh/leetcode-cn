@@ -15,6 +15,7 @@
   * [Dynamic Programming](#dynamic-programming)
   * [LinkedList](#linkedlist)
   * [Binary Search](#binary-search)
+  * [Matrix](#matrix)
   * [Stack & PriorityQueue](#stack--priorityqueue)
   * [Trie](#trie)
   * [Design](#design)
@@ -361,6 +362,12 @@
 | 315  | [计算右侧小于当前元素的个数](https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0315_Count_of_Smaller_Numbers_After_Self/Solution.java) | 困难 | 树状数组 线段树 数组 二分查找 分治 有序集合 归并排序 |
 | 300  | [最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0300_Longest_Increasing_Subsequence/Solution.java) | 中等 | 数组 二分查找 动态规划                               |
 | 354  | [俄罗斯套娃信封问题](https://leetcode-cn.com/problems/russian-doll-envelopes/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0354_Russian_Doll_Envelopes/Solution.java) | 困难 | 数组 二分查找 动态规划 排序                          |
+
+### Matrix
+
+| #    | 题目                                                       | 题解                                                         | 难度 | 标签           |
+| ---- | ---------------------------------------------------------- | ------------------------------------------------------------ | ---- | -------------- |
+| 48   | [旋转图像](https://leetcode-cn.com/problems/rotate-image/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0048_Rotate_Image/Solution.java) | 中等 | 数组 数学 矩阵 |
 
 ### Stack & PriorityQueue
 
