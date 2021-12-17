@@ -14,6 +14,7 @@
   * [Backtracking](#backtracking)
   * [Dynamic Programming](#dynamic-programming)
   * [LinkedList](#linkedlist)
+  * [Binary Search](#binary-search)
   * [Stack & PriorityQueue](#stack--priorityqueue)
   * [Trie](#trie)
   * [Design](#design)
@@ -343,6 +344,12 @@
 | 86   | [分隔链表](https://leetcode-cn.com/problems/partition-list/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0086_Partition_List/Solution.java) | 中等 | 链表 双指针                       |
 | 23   | [合并K个升序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0023_Merge_k_Sorted_Lists/Solution.java) | 困难 | 链表 分治 堆（优先队列） 归并排序 |
 | 147  | [对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0147_Insertion_Sort_List/Solution.java) | 中等 | 链表 排序                         |
+
+### Binary Search
+
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签          |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------- |
+| 278  | [第一个错误的版本](https://leetcode-cn.com/problems/first-bad-version/) | [Java](https://leetcode-cn.com/problems/first-bad-version/solution/) | 简单 | 二分查找 交互 |
 
 ### Stack & PriorityQueue
 
