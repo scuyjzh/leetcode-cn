@@ -350,6 +350,7 @@
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签          |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------- |
 | 278  | [第一个错误的版本](https://leetcode-cn.com/problems/first-bad-version/) | [Java](https://leetcode-cn.com/problems/first-bad-version/solution/) | 简单 | 二分查找 交互 |
+| 35   | [搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0035_Search_Insert_Position/Solution.java) | 简单 | 数组 二分查找 |
 
 ### Stack & PriorityQueue
 
