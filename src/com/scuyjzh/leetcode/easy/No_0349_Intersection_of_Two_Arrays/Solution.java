@@ -4,82 +4,49 @@ import java.util.*;
 
 /**
  * 349. 两个数组的交集
- * <p>
+ *
  * 给定两个数组，编写一个函数来计算它们的交集。
  * 说明：
- * • 输出结果中的每个元素一定是唯一的。
- * • 可以不考虑输出结果的顺序。
+ *   • 输出结果中的每个元素一定是唯一的。
+ *   • 可以不考虑输出结果的顺序。
  */
 class Solution {
     /**
-     * 方法一：两个集合
-     * 时间复杂度：O(m+n)，其中 m 和 n 分别是两个数组的长度。使用两个集合分别存储两个数组中的元素需要 O(m+n) 的时间，遍历较小的集合并判断元素是否在另一个集合中需要 O(min(m,n)) 的时间，因此总时间复杂度是 O(m+n)。
-     * 空间复杂度：O(m+n)，其中 m 和 n 分别是两个数组的长度。空间复杂度主要取决于两个集合。
+     * 方法一：集合
      */
     public int[] intersection1(int[] nums1, int[] nums2) {
-        /*
-         * 计算两个数组的交集，直观的方法是遍历数组 nums1，对于其中的每个
-         * 元素，遍历数组 nums2 判断该元素是否在数组 nums2 中，如果存在，
-         * 则将该元素添加到返回值。
-         *
-         * 假设数组 nums1 和 nums2 的长度分别是 m 和 n，则遍历数组
-         * nums1 需要 O(m) 的时间，判断 nums1 中的每个元素是否在数组
-         * nums2 中需要 O(n) 的时间，因此总时间复杂度是 O(mn)。
-         *
-         * 如果使用哈希集合存储元素，则可以在 O(1) 的时间内判断一个元素是
-         * 否在集合中，从而降低时间复杂度。
-         *
-         * 首先使用两个集合分别存储两个数组中的元素，然后遍历较小的集合，判
-         * 断其中的每个元素是否在另一个集合中，如果元素也在另一个集合中，则
-         * 将该元素添加到返回值。该方法的时间复杂度可以降低到 O(m+n)。
-         */
-        Set<Integer> set1 = new HashSet<>();
-        Set<Integer> set2 = new HashSet<>();
-        for (int num : nums1) {
-            set1.add(num);
-        }
-        for (int num : nums2) {
-            set2.add(num);
-        }
-        return getIntersection(set1, set2);
-    }
+        Set<Integer> set = new HashSet<>();
+        List<Integer> list = new ArrayList<>();
 
-    private int[] getIntersection(Set<Integer> set1, Set<Integer> set2) {
-        if (set1.size() > set2.size()) {
-            return getIntersection(set2, set1);
+        for (int n1 : nums1) {
+            set.add(n1);
         }
-        Set<Integer> intersectionSet = new HashSet<>();
-        for (int num : set1) {
-            if (set2.contains(num)) {
-                intersectionSet.add(num);
+        for (int n2 : nums2) {
+            if (set.contains(n2)) {
+                list.add(n2);
+                set.remove(n2);
             }
         }
-        int[] intersection = new int[intersectionSet.size()];
-        int index = 0;
-        for (int num : intersectionSet) {
-            intersection[index++] = num;
+        int[] intersection = new int[list.size()];
+        for (int i = 0; i < list.size(); ++i) {
+            intersection[i] = list.get(i);
         }
         return intersection;
     }
 
     /**
      * 方法二：排序 + 双指针
-     * 时间复杂度：O(m*log m+n*log n)，其中 m 和 n 分别是两个数组的长度。对两个数组排序的时间复杂度分别是 O(m*log m) 和 O(n*log n)，双指针寻找交集元素的时间复杂度是 O(m+n)，因此总时间复杂度是 O(m*log m+n*log n)。
-     * 空间复杂度：O(log m+log n)，其中 m 和 n 分别是两个数组的长度。空间复杂度主要取决于排序使用的额外空间。
      */
     public int[] intersection2(int[] nums1, int[] nums2) {
         /*
          * 如果两个数组是有序的，则可以使用双指针的方法得到两个数组的交集。
          *
-         * 首先对两个数组进行排序，然后使用两个指针遍历两个数组。可以预见的
-         * 是加入答案的数组的元素一定是递增的，为了保证加入元素的唯一性，需
-         * 要额外记录变量 pre 表示上一次加入答案数组的元素。
+         * 首先对两个数组进行排序，然后使用两个指针遍历两个数组。可以预见的是加入答案的数组的元素一定是递
+         * 增的，为了保证加入元素的唯一性，需要额外记录变量 pre 表示上一次加入答案数组的元素。
          *
-         * 初始时，两个指针分别指向两个数组的头部。每次比较两个指针指向的两
-         * 个数组中的数字，如果两个数字不相等，则将指向较小数字的指针右移一
-         * 位，如果两个数字相等，且该数字不等于 pre，将该数字添加到答案并
-         * 更新 pre 变量，同时将两个指针都右移一位。当至少有一个指针超出数
-         * 组范围时，遍历结束。
+         * 初始时，两个指针分别指向两个数组的头部。每次比较两个指针指向的两个数组中的数字，如果两个数字不
+         * 相等，则将指向较小数字的指针右移一位，如果两个数字相等，且该数字不等于 pre，将该数字添加到答案
+         * 并更新 pre 变量，同时将两个指针都右移一位。当至少有一个指针超出数组范围时，遍历结束。
          */
         Arrays.sort(nums1);
         Arrays.sort(nums2);
