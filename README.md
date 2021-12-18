@@ -365,9 +365,10 @@
 
 ### Matrix
 
-| #    | 题目                                                       | 题解                                                         | 难度 | 标签           |
-| ---- | ---------------------------------------------------------- | ------------------------------------------------------------ | ---- | -------------- |
-| 48   | [旋转图像](https://leetcode-cn.com/problems/rotate-image/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0048_Rotate_Image/Solution.java) | 中等 | 数组 数学 矩阵 |
+| #    | 题目                                                        | 题解                                                         | 难度 | 标签           |
+| ---- | ----------------------------------------------------------- | ------------------------------------------------------------ | ---- | -------------- |
+| 48   | [旋转图像](https://leetcode-cn.com/problems/rotate-image/)  | [Java](./src/com/scuyjzh/leetcode/medium/No_0048_Rotate_Image/Solution.java) | 中等 | 数组 数学 矩阵 |
+| 54   | [螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0054_Spiral_Matrix/Solution.java) | 中等 | 数组 矩阵 模拟 |
 
 ### Stack & PriorityQueue
 
