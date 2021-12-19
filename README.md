@@ -371,6 +371,7 @@
 | 54   | [螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/)  | [Java](./src/com/scuyjzh/leetcode/medium/No_0054_Spiral_Matrix/Solution.java) | 中等 | 数组 矩阵 模拟   |
 | 59   | [螺旋矩阵 II](https://leetcode-cn.com/problems/spiral-matrix-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0059_Spiral_Matrix_II/Solution.java) | 中等 | 数组 矩阵 模拟   |
 | 73   | [矩阵置零](https://leetcode-cn.com/problems/set-matrix-zeroes/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0073_Set_Matrix_Zeroes/Solution.java) | 中等 | 数组 哈希表 矩阵 |
+| 311  | [稀疏矩阵的乘法](https://leetcode-cn.com/problems/sparse-matrix-multiplication/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0311_Sparse_Matrix_Multiplication/Solution.java) | 中等 | 数组 哈希表 矩阵 |
 
 ### Stack & PriorityQueue
 
