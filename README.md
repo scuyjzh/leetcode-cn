@@ -373,6 +373,7 @@
 | 73   | [矩阵置零](https://leetcode-cn.com/problems/set-matrix-zeroes/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0073_Set_Matrix_Zeroes/Solution.java) | 中等 | 数组 哈希表 矩阵                                          |
 | 311  | [稀疏矩阵的乘法](https://leetcode-cn.com/problems/sparse-matrix-multiplication/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0311_Sparse_Matrix_Multiplication/Solution.java) | 中等 | 数组 哈希表 矩阵                                          |
 | 329  | [矩阵中的最长递增路径](https://leetcode-cn.com/problems/longest-increasing-path-in-a-matrix/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0329_Longest_Increasing_Path_in_a_Matrix/Solution.java) | 困难 | 深度优先搜索 广度优先搜索 图 拓扑排序 记忆化搜索 动态规划 |
+| 378  | [有序矩阵中第 K 小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-sorted-matrix/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0378_Kth_Smallest_Element_in_a_Sorted_Matrix/Solution.java) | 中等 | 数组 二分查找 矩阵 排序 堆（优先队列）                    |
 
 ### Stack & PriorityQueue
 
