@@ -377,6 +377,7 @@
 | 74   | [搜索二维矩阵](https://leetcode-cn.com/problems/search-a-2d-matrix/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0074_Search_a_2D_Matrix/Solution.java) | 中等 | 数组 二分查找 矩阵                                        |
 | 240  | [搜索二维矩阵 II](https://leetcode-cn.com/problems/search-a-2d-matrix-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0240_Search_a_2D_Matrix_II/Solution.java) | 中等 | 数组 二分查找 分治 矩阵                                   |
 | 370  | [区间加法](https://leetcode-cn.com/problems/range-addition/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0370_Range_Addition/Solution.java) | 中等 | 数组 前缀和                                               |
+| 79   | [单词搜索](https://leetcode-cn.com/problems/word-search/)    | [Java](./src/com/scuyjzh/leetcode/medium/No_0079_Word_Search/Solution.java) | 中等 | 数组 回溯 矩阵                                            |
 
 ### Stack & PriorityQueue
 
