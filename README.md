@@ -380,6 +380,7 @@
 | 79   | [单词搜索](https://leetcode-cn.com/problems/word-search/)    | [Java](./src/com/scuyjzh/leetcode/medium/No_0079_Word_Search/Solution.java) | 中等 | 数组 回溯 矩阵                                            |
 | 296  | [最佳的碰头地点](https://leetcode-cn.com/problems/best-meeting-point/) 🔒 | [Java](./src/com/scuyjzh/leetcode/hard/No_0296_Best_Meeting_Point/Solution.java) | 困难 | 数组 数学 矩阵 排序                                       |
 | 361  | [轰炸敌人](https://leetcode-cn.com/problems/bomb-enemy/) 🔒   | [Java](./src/com/scuyjzh/leetcode/medium/No_0361_Bomb_Enemy/Solution.java) | 中等 | 数组 动态规划 矩阵                                        |
+| 317  | [离建筑物最近的距离](https://leetcode-cn.com/problems/shortest-distance-from-all-buildings/) 🔒 | [Java](./src/com/scuyjzh/leetcode/hard/No_0317_Shortest_Distance_from_All_Buildings/Solution.java) | 困难 | 广度优先搜索 数组 矩阵                                    |
 
 ### Stack & PriorityQueue
 
