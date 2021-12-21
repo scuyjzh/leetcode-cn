@@ -382,6 +382,7 @@
 | 361  | [轰炸敌人](https://leetcode-cn.com/problems/bomb-enemy/) 🔒   | [Java](./src/com/scuyjzh/leetcode/medium/No_0361_Bomb_Enemy/Solution.java) | 中等 | 数组 动态规划 矩阵                                        |
 | 317  | [离建筑物最近的距离](https://leetcode-cn.com/problems/shortest-distance-from-all-buildings/) 🔒 | [Java](./src/com/scuyjzh/leetcode/hard/No_0317_Shortest_Distance_from_All_Buildings/Solution.java) | 困难 | 广度优先搜索 数组 矩阵                                    |
 | 302  | [包含全部黑色像素的最小矩形](https://leetcode-cn.com/problems/smallest-rectangle-enclosing-black-pixels/) 🔒 | [Java](./src/com/scuyjzh/leetcode/hard/No_0302_Smallest_Rectangle_Enclosing_Black_Pixels/Solution.java) | 困难 | 深度优先搜索 广度优先搜索 数组 二分查找 矩阵              |
+| 36   | [有效的数独](https://leetcode-cn.com/problems/valid-sudoku/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0036_Valid_Sudoku/Solution.java) | 中等 | 数组 哈希表 矩阵                                          |
 
 ### Stack & PriorityQueue
 
