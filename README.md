@@ -404,6 +404,7 @@
 
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签           |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | -------------- |
+| 155  | [最小栈](https://leetcode-cn.com/problems/min-stack/)        | [Java](./src/com/scuyjzh/leetcode/easy/No_0155_Min_Stack/MinStack.java) | 简单 | 栈 设计        |
 | 84   | [柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0084_Largest_Rectangle_in_Histogram/Solution.java) | 困难 | 栈 数组 单调栈 |
 
 ### Trie
