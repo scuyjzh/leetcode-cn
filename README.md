@@ -16,6 +16,7 @@
   * [LinkedList](#linkedlist)
   * [Binary Search](#binary-search)
   * [Matrix](#matrix)
+  * [DFS & BFS](#dfs--bfs)
   * [Stack & PriorityQueue](#stack--priorityqueue)
   * [Trie](#trie)
   * [Design](#design)
@@ -384,6 +385,12 @@
 | 302  | [包含全部黑色像素的最小矩形](https://leetcode-cn.com/problems/smallest-rectangle-enclosing-black-pixels/) 🔒 | [Java](./src/com/scuyjzh/leetcode/hard/No_0302_Smallest_Rectangle_Enclosing_Black_Pixels/Solution.java) | 困难 | 深度优先搜索 广度优先搜索 数组 二分查找 矩阵              |
 | 36   | [有效的数独](https://leetcode-cn.com/problems/valid-sudoku/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0036_Valid_Sudoku/Solution.java) | 中等 | 数组 哈希表 矩阵                                          |
 | 37   | [解数独](https://leetcode-cn.com/problems/sudoku-solver/)    | [Java](./src/com/scuyjzh/leetcode/hard/No_0037_Sudoku_Solver/Solution.java) | 困难 | 数组 回溯 矩阵                                            |
+
+### DFS & BFS
+
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签                                       |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------------------------------ |
+| 200  | [岛屿数量](https://leetcode-cn.com/problems/number-of-islands/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0200_Number_of_Islands/Solution.java) | 中等 | 深度优先搜索 广度优先搜索 并查集 数组 矩阵 |
 
 ### Stack & PriorityQueue
 
