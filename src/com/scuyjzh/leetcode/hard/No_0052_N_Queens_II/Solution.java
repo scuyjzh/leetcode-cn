@@ -4,38 +4,95 @@ import java.util.*;
 
 /**
  * 52. N皇后 II
- * <p>
- * n 皇后问题 研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。
+ *
+ * n 皇后问题 研究的是如何将 n 个皇后放置在 n × n 的棋盘上，并且使皇
+ * 后彼此之间不能相互攻击。
  * 给你一个整数 n ，返回 n 皇后问题 不同的解决方案的数量。
  */
 class Solution {
+    /**
+     * 使用三个集合 columns、diagonals1 和 diagonals2 分别记录每一列以及两个方向的每条斜线上是否有皇后
+     */
+    private Set<Integer> columns;
+    private Set<Integer> diagonals1;
+    private Set<Integer> diagonals2;
+
     public int totalNQueens(int n) {
-        // 使用三个集合columns、diagonals1和diagonals2分别记录每一列以及两个方向的每条斜线上是否有皇后
-        Set<Integer> columns = new HashSet<>();
-        Set<Integer> diagonals1 = new HashSet<>();
-        Set<Integer> diagonals2 = new HashSet<>();
-        return dfs(n, 0, columns, diagonals1, diagonals2);
+        /*
+         * 这道题和「51. N 皇后」非常相似，区别在于，第 51 题需要得到所有可能的解，这道题只需要得到可能的解
+         * 的数量。因此这道题可以使用第 51 题的做法，只需要将得到所有可能的解改成得到可能的解的数量即可。
+         *
+         * 皇后的走法是：可以横直斜走，格数不限。因此要求皇后彼此之间不能相互攻击，等价于要求任何两个皇后
+         * 都不能在同一行、同一列以及同一条斜线上。
+         *
+         * 直观的做法是暴力枚举将 N 个皇后放置在 N×N 的棋盘上的所有可能的情况，并对每一种情况判断是否满
+         * 足皇后彼此之间不相互攻击。暴力枚举的时间复杂度是非常高的，因此必须利用限制条件加以优化。
+         *
+         * 显然，每个皇后必须位于不同行和不同列，因此将 N 个皇后放置在 N×N 的棋盘上，一定是每一行有且仅
+         * 有一个皇后，每一列有且仅有一个皇后，且任何两个皇后都不能在同一条斜线上。基于上述发现，可以通过
+         * 回溯的方式得到可能的解的数量。
+         *
+         * 回溯的具体做法是：依次在每一行放置一个皇后，每次新放置的皇后都不能和已经放置的皇后之间有攻击，
+         * 即新放置的皇后不能和任何一个已经放置的皇后在同一列以及同一条斜线上。当 N 个皇后都放置完毕，则找
+         * 到一个可能的解，将可能的解的数量加 1。
+         *
+         * 由于每个皇后必须位于不同列，因此已经放置的皇后所在的列不能放置别的皇后。第一个皇后有 N 列可以选
+         * 择，第二个皇后最多有 N−1 列可以选择，第三个皇后最多有 N−2 列可以选择（如果考虑到不能在同一条
+         * 斜线上，可能的选择数量更少），因此所有可能的情况不会超过 N! 种，遍历这些情况的时间复杂度是
+         * O(N!)。
+         *
+         * 为了降低总时间复杂度，每次放置皇后时需要快速判断每个位置是否可以放置皇后，显然，最理想的情况是
+         * 在 O(1) 的时间内判断该位置所在的列和两条斜线上是否已经有皇后。
+         *
+         * 以下方法使用集合对皇后的放置位置进行判断，可以在 O(1) 的时间内判断一个位置是否可以放置皇后，
+         * 算法的总时间复杂度都是 O(N!)。
+         *
+         * 为了判断一个位置所在的列和两条斜线上是否已经有皇后，使用三个集合 columns、diagonals1 和 diagonals2
+         * 分别记录每一列以及两个方向的每条斜线上是否有皇后。
+         *
+         * 列的表示法很直观，一共有 N 列，每一列的下标范围从 0 到 N−1，使用列的下标即可明确表示每一列。
+         *
+         * 如何表示两个方向的斜线呢？对于每个方向的斜线，需要找到斜线上的每个位置的行下标与列下标之间的关
+         * 系。
+         *
+         * 方向一的斜线为从左上到右下方向，同一条斜线上的每个位置满足行下标与列下标之差相等，例如 (0,0) 和
+         * (3,3) 在同一条方向一的斜线上。因此使用行下标与列下标之差即可明确表示每一条方向一的斜线。
+         *
+         * 方向二的斜线为从右上到左下方向，同一条斜线上的每个位置满足行下标与列下标之和相等，例如 (3,0) 和
+         * (1,2) 在同一条方向二的斜线上。因此使用行下标与列下标之和即可明确表示每一条方向二的斜线。
+         *
+         * 每次放置皇后时，对于每个位置判断其是否在三个集合中，如果三个集合都不包含当前位置，则当前位置是
+         * 可以放置皇后的位置。
+         */
+        columns = new HashSet<>();
+        diagonals1 = new HashSet<>();
+        diagonals2 = new HashSet<>();
+
+        return dfs(n, 0);
     }
 
-    private int dfs(int n, int row, Set<Integer> columns, Set<Integer> diagonals1, Set<Integer> diagonals2) {
+    private int dfs(int n, int row) {
         // 递归终止条件
         if (row == n) {
             return 1;
         }
 
         int count = 0;
+
         // 按列遍历
         for (int i = 0; i < n; ++i) {
             // 一共有 N 列，每一列的下标范围从 0 到 N−1，使用列的下标即可明确表示每一列
             if (columns.contains(i)) {
                 continue;
             }
+
             // 方向一的斜线为从左上到右下方向，同一条斜线上的每个位置满足行下标与列下标之差相等
-            // 例如 ((0,0) 和 (3,3) 在同一条方向一的斜线上
+            // 例如 (0,0) 和 (3,3) 在同一条方向一的斜线上
             int diagonal1 = row - i;
             if (diagonals1.contains(diagonal1)) {
                 continue;
             }
+
             // 方向二的斜线为从右上到左下方向，同一条斜线上的每个位置满足行下标与列下标之和相等
             // 例如 (3,0) 和 (1,2) 在同一条方向二的斜线上
             int diagonal2 = row + i;
@@ -49,17 +106,19 @@ class Solution {
             diagonals2.add(diagonal2);
 
             // 下一轮搜索，行数为 row + 1
-            count += dfs(n, row + 1, columns, diagonals1, diagonals2);
+            count += dfs(n, row + 1);
 
             // 回溯：深度优先遍历有回头的过程，因此递归之前做了什么，递归之后需要做相同操作的逆向操作
             columns.remove(i);
             diagonals1.remove(diagonal1);
             diagonals2.remove(diagonal2);
         }
+
         return count;
     }
 
     public static void main(String[] args) {
-        System.out.println(new Solution().totalNQueens(8));
+        System.out.println(new Solution().totalNQueens(4));
+        System.out.println(new Solution().totalNQueens(1));
     }
 }

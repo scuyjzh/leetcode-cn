@@ -398,6 +398,7 @@
 | 127  | [单词接龙](https://leetcode-cn.com/problems/word-ladder/)    | [Java](./src/com/scuyjzh/leetcode/hard/No_0127_Word_Ladder/Solution.java) | 困难 | 广度优先搜索 哈希表 字符串                 |
 | 126  | [单词接龙 II](https://leetcode-cn.com/problems/word-ladder-ii/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0126_Word_Ladder_II/Solution.java) | 困难 | 广度优先搜索 哈希表 字符串 回溯            |
 | 51   | [N 皇后](https://leetcode-cn.com/problems/n-queens/)         | [Java](./src/com/scuyjzh/leetcode/hard/No_0051_N_Queens/Solution.java) | 困难 | 数组 回溯                                  |
+| 52   | [N皇后 II](https://leetcode-cn.com/problems/n-queens-ii/)    | [Java](./src/com/scuyjzh/leetcode/hard/No_0052_N_Queens_II/Solution.java) | 困难 | 回溯                                       |
 
 ### Stack & PriorityQueue
 
