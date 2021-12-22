@@ -391,6 +391,7 @@
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签                                       |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------------------------------ |
 | 200  | [岛屿数量](https://leetcode-cn.com/problems/number-of-islands/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0200_Number_of_Islands/Solution.java) | 中等 | 深度优先搜索 广度优先搜索 并查集 数组 矩阵 |
+| 286  | [墙与门](https://leetcode-cn.com/problems/walls-and-gates/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0286_Walls_and_Gates/Solution.java) | 中等 | 广度优先搜索 数组 矩阵                     |
 
 ### Stack & PriorityQueue
 
