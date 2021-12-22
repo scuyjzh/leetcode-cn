@@ -394,6 +394,7 @@
 | 286  | [墙与门](https://leetcode-cn.com/problems/walls-and-gates/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0286_Walls_and_Gates/Solution.java) | 中等 | 广度优先搜索 数组 矩阵                     |
 | 130  | [被围绕的区域](https://leetcode-cn.com/problems/surrounded-regions/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0130_Surrounded_Regions/Solution.java) | 中等 | 深度优先搜索 广度优先搜索 并查集 数组 矩阵 |
 | 339  | [嵌套列表权重和](https://leetcode-cn.com/problems/nested-list-weight-sum/) 🔒 | [Java](https://leetcode-cn.com/problems/nested-list-weight-sum/solution/qian-tao-lie-biao-quan-zhong-he-by-leetcode-2/) | 中等 | 深度优先搜索 广度优先搜索                  |
+| 364  | [加权嵌套序列和 II](https://leetcode-cn.com/problems/nested-list-weight-sum-ii/) 🔒 | [Java](https://leetcode-cn.com/problems/nested-list-weight-sum-ii/solution/) | 中等 | 栈 深度优先搜索 广度优先搜索               |
 
 ### Stack & PriorityQueue
 
