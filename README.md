@@ -402,14 +402,15 @@
 
 ### Stack & PriorityQueue
 
-| #    | 题目                                                         | 题解                                                         | 难度 | 标签           |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | -------------- |
-| 155  | [最小栈](https://leetcode-cn.com/problems/min-stack/)        | [Java](./src/com/scuyjzh/leetcode/easy/No_0155_Min_Stack/MinStack.java) | 简单 | 栈 设计        |
-| 232  | [用栈实现队列](https://leetcode-cn.com/problems/implement-queue-using-stacks/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0232_Implement_Queue_using_Stacks/MyQueue.java) | 简单 | 栈 设计 队列   |
-| 225  | [用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0225_Implement_Stack_using_Queues/MyStack.java) | 简单 | 栈 设计 队列   |
-| 150  | [逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0150_Evaluate_Reverse_Polish_Notation/Solution.java) | 中等 | 栈 数组 数学   |
-| 71   | [简化路径](https://leetcode-cn.com/problems/simplify-path/)  | [Java](./src/com/scuyjzh/leetcode/medium/No_0071_Simplify_Path/Solution.java) | 中等 | 栈 字符串      |
-| 84   | [柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0084_Largest_Rectangle_in_Histogram/Solution.java) | 困难 | 栈 数组 单调栈 |
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签                   |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ---------------------- |
+| 155  | [最小栈](https://leetcode-cn.com/problems/min-stack/)        | [Java](./src/com/scuyjzh/leetcode/easy/No_0155_Min_Stack/MinStack.java) | 简单 | 栈 设计                |
+| 232  | [用栈实现队列](https://leetcode-cn.com/problems/implement-queue-using-stacks/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0232_Implement_Queue_using_Stacks/MyQueue.java) | 简单 | 栈 设计 队列           |
+| 225  | [用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0225_Implement_Stack_using_Queues/MyStack.java) | 简单 | 栈 设计 队列           |
+| 150  | [逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0150_Evaluate_Reverse_Polish_Notation/Solution.java) | 中等 | 栈 数组 数学           |
+| 71   | [简化路径](https://leetcode-cn.com/problems/simplify-path/)  | [Java](./src/com/scuyjzh/leetcode/medium/No_0071_Simplify_Path/Solution.java) | 中等 | 栈 字符串              |
+| 388  | [文件的最长绝对路径](https://leetcode-cn.com/problems/longest-absolute-file-path/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0388_Longest_Absolute_File_Path/Solution.java) | 中等 | 栈 深度优先搜索 字符串 |
+| 84   | [柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0084_Largest_Rectangle_in_Histogram/Solution.java) | 困难 | 栈 数组 单调栈         |
 
 ### Trie
 
