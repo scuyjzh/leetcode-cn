@@ -411,7 +411,7 @@
 | 71   | [简化路径](https://leetcode-cn.com/problems/simplify-path/)  | [Java](./src/com/scuyjzh/leetcode/medium/No_0071_Simplify_Path/Solution.java) | 中等 | 栈 字符串              |
 | 388  | [文件的最长绝对路径](https://leetcode-cn.com/problems/longest-absolute-file-path/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0388_Longest_Absolute_File_Path/Solution.java) | 中等 | 栈 深度优先搜索 字符串 |
 | 394  | [字符串解码](https://leetcode-cn.com/problems/decode-string/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0394_Decode_String/Solution.java) | 中等 | 栈 递归 字符串         |
-| 84   | [柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0084_Largest_Rectangle_in_Histogram/Solution.java) | 困难 | 栈 数组 单调栈         |
+| 224  | [基本计算器](https://leetcode-cn.com/problems/basic-calculator/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0224_Basic_Calculator/Solution.java) | 困难 | 栈 递归 数学 字符串    |
 
 ### Trie
 
