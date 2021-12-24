@@ -14,6 +14,17 @@ class Solution {
      * 方法一：暴力解法（超时）
      */
     public int largestRectangleArea1(int[] heights) {
+        /*
+         * 枚举以每个柱形为高度的最大矩形的面积。
+         * 具体来说是：依次遍历柱形的高度，对于每一个高度分别向两边扩散，求出以当前高度为矩形的最大宽度多
+         * 少。
+         *
+         * 为此，需要：
+         *   • 左边看一下，看最多能向左延伸多长，找到大于等于当前柱形高度的最左边元素的下标；
+         *   • 右边看一下，看最多能向右延伸多长；找到大于等于当前柱形高度的最右边元素的下标。
+         *
+         * 对于每一个位置，都这样操作，得到一个矩形面积，求出它们的最大值。
+         */
         int len = heights.length;
         // 特判
         if (len == 0) {
@@ -22,7 +33,6 @@ class Solution {
 
         int res = 0;
         for (int i = 0; i < len; i++) {
-
             // 找左边最后 1 个大于等于 heights[i] 的下标
             int left = i;
             int curHeight = heights[i];
@@ -78,6 +88,6 @@ class Solution {
 
     public static void main(String[] args) {
         System.out.println(new Solution().largestRectangleArea1(new int[]{2, 1, 5, 6, 2, 3}));
-        System.out.println(new Solution().largestRectangleArea2(new int[]{2, 1, 5, 6, 2, 3}));
+        System.out.println(new Solution().largestRectangleArea2(new int[]{2, 4}));
     }
 }

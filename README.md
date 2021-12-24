@@ -414,6 +414,7 @@
 | 224  | [基本计算器](https://leetcode-cn.com/problems/basic-calculator/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0224_Basic_Calculator/Solution.java) | 困难 | 栈 递归 数学 字符串    |
 | 227  | [基本计算器 II](https://leetcode-cn.com/problems/basic-calculator-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0227_Basic_Calculator_II/Solution.java) | 中等 | 栈 数学 字符串         |
 | 385  | [迷你语法分析器](https://leetcode-cn.com/problems/mini-parser/) | [Java](https://leetcode-cn.com/problems/mini-parser/solution/) | 中等 | 栈 深度优先搜索 字符串 |
+| 84   | [柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0084_Largest_Rectangle_in_Histogram/Solution.java) | 困难 | 栈 数组 单调栈         |
 
 ### Trie
 
