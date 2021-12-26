@@ -402,20 +402,21 @@
 
 ### Stack & PriorityQueue
 
-| #    | 题目                                                         | 题解                                                         | 难度 | 标签                                   |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | -------------------------------------- |
-| 155  | [最小栈](https://leetcode-cn.com/problems/min-stack/)        | [Java](./src/com/scuyjzh/leetcode/easy/No_0155_Min_Stack/MinStack.java) | 简单 | 栈 设计                                |
-| 232  | [用栈实现队列](https://leetcode-cn.com/problems/implement-queue-using-stacks/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0232_Implement_Queue_using_Stacks/MyQueue.java) | 简单 | 栈 设计 队列                           |
-| 225  | [用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0225_Implement_Stack_using_Queues/MyStack.java) | 简单 | 栈 设计 队列                           |
-| 150  | [逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0150_Evaluate_Reverse_Polish_Notation/Solution.java) | 中等 | 栈 数组 数学                           |
-| 71   | [简化路径](https://leetcode-cn.com/problems/simplify-path/)  | [Java](./src/com/scuyjzh/leetcode/medium/No_0071_Simplify_Path/Solution.java) | 中等 | 栈 字符串                              |
-| 388  | [文件的最长绝对路径](https://leetcode-cn.com/problems/longest-absolute-file-path/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0388_Longest_Absolute_File_Path/Solution.java) | 中等 | 栈 深度优先搜索 字符串                 |
-| 394  | [字符串解码](https://leetcode-cn.com/problems/decode-string/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0394_Decode_String/Solution.java) | 中等 | 栈 递归 字符串                         |
-| 224  | [基本计算器](https://leetcode-cn.com/problems/basic-calculator/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0224_Basic_Calculator/Solution.java) | 困难 | 栈 递归 数学 字符串                    |
-| 227  | [基本计算器 II](https://leetcode-cn.com/problems/basic-calculator-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0227_Basic_Calculator_II/Solution.java) | 中等 | 栈 数学 字符串                         |
-| 385  | [迷你语法分析器](https://leetcode-cn.com/problems/mini-parser/) | [Java](https://leetcode-cn.com/problems/mini-parser/solution/) | 中等 | 栈 深度优先搜索 字符串                 |
-| 84   | [柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0084_Largest_Rectangle_in_Histogram/Solution.java) | 困难 | 栈 数组 单调栈                         |
-| 215  | [数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0215_Kth_Largest_Element_in_an_Array/Solution.java) | 中等 | 数组 分治 快速排序 排序 堆（优先队列） |
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签                                                      |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | --------------------------------------------------------- |
+| 155  | [最小栈](https://leetcode-cn.com/problems/min-stack/)        | [Java](./src/com/scuyjzh/leetcode/easy/No_0155_Min_Stack/MinStack.java) | 简单 | 栈 设计                                                   |
+| 232  | [用栈实现队列](https://leetcode-cn.com/problems/implement-queue-using-stacks/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0232_Implement_Queue_using_Stacks/MyQueue.java) | 简单 | 栈 设计 队列                                              |
+| 225  | [用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0225_Implement_Stack_using_Queues/MyStack.java) | 简单 | 栈 设计 队列                                              |
+| 150  | [逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0150_Evaluate_Reverse_Polish_Notation/Solution.java) | 中等 | 栈 数组 数学                                              |
+| 71   | [简化路径](https://leetcode-cn.com/problems/simplify-path/)  | [Java](./src/com/scuyjzh/leetcode/medium/No_0071_Simplify_Path/Solution.java) | 中等 | 栈 字符串                                                 |
+| 388  | [文件的最长绝对路径](https://leetcode-cn.com/problems/longest-absolute-file-path/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0388_Longest_Absolute_File_Path/Solution.java) | 中等 | 栈 深度优先搜索 字符串                                    |
+| 394  | [字符串解码](https://leetcode-cn.com/problems/decode-string/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0394_Decode_String/Solution.java) | 中等 | 栈 递归 字符串                                            |
+| 224  | [基本计算器](https://leetcode-cn.com/problems/basic-calculator/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0224_Basic_Calculator/Solution.java) | 困难 | 栈 递归 数学 字符串                                       |
+| 227  | [基本计算器 II](https://leetcode-cn.com/problems/basic-calculator-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0227_Basic_Calculator_II/Solution.java) | 中等 | 栈 数学 字符串                                            |
+| 385  | [迷你语法分析器](https://leetcode-cn.com/problems/mini-parser/) | [Java](https://leetcode-cn.com/problems/mini-parser/solution/) | 中等 | 栈 深度优先搜索 字符串                                    |
+| 84   | [柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0084_Largest_Rectangle_in_Histogram/Solution.java) | 困难 | 栈 数组 单调栈                                            |
+| 215  | [数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0215_Kth_Largest_Element_in_an_Array/Solution.java) | 中等 | 数组 分治 快速排序 排序 堆（优先队列）                    |
+| 347  | [前 K 个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0347_Top_K_Frequent_Elements/Solution.java) | 中等 | 数组 哈希表 分治 桶排序 计数 快速排序 排序 堆（优先队列） |
 
 ### Trie
 
