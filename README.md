@@ -417,6 +417,7 @@
 | 84   | [柱状图中最大的矩形](https://leetcode-cn.com/problems/largest-rectangle-in-histogram/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0084_Largest_Rectangle_in_Histogram/Solution.java) | 困难 | 栈 数组 单调栈                                            |
 | 215  | [数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0215_Kth_Largest_Element_in_an_Array/Solution.java) | 中等 | 数组 分治 快速排序 排序 堆（优先队列）                    |
 | 347  | [前 K 个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0347_Top_K_Frequent_Elements/Solution.java) | 中等 | 数组 哈希表 分治 桶排序 计数 快速排序 排序 堆（优先队列） |
+| 313  | [超级丑数](https://leetcode-cn.com/problems/super-ugly-number/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0313_Super_Ugly_Number/Solution.java) | 中等 | 数组 哈希表 数学 动态规划 堆（优先队列）                  |
 
 ### Trie
 
