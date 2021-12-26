@@ -418,6 +418,7 @@
 | 215  | [数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0215_Kth_Largest_Element_in_an_Array/Solution.java) | 中等 | 数组 分治 快速排序 排序 堆（优先队列）                    |
 | 347  | [前 K 个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0347_Top_K_Frequent_Elements/Solution.java) | 中等 | 数组 哈希表 分治 桶排序 计数 快速排序 排序 堆（优先队列） |
 | 313  | [超级丑数](https://leetcode-cn.com/problems/super-ugly-number/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0313_Super_Ugly_Number/Solution.java) | 中等 | 数组 哈希表 数学 动态规划 堆（优先队列）                  |
+| 373  | [查找和最小的K对数字](https://leetcode-cn.com/problems/find-k-pairs-with-smallest-sums/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0373_Find_K_Pairs_with_Smallest_Sums/Solution.java) | 中等 | 数组 堆（优先队列）                                       |
 
 ### Trie
 
