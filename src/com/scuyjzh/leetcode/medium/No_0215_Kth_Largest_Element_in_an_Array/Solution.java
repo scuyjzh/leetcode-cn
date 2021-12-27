@@ -32,7 +32,8 @@ class Solution {
 
         // 在 while (true) 循环中，通过 left 与 right 向中间靠拢的方式逐步缩小搜索区间
         while (true) {
-            int index = partition(nums, start, end);
+            // 将数组分区，左边区域比基数小，右边区域比基数大，然后返回基数的下标
+            int index = partition2(nums, start, end);
             if (index == target) {
                 return nums[index];
             } else if (index < target) {
@@ -44,48 +45,92 @@ class Solution {
     }
 
     /**
+     * 最简单的分区算法
+     */
+    private int partition1(int[] nums, int start, int end) {
+        /*
+         * 从 left 开始，遇到比基数大的数，就交换到数组最后，
+         * 并将 right 减一，直到 left 和 right 相遇，
+         * 此时数组就被分成了左右两个区域。
+         *
+         * 再将基数和中间的数交换，返回中间值的下标即可。
+         */
+        int pivotIndex = start + (int) (Math.random() * (end - start + 1));
+        // 随机初始化 pivot 元素
+        swap(nums, start, pivotIndex);
+        // 取第一个数为基数
+        int pivot = nums[start];
+        // 从第二个数开始分区
+        int left = start + 1;
+        // 右边界
+        int right = end;
+        // left、right 相遇时退出循环
+        while (left < right) {
+            // 找到第一个大于基数的位置
+            while (left < right && nums[left] <= pivot) {
+                ++left;
+            }
+            // 交换这两个数，使得左边分区都小于或等于基数，右边分区大于或等于基数
+            if (left != right) {
+                swap(nums, left, right);
+                --right;
+            }
+        }
+        // 如果 left 和 right 相等，单独比较 nums[right] 和 pivot
+        if (left == right && nums[right] > pivot) {
+            right--;
+        }
+        // 将基数和中间数交换
+        if (right != start) {
+            swap(nums, start, right);
+        }
+        // 返回中间值的下标
+        return right;
+    }
+
+    /**
      * 双指针分区算法
      */
-    private int partition(int[] arr, int start, int end) {
+    private int partition2(int[] nums, int start, int end) {
         /*
          * 从 left 开始，遇到比基数大的数，记录其下标；
          * 再从 right 往前遍历，找到第一个比基数小的数，记录其下标；
          * 然后交换这两个数。继续遍历，直到 left 和 right 相遇。
          *
          * 然后交换基数和中间值，并返回中间值的下标。
-         * 需要在退出循环后，单独比较 left 和 right 的值。
+         * 在退出循环后，需要单独比较 left 和 right 的值。
          */
         int pivotIndex = start + (int) (Math.random() * (end - start + 1));
         // 随机初始化 pivot 元素
-        swap(arr, start, pivotIndex);
+        swap(nums, start, pivotIndex);
         // 取第一个数为基数
-        int pivot = arr[start];
+        int pivot = nums[start];
         // 从第二个数开始分区
         int left = start + 1;
         // 右边界
         int right = end;
         while (left < right) {
             // 找到第一个大于基数的位置
-            while (left < right && arr[left] <= pivot) {
+            while (left < right && nums[left] <= pivot) {
                 left++;
             }
             // 找到第一个小于基数的位置
-            while (left < right && arr[right] >= pivot) {
+            while (left < right && nums[right] >= pivot) {
                 right--;
             }
             // 交换这两个数，使得左边分区都小于或等于基数，右边分区大于或等于基数
             if (left < right) {
-                swap(arr, left, right);
+                swap(nums, left, right);
                 left++;
                 right--;
             }
         }
-        // 如果 left 和 right 相等，单独比较 arr[right] 和 pivot
-        if (left == right && arr[right] > pivot) {
+        // 如果 left 和 right 相等，单独比较 nums[right] 和 pivot
+        if (left == right && nums[right] > pivot) {
             right--;
         }
         // 将基数和轴交换
-        swap(arr, start, right);
+        swap(nums, start, right);
         return right;
     }
 
@@ -111,7 +156,7 @@ class Solution {
      * 构建初始大顶堆
      */
     private void buildMaxHeap(int[] nums) {
-        // 从最后一个非叶子结点开始调整大顶堆，最后一个非叶子结点的下标就是 arr.length / 2 - 1
+        // 从最后一个非叶子节点开始调整大顶堆，最后一个非叶子节点的下标就是 arr.length / 2 - 1
         for (int i = nums.length / 2 - 1; i >= 0; --i) {
             maxHeapify(nums, i, nums.length);
         }
@@ -136,7 +181,7 @@ class Solution {
             largest = r;
         }
         if (largest != i) {
-            // 将最大值交换为根结点
+            // 将最大值交换为根节点
             swap(nums, i, largest);
             // 再次调整交换数字后的大顶堆
             maxHeapify(nums, largest, heapSize);
