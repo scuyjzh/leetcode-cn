@@ -421,6 +421,7 @@
 | 313  | [超级丑数](https://leetcode-cn.com/problems/super-ugly-number/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0313_Super_Ugly_Number/Solution.java) | 中等 | 数组 哈希表 数学 动态规划 堆（优先队列）                  |
 | 373  | [查找和最小的K对数字](https://leetcode-cn.com/problems/find-k-pairs-with-smallest-sums/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0373_Find_K_Pairs_with_Smallest_Sums/Solution.java) | 中等 | 数组 堆（优先队列）                                       |
 | 218  | [天际线问题](https://leetcode-cn.com/problems/the-skyline-problem/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0218_The_Skyline_Problem/Solution.java) | 困难 | 树状数组 线段树 数组 分治 有序集合 扫描线 堆（优先队列）  |
+| 332  | [重新安排行程](https://leetcode-cn.com/problems/reconstruct-itinerary/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0332_Reconstruct_Itinerary/Solution.java) | 困难 | 深度优先搜索 图 欧拉回路                                  |
 
 ### Graph
 
