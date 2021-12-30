@@ -433,6 +433,7 @@
 | 207  | [课程表](https://leetcode-cn.com/problems/course-schedule/)  | [Java](./src/com/scuyjzh/leetcode/medium/No_0207_Course_Schedule/Solution.java) | 中等 | 深度优先搜索 广度优先搜索 图 拓扑排序           |
 | 210  | [课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0210_Course_Schedule_II/Solution.java) | 中等 | 深度优先搜索 广度优先搜索 图 拓扑排序           |
 | 149  | [直线上最多的点数](https://leetcode-cn.com/problems/max-points-on-a-line/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0149_Max_Points_on_a_Line/Solution.java) | 困难 | 几何 哈希表 数学                                |
+| 305  | [岛屿数量 II](https://leetcode-cn.com/problems/number-of-islands-ii/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0305_Number_of_Islands_II/Solution.java) | 困难 | 并查集 数组                                     |
 
 ### Trie
 
