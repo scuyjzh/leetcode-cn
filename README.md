@@ -440,6 +440,7 @@
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------------------- |
 | 211  | [添加与搜索单词 - 数据结构设计](https://leetcode-cn.com/problems/design-add-and-search-words-data-structure/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0211_Design_Add_and_Search_Words_Data_Structure/WordDictionary.java) | 中等 | 深度优先搜索 设计 字典树 字符串 |
 | 208  | [实现 Trie (前缀树)](https://leetcode-cn.com/problems/implement-trie-prefix-tree/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0208_Implement_Trie/Trie.java) | 中等 | 设计 字典树 哈希表 字符串       |
+| 212  | [单词搜索 II](https://leetcode-cn.com/problems/word-search-ii/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0212_Word_Search_II/Solution.java) | 困难 | 字典树 数组 字符串 回溯 矩阵    |
 
 ### Design
 
