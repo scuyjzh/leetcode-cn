@@ -41,21 +41,21 @@ class Solution {
         rows = grid.length;
         cols = grid[0].length;
 
-        int ans = 0;
+        int num = 0;
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < cols; ++j) {
                 if (grid[i][j] == '1') {
-                    ++ans;
                     dfs(grid, i, j);
+                    ++num;
                 }
             }
         }
 
-        return ans;
+        return num;
     }
 
     private void dfs(char[][] grid, int i, int j) {
-        if (i < 0 || j < 0 || i >= rows || j >= cols || grid[i][j] == '0') {
+        if (!inArea(i, j) || grid[i][j] == '0') {
             return;
         }
 
@@ -86,40 +86,136 @@ class Solution {
         rows = grid.length;
         cols = grid[0].length;
 
-        int ans = 0;
+        int num = 0;
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < cols; ++j) {
                 if (grid[i][j] == '1') {
-                    ++ans;
                     bfs(grid, i, j);
+                    ++num;
                 }
             }
         }
 
-        return ans;
+        return num;
     }
 
     private void bfs(char[][] grid, int i, int j) {
-        Queue<Integer[]> neighbors = new ArrayDeque<>();
-        neighbors.offer(new Integer[]{i, j});
+        Deque<int[]> neighbors = new ArrayDeque<>();
+        neighbors.offer(new int[]{i, j});
         grid[i][j] = '0';
 
         while (!neighbors.isEmpty()) {
-            Integer[] curr = neighbors.poll();
+            int[] curr = neighbors.poll();
 
             for (int[] dir : DIRECTIONS) {
                 int row = curr[0] + dir[0];
                 int col = curr[1] + dir[1];
-                if (row >= 0 && row < rows && col >= 0 && col < cols && grid[row][col] == '1') {
-                    neighbors.offer(new Integer[]{row, col});
+                if (inArea(row, col) && grid[row][col] == '1') {
+                    neighbors.offer(new int[]{row, col});
                     grid[row][col] = '0';
                 }
             }
         }
     }
 
+    class UnionFind {
+        int count;
+        int[] parent;
+        int[] rank;
+
+        UnionFind(char[][] grid) {
+            count = 0;
+            int m = grid.length;
+            int n = grid[0].length;
+            parent = new int[m * n];
+            rank = new int[m * n];
+            for (int i = 0; i < m; ++i) {
+                for (int j = 0; j < n; ++j) {
+                    if (grid[i][j] == '1') {
+                        parent[i * n + j] = i * n + j;
+                        ++count;
+                    }
+                    rank[i * n + j] = 1;
+                }
+            }
+        }
+
+        int find(int x) {
+            while (x != parent[x]) {
+                // 路径压缩
+                parent[x] = parent[parent[x]];
+                x = parent[x];
+            }
+            return x;
+        }
+
+        void union(int x, int y) {
+            int rootX = find(x);
+            int rootY = find(y);
+            if (rootX != rootY) {
+                if (rank[rootX] > rank[rootY]) {
+                    parent[rootY] = rootX;
+                } else if (rank[rootX] < rank[rootY]) {
+                    parent[rootX] = rootY;
+                } else {
+                    parent[rootY] = rootX;
+                    ++rank[rootX];
+                }
+                --count;
+            }
+        }
+
+        int getCount() {
+            return count;
+        }
+    }
+
+    /**
+     * 方法三：并查集
+     */
+    public int numIslands3(char[][] grid) {
+        /*
+         * 同样地，也可以使用并查集代替搜索。
+         *
+         * 为了求出岛屿的数量，可以扫描整个二维网格。如果一个位置为 1，则将其与相邻四个方向上的 1 在并
+         * 查集中进行合并。
+         *
+         * 最终岛屿的数量就是并查集中连通分量的数目。
+         */
+        if (grid == null || grid.length == 0) {
+            return 0;
+        }
+
+        rows = grid.length;
+        cols = grid[0].length;
+
+        UnionFind uf = new UnionFind(grid);
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < cols; ++j) {
+                if (grid[i][j] == '1') {
+                    grid[i][j] = '0';
+
+                    for (int[] dir : DIRECTIONS) {
+                        int row = i + dir[0];
+                        int col = j + dir[1];
+                        if (inArea(row, col) && grid[row][col] == '1') {
+                            uf.union(i * cols + j, row * cols + col);
+                        }
+                    }
+                }
+            }
+        }
+
+        return uf.getCount();
+    }
+
+    private boolean inArea(int row, int col) {
+        return row >= 0 && row < rows && col >= 0 && col < cols;
+    }
+
     public static void main(String[] args) {
         System.out.println(new Solution().numIslands1(new char[][]{{'1', '1', '1', '1', '0'}, {'1', '1', '0', '1', '0'}, {'1', '1', '0', '0', '0'}, {'0', '0', '0', '0', '0'}}));
         System.out.println(new Solution().numIslands2(new char[][]{{'1', '1', '0', '0', '0'}, {'1', '1', '0', '0', '0'}, {'0', '0', '1', '0', '0'}, {'0', '0', '0', '1', '1'}}));
+        System.out.println(new Solution().numIslands3(new char[][]{{'1', '1', '0', '0', '0'}, {'1', '1', '0', '0', '0'}, {'0', '0', '1', '0', '0'}, {'0', '0', '0', '1', '1'}}));
     }
 }
