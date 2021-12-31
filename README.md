@@ -429,6 +429,7 @@
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签                      |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------------- |
 | 389  | [找不同](https://leetcode-cn.com/problems/find-the-difference/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0389_Find_the_Difference/Solution.java) | 简单 | 位运算 哈希表 字符串 排序 |
+| 136  | [只出现一次的数字](https://leetcode-cn.com/problems/single-number/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0136_Single_Number/Solution.java) | 简单 | 位运算 数组               |
 
 ### Graph
 
