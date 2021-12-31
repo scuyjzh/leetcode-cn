@@ -434,6 +434,7 @@
 | 210  | [课程表 II](https://leetcode-cn.com/problems/course-schedule-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0210_Course_Schedule_II/Solution.java) | 中等 | 深度优先搜索 广度优先搜索 图 拓扑排序           |
 | 149  | [直线上最多的点数](https://leetcode-cn.com/problems/max-points-on-a-line/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0149_Max_Points_on_a_Line/Solution.java) | 困难 | 几何 哈希表 数学                                |
 | 305  | [岛屿数量 II](https://leetcode-cn.com/problems/number-of-islands-ii/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0305_Number_of_Islands_II/Solution.java) | 困难 | 并查集 数组                                     |
+| 547  | [省份数量](https://leetcode-cn.com/problems/number-of-provinces/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0547_Number_of_Provinces/Solution.java) | 中等 | 深度优先搜索 广度优先搜索 图 并查集             |
 
 ### Trie
 
@@ -445,6 +446,7 @@
 
 ### Design
 
-| #    | 题目                                                        | 题解                                                         | 难度 | 标签                      |
-| ---- | ----------------------------------------------------------- | ------------------------------------------------------------ | ---- | ------------------------- |
-| 146  | [LRU 缓存机制](https://leetcode-cn.com/problems/lru-cache/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0146_LRU_Cache/LRUCache.java) | 中等 | 设计 哈希表 链表 双向链表 |
+| #    | 题目                                                    | 题解                                                         | 难度 | 标签                      |
+| ---- | ------------------------------------------------------- | ------------------------------------------------------------ | ---- | ------------------------- |
+| 146  | [LRU 缓存](https://leetcode-cn.com/problems/lru-cache/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0146_LRU_Cache/LRUCache.java) | 中等 | 设计 哈希表 链表 双向链表 |
+| 460  | [LFU 缓存](https://leetcode-cn.com/problems/lfu-cache/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0460_LFU_Cache/LFUCache.java) | 困难 | 设计 哈希表 链表 双向链表 |
