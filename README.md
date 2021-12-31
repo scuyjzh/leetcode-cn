@@ -430,6 +430,7 @@
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------------- |
 | 389  | [找不同](https://leetcode-cn.com/problems/find-the-difference/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0389_Find_the_Difference/Solution.java) | 简单 | 位运算 哈希表 字符串 排序 |
 | 136  | [只出现一次的数字](https://leetcode-cn.com/problems/single-number/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0136_Single_Number/Solution.java) | 简单 | 位运算 数组               |
+| 318  | [最大单词长度乘积](https://leetcode-cn.com/problems/maximum-product-of-word-lengths/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0318_Maximum_Product_of_Word_Lengths/Solution.java) | 中等 | 位运算 数组 字符串        |
 
 ### Graph
 
