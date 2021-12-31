@@ -3,28 +3,32 @@ package com.scuyjzh.leetcode.medium.No_0146_LRU_Cache;
 import java.util.*;
 
 /**
- * 146. LRU 缓存机制
+ * 146. LRU 缓存
  *
- * 运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制
- * 。
+ * 请你设计并实现一个满足  LRU (最近最少使用) 缓存 约束的数据结构。
+ *
  * 实现 LRUCache 类：
- *     • LRUCache(int capacity) 以正整数作为容量 capacity 初始化
- *       LRU 缓存
- *     • int get(int key) 如果关键字 key 存在于缓存中，则返回关键字
- *       的值，否则返回 -1 。
- *     • void put(int key, int value) 如果关键字已经存在，则变更其数
- *       据值；如果关键字不存在，则插入该组「关键字-值」。当缓存容量
- *       达到上限时，它应该在写入新数据之前删除最久未使用的数据值，
- *       从而为新的数据值留出空间。
- * 进阶：你是否可以在 O(1) 时间复杂度内完成这两种操作？
+ *   • LRUCache(int capacity) 以 正整数 作为容量 capacity 初始化
+ *     LRU 缓存
+ *   • int get(int key) 如果关键字 key 存在于缓存中，则返回关键字
+ *     的值，否则返回 -1 。
+ *   • void put(int key, int value) 如果关键字 key 已经存在，则变
+ *     更其数据值 value ；如果不存在，则向缓存中插入该组 key-
+ *     value 。如果插入操作导致关键字数量超过 capacity ，则应该 逐
+ *     出 最久未使用的关键字。
+ *
+ * 函数 get 和 put 必须以 O(1) 的平均时间复杂度运行。
  */
 class LRUCache {
     /**
      * 双向链表节点
      */
     class Node {
-        public int key, val;
-        public Node next, prev;
+        int key, val;
+        Node next, prev;
+
+        Node() {
+        }
 
         public Node(int key, int val) {
             this.key = key;
@@ -39,44 +43,43 @@ class LRUCache {
         /**
          * 虚拟头尾节点
          */
-        private Node head, tail;
+        Node head, tail;
         /**
          * 链表元素数
          */
-        private int size;
+        int size;
 
-        public DoubleList() {
-            head = new Node(0, 0);
-            tail = new Node(0, 0);
+        DoubleList() {
+            head = new Node();
+            tail = new Node();
             head.next = tail;
             tail.prev = head;
-            size = 0;
         }
 
         /**
-         * 在链表头部添加节点 x，时间 O(1)
+         * 在链表头部添加节点 x，时间复杂度 O(1)
          */
-        public void addFirst(Node x) {
+        void addFirst(Node x) {
             x.next = head.next;
             x.prev = head;
             head.next.prev = x;
             head.next = x;
-            size++;
+            ++size;
         }
 
         /**
-         * 删除链表中的 x 节点（x 一定存在），时间 O(1)
+         * 删除链表中的 x 节点（x 一定存在），时间复杂度 O(1)
          */
-        public void remove(Node x) {
+        void remove(Node x) {
             x.prev.next = x.next;
             x.next.prev = x.prev;
-            size--;
+            --size;
         }
 
         /**
-         * 删除链表中最后一个节点，并返回该节点，时间 O(1)
+         * 删除链表中最后一个节点，并返回该节点，时间复杂度 O(1)
          */
-        public Node removeLast() {
+        Node removeLast() {
             if (tail.prev == head) {
                 return null;
             }
@@ -86,9 +89,9 @@ class LRUCache {
         }
 
         /**
-         * 返回链表长度，时间 O(1)
+         * 返回链表长度，时间复杂度 O(1)
          */
-        public int size() {
+        int size() {
             return size;
         }
     }
@@ -96,7 +99,7 @@ class LRUCache {
     /**
      * 缓存容量
      */
-    private int cap;
+    private int capacity;
     /**
      * key 映射到 Node(key, val)
      */
@@ -107,7 +110,7 @@ class LRUCache {
     private DoubleList cache;
 
     public LRUCache(int capacity) {
-        this.cap = capacity;
+        this.capacity = capacity;
         this.map = new HashMap<>();
         this.cache = new DoubleList();
     }
@@ -131,7 +134,7 @@ class LRUCache {
             cache.remove(map.get(key));
         } else {
             // cache 已满
-            if (cap == cache.size()) {
+            if (capacity == cache.size()) {
                 // 删除链表最后一个节点
                 Node last = cache.removeLast();
                 // 同时删除 map 中映射到该节点的 key
