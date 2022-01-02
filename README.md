@@ -439,6 +439,7 @@
 | 268  | [丢失的数字](https://leetcode-cn.com/problems/missing-number/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0268_Missing_Number/Solution.java) | 简单 | 位运算 数组 哈希表 数学 排序 |
 | 191  | [位1的个数](https://leetcode-cn.com/problems/number-of-1-bits/) | [Java](https://leetcode-cn.com/problems/number-of-1-bits/solution/wei-1de-ge-shu-by-leetcode-solution-jnwf/) | 简单 | 位运算                       |
 | 190  | [颠倒二进制位](https://leetcode-cn.com/problems/reverse-bits/) | [Java](https://leetcode-cn.com/problems/reverse-bits/solution/dian-dao-er-jin-zhi-wei-by-leetcode-solu-yhxz/) | 简单 | 位运算 分治                  |
+| 137  | [只出现一次的数字 II](https://leetcode-cn.com/problems/single-number-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0137_Single_Number_II/Solution.java) | 中等 | 位运算 数组                  |
 
 ### Graph
 
