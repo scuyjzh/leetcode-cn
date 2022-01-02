@@ -426,16 +426,17 @@
 
 ### Bit Manipulation
 
-| #    | 题目                                                         | 题解                                                         | 难度 | 标签                      |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------------- |
-| 389  | [找不同](https://leetcode-cn.com/problems/find-the-difference/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0389_Find_the_Difference/Solution.java) | 简单 | 位运算 哈希表 字符串 排序 |
-| 136  | [只出现一次的数字](https://leetcode-cn.com/problems/single-number/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0136_Single_Number/Solution.java) | 简单 | 位运算 数组               |
-| 318  | [最大单词长度乘积](https://leetcode-cn.com/problems/maximum-product-of-word-lengths/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0318_Maximum_Product_of_Word_Lengths/Solution.java) | 中等 | 位运算 数组 字符串        |
-| 393  | [UTF-8 编码验证](https://leetcode-cn.com/problems/utf-8-validation/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0393_UTF8_Validation/Solution.java) | 中等 | 位运算 数组               |
-| 201  | [数字范围按位与](https://leetcode-cn.com/problems/bitwise-and-of-numbers-range/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0201_Bitwise_AND_of_Numbers_Range/Solution.java) | 中等 | 位运算                    |
-| 371  | [两整数之和](https://leetcode-cn.com/problems/sum-of-two-integers/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0371_Sum_of_Two_Integers/Solution.java) | 中等 | 位运算 数学               |
-| 338  | [比特位计数](https://leetcode-cn.com/problems/counting-bits/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0338_Counting_Bits/Solution.java) | 简单 | 位运算 动态规划           |
-| 89   | [格雷编码](https://leetcode-cn.com/problems/gray-code/)      | [Java](./src/com/scuyjzh/leetcode/medium/No_0089_Gray_Code/Solution.java) | 中等 | 位运算 数学 回溯          |
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签                         |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ---------------------------- |
+| 389  | [找不同](https://leetcode-cn.com/problems/find-the-difference/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0389_Find_the_Difference/Solution.java) | 简单 | 位运算 哈希表 字符串 排序    |
+| 136  | [只出现一次的数字](https://leetcode-cn.com/problems/single-number/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0136_Single_Number/Solution.java) | 简单 | 位运算 数组                  |
+| 318  | [最大单词长度乘积](https://leetcode-cn.com/problems/maximum-product-of-word-lengths/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0318_Maximum_Product_of_Word_Lengths/Solution.java) | 中等 | 位运算 数组 字符串           |
+| 393  | [UTF-8 编码验证](https://leetcode-cn.com/problems/utf-8-validation/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0393_UTF8_Validation/Solution.java) | 中等 | 位运算 数组                  |
+| 201  | [数字范围按位与](https://leetcode-cn.com/problems/bitwise-and-of-numbers-range/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0201_Bitwise_AND_of_Numbers_Range/Solution.java) | 中等 | 位运算                       |
+| 371  | [两整数之和](https://leetcode-cn.com/problems/sum-of-two-integers/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0371_Sum_of_Two_Integers/Solution.java) | 中等 | 位运算 数学                  |
+| 338  | [比特位计数](https://leetcode-cn.com/problems/counting-bits/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0338_Counting_Bits/Solution.java) | 简单 | 位运算 动态规划              |
+| 89   | [格雷编码](https://leetcode-cn.com/problems/gray-code/)      | [Java](./src/com/scuyjzh/leetcode/medium/No_0089_Gray_Code/Solution.java) | 中等 | 位运算 数学 回溯             |
+| 268  | [丢失的数字](https://leetcode-cn.com/problems/missing-number/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0268_Missing_Number/Solution.java) | 简单 | 位运算 数组 哈希表 数学 排序 |
 
 ### Graph
 
