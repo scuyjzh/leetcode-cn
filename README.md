@@ -304,6 +304,7 @@
 | 279  | [完全平方数](https://leetcode-cn.com/problems/perfect-squares/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0279_Perfect_Squares/Solution.java) | 中等 | 广度优先搜索 数学 动态规划               |
 | 139  | [单词拆分](https://leetcode-cn.com/problems/word-break/)     | [Java](./src/com/scuyjzh/leetcode/medium/No_0139_Word_Break/Solution.java) | 中等 | 字典树 记忆化搜索 哈希表 字符串 动态规划 |
 | 375  | [猜数字大小 II](https://leetcode-cn.com/problems/guess-number-higher-or-lower-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0375_Guess_Number_Higher_or_Lower_II/Solution.java) | 中等 | 数学 动态规划 博弈                       |
+| 312  | [戳气球](https://leetcode-cn.com/problems/burst-balloons/)   | [Java](./src/com/scuyjzh/leetcode/hard/No_0312_Burst_Balloons/Solution.java) | 困难 | 数组 动态规划                            |
 | 322  | [零钱兑换](https://leetcode-cn.com/problems/coin-change/)    | [Java](./src/com/scuyjzh/leetcode/medium/No_0322_Coin_Change/Solution.java) | 中等 | 广度优先搜索 数组 动态规划               |
 | 256  | [粉刷房子](https://leetcode-cn.com/problems/paint-house/)    | [Java](./src/com/scuyjzh/leetcode/medium/No_0256_Paint_House/Solution.java) | 中等 | 数组 动态规划                            |
 | 265  | [粉刷房子 II](https://leetcode-cn.com/problems/paint-house-ii/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0265_Paint_House_II/Solution.java) | 困难 | 数组 动态规划                            |
