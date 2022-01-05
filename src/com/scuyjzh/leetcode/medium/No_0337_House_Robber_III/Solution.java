@@ -12,12 +12,16 @@ import java.util.*;
  * 有且只有一个“父“房子与之相连。一番侦察之后，聪明的小偷意识到“这个
  * 地方的所有房屋的排列类似于一棵二叉树”。 如果两个直接相连的房子在同
  * 一天晚上被打劫，房屋将自动报警。
+ *
  * 计算在不触动警报的情况下，小偷一晚能够盗取的最高金额。
  */
 class Solution {
     Map<TreeNode, Integer> f = new HashMap<>();
     Map<TreeNode, Integer> g = new HashMap<>();
 
+    /**
+     * 方法一：动态规划
+     */
     private int rob1(TreeNode root) {
         /*
          * 简化一下这个问题：一棵二叉树，树上的每个点都有对应的权值，每个点有两种状态（选中和不选中），问
@@ -33,20 +37,23 @@ class Solution {
          * 至此，可以用哈希表来存 f 和 g 的函数值，用深度优先搜索的办法后序遍历这棵二叉树，就可以得
          * 到每一个节点的 f 和 g。根节点的 f 和 g 的最大值就是要找的答案。
          */
-        dfs1(root);
+        postorder1(root);
         return Math.max(f.getOrDefault(root, 0), g.getOrDefault(root, 0));
     }
 
-    private void dfs1(TreeNode node) {
+    private void postorder1(TreeNode node) {
         if (node == null) {
             return;
         }
-        dfs1(node.left);
-        dfs1(node.right);
+        postorder1(node.left);
+        postorder1(node.right);
         f.put(node, node.val + g.getOrDefault(node.left, 0) + g.getOrDefault(node.right, 0));
         g.put(node, Math.max(f.getOrDefault(node.left, 0), g.getOrDefault(node.left, 0)) + Math.max(f.getOrDefault(node.right, 0), g.getOrDefault(node.right, 0)));
     }
 
+    /**
+     * 方法二：动态规划 + 空间优化
+     */
     public int rob2(TreeNode root) {
         /*
          * 假设二叉树的节点个数为 n。
@@ -59,18 +66,18 @@ class Solution {
          * 点的 f 和 g 值，在每次递归返回的时候，都把这个点对应的 f 和 g 返回给上一级调用，这样可以省去哈希表
          * 的空间。
          */
-        int[] rootStatus = dfs2(root);
+        int[] rootStatus = postorder2(root);
         return Math.max(rootStatus[0], rootStatus[1]);
     }
 
-    private int[] dfs2(TreeNode node) {
+    private int[] postorder2(TreeNode node) {
         if (node == null) {
             return new int[]{0, 0};
         }
-        int[] l = dfs2(node.left);
-        int[] r = dfs2(node.right);
-        int selected = node.val + l[1] + r[1];
-        int notSelected = Math.max(l[0], l[1]) + Math.max(r[0], r[1]);
+        int[] left = postorder2(node.left);
+        int[] right = postorder2(node.right);
+        int selected = node.val + left[1] + right[1];
+        int notSelected = Math.max(left[0], left[1]) + Math.max(right[0], right[1]);
         return new int[]{selected, notSelected};
     }
 
