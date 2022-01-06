@@ -7,6 +7,7 @@ import com.scuyjzh.leetcode.structure.TreeNode;
  *
  * 给定一棵二叉树，你需要计算它的直径长度。一棵二叉树的直径长度是任意
  * 两个节点路径长度中的最大值。这条路径可能穿过也可能不穿过根节点。
+ *
  * 示例 :
  * 给定二叉树
  *
@@ -16,14 +17,12 @@ import com.scuyjzh.leetcode.structure.TreeNode;
  *        / \
  *       4   5
  * 返回 3, 它的长度是路径 [4,2,1,3] 或者 [5,2,1,3]。
+ *
  * 注意：两节点之间的路径长度是以它们之间边的数目表示。
  */
 class Solution {
-    private int ans;
+    private int ans = Integer.MIN_VALUE;
 
-    /**
-     * 方法：深度优先搜索
-     */
     public int diameterOfBinaryTree(TreeNode root) {
         /*
          * 首先知道一条路径的长度为该路径经过的节点数减一，所以求直径（即求路径长度的最大值）等效于求
@@ -46,14 +45,12 @@ class Solution {
          *
          * 递归搜索每个节点并设一个全局变量 ans 记录 d_node 的最大值，最后返回 ans-1 即为树的直径。
          */
-        ans = 1;
         depth(root);
         // 一条路径的长度为该路径经过的节点数减一
         return ans - 1;
     }
 
     private int depth(TreeNode node) {
-        // 访问到空节点了，返回0
         if (node == null) {
             return 0;
         }

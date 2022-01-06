@@ -121,6 +121,7 @@
 | 461  | [汉明距离](https://leetcode-cn.com/problems/hamming-distance/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0461_Hamming_Distance/Solution.java) | 简单 | 位运算                                                    |
 | 494  | [目标和](https://leetcode-cn.com/problems/target-sum/)       | [Java](./src/com/scuyjzh/leetcode/medium/No_0494_Target_Sum/Solution.java) | 中等 | 数组 动态规划 回溯                                        |
 | 538  | [把二叉搜索树转换为累加树](https://leetcode-cn.com/problems/convert-bst-to-greater-tree/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0538_Convert_BST_to_Greater_Tree/Solution.java) | 中等 | 树 深度优先搜索 二叉搜索树 二叉树                         |
+| 543  | [二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0543_Diameter_of_Binary_Tree/Solution.java) | 简单 | 树 深度优先搜索 二叉树                                    |
 
 ## Tags
 
