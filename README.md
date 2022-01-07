@@ -124,6 +124,7 @@
 | 543  | [二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0543_Diameter_of_Binary_Tree/Solution.java) | 简单 | 树 深度优先搜索 二叉树                                    |
 | 560  | [和为 K 的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0560_Subarray_Sum_Equals_K/Solution.java) | 中等 | 数组 哈希表 前缀和                                        |
 | 581  | [最短无序连续子数组](https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0581_Shortest_Unsorted_Continuous_Subarray/Solution.java) | 中等 | 栈 贪心 数组 双指针 排序 单调栈                           |
+| 617  | [合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0617_Merge_Two_Binary_Trees/Solution.java) | 简单 | 树 深度优先搜索 广度优先搜索 二叉树                       |
 
 ## Tags
 
