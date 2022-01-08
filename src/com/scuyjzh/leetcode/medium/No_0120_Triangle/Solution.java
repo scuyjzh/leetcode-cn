@@ -71,33 +71,11 @@ class Solution {
      * 方法二：动态规划 + 空间优化
      */
     public int minimumTotal2(List<List<Integer>> triangle) {
-        // 空间复杂度为 O(n)，使用了 2n 的空间存储状态
         int n = triangle.size();
         int[] f = new int[n];
         f[0] = triangle.get(0).get(0);
         for (int i = 1; i < n; ++i) {
-            f[i] = f[i - 1] + triangle.get(i).get(i);
-            for (int j = i - 1; j > 0; --j) {
-                f[j] = Math.min(f[j - 1], f[j]) + triangle.get(i).get(j);
-            }
-            f[0] += triangle.get(i).get(0);
-        }
-        int minTotal = f[0];
-        for (int i = 1; i < n; ++i) {
-            minTotal = Math.min(minTotal, f[i]);
-        }
-        return minTotal;
-    }
-
-    /**
-     * 方法三：动态规划 + 空间优化
-     */
-    public int minimumTotal3(List<List<Integer>> triangle) {
-        // 空间复杂度仍然为 O(n)，但只使用了 n 的空间存储状态，减少了一半的空间消耗
-        int n = triangle.size();
-        int[] f = new int[n];
-        f[0] = triangle.get(0).get(0);
-        for (int i = 1; i < n; ++i) {
+            // 注意：递减地枚举 j
             f[i] = f[i - 1] + triangle.get(i).get(i);
             for (int j = i - 1; j > 0; --j) {
                 f[j] = Math.min(f[j - 1], f[j]) + triangle.get(i).get(j);
@@ -119,6 +97,5 @@ class Solution {
         triangle.add(Arrays.asList(4, 1, 8, 3));
         System.out.println(new Solution().minimumTotal1(triangle));
         System.out.println(new Solution().minimumTotal2(triangle));
-        System.out.println(new Solution().minimumTotal3(triangle));
     }
 }
