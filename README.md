@@ -412,7 +412,7 @@
 | 312  | [戳气球](https://leetcode-cn.com/problems/burst-balloons/)   | [Java](./src/com/scuyjzh/leetcode/hard/No_0312_Burst_Balloons/Solution.java) | 困难 | 数组 动态规划                            |
 | 322  | [零钱兑换](https://leetcode-cn.com/problems/coin-change/)    | [Java](./src/com/scuyjzh/leetcode/medium/No_0322_Coin_Change/Solution.java) | 中等 | 广度优先搜索 数组 动态规划               |
 | 256  | [粉刷房子](https://leetcode-cn.com/problems/paint-house/) 🔒  | [Java](./src/com/scuyjzh/leetcode/medium/No_0256_Paint_House/Solution.java) | 中等 | 数组 动态规划                            |
-| 265  | [粉刷房子 II](https://leetcode-cn.com/problems/paint-house-ii/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0265_Paint_House_II/Solution.java) | 困难 | 数组 动态规划                            |
+| 265  | [粉刷房子 II](https://leetcode-cn.com/problems/paint-house-ii/) 🔒 | [Java](./src/com/scuyjzh/leetcode/hard/No_0265_Paint_House_II/Solution.java) | 困难 | 数组 动态规划                            |
 | 64   | [最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0064_Minimum_Path_Sum/Solution.java) | 中等 | 数组 动态规划 矩阵                       |
 | 72   | [编辑距离](https://leetcode-cn.com/problems/edit-distance/)  | [Java](./src/com/scuyjzh/leetcode/hard/No_0072_Edit_Distance/Solution.java) | 困难 | 字符串 动态规划                          |
 | 97   | [交错字符串](https://leetcode-cn.com/problems/interleaving-string/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0097_Interleaving_String/Solution.java) | 中等 | 字符串 动态规划                          |
