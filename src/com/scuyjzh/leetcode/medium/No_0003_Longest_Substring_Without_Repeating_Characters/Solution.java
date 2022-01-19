@@ -9,26 +9,26 @@ import java.util.*;
  */
 class Solution {
     public int lengthOfLongestSubstring(String s) {
-        // 哈希集合，记录每个字符是否出现过
-        Set<Character> occ = new HashSet<>();
+        // 哈希集合，记录每个字符是否出现过，来判断 是否有重复的字符
+        // 在左指针向右移动的时候，从哈希集合中移除一个字符，在右指针向右移动的时候，往哈希集合中添加一个字符
+        Set<Character> set = new HashSet<>();
         int n = s.length();
-        // 右指针，初始值为 -1，相当于在字符串的左边界的左侧，还没有开始移动
-        int right = -1, ans = 0;
-        // 左指针，不断将左指针向右移动一格，表示开始枚举下一个字符作为起始位置
-        for (int left = 0; left < n; ++left) {
-            if (left != 0) {
-                // 左指针向右移动一格，移除一个字符
-                occ.remove(s.charAt(left - 1));
+        int max = 0;
+        // 左右指针指向滑动窗口的左右边界，初始都指向下标 0
+        int left = 0, right = 0;
+        while (right < n) {
+            // 若当前右指针指向的元素在 Set 集合中存在，则右移左指针缩小滑动窗口，直到集合中不包含右指针指向的元素
+            while (set.contains(s.charAt(right))) {
+                set.remove(s.charAt(left));
+                ++left;
             }
-            while (right + 1 < n && !occ.contains(s.charAt(right + 1))) {
-                // 不断地移动右指针
-                occ.add(s.charAt(right + 1));
-                ++right;
-            }
-            // 第 left 到 right 个字符是一个极长的无重复字符子串
-            ans = Math.max(ans, right - left + 1);
+            // 记录结果
+            max = Math.max(max, right - left + 1);
+            // 不断地向右移动右指针
+            set.add(s.charAt(right));
+            ++right;
         }
-        return ans;
+        return max;
     }
 
     public static void main(String[] args) {
