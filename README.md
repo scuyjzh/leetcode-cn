@@ -199,6 +199,7 @@
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签                                       |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------------------------------ |
 | 239  | [滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0239_Sliding_Window_Maximum/Solution.java) | 困难 | 队列 数组 滑动窗口 单调队列 堆（优先队列） |
+| 480  | [滑动窗口中位数](https://leetcode-cn.com/problems/sliding-window-median/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0480_Sliding_Window_Median/Solution.java) | 困难 | 数组 哈希表 滑动窗口 堆（优先队列）        |
 
 ### Array
 
