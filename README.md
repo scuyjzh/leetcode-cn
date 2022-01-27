@@ -168,6 +168,7 @@
 | 992  | [K 个不同整数的子数组](https://leetcode-cn.com/problems/subarrays-with-k-different-integers/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0992_Subarrays_with_K_Different_Integers/Solution.java) | 困难 | 数组 哈希表 计数 滑动窗口              |
 | 713  | [乘积小于K的子数组](https://leetcode-cn.com/problems/subarray-product-less-than-k/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0713_Subarray_Product_Less_Than_K/Solution.java) | 中等 | 数组 滑动窗口                          |
 | 904  | [水果成篮](https://leetcode-cn.com/problems/fruit-into-baskets/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0904_Fruit_Into_Baskets/Solution.java) | 中等 | 数组 哈希表 滑动窗口                   |
+| 1358 | [包含所有三种字符的子字符串数目](https://leetcode-cn.com/problems/number-of-substrings-containing-all-three-characters/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1358_Number_of_Substrings_Containing_All_Three_Characters/Solution.java) | 中等 | 哈希表 字符串 滑动窗口                 |
 
 ### Array
 
