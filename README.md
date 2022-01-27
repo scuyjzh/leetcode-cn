@@ -165,6 +165,7 @@
 | 159  | [至多包含两个不同字符的最长子串](https://leetcode-cn.com/problems/longest-substring-with-at-most-two-distinct-characters/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0159_Longest_Substring_with_At_Most_Two_Distinct_Characters/Solution.java) | 中等 | 哈希表 字符串 滑动窗口                 |
 | 340  | [至多包含 K 个不同字符的最长子串](https://leetcode-cn.com/problems/longest-substring-with-at-most-k-distinct-characters/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0340_Longest_Substring_with_At_Most_K_Distinct_Characters/Solution.java) | 中等 | 哈希表 字符串 滑动窗口                 |
 | 795  | [区间子数组个数](https://leetcode-cn.com/problems/number-of-subarrays-with-bounded-maximum/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0795_Number_of_Subarrays_with_Bounded_Maximum/Solution.java) | 中等 | 数组 双指针                            |
+| 992  | [K 个不同整数的子数组](https://leetcode-cn.com/problems/subarrays-with-k-different-integers/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0992_Subarrays_with_K_Different_Integers/Solution.java) | 困难 | 数组 哈希表 计数 滑动窗口              |
 
 ### Array
 
