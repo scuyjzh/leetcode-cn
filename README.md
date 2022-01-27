@@ -133,44 +133,72 @@
 
 ### Sliding Window & Two Pointers
 
+#### 循环不变量
+
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签        |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ----------- |
+| 26   | [删除有序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0026_Remove_Duplicates_from_Sorted_Array/Solution.java) | 简单 | 数组 双指针 |
+| 674  | [最长连续递增序列](https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0674_Longest_Continuous_Increasing_Subsequence/Solution.java) | 简单 | 数组        |
+| 27   | [移除元素](https://leetcode-cn.com/problems/remove-element/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0027_Remove_Element/Solution.java) | 简单 | 数组 双指针 |
+| 80   | [删除有序数组中的重复项 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0080_Remove_Duplicates_from_Sorted_Array_II/Solution.java) | 中等 | 数组 双指针 |
+| 283  | [移动零](https://leetcode-cn.com/problems/move-zeroes/)      | [Java](./src/com/scuyjzh/leetcode/easy/No_0283_Move_Zeroes/Solution.java) | 简单 | 数组 双指针 |
+
+#### 使用循环不变量写对代码
+
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签                                   |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | -------------------------------------- |
-| 26   | [删除有序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0026_Remove_Duplicates_from_Sorted_Array/Solution.java) | 简单 | 数组 双指针                            |
-| 674  | [最长连续递增序列](https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0674_Longest_Continuous_Increasing_Subsequence/Solution.java) | 简单 | 数组                                   |
-| 27   | [移除元素](https://leetcode-cn.com/problems/remove-element/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0027_Remove_Element/Solution.java) | 简单 | 数组 双指针                            |
-| 80   | [删除有序数组中的重复项 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0080_Remove_Duplicates_from_Sorted_Array_II/Solution.java) | 中等 | 数组 双指针                            |
-| 283  | [移动零](https://leetcode-cn.com/problems/move-zeroes/)      | [Java](./src/com/scuyjzh/leetcode/easy/No_0283_Move_Zeroes/Solution.java) | 简单 | 数组 双指针                            |
 | 75   | [颜色分类](https://leetcode-cn.com/problems/sort-colors/)    | [Java](./src/com/scuyjzh/leetcode/medium/No_0075_Sort_Colors/Solution.java) | 中等 | 数组 双指针 排序                       |
 | 215  | [数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0215_Kth_Largest_Element_in_an_Array/Solution.java) | 中等 | 数组 分治 快速排序 排序 堆（优先队列） |
-| 643  | [子数组最大平均数 I](https://leetcode-cn.com/problems/maximum-average-subarray-i/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0643_Maximum_Average_Subarray_I/Solution.java) | 简单 | 数组 滑动窗口                          |
-| 1052 | [爱生气的书店老板](https://leetcode-cn.com/problems/grumpy-bookstore-owner/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1052_Grumpy_Bookstore_Owner/Solution.java) | 中等 | 数组 滑动窗口                          |
-| 1423 | [可获得的最大点数](https://leetcode-cn.com/problems/maximum-points-you-can-obtain-from-cards/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1423_Maximum_Points_You_Can_Obtain_from_Cards/Solution.java) | 中等 | 数组 前缀和 滑动窗口                   |
-| 1456 | [定长子串中元音的最大数目](https://leetcode-cn.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1456_Maximum_Number_of_Vowels_in_a_Substring_of_Given_Length/Solution.java) | 中等 | 字符串 滑动窗口                        |
-| 1658 | [将 x 减到 0 的最小操作数](https://leetcode-cn.com/problems/minimum-operations-to-reduce-x-to-zero/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1658_Minimum_Operations_to_Reduce_X_to_Zero/Solution.java) | 中等 | 数组 哈希表 二分查找 前缀和 滑动窗口   |
-| 76   | [最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0076_Minimum_Window_Substring/Solution.java) | 困难 | 哈希表 字符串 滑动窗口                 |
-| 424  | [替换后的最长重复字符](https://leetcode-cn.com/problems/longest-repeating-character-replacement/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0424_Longest_Repeating_Character_Replacement/Solution.java) | 中等 | 哈希表 字符串 滑动窗口                 |
-| 3    | [无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0003_Longest_Substring_Without_Repeating_Characters/Solution.java) | 中等 | 哈希表 字符串 滑动窗口                 |
-| 209  | [长度最小的子数组](https://leetcode-cn.com/problems/minimum-size-subarray-sum/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0209_Minimum_Size_Subarray_Sum/Solution.java) | 中等 | 数组 二分查找 前缀和 滑动窗口          |
-| 1695 | [删除子数组的最大得分](https://leetcode-cn.com/problems/maximum-erasure-value/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1695_Maximum_Erasure_Value/Solution.java) | 中等 | 数组 哈希表 滑动窗口                   |
-| 438  | [找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0438_Find_All_Anagrams_in_a_String/Solution.java) | 中等 | 哈希表 字符串 滑动窗口                 |
-| 567  | [字符串的排列](https://leetcode-cn.com/problems/permutation-in-string/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0567_Permutation_in_String/Solution.java) | 中等 | 哈希表 双指针 字符串 滑动窗口          |
-| 487  | [最大连续1的个数 II](https://leetcode-cn.com/problems/max-consecutive-ones-ii/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0487_Max_Consecutive_Ones_II/Solution.java) | 中等 | 数组 动态规划 滑动窗口                 |
-| 1004 | [最大连续1的个数 III](https://leetcode-cn.com/problems/max-consecutive-ones-iii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1004_Max_Consecutive_Ones_III/Solution.java) | 中等 | 数组 二分查找 前缀和 滑动窗口          |
-| 1208 | [尽可能使字符串相等](https://leetcode-cn.com/problems/get-equal-substrings-within-budget/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1208_Get_Equal_Substrings_Within_Budget/Solution.java) | 中等 | 数组 二分查找 前缀和 滑动窗口          |
-| 1493 | [删掉一个元素以后全为 1 的最长子数组](https://leetcode-cn.com/problems/longest-subarray-of-1s-after-deleting-one-element/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1493_Longest_Subarray_of_1_s_After_Deleting_One_Element/Solution.java) | 中等 | 数学 动态规划 滑动窗口                 |
-| 978  | [最长湍流子数组](https://leetcode-cn.com/problems/longest-turbulent-subarray/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0978_Longest_Turbulent_Subarray/Solution.java) | 中等 | 数组 动态规划 滑动窗口                 |
-| 1100 | [长度为 K 的无重复字符子串](https://leetcode-cn.com/problems/find-k-length-substrings-with-no-repeated-characters/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_1100_Find_K_Length_Substrings_With_No_Repeated_Characters/Solution.java) | 中等 | 哈希表 字符串 滑动窗口                 |
-| 1151 | [最少交换次数来组合所有的 1](https://leetcode-cn.com/problems/minimum-swaps-to-group-all-1s-together/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_1151_Minimum_Swaps_to_Group_All_1_s_Together/Solution.java) | 中等 | 数组 滑动窗口                          |
-| 1176 | [健身计划评估](https://leetcode-cn.com/problems/diet-plan-performance/) | [Java](./src/com/scuyjzh/leetcode/easy/No_1176_Diet_Plan_Performance/Solution.java) | 简单 | 数组 滑动窗口                          |
-| 159  | [至多包含两个不同字符的最长子串](https://leetcode-cn.com/problems/longest-substring-with-at-most-two-distinct-characters/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0159_Longest_Substring_with_At_Most_Two_Distinct_Characters/Solution.java) | 中等 | 哈希表 字符串 滑动窗口                 |
-| 340  | [至多包含 K 个不同字符的最长子串](https://leetcode-cn.com/problems/longest-substring-with-at-most-k-distinct-characters/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0340_Longest_Substring_with_At_Most_K_Distinct_Characters/Solution.java) | 中等 | 哈希表 字符串 滑动窗口                 |
-| 795  | [区间子数组个数](https://leetcode-cn.com/problems/number-of-subarrays-with-bounded-maximum/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0795_Number_of_Subarrays_with_Bounded_Maximum/Solution.java) | 中等 | 数组 双指针                            |
-| 992  | [K 个不同整数的子数组](https://leetcode-cn.com/problems/subarrays-with-k-different-integers/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0992_Subarrays_with_K_Different_Integers/Solution.java) | 困难 | 数组 哈希表 计数 滑动窗口              |
-| 713  | [乘积小于K的子数组](https://leetcode-cn.com/problems/subarray-product-less-than-k/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0713_Subarray_Product_Less_Than_K/Solution.java) | 中等 | 数组 滑动窗口                          |
-| 904  | [水果成篮](https://leetcode-cn.com/problems/fruit-into-baskets/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0904_Fruit_Into_Baskets/Solution.java) | 中等 | 数组 哈希表 滑动窗口                   |
-| 1358 | [包含所有三种字符的子字符串数目](https://leetcode-cn.com/problems/number-of-substrings-containing-all-three-characters/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1358_Number_of_Substrings_Containing_All_Three_Characters/Solution.java) | 中等 | 哈希表 字符串 滑动窗口                 |
-| 467  | [环绕字符串中唯一的子字符串](https://leetcode-cn.com/problems/unique-substrings-in-wraparound-string/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0467_Unique_Substrings_in_Wraparound_String/Solution.java) | 中等 | 字符串 动态规划                        |
-| 719  | [找出第 k 小的距离对](https://leetcode-cn.com/problems/find-k-th-smallest-pair-distance/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0719_Find_K_th_Smallest_Pair_Distance/Solution.java) | 困难 | 数组 双指针 二分查找 排序              |
+
+#### 滑动窗口 1：同向交替移动的两个变量
+
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签                                 |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------------------------ |
+| 643  | [子数组最大平均数 I](https://leetcode-cn.com/problems/maximum-average-subarray-i/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0643_Maximum_Average_Subarray_I/Solution.java) | 简单 | 数组 滑动窗口                        |
+| 1052 | [爱生气的书店老板](https://leetcode-cn.com/problems/grumpy-bookstore-owner/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1052_Grumpy_Bookstore_Owner/Solution.java) | 中等 | 数组 滑动窗口                        |
+| 1423 | [可获得的最大点数](https://leetcode-cn.com/problems/maximum-points-you-can-obtain-from-cards/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1423_Maximum_Points_You_Can_Obtain_from_Cards/Solution.java) | 中等 | 数组 前缀和 滑动窗口                 |
+| 1456 | [定长子串中元音的最大数目](https://leetcode-cn.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1456_Maximum_Number_of_Vowels_in_a_Substring_of_Given_Length/Solution.java) | 中等 | 字符串 滑动窗口                      |
+| 1658 | [将 x 减到 0 的最小操作数](https://leetcode-cn.com/problems/minimum-operations-to-reduce-x-to-zero/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1658_Minimum_Operations_to_Reduce_X_to_Zero/Solution.java) | 中等 | 数组 哈希表 二分查找 前缀和 滑动窗口 |
+
+#### 滑动窗口 2：不定长度的滑动窗口
+
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签                          |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ----------------------------- |
+| 76   | [最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0076_Minimum_Window_Substring/Solution.java) | 困难 | 哈希表 字符串 滑动窗口        |
+| 424  | [替换后的最长重复字符](https://leetcode-cn.com/problems/longest-repeating-character-replacement/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0424_Longest_Repeating_Character_Replacement/Solution.java) | 中等 | 哈希表 字符串 滑动窗口        |
+| 3    | [无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0003_Longest_Substring_Without_Repeating_Characters/Solution.java) | 中等 | 哈希表 字符串 滑动窗口        |
+| 209  | [长度最小的子数组](https://leetcode-cn.com/problems/minimum-size-subarray-sum/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0209_Minimum_Size_Subarray_Sum/Solution.java) | 中等 | 数组 二分查找 前缀和 滑动窗口 |
+| 1695 | [删除子数组的最大得分](https://leetcode-cn.com/problems/maximum-erasure-value/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1695_Maximum_Erasure_Value/Solution.java) | 中等 | 数组 哈希表 滑动窗口          |
+| 438  | [找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0438_Find_All_Anagrams_in_a_String/Solution.java) | 中等 | 哈希表 字符串 滑动窗口        |
+| 567  | [字符串的排列](https://leetcode-cn.com/problems/permutation-in-string/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0567_Permutation_in_String/Solution.java) | 中等 | 哈希表 双指针 字符串 滑动窗口 |
+| 487  | [最大连续1的个数 II](https://leetcode-cn.com/problems/max-consecutive-ones-ii/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0487_Max_Consecutive_Ones_II/Solution.java) | 中等 | 数组 动态规划 滑动窗口        |
+| 1004 | [最大连续1的个数 III](https://leetcode-cn.com/problems/max-consecutive-ones-iii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1004_Max_Consecutive_Ones_III/Solution.java) | 中等 | 数组 二分查找 前缀和 滑动窗口 |
+| 1208 | [尽可能使字符串相等](https://leetcode-cn.com/problems/get-equal-substrings-within-budget/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1208_Get_Equal_Substrings_Within_Budget/Solution.java) | 中等 | 数组 二分查找 前缀和 滑动窗口 |
+| 1493 | [删掉一个元素以后全为 1 的最长子数组](https://leetcode-cn.com/problems/longest-subarray-of-1s-after-deleting-one-element/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1493_Longest_Subarray_of_1_s_After_Deleting_One_Element/Solution.java) | 中等 | 数学 动态规划 滑动窗口        |
+| 978  | [最长湍流子数组](https://leetcode-cn.com/problems/longest-turbulent-subarray/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0978_Longest_Turbulent_Subarray/Solution.java) | 中等 | 数组 动态规划 滑动窗口        |
+| 1100 | [长度为 K 的无重复字符子串](https://leetcode-cn.com/problems/find-k-length-substrings-with-no-repeated-characters/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_1100_Find_K_Length_Substrings_With_No_Repeated_Characters/Solution.java) | 中等 | 哈希表 字符串 滑动窗口        |
+| 1151 | [最少交换次数来组合所有的 1](https://leetcode-cn.com/problems/minimum-swaps-to-group-all-1s-together/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_1151_Minimum_Swaps_to_Group_All_1_s_Together/Solution.java) | 中等 | 数组 滑动窗口                 |
+| 1176 | [健身计划评估](https://leetcode-cn.com/problems/diet-plan-performance/) | [Java](./src/com/scuyjzh/leetcode/easy/No_1176_Diet_Plan_Performance/Solution.java) | 简单 | 数组 滑动窗口                 |
+
+#### 滑动窗口 3：计数问题选讲
+
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签                      |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------------- |
+| 159  | [至多包含两个不同字符的最长子串](https://leetcode-cn.com/problems/longest-substring-with-at-most-two-distinct-characters/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0159_Longest_Substring_with_At_Most_Two_Distinct_Characters/Solution.java) | 中等 | 哈希表 字符串 滑动窗口    |
+| 340  | [至多包含 K 个不同字符的最长子串](https://leetcode-cn.com/problems/longest-substring-with-at-most-k-distinct-characters/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0340_Longest_Substring_with_At_Most_K_Distinct_Characters/Solution.java) | 中等 | 哈希表 字符串 滑动窗口    |
+| 795  | [区间子数组个数](https://leetcode-cn.com/problems/number-of-subarrays-with-bounded-maximum/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0795_Number_of_Subarrays_with_Bounded_Maximum/Solution.java) | 中等 | 数组 双指针               |
+| 992  | [K 个不同整数的子数组](https://leetcode-cn.com/problems/subarrays-with-k-different-integers/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0992_Subarrays_with_K_Different_Integers/Solution.java) | 困难 | 数组 哈希表 计数 滑动窗口 |
+| 713  | [乘积小于K的子数组](https://leetcode-cn.com/problems/subarray-product-less-than-k/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0713_Subarray_Product_Less_Than_K/Solution.java) | 中等 | 数组 滑动窗口             |
+| 904  | [水果成篮](https://leetcode-cn.com/problems/fruit-into-baskets/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0904_Fruit_Into_Baskets/Solution.java) | 中等 | 数组 哈希表 滑动窗口      |
+| 1358 | [包含所有三种字符的子字符串数目](https://leetcode-cn.com/problems/number-of-substrings-containing-all-three-characters/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1358_Number_of_Substrings_Containing_All_Three_Characters/Solution.java) | 中等 | 哈希表 字符串 滑动窗口    |
+| 467  | [环绕字符串中唯一的子字符串](https://leetcode-cn.com/problems/unique-substrings-in-wraparound-string/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0467_Unique_Substrings_in_Wraparound_String/Solution.java) | 中等 | 字符串 动态规划           |
+| 719  | [找出第 k 小的距离对](https://leetcode-cn.com/problems/find-k-th-smallest-pair-distance/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0719_Find_K_th_Smallest_Pair_Distance/Solution.java) | 困难 | 数组 双指针 二分查找 排序 |
+
+#### 滑动窗口 4：使用数据结构维护窗口性质
+
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签                                       |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------------------------------ |
+| 239  | [滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0239_Sliding_Window_Maximum/Solution.java) | 困难 | 队列 数组 滑动窗口 单调队列 堆（优先队列） |
 
 ### Array
 
