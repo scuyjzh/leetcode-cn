@@ -6,16 +6,17 @@ import com.scuyjzh.leetcode.structure.ListNode;
  * 141. 环形链表
  *
  * 给你一个链表的头节点 head ，判断链表中是否有环。
+ *
  * 如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表
  * 中存在环。 为了表示给定链表中的环，评测系统内部使用整数 pos 来表示
- * 链表尾连接到链表中的位置（索引从 0 开始）。如果 pos 是 -1，则在该
- * 链表中没有环。注意：pos 不作为参数进行传递，仅仅是为了标识链表的
- * 实际情况。
- * 如果链表中存在环，则返回 true 。 否则，返回 false 。
+ * 链表尾连接到链表中的位置（索引从 0 开始）。注意：pos 不作为参数进
+ * 行传递 。仅仅是为了标识链表的实际情况。
+ *
+ * 如果链表中存在环 ，则返回 true 。 否则，返回 false 。
  */
 class Solution {
     /**
-     * 方法：快慢指针
+     * 方法：双指针
      */
     public boolean hasCycle(ListNode head) {
         /*
@@ -35,8 +36,10 @@ class Solution {
             return false;
         }
 
-        // 定义两个指针，一快一满
-        // 初始时，慢指针在位置 head，而快指针在位置 head.next
+        // 定义两个指针，一快一满。初始时，慢指针在位置 head，而快指针在位置 head.next。
+        // 由于循环条件一定是判断快慢指针是否重合，如果将两个指针初始都置于 head，那么 while 循环就不会执行。
+        // 因此，可以假想一个在 head 之前的虚拟节点，慢指针从虚拟节点移动一步到达 head，快指针从虚拟节点移动两步到达 head.next，
+        // 这样就可以使用 while 循环了。
         ListNode slow = head;
         ListNode fast = head.next;
         // 如果在移动的过程中，快指针反过来追上慢指针，就说明该链表为环形链表
