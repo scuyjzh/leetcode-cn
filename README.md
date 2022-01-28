@@ -196,11 +196,12 @@
 
 #### 滑动窗口 4：使用数据结构维护窗口性质
 
-| #    | 题目                                                         | 题解                                                         | 难度 | 标签                                       |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ------------------------------------------ |
-| 239  | [滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0239_Sliding_Window_Maximum/Solution.java) | 困难 | 队列 数组 滑动窗口 单调队列 堆（优先队列） |
-| 480  | [滑动窗口中位数](https://leetcode-cn.com/problems/sliding-window-median/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0480_Sliding_Window_Median/Solution.java) | 困难 | 数组 哈希表 滑动窗口 堆（优先队列）        |
-| 220  | [存在重复元素 III](https://leetcode-cn.com/problems/contains-duplicate-iii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0220_Contains_Duplicate_III/Solution.java) | 中等 | 数组 桶排序 有序集合 排序 滑动窗口         |
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签                                                |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | --------------------------------------------------- |
+| 239  | [滑动窗口最大值](https://leetcode-cn.com/problems/sliding-window-maximum/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0239_Sliding_Window_Maximum/Solution.java) | 困难 | 队列 数组 滑动窗口 单调队列 堆（优先队列）          |
+| 480  | [滑动窗口中位数](https://leetcode-cn.com/problems/sliding-window-median/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0480_Sliding_Window_Median/Solution.java) | 困难 | 数组 哈希表 滑动窗口 堆（优先队列）                 |
+| 220  | [存在重复元素 III](https://leetcode-cn.com/problems/contains-duplicate-iii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0220_Contains_Duplicate_III/Solution.java) | 中等 | 数组 桶排序 有序集合 排序 滑动窗口                  |
+| 1438 | [绝对差不超过限制的最长连续子数组](https://leetcode-cn.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | [Java](./src/com/scuyjzh/leetcode/medium/No_1438_Longest_Continuous_Subarray_With_Absolute_Diff_Less_Than_or_Equal_to_Limit/Solution.java) | 中等 | 队列 数组 有序集合 滑动窗口 单调队列 堆（优先队列） |
 
 ### Array
 
