@@ -211,6 +211,7 @@
 | 19   | [删除链表的倒数第 N 个节点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0019_Remove_Nth_Node_From_End_of_List/Solution.java) | 中等 | 链表 双指针        |
 | 876  | [链表的中间结点](https://leetcode-cn.com/problems/middle-of-the-linked-list/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0876_Middle_of_the_Linked_List/Solution.java) | 简单 | 链表 双指针        |
 | 142  | [环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0142_Linked_List_Cycle_II/Solution.java) | 中等 | 哈希表 链表 双指针 |
+| 160  | [相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0160_Intersection_of_Two_Linked_Lists/Solution.java) | 简单 | 哈希表 链表 双指针 |
 
 ### Array
 
