@@ -213,6 +213,12 @@
 | 142  | [环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0142_Linked_List_Cycle_II/Solution.java) | 中等 | 哈希表 链表 双指针 |
 | 160  | [相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0160_Intersection_of_Two_Linked_Lists/Solution.java) | 简单 | 哈希表 链表 双指针 |
 
+#### 双指针：相向交替移动的两个变量
+
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签             |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ---------------- |
+| 11   | [盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0011_Container_With_Most_Water/Solution.java) | 中等 | 贪心 数组 双指针 |
+
 ### Array
 
 | #    | 题目                                                         | 题解                                                         | 难度 | 标签                                                 |
