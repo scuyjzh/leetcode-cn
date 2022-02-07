@@ -215,9 +215,10 @@
 
 #### 双指针：相向交替移动的两个变量
 
-| #    | 题目                                                         | 题解                                                         | 难度 | 标签             |
-| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | ---------------- |
-| 11   | [盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0011_Container_With_Most_Water/Solution.java) | 中等 | 贪心 数组 双指针 |
+| #    | 题目                                                         | 题解                                                         | 难度 | 标签                 |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- | -------------------- |
+| 11   | [盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0011_Container_With_Most_Water/Solution.java) | 中等 | 贪心 数组 双指针     |
+| 167  | [两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0167_Two_Sum_II/Solution.java) | 中等 | 数组 双指针 二分查找 |
 
 ### Array
 
@@ -385,7 +386,7 @@
 | 365  | [水壶问题](https://leetcode-cn.com/problems/water-and-jug-problem/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0365_Water_and_Jug_Problem/Solution.java) | 中等 | 深度优先搜索 广度优先搜索 数学      |
 | 204  | [计数质数](https://leetcode-cn.com/problems/count-primes/)   | [Java](./src/com/scuyjzh/leetcode/medium/No_0204_Count_Primes/Solution.java) | 中等 | 数组 数学 枚举 数论                 |
 | 1    | [两数之和](https://leetcode-cn.com/problems/two-sum/)        | [Java](./src/com/scuyjzh/leetcode/easy/No_0001_Two_Sum/Solution.java) | 简单 | 数组 哈希表                         |
-| 167  | [两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0167_Two_Sum_II/Solution.java) | 简单 | 数组 双指针 二分查找                |
+| 167  | [两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0167_Two_Sum_II/Solution.java) | 中等 | 数组 双指针 二分查找                |
 | 15   | [三数之和](https://leetcode-cn.com/problems/3sum/)           | [Java](./src/com/scuyjzh/leetcode/medium/No_0015_3Sum/Solution.java) | 中等 | 数组 双指针 排序                    |
 | 16   | [最接近的三数之和](https://leetcode-cn.com/problems/3sum-closest/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0016_3Sum_Closest/Solution.java) | 中等 | 数组 双指针 排序                    |
 | 259  | [较小的三数之和](https://leetcode-cn.com/problems/3sum-smaller/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0259_3Sum_Smaller/Solution.java) | 中等 | 数组 双指针 二分查找 排序           |
