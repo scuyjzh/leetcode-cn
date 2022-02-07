@@ -228,6 +228,7 @@
 | 42   | [接雨水](https://leetcode-cn.com/problems/trapping-rain-water/) | [Java](./src/com/scuyjzh/leetcode/hard/No_0042_Trapping_Rain_Water/Solution.java) | 困难 | 栈 数组 双指针 动态规划 单调栈           |
 | 658  | [找到 K 个最接近的元素](https://leetcode-cn.com/problems/find-k-closest-elements/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0658_Find_K_Closest_Elements/Solution.java) | 中等 | 数组 双指针 二分查找 排序 堆（优先队列） |
 | 259  | [较小的三数之和](https://leetcode-cn.com/problems/3sum-smaller/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0259_3Sum_Smaller/Solution.java) | 中等 | 数组 双指针 二分查找 排序                |
+| 845  | [数组中的最长山脉](https://leetcode-cn.com/problems/longest-mountain-in-array/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0845_Longest_Mountain_in_Array/Solution.java) | 中等 | 数组 双指针 动态规划 枚举                |
 
 ### Array
 
