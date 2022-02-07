@@ -230,6 +230,7 @@
 | 259  | [较小的三数之和](https://leetcode-cn.com/problems/3sum-smaller/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_0259_3Sum_Smaller/Solution.java) | 中等 | 数组 双指针 二分查找 排序                |
 | 845  | [数组中的最长山脉](https://leetcode-cn.com/problems/longest-mountain-in-array/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0845_Longest_Mountain_in_Array/Solution.java) | 中等 | 数组 双指针 动态规划 枚举                |
 | 881  | [救生艇](https://leetcode-cn.com/problems/boats-to-save-people/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0881_Boats_to_Save_People/Solution.java) | 中等 | 贪心 数组 双指针 排序                    |
+| 925  | [长按键入](https://leetcode-cn.com/problems/long-pressed-name/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0925_Long_Pressed_Name/Solution.java) | 简单 | 双指针 字符串                            |
 
 ### Array
 
