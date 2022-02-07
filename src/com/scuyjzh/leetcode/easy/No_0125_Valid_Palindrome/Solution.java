@@ -7,29 +7,20 @@ package com.scuyjzh.leetcode.easy.No_0125_Valid_Palindrome;
  * 字母的大小写。
  */
 class Solution {
-    public boolean isPalindrome1(String s) {
-        StringBuilder sb = new StringBuilder();
-        int length = s.length();
-        for (int i = 0; i < length; ++i) {
-            char ch = s.charAt(i);
-            if (Character.isLetterOrDigit(ch)) {
-                sb.append(Character.toLowerCase(ch));
-            }
-        }
-        StringBuffer rev = new StringBuffer(sb).reverse();
-        return sb.toString().equals(rev.toString());
-    }
-
-    public boolean isPalindrome2(String s) {
-        int n = s.length();
-        int left = 0, right = n - 1;
+    /**
+     * 方法：双指针
+     */
+    public boolean isPalindrome(String s) {
+        int left = 0, right = s.length() - 1;
         while (left < right) {
+            // 在移动任意一个指针时，需要不断地向另一指针的方向移动，直到遇到一个字母或数字字符，或者两指针重合为止
             while (left < right && !Character.isLetterOrDigit(s.charAt(left))) {
                 ++left;
             }
             while (left < right && !Character.isLetterOrDigit(s.charAt(right))) {
                 --right;
             }
+            // 也就是说，每次将指针移到下一个字母字符或数字字符，再判断这两个指针指向的字符是否相同
             if (left < right) {
                 if (Character.toLowerCase(s.charAt(left)) != Character.toLowerCase(s.charAt(right))) {
                     return false;
@@ -42,7 +33,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Solution().isPalindrome1("A man, a plan, a canal: Panama"));
-        System.out.println(new Solution().isPalindrome2("race a car"));
+        System.out.println(new Solution().isPalindrome("A man, a plan, a canal: Panama"));
+        System.out.println(new Solution().isPalindrome("race a car"));
     }
 }
