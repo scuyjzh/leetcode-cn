@@ -232,6 +232,7 @@
 | 881  | [救生艇](https://leetcode-cn.com/problems/boats-to-save-people/) | [Java](./src/com/scuyjzh/leetcode/medium/No_0881_Boats_to_Save_People/Solution.java) | 中等 | 贪心 数组 双指针 排序                    |
 | 925  | [长按键入](https://leetcode-cn.com/problems/long-pressed-name/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0925_Long_Pressed_Name/Solution.java) | 简单 | 双指针 字符串                            |
 | 977  | [有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array/) | [Java](./src/com/scuyjzh/leetcode/easy/No_0977_Squares_of_a_Sorted_Array/Solution.java) | 简单 | 数组 双指针 排序                         |
+| 1229 | [安排会议日程](https://leetcode-cn.com/problems/meeting-scheduler/) 🔒 | [Java](./src/com/scuyjzh/leetcode/medium/No_1229_Meeting_Scheduler/Solution.java) | 中等 | 数组 双指针 排序                         |
 
 ### Array
 
