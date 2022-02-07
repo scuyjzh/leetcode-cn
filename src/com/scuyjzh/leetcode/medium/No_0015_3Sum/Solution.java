@@ -7,14 +7,12 @@ import java.util.*;
  *
  * 给你一个包含 n 个整数的数组nums，判断nums中是否存在三个元素
  * a，b，c ，使得a + b + c = 0 ？请你找出所有和为 0 且不重复的三元组。
+ *
  * 注意：答案中不可以包含重复的三元组。
  */
 class Solution {
     /**
      * 方法：排序 + 双指针
-     *
-     * • 时间复杂度：O(N^2)，其中 N 是数组 nums 的长度。
-     * • 空间复杂度：O(logN)。忽略存储答案的空间，额外的排序的空间复杂度为 O(logN)。
      */
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> res = new LinkedList<>();
@@ -24,7 +22,7 @@ class Solution {
         // 排序
         Arrays.sort(nums);
         for (int i = 0; i < nums.length - 2; ++i) {
-            // 如果当前数字大于0，则三数之和一定大于0，所以结束循环
+            // 如果当前数字大于 0，则三数之和一定大于 0，所以结束循环
             if (nums[i] > 0) {
                 break;
             }
@@ -37,19 +35,19 @@ class Solution {
                 int sum = nums[i] + nums[left] + nums[right];
                 if (0 == sum) {
                     res.add(Arrays.asList(nums[i], nums[left], nums[right]));
-                    left++;
-                    right--;
+                    ++left;
+                    --right;
                     // 去除重复解
                     while (left < right && nums[left] == nums[left - 1]) {
-                        left++;
+                        ++left;
                     }
                     while (left < right && nums[right] == nums[right + 1]) {
-                        right--;
+                        --right;
                     }
                 } else if (sum < 0) {
-                    left++;
+                    ++left;
                 } else {
-                    right--;
+                    --right;
                 }
             }
         }
