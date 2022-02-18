@@ -9,21 +9,26 @@ package com.scuyjzh.leetcode.hard.No_0004_Median_of_Two_Sorted_Arrays;
  * 算法的时间复杂度应该为 O(log (m+n)) 。
  */
 class Solution {
+    /**
+     * 方法：二分查找
+     */
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        // 将问题转化成：寻找两个有序数组中的第 k 小的数，其中 k 为 (m+n)/2 或 (m+n)/2+1
-        int m = nums1.length, n = nums2.length;
-        int k = (m + n) / 2;
-        if ((m + n) % 2 == 1) {
-            // 当 m+n 是奇数时，中位数是两个有序数组中的第 (m+n)/2+1 个元素
+        // 这道题可以转化成寻找两个有序数组中的第 k 小的数，其中 k 为 (m+n)/2 或 (m+n)/2+1。
+        int len1 = nums1.length, len2 = nums2.length;
+        int k = (len1 + len2) / 2;
+        if ((len1 + len2) % 2 == 1) {
+            // 根据中位数的定义，
+            // 当 m+n 是奇数时，中位数是两个有序数组中的第 (m+n)/2+1 个元素；
             return findKthElement(nums1, nums2, k + 1);
         } else {
-            // 当 m+n 是偶数时，中位数是两个有序数组中的第 (m+n)/2 个元素和第 (m+n)/2+1 个元素的平均值
-            int left = findKthElement(nums1, nums2, k);
-            int right = findKthElement(nums1, nums2, k + 1);
-            return (left + right) / 2.0;
+            // 当 m+n 是偶数时，中位数是两个有序数组中的第 (m+n)/2 个元素和第 (m+n)/2+1 个元素的平均值。
+            return (findKthElement(nums1, nums2, k) + findKthElement(nums1, nums2, k + 1)) / 2.0;
         }
     }
 
+    /**
+     * 寻找两个有序数组中的第 k 小的数
+     */
     private int findKthElement(int[] nums1, int[] nums2, int k) {
         /*
          * 主要思路：
@@ -40,26 +45,26 @@ class Solution {
          * 由于 "删除" 了一些元素（这些元素都比第 k 小的元素要小），因此需要修改 k 的值，减去删除的数的个数
          */
 
-        int m = nums1.length, n = nums2.length;
+        int len1 = nums1.length, len2 = nums2.length;
         int idx1 = 0, idx2 = 0;
 
         while (true) {
-            // 边界情况：
-            // 如果一个数组为空，说明该数组中的所有元素都被排除，可以直接返回另一个数组中第 k 小的元素
-            if (idx1 == m) {
+            // 边界情况（注意 1 和 2 顺序不能颠倒）：
+            // 1.首先，如果一个数组为空，说明该数组中的所有元素都被排除，可以直接返回另一个数组中第 k 小的元素；
+            if (idx1 == len1) {
                 return nums2[idx2 + k - 1];
             }
-            if (idx2 == n) {
+            if (idx2 == len2) {
                 return nums1[idx1 + k - 1];
             }
-            // 如果 k=1，只要返回两个数组首元素的最小值即可
+            // 2.其次，如果 k=1，只要返回两个数组首元素的最小值即可。
             if (k == 1) {
                 return Math.min(nums1[idx1], nums2[idx2]);
             }
 
             // 正常情况：
-            int newIdx1 = Math.min(idx1 + k / 2, m) - 1;
-            int newIdx2 = Math.min(idx2 + k / 2, n) - 1;
+            int newIdx1 = Math.min(idx1 + k / 2, len1) - 1;
+            int newIdx2 = Math.min(idx2 + k / 2, len2) - 1;
             int pivot1 = nums1[newIdx1];
             int pivot2 = nums2[newIdx2];
             // 取 pivot = min(pivot1, pivot2)，更新 k 和 idx
