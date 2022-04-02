@@ -96,7 +96,7 @@ class Solution {
      */
     private void buildMaxHeap(int[] nums) {
         // 从最后一个非叶子节点开始调整大顶堆，最后一个非叶子节点的下标就是 arr.length / 2 - 1
-        for (int i = nums.length / 2 - 1; i >= 0; --i) {
+        for (int i = (nums.length >> 1) - 1; i >= 0; --i) {
             maxHeapify(nums, i, nums.length);
         }
     }
