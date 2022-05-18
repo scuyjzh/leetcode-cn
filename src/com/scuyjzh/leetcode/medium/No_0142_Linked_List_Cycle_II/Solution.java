@@ -2,8 +2,6 @@ package com.scuyjzh.leetcode.medium.No_0142_Linked_List_Cycle_II;
 
 import com.scuyjzh.leetcode.structure.ListNode;
 
-import java.util.*;
-
 /**
  * 142. 环形链表 II
  *
